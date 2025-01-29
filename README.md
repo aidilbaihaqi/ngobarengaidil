@@ -2,6 +2,12 @@
 Website portfolio Aidil Baihaqi, dimana didalamnya terdapat beberapa informasi diri serta platform blog terkait artikel atau post yang pernah dibuat oleh author.
 
 <p>Link: <a href="https://ngobarengaidil.com/">ngobarengaidil.com</a></p>
+<p>Hosting: <a href="https://www.hostinger.com/">Hostinger</a> - Business Shared Hosting. <strong>not VPS</strong></p>
+<p>Deployment: Auto deploy with git access. run code below if your change in views</p>
+
+```bash
+npm run build // it will make "out" folder.
+```
 
 <h3 align="left">Tech Stack (Static Website):</h3>
 <img height="40" src="https://skillicons.dev/icons?i=react,nextjs,tailwind,ts,figma,vite,git,github,npm"/>
