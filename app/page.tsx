@@ -644,15 +644,15 @@ export default function Home() {
                 </svg>
 
                 <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400">
-                  2012 - 2013
+                  2023 - Present
                 </h3>
 
                 <p className="font-semibold text-sm text-gray-800 dark:text-neutral-200">
-                  Masters degree in Computer Software Engineering
+                  Bachelor`s Degree in Informatics Engineering
                 </p>
 
                 <p className="mt-1 text-sm text-gray-600 dark:text-neutral-400">
-                  The University of Manchester
+                  Universitas Maritim Raja Ali Haji
                 </p>
               </div>
 
@@ -666,15 +666,15 @@ export default function Home() {
                 </svg>
 
                 <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400">
-                  2009 - 2012
+                  2019 - 2023
                 </h3>
 
                 <p className="font-semibold text-sm text-gray-800 dark:text-neutral-200">
-                  Bachelors degree in Computer Software Engineering
+                  High School Diploma in Software Engineering
                 </p>
 
                 <p className="mt-1 text-sm text-gray-600 dark:text-neutral-400">
-                  Harvard University
+                  SMK Negeri 1 Bintan Timur
                 </p>
               </div>
             </div>
