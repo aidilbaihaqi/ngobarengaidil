@@ -12,13 +12,13 @@ export default function Home() {
           {/* Profile */}
           <div className="flex items-center gap-x-3">
             <div className="shrink-0">
-              <img className="shrink-0 size-16 rounded-full" src="https://images.unsplash.com/photo-1510706019500-d23a509eecd4?q=80&w=2667&auto=format&fit=facearea&facepad=3&w=320&h=320&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Avatar"/>
+              <img className="shrink-0 size-16 rounded-full" src="https://images.unsplash.com/photo-1510706019500-d23a509eecd4?q=80&w=2667&auto=format&fit=facearea&facepad=3&w=320&h=320&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Avatar" />
             </div>
 
             <div className="grow">
               <TypewriterEffectSmoothDemo />
               <p className="text-sm text-gray-600 dark:text-neutral-400">
-              Web Developer | Content Creator | Awardee of Beasiswa Pendidikan Indonesia
+                Web Developer | Content Creator | Awardee of Beasiswa Pendidikan Indonesia
               </p>
             </div>
           </div>
@@ -27,7 +27,7 @@ export default function Home() {
           {/* About */}
           <div className="mt-8">
             <p className="text-sm text-gray-600 dark:text-neutral-400">
-            Passionate and results-driven Junior Programmer with over 3 years of experience in software engineering. Skilled in web development, mentoring junior developers, and delivering high-quality freelance projects for diverse clients, including individuals, businesses, and government organizations. Adept at team collaboration, agile methodologies, and leveraging modern tools to solve complex problems efficiently.
+              Passionate and results-driven Junior Programmer with over 3 years of experience in software engineering. Skilled in web development, mentoring junior developers, and delivering high-quality freelance projects for diverse clients, including individuals, businesses, and government organizations. Adept at team collaboration, agile methodologies, and leveraging modern tools to solve complex problems efficiently.
             </p>
 
             <ul className="mt-5 flex flex-col gap-y-3">
@@ -36,170 +36,81 @@ export default function Home() {
                   <rect width="20" height="16" x="2" y="4" rx="2" />
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                 </svg>
-                <a className="text-[13px] text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="#">
+                <a className="text-[13px] text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="mailto:aidilmusirjun@gmail.com" target="_blank">
                   aidilmusirjun@gmail.com
                 </a>
               </li>
 
               <li className="flex items-center gap-x-2.5">
-                <svg className="shrink-0 size-3.5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14.1881 10.1624L22.7504 0H20.7214L13.2868 8.82385L7.34878 0H0.5L9.47944 13.3432L0.5 24H2.5291L10.3802 14.6817L16.6512 24H23.5L14.1881 10.1624ZM11.409 13.4608L3.26021 1.55962H6.37679L20.7224 22.5113H17.6058L11.409 13.4613V13.4608Z" fill="currentColor" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="shrink-0 size-3.5"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <circle cx="17.5" cy="6.5" r="1.5" />
                 </svg>
-                <a className="text-[13px] text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="#">
-                  @elianagarcia997
+
+                <a className="text-[13px] text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="https://www.instagram.com/albyhaqee/" target="_blank">
+                  @albyhaqee
                 </a>
               </li>
 
               <li className="flex items-center gap-x-2.5">
-                <svg className="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94" />
-                  <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32" />
-                  <path d="M8.56 2.75c4.37 6 6 9.42 8 17.72" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="shrink-0 size-3.5"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="3" ry="3" />
+                  <path d="M8 11v6M8 8v.01" />
+                  <path d="M12 16v-5a2 2 0 1 1 4 0v5" />
                 </svg>
-                <a className="text-[13px] text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="#">
-                  @elianagarcia997
+
+                <a className="text-[13px] text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="https://www.linkedin.com/in/aidilbaihaqi/" target="_blank">
+                  Aidil Baihaqi
+                </a>
+              </li>
+
+              <li className="flex items-center gap-x-2.5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="shrink-0 size-3.5"
+                >
+                  <path d="M9 19c-5 1-5-2-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77 5.07 5.07 0 0 0 18.91 1s-1.18-.37-3.91 1.48a13.38 13.38 0 0 0-7 0C5.27.63 4.09 1 4.09 1A5.07 5.07 0 0 0 4 4.77 5.44 5.44 0 0 0 2.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 8 18.13V22" />
+                </svg>
+
+
+                <a className="text-[13px] text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="https://github.com/aidilbaihaqi/" target="_blank">
+                  aidilbaihaqi
                 </a>
               </li>
             </ul>
           </div>
           {/* End About */}
-
-          {/* Projects */}
-          <div className="mt-10 sm:mt-14">
-            <h2 className="mb-5 font-medium text-gray-800 dark:text-neutral-200">
-              Projects
-            </h2>
-
-            {/* Image Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-              <a className="group block relative overflow-hidden rounded-lg" href="#">
-                <img className="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800" src="https://images.unsplash.com/photo-1656618724305-a4257e46e847?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project"/>
-                <div className="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
-                  <div className="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
-                    <svg className="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="11" cy="11" r="8" />
-                      <path d="m21 21-4.3-4.3" />
-                    </svg>
-                    <span className="text-xs">View</span>
-                  </div>
-                </div>
-              </a>
-
-              <a className="group block relative overflow-hidden rounded-lg" href="#">
-                <img className="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800" src="https://images.unsplash.com/photo-1616427592793-67b858804534?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project"/>
-                <div className="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
-                  <div className="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
-                    <svg className="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="11" cy="11" r="8" />
-                      <path d="m21 21-4.3-4.3" />
-                    </svg>
-                    <span className="text-xs">View</span>
-                  </div>
-                </div>
-              </a>
-
-              <a className="group block relative overflow-hidden rounded-lg" href="#">
-                <img className="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800" src="https://images.unsplash.com/photo-1516131206008-dd041a9764fd?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project"/>
-                <div className="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
-                  <div className="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
-                    <svg className="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="11" cy="11" r="8" />
-                      <path d="m21 21-4.3-4.3" />
-                    </svg>
-                    <span className="text-xs">View</span>
-                  </div>
-                </div>
-              </a>
-
-              <a className="group block relative overflow-hidden rounded-lg" href="#">
-                <img className="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800" src="https://images.unsplash.com/photo-1707760696486-2a2cd7e0b6a6?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project"/>
-                <div className="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
-                  <div className="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
-                    <svg className="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="11" cy="11" r="8" />
-                      <path d="m21 21-4.3-4.3" />
-                    </svg>
-                    <span className="text-xs">View</span>
-                  </div>
-                </div>
-              </a>
-
-              <a className="group block relative overflow-hidden rounded-lg" href="#">
-                <img className="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800" src="https://images.unsplash.com/photo-1585159812596-fac104f2f069?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project"/>
-                <div className="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
-                  <div className="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
-                    <svg className="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="11" cy="11" r="8" />
-                      <path d="m21 21-4.3-4.3" />
-                    </svg>
-                    <span className="text-xs">View</span>
-                  </div>
-                </div>
-              </a>
-
-              <a className="group block relative overflow-hidden rounded-lg" href="#">
-                <img className="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800" src="https://images.unsplash.com/photo-1654131300276-db70adf4f85d?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project"/>
-                <div className="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
-                  <div className="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
-                    <svg className="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="11" cy="11" r="8" />
-                      <path d="m21 21-4.3-4.3" />
-                    </svg>
-                    <span className="text-xs">View</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            {/* End Image Grid */}
-          </div>
-          {/* End Projects */}
-
-          {/* Testimonials */}
-          <div className="mt-10 sm:mt-14">
-            <h2 className="mb-3 font-medium text-gray-800 dark:text-neutral-200">
-              Testimonials
-            </h2>
-
-            {/* Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-3 border-y border-gray-200 divide-y sm:divide-y-0 sm:divide-x divide-gray-200 dark:border-neutral-700 dark:divide-neutral-700">
-              <div className="sm:-ms-4 py-6 sm:px-4">
-                {/* Review */}
-                <blockquote>
-                  <span className="text-sm text-gray-800 dark:text-neutral-200">Im absolutely floored by the level of care and attention to detail Eliana has put into this project and for one can guarantee that we will be a return customer.</span>
-
-                  <footer className="mt-3">
-                    <div className="flex items-center gap-x-2">
-                      <img className="shrink-0 size-5 rounded-full" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Avatar"/>
-                      <div className="grow">
-                        <div className="text-xs text-gray-500 dark:text-neutral-500">Josh Grazioso</div>
-                      </div>
-                    </div>
-                  </footer>
-                </blockquote>
-                {/* End Review */}
-              </div>
-
-              <div className="py-6 sm:px-4">
-                {/* Review */}
-                <blockquote>
-                  <span className="text-sm text-gray-800 dark:text-neutral-200">To say that hiring Eliana has been life-changing is an understatement. My business has tripled and I got my life back.</span>
-
-                  <footer className="mt-3">
-                    <div className="flex items-center gap-x-2">
-                      <img className="shrink-0 size-5 rounded-full" src="https://images.unsplash.com/photo-1671726203390-cdc4354ee2eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Avatar"/>
-                      <div className="grow">
-                        <div className="text-xs text-gray-500 dark:text-neutral-500">Nicole Grazioso</div>
-                      </div>
-                    </div>
-                  </footer>
-                </blockquote>
-                {/* End Review */}
-              </div>
-            </div>
-            {/* End Grid */}
-          </div>
-          {/* End Testimonials */}
 
           {/* Skills */}
           <div className="my-10 sm:my-14">
@@ -226,10 +137,69 @@ export default function Home() {
                       Figma
                     </li>
                     <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                      <svg className="shrink-0 size-4 me-1" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M11.0597 0.32329C11.02 0.31932 10.98 0.31932 10.9403 0.32329L5.3403 0.883285C5.17075 0.900245 5.0164 0.988485 4.91578 1.126L0.119634 7.68074C0.0464736 7.77832 0.00235197 7.89893 9.11713e-05 8.02973C3.03713e-05 8.03325 0 8.03679 0 8.04031L4.76837e-06 8.04274C0.000580768 8.18808 0.0528336 8.32124 0.139339 8.42477L10.5367 21.0616C10.6506 21.2001 10.8206 21.2803 11 21.2803C11.1794 21.2803 11.3494 21.2001 11.4633 21.0616L21.8606 8.42479C21.9472 8.32125 21.9994 8.18808 22 8.04274V8.03301C21.9998 8.0237 21.9995 8.0144 21.999 8.00511C21.992 7.8838 21.949 7.77216 21.8803 7.68072L17.0842 1.126C16.9835 0.988485 16.8293 0.900245 16.6597 0.883285L11.0597 0.32329ZM16.48 7.44031V7.40407L16.4757 7.44031H16.48ZM16.4947 7.28026H20.1003L16.9992 3.04205L16.4947 7.28026ZM15.9131 2.01461L11.8709 1.61039L15.2795 7.33684L15.9131 2.01461ZM10.1291 1.61039L6.0869 2.01461L6.7205 7.33684L10.1291 1.61039ZM5.00074 3.04205L1.89962 7.28026H5.50528L5.00074 3.04205ZM1.87066 8.64031L9.81378 18.2942L5.75794 8.70733C5.74859 8.68525 5.74102 8.66285 5.73518 8.64031H1.87066ZM7.24088 8.64031L11 18.3739L14.7591 8.64031H7.24088ZM16.2648 8.64031C16.259 8.66285 16.2514 8.68525 16.2421 8.70733L12.1862 18.2942L20.1293 8.64031H16.2648ZM11 2.49337L13.9446 7.44031H8.05539L11 2.49337Z" fill="currentColor" />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24  24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="shrink-0 size-3.5 me-1"
+                      >
+                        <rect width="24" height="24" rx="4" fill="#001E36" />
+                        <text x="5" y="16" fill="#00C8FF" fontSize="10" fontWeight="bold">Ps</text>
                       </svg>
-                      Sketch
+                      Adobe Photoshop
+                    </li>
+                    <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24  24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="shrink-0 size-3.5 me-1"
+                      >
+                        <rect width="24" height="24" rx="4" fill="#330000" />
+                        <text x="6" y="16" fill="#FF9A00" fontSize="10" fontWeight="bold">Ai</text>
+                      </svg>
+                      Adobe Illustrator
+                    </li>
+                  </ul>
+                </dd>
+              </dl>
+
+              <dl className="flex flex-col sm:flex-row gap-1">
+                <dt className="min-w-40">
+                  <span className="block text-sm text-gray-500 dark:text-neutral-500">Filming Tools:</span>
+                </dt>
+                <dd>
+                  <ul>
+                    <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24  24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="shrink-0 size-3.5 me-1"
+                      >
+                        <rect width="24" height="24" rx="4" fill="#220A3A" />
+                        <text x="5" y="16" fill="#EA77FF" fontSize="10" fontWeight="bold">Pr</text>
+                      </svg>
+
+                      Adobe Premiere Pro
                     </li>
                   </ul>
                 </dd>
@@ -242,22 +212,38 @@ export default function Home() {
                 <dd>
                   <ul>
                     <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                      <svg className="shrink-0 size-4 me-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3.41014 21.6082L1.5 0H22.5L20.5899 21.5965L11.9826 24" fill="currentColor" />
-                        <path d="M12.5 22V2H20.5L18.9734 20.083" fill="currentColor" />
-                        <path d="M5.5 4H12.5V6.64672H8.55789L8.81579 9.35756H12.5V11.9984H6.2614M6.38421 13.3276H9.18421L9.3807 15.4438L12.5 16.2367V19L6.77719 17.4843" fill="white" fillOpacity="0.8" />
-                        <path d="M18.5 4H12.5V6.64877H18.2786M18.0624 9.36173H12.5V12.0105H15.4525L15.1731 15.4527L12.5 16.2462V19L17.4033 17.4948" fill="white" />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="shrink-0 size-3.5 me-1"
+                      >
+                        <path d="M3 3l3 5-3 5h6l3 5 3-5h6l-3-5 3-5H12l-3 5-3-5z" />
                       </svg>
-                      HTML
+                      Laravel
                     </li>
                     <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                      <svg className="shrink-0 size-4 me-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3.3448 21.6009L1.41895 0H22.5809L20.653 21.5975L11.987 24L3.3448 21.6009Z" fill="currentColor" />
-                        <path d="M19.0026 20.2227L20.6501 1.7666H12V22.1641L19.0026 20.2227Z" fill="currentColor" />
-                        <path d="M5.83407 9.77721L6.0715 12.4264H12V9.77721H5.83407ZM5.59778 7.06432H12V4.41504H5.35693L5.59778 7.06432ZM12 16.6576L11.9884 16.6607L9.03789 15.864L8.84931 13.7511H6.18981L6.56101 17.9108L11.9878 19.4174L12 19.414V16.6576Z" fill="white" fillOpacity="0.8" />
-                        <path d="M11.9907 9.77721V12.4264H15.253L14.9455 15.8623L11.9907 16.6598V19.4161L17.4218 17.9108L17.4617 17.4632L18.0842 10.4886L18.1489 9.77721L18.6271 4.41504H11.9907V7.06432H15.7238L15.4827 9.77721H11.9907Z" fill="white" />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="shrink-0 size-3.5 me-1"
+                      >
+                        <polygon points="12,2 22,8 22,16 12,22 2,16 2,8" />
                       </svg>
-                      CSS
+                      Node.js
                     </li>
                     <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
                       <svg className="shrink-0 size-4 me-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -273,11 +259,92 @@ export default function Home() {
                       React
                     </li>
                     <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                      <svg className="shrink-0 size-4 me-1" width="164" height="143" viewBox="0 0 164 143" fill="none">
-                        <path d="M81.1349 139.508L2.87045 4.50153C2.48398 3.83487 2.96501 3 3.73559 3H62.4308C62.7837 3 63.1104 3.18601 63.2906 3.48946L81.1286 33.5324C81.5188 34.1895 82.4718 34.1839 82.8542 33.5224L100.211 3.4995C100.39 3.19038 100.72 3 101.077 3H160.264C161.035 3 161.516 3.83487 161.13 4.50154L82.8651 139.508C82.4799 140.172 81.5201 140.172 81.1349 139.508Z" stroke="currentColor" strokeWidth="5" strokeLinecap="round" />
-                        <path d="M81.1292 86.9894L33.8644 4.99943C33.4801 4.33276 33.9612 3.5 34.7307 3.5H62.9276C63.2822 3.5 63.6103 3.6878 63.7899 3.99358L81.1259 33.5116C81.515 34.1742 82.4751 34.1685 82.8564 33.5013L99.7121 4.00386C99.8901 3.69229 100.221 3.5 100.58 3.5H128.778C129.546 3.5 130.027 4.32894 129.647 4.99559L82.8641 86.9856C82.4813 87.6564 81.5149 87.6586 81.1292 86.9894Z" fill="currentColor" />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="shrink-0 size-3.5 me-1"
+                      >
+                        <text x="2" y="16" fill="black" fontSize="10" fontWeight="bold">Express</text>
                       </svg>
-                      Vue
+                      Express.js
+                    </li>
+                    <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="shrink-0 size-3.5 me-1"
+                      >
+                        <path d="M3 3h18v18H3V3z" stroke="black" />
+                        <line x1="4" y1="4" x2="20" y2="20" stroke="black" />
+                      </svg>
+                      Next.js
+                    </li>
+                    <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="shrink-0 size-3.5 me-1"
+                      >
+                        <path d="M8 3h8a5 5 0 0 1 5 5v4h-6v2h6v4a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5v-4h6v-2H3V8a5 5 0 0 1 5-5z" stroke="#3776AB" />
+                      </svg>
+                      Python
+                    </li>
+                    <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="shrink-0 size-3.5 me-1"
+                      >
+                        <path d="M4 4h16v16H4V4z" stroke="#00758F" />
+                        <text x="6" y="16" fill="#F29111" fontSize="10" fontWeight="bold">MySQL</text>
+                      </svg>
+                      MySQL
+                    </li>
+                    <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="shrink-0 size-3.5 me-1"
+                      >
+                        <polygon points="12,2 22,8 22,16 12,22 2,16 2,8" stroke="#F05032" />
+                        <circle cx="12" cy="12" r="3" stroke="#F05032" />
+                      </svg>
+                      Git
                     </li>
                   </ul>
                 </dd>
@@ -295,22 +362,6 @@ export default function Home() {
                         <path d="M23.4277 10.8818C22.3698 10.9506 21.4296 11.0484 21.3218 11.1073C20.9985 11.2739 20.8028 11.5483 20.7638 11.8617C20.7347 12.185 20.8325 12.224 21.8898 12.3516L22.35 12.4104V16.5925C22.35 19.0799 22.311 20.7256 22.2621 20.6767C22.2131 20.6178 20.8226 18.5027 19.167 15.9756C17.512 13.4392 16.1407 11.3525 16.1209 11.3333C16.1011 11.3135 15.024 11.3724 13.7313 11.4609C12.1445 11.5687 11.273 11.6666 11.0965 11.7644C10.8122 11.9112 10.4988 12.4303 10.4988 12.7734C10.4988 12.979 10.871 13.0868 11.6545 13.0868H12.0658V25.1139L11.4 25.3196C10.8809 25.4763 10.7044 25.5741 10.6165 25.7698C10.4598 26.1031 10.4697 26.4066 10.6264 26.4066C10.6852 26.4066 11.792 26.3378 13.0649 26.2598C15.582 26.113 15.8657 26.0442 16.1302 25.5252C16.2088 25.3685 16.277 25.2019 16.277 25.1529C16.277 25.1139 15.9345 24.9962 15.5226 24.8984C15.1014 24.8005 14.6802 24.7027 14.5923 24.6828C14.4257 24.6339 14.4157 24.3304 14.4157 20.1186V15.6033L17.3931 20.2753C20.5173 25.1721 20.9093 25.7308 21.3893 25.9755C21.987 26.2889 23.5051 26.0733 24.2688 25.5741L24.5042 25.4273L24.524 18.7479L24.5531 12.0586L25.0722 11.9608C25.6891 11.8431 25.9734 11.5594 25.9734 11.0695C25.9734 10.7561 25.9536 10.7362 25.66 10.7462C25.4847 10.7542 24.4757 10.813 23.4277 10.8818Z" className="fill-black dark:fill-neutral-200" fill="currentColor"></path>
                       </svg>
                       Notion
-                    </li>
-                    <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                      <svg className="shrink-0 size-4 me-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.62424 14.7793C7.64424 14.7993 7.64424 14.8393 7.62424 14.8793C7.54424 15.0193 7.38424 15.0993 7.22424 15.0793C6.92424 15.0393 6.70424 14.7993 6.72424 14.4993C6.72424 14.2993 6.76424 14.1193 6.82424 13.9193C6.92424 13.6793 6.82424 13.4193 6.62424 13.2793C6.50424 13.1993 6.34424 13.1793 6.20424 13.1993C6.06424 13.2193 5.94424 13.3193 5.86425 13.4393C5.80425 13.5393 5.76425 13.6393 5.74425 13.7393C5.74425 13.7593 5.72425 13.7793 5.72425 13.7793C5.68425 13.8993 5.60425 13.9393 5.54425 13.9393C5.52425 13.9393 5.48425 13.9193 5.46425 13.8593C5.40425 13.5193 5.52425 13.1793 5.74425 12.9193C5.94424 12.6993 6.22424 12.5993 6.52424 12.6393C6.82424 12.6793 7.10424 12.8793 7.22424 13.1593C7.36424 13.4993 7.32424 13.8793 7.14424 14.1993C7.12424 14.2193 7.12424 14.2593 7.10424 14.2793C7.04424 14.3993 7.02424 14.5593 7.10424 14.6793C7.16424 14.7593 7.24424 14.7993 7.34424 14.7993C7.38424 14.7993 7.42424 14.7993 7.46424 14.7793C7.54424 14.7393 7.60424 14.7393 7.62424 14.7793ZM20.8442 15.0993C20.8242 15.7193 20.6842 16.3193 20.4642 16.8993C19.3442 19.5993 16.6642 21.0993 13.4642 20.9993C10.4842 20.9193 7.94424 19.3393 6.84424 16.7593C6.14424 16.7393 5.46425 16.4593 4.96425 15.9993C4.42425 15.5393 4.08425 14.8993 4.00425 14.1993C3.94425 13.7193 4.00425 13.2393 4.18425 12.7793L3.56425 12.2593C0.68425 9.85935 9.62424 -0.100651 12.4642 2.39935C12.4842 2.41935 13.4442 3.35935 13.4442 3.35935C13.4442 3.35935 13.9642 3.13935 13.9842 3.13935C16.4842 2.09935 18.5242 2.59935 18.5242 4.25935C18.5242 5.11935 17.9842 6.11935 17.1042 7.03935C17.4642 7.39935 17.7042 7.83935 17.8242 8.31935C17.9242 8.65935 17.9642 8.99935 17.9842 9.35935C18.0042 9.71935 18.0242 10.5393 18.0242 10.5393C18.0442 10.5393 18.3042 10.6193 18.3842 10.6393C18.9042 10.7593 19.3642 10.9793 19.7642 11.3193C19.9842 11.5193 20.1042 11.7993 20.1642 12.0793C20.2242 12.4593 20.1242 12.8393 19.9042 13.1393C19.9642 13.2793 20.0042 13.3993 20.0642 13.5393C20.1442 13.7793 20.1842 13.9793 20.2042 13.9993C20.4242 14.0393 20.8442 14.3593 20.8442 15.0993ZM8.24424 13.6193C8.04424 12.3593 7.20424 11.9193 6.62424 11.8793C6.48424 11.8793 6.34424 11.8793 6.18424 11.9193C5.16425 12.1193 4.56425 12.9993 4.68425 14.1393C4.86425 15.1993 5.72425 15.9993 6.78424 16.0593C6.88424 16.0593 6.98424 16.0593 7.08424 16.0393C8.14424 15.8793 8.40424 14.7393 8.24424 13.6193ZM10.0042 5.61935C10.8842 4.89935 11.8042 4.25935 12.7842 3.69935C12.7842 3.69935 12.0042 2.79935 11.7642 2.71935C10.3242 2.31935 7.20424 4.47935 5.20425 7.33935C4.40425 8.49935 3.24425 10.5393 3.80425 11.5793C4.00425 11.8193 4.22425 12.0193 4.46425 12.2193C4.82425 11.6993 5.38425 11.3393 6.02424 11.2193C6.80424 9.03935 8.18424 7.09935 10.0042 5.61935ZM13.1242 15.5993C13.2042 15.9393 13.4642 16.2193 13.8042 16.2993C13.9842 16.3593 14.1442 16.4193 14.3442 16.4393C16.6242 16.8393 18.7642 15.5193 19.2442 15.1993C19.2842 15.1793 19.3042 15.1993 19.2842 15.2393C19.2642 15.2593 19.2442 15.2793 19.2442 15.2993C18.6642 16.0593 17.0842 16.9393 15.0242 16.9393C14.1242 16.9393 13.2242 16.6193 12.9042 16.1393C12.3842 15.3793 12.8842 14.2793 13.7242 14.3993C13.7242 14.3993 14.0242 14.4393 14.1042 14.4393C15.4242 14.5593 16.7642 14.3593 17.9842 13.8193C19.1442 13.2793 19.5842 12.6793 19.5242 12.1993C19.5042 12.0593 19.4242 11.9193 19.3242 11.7993C19.0042 11.5393 18.6242 11.3593 18.2242 11.2793C18.0442 11.2193 17.9242 11.1993 17.7842 11.1593C17.5442 11.0793 17.4242 11.0193 17.4042 10.5593C17.3842 10.3593 17.3642 9.67935 17.3442 9.37935C17.3242 8.87935 17.2642 8.19935 16.8442 7.91935C16.7442 7.83935 16.6042 7.79935 16.4842 7.79935C16.4042 7.79935 16.3442 7.79935 16.2642 7.81935C16.0442 7.85935 15.8642 7.97935 15.7042 8.13935C15.3042 8.49935 14.7842 8.67935 14.2442 8.63935C13.9442 8.61935 13.6442 8.57935 13.2842 8.55935C13.2242 8.55935 13.1442 8.55935 13.0842 8.53935C12.1242 8.55935 11.3442 9.27935 11.2242 10.2393C11.0242 11.6593 12.0442 12.3793 12.3442 12.8193C12.3842 12.8793 12.4242 12.9393 12.4242 13.0193C12.4242 13.0993 12.3842 13.1793 12.3242 13.2193C11.5042 14.1393 11.2042 15.4193 11.5242 16.6193C11.5642 16.7593 11.6042 16.8993 11.6642 17.0393C12.4042 18.7793 14.7242 19.5993 16.9842 18.8593C17.2842 18.7593 17.5642 18.6393 17.8442 18.4993C18.3442 18.2593 18.7842 17.9193 19.1642 17.5193C19.7442 16.9393 20.1242 16.1793 20.2642 15.3593C20.3242 14.8993 20.2242 14.7393 20.1042 14.6593C20.0042 14.5993 19.9042 14.5793 19.7842 14.5993C19.7242 14.2393 19.6242 13.8993 19.4842 13.5793C18.8442 14.0593 18.1042 14.4393 17.3242 14.6593C16.3842 14.9193 15.4242 15.0193 14.4442 14.9793C13.8242 14.9193 13.4042 14.7393 13.2442 15.2593C14.1842 15.5793 15.1842 15.6793 16.1842 15.5593C16.2042 15.5593 16.2442 15.5793 16.2442 15.5993C16.2442 15.6193 16.2242 15.6393 16.2042 15.6593C16.1242 15.6393 14.9642 16.1793 13.1242 15.5993ZM9.74424 7.37935C10.5042 6.83935 11.3842 6.45935 12.2842 6.25935C13.3242 6.01935 14.3842 6.01935 15.4242 6.25935C15.4642 6.25935 15.4842 6.19935 15.4442 6.17935C14.9042 5.89935 14.3242 5.73935 13.7042 5.71935C13.6842 5.71935 13.6642 5.69935 13.6642 5.67935V5.65935C13.7642 5.53935 13.8642 5.41935 13.9842 5.33935C14.0042 5.31935 14.0042 5.29935 13.9842 5.29935L13.9642 5.27935C13.2242 5.35935 12.5242 5.59935 11.8842 6.01935C11.8642 6.01935 11.8442 6.01935 11.8442 6.01935V5.99935C11.8842 5.81935 11.9642 5.63935 12.0642 5.45935C12.0642 5.43935 12.0642 5.41935 12.0442 5.41935H12.0242C11.1242 5.91935 10.3242 6.57935 9.66424 7.35935C9.64424 7.37935 9.64424 7.39935 9.66424 7.39935C9.70424 7.39935 9.72424 7.39935 9.74424 7.37935ZM15.7442 12.1993C15.8642 12.2793 16.0442 12.2593 16.1442 12.1393C16.2042 12.0193 16.1242 11.8793 15.9642 11.7993C15.8442 11.7193 15.6642 11.7393 15.5642 11.8593C15.5042 11.9593 15.5842 12.1193 15.7442 12.1993ZM16.2442 10.3793C16.2842 10.5793 16.3642 10.7793 16.4842 10.9393C16.6042 10.9193 16.7442 10.9193 16.8642 10.9393C16.9442 10.7193 16.9442 10.4793 16.8842 10.2593C16.7842 9.83935 16.6642 9.59935 16.4242 9.63935C16.1642 9.67935 16.1442 9.97935 16.2442 10.3793ZM16.7842 11.3393C16.6242 11.2993 16.4442 11.3793 16.3842 11.5593C16.3442 11.7193 16.4242 11.8993 16.6042 11.9593C16.7842 12.0193 16.9442 11.9193 17.0042 11.7393C17.0042 11.7193 17.0242 11.6793 17.0242 11.6593C17.0242 11.4993 16.9242 11.3593 16.7842 11.3393Z" fill="currentColor" />
-                        <path d="M12.5642 11.2989C12.5242 11.2989 12.5042 11.2789 12.5042 11.2589C12.4842 11.1789 12.6042 11.0789 12.7042 10.9789C13.0442 10.7189 13.5042 10.6789 13.8842 10.8389C14.0642 10.9189 14.2242 11.0389 14.3242 11.1989C14.3642 11.2589 14.3642 11.3189 14.3442 11.3389C14.3042 11.3789 14.2042 11.3389 14.0242 11.2589C13.8242 11.1589 13.5842 11.0989 13.3642 11.1189C13.1042 11.1589 12.8242 11.2189 12.5642 11.2989ZM14.2842 11.6589C14.1242 11.4989 13.9042 11.4189 13.7042 11.4589C13.5442 11.4789 13.4042 11.5389 13.2842 11.6389C13.2242 11.6789 13.1842 11.7389 13.1842 11.8189C13.1842 11.8389 13.1842 11.8589 13.2042 11.8589C13.2242 11.8589 13.2242 11.8789 13.2442 11.8789C13.3042 11.8789 13.3642 11.8589 13.4042 11.8389C13.6442 11.7589 13.8842 11.7189 14.1242 11.7589C14.2442 11.7789 14.2842 11.7789 14.3242 11.7389C14.3042 11.6989 14.3042 11.6789 14.2842 11.6589Z" fill="currentColor" />
-                      </svg>
-                      Mailchimp
-                    </li>
-                    <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                      <svg className="shrink-0 size-4 me-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M8.79945 0C7.47279 0.000978593 6.39908 1.07548 6.40006 2.39951C6.39908 3.72355 7.47377 4.79804 8.80043 4.79902H11.2009V2.40049C11.2019 1.07645 10.1272 0.00195719 8.79945 0ZM8.79945 6.4H2.4004C1.07371 6.40098 -0.000977873 7.47548 2.67973e-06 8.79953C-0.00195842 10.1236 1.07273 11.198 2.39942 11.2H8.79945C10.1262 11.199 11.2009 10.1245 11.1999 8.8005C11.2009 7.47547 10.1262 6.40098 8.79945 6.4Z" fill="currentColor" />
-                        <path fillRule="evenodd" clipRule="evenodd" d="M24 8.79953C24.001 7.47548 22.9263 6.40098 21.5996 6.4C20.2729 6.40098 19.1982 7.47548 19.1992 8.79953V11.2H21.5996C22.9263 11.199 24.001 10.1246 24 8.79953ZM17.6 8.79953V2.39951C17.6009 1.07645 16.5272 0.00195719 15.2006 0C13.8738 0.000978593 12.7991 1.07548 12.8001 2.39951V8.79953C12.7981 10.1236 13.8728 11.198 15.1996 11.2C16.5262 11.199 17.6009 10.1246 17.6 8.79953Z" fill="currentColor" />
-                        <path fillRule="evenodd" clipRule="evenodd" d="M15.1996 24C16.5262 23.999 17.6009 22.9245 17.5999 21.6005C17.6009 20.2765 16.5262 19.2019 15.1996 19.201H12.7992V21.6005C12.7981 22.9235 13.8729 23.9981 15.1996 24ZM15.1996 17.5991H21.5996C22.9263 17.5981 24.001 16.5236 24 15.1995C24.0019 13.8755 22.9273 12.801 21.6006 12.799H15.2006C13.8739 12.8 12.7992 13.8745 12.8002 15.1985C12.7992 16.5235 13.8729 17.5981 15.1996 17.5991Z" fill="currentColor" />
-                        <path fillRule="evenodd" clipRule="evenodd" d="M6.70464e-07 15.1995C-0.000979883 16.5236 1.07371 17.5981 2.40039 17.5991C3.72708 17.5981 4.80176 16.5236 4.80079 15.1995V12.8H2.40039C1.07371 12.801 -0.000979883 13.8755 6.70464e-07 15.1995ZM6.40006 15.1995V21.5995C6.39811 22.9235 7.47279 23.9981 8.79945 24C10.1262 23.999 11.2009 22.9245 11.1999 21.6005V15.2015C11.2018 13.8774 10.1272 12.803 8.80043 12.801C7.47279 12.801 6.39908 13.8755 6.40006 15.1995Z" fill="currentColor" />
-                      </svg>
-                      Slack
                     </li>
                   </ul>
                 </dd>
@@ -355,6 +406,12 @@ export default function Home() {
                     </li>
                     <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
                       Time management
+                    </li>
+                    <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      Coaching & Mentoring
+                    </li>
+                    <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      Critical Thinking
                     </li>
                   </ul>
                 </dd>
@@ -460,7 +517,7 @@ export default function Home() {
                     {/* Card */}
                     <a className="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-700" href="#">
                       <div className="relative flex items-center overflow-hidden">
-                        <img className="w-32 sm:w-48 h-full absolute inset-0 object-cover rounded-s-lg" src="https://images.unsplash.com/photo-1661956600655-e772b2b97db4?q=80&w=560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blog Image"/>
+                        <img className="w-32 sm:w-48 h-full absolute inset-0 object-cover rounded-s-lg" src="https://images.unsplash.com/photo-1661956600655-e772b2b97db4?q=80&w=560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blog Image" />
 
                         <div className="grow p-4 ms-32 sm:ms-48">
                           <div className="min-h-24 flex flex-col justify-center">
@@ -625,103 +682,6 @@ export default function Home() {
           </div>
           {/* End Education */}
 
-          {/* Articles */}
-          <div className="my-10 sm:my-14">
-            <h2 className="mb-5 font-medium text-gray-800 dark:text-neutral-200">
-              Articles
-            </h2>
-
-            {/* List */}
-            <ul className="space-y-10">
-              <li>
-                <p className="mb-2 text-sm text-gray-500 dark:text-neutral-500">
-                  2024
-                </p>
-                <h5 className="font-medium text-sm text-gray-800 dark:text-neutral-200">
-                  The complete guide to OKRs
-                </h5>
-                <p className="mt-1 text-sm text-gray-500 dark:text-neutral-500">
-                  How to make objectives and key results work for your company.
-                </p>
-                <p className="mt-1">
-                  <a className="text-sm text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="#">
-                    Continue reading
-                  </a>
-                </p>
-              </li>
-
-              <li>
-                <p className="mb-2 text-sm text-gray-500 dark:text-neutral-500">
-                  2024
-                </p>
-                <h5 className="font-medium text-sm text-gray-800 dark:text-neutral-200">
-                  Enhancement in Customer Engagement
-                </h5>
-                <p className="mt-1 text-sm text-gray-500 dark:text-neutral-500">
-                  With the aim of optimizing customer interactions and boosting brand loyalty, the team at Preline leveraged Mailchimps powerful tools and expertise to deliver exceptional results.
-                </p>
-                <p className="mt-1">
-                  <a className="text-sm text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="#">
-                    Continue reading
-                  </a>
-                </p>
-              </li>
-
-              <li>
-                <p className="mb-2 text-sm text-gray-500 dark:text-neutral-500">
-                  2023
-                </p>
-                <h5 className="font-medium text-sm text-gray-800 dark:text-neutral-200">
-                  How Google Assistant now helps you record stories for kids
-                </h5>
-                <p className="mt-1 text-sm text-gray-500 dark:text-neutral-500">
-                  Google is constantly updating its consumer AI, Google Assistant, with new features.
-                </p>
-                <p className="mt-1">
-                  <a className="text-sm text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="#">
-                    Continue reading
-                  </a>
-                </p>
-              </li>
-            </ul>
-            {/* End List */}
-          </div>
-          {/* End Articles */}
-
-          {/* Subscribe */}
-          <div className="my-10 sm:my-14">
-            <h2 className="mb-5 font-medium text-gray-800 dark:text-neutral-200">
-              Subscribe
-            </h2>
-
-            {/* Input */}
-            <form>
-              <div className="p-1.5 flex flex-col sm:flex-row items-center gap-2 border border-gray-200 rounded-lg dark:border-neutral-700">
-                <div className="relative w-full">
-                  <label htmlFor="hero-input" className="sr-only">Subscribe</label>
-                  <div className="absolute inset-y-0 start-0 flex items-center pointer-events-none z-20 ps-3">
-                    <svg className="shrink-0 size-4 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <rect width="20" height="16" x="2" y="4" rx="2" />
-                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                    </svg>
-                  </div>
-                  <input type="text" id="hero-input" name="hero-input" className="py-2 ps-9 pe-3 block w-full border-transparent rounded-lg text-sm focus:border-transparent focus:ring-transparent disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:text-neutral-400 dark:placeholder-neutral-500" placeholder="Enter your email"/>
-                </div>
-                <a className="w-full sm:w-auto whitespace-nowrap py-2 px-2.5 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-md border border-transparent bg-gray-800 text-white hover:bg-gray-900 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:bg-white dark:text-neutral-800 dark:hover:bg-neutral-200" href="#">
-                  Join
-                  <svg className="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-              <p className="mt-2 text-xs text-gray-500 dark:text-neutral-500">
-                No spam, unsubscribe at any time.
-              </p>
-            </form>
-            {/* End Input */}
-          </div>
-          {/* End Subscribe */}
         </div>
       </main>
     </Main>
