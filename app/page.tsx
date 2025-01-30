@@ -1,8 +1,19 @@
-// import Image from "next/image";
 "use client";
+// import Image from "next/image";
+import DecryptedText from "./components/Text/DecriptedText";
+import AnimatedContent from "./components/Animation/AnimatedContent";
+import { TypewriterEffectSmoothDemo } from "./components/Text/TypewriterEffectSmooth";
+
 export default function Home() {
   return (
-    <>
+    <AnimatedContent
+      distance={70}
+      direction="vertical"
+      reverse={false}
+      config={{ tension: 50, friction: 35 }}
+      initialOpacity={0.8}
+      animateOpacity={true}
+    >
       {/* Header */}
       <header className="sticky top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
         <nav className="mt-4 relative max-w-4xl w-full bg-white border border-gray-200 rounded-[2rem] mx-2 py-2.5 md:flex md:items-center md:justify-between md:py-0 md:px-4 md:mx-auto dark:bg-neutral-900 dark:border-neutral-700">
@@ -58,9 +69,19 @@ export default function Home() {
             </div>
 
             <div className="grow">
-              <h1 className="text-lg font-medium text-gray-800 dark:text-neutral-200">
-                Eliana Garcia
-              </h1>
+              {/* <DecryptedText 
+                text="Aidil Baihaqi"
+                speed={140}
+                maxIterations={10}
+                sequential={true}
+                characters="ABCDEF?!"
+                className="revealed text-lg font-medium text-gray-800 dark:text-neutral-200"
+                parentClassName="all-letters"
+                encryptedClassName="encrypted"
+                animateOn="view"
+                revealDirection="start"
+              /> */}
+              <TypewriterEffectSmoothDemo />
               <p className="text-sm text-gray-600 dark:text-neutral-400">
                 Graphic Designer, Web designer/developer
               </p>
@@ -830,6 +851,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </>
+    </AnimatedContent>
   );
 }
