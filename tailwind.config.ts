@@ -5,7 +5,7 @@ export default {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    'node_modules/preline/dist/*.js',
+    './node_modules/preline/preline.js',
   ],
   theme: {
     extend: {
@@ -16,6 +16,7 @@ export default {
     },
   },
   plugins: [
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
     require('preline/plugin'),
   ],
 } satisfies Config;
