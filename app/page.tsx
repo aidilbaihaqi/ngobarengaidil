@@ -30,7 +30,7 @@ export default function Home() {
               Passionate and results-driven Junior Programmer with over 3 years of experience in software engineering. Skilled in web development, mentoring junior developers, and delivering high-quality freelance projects for diverse clients, including individuals, businesses, and government organizations. Adept at team collaboration, agile methodologies, and leveraging modern tools to solve complex problems efficiently.
             </p>
 
-            <ul className="mt-5 flex flex-col gap-y-3">
+            {/* <ul className="mt-5 flex flex-col gap-y-3">
               <li className="flex items-center gap-x-2.5">
                 <svg className="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect width="20" height="16" x="2" y="4" rx="2" />
@@ -108,7 +108,7 @@ export default function Home() {
                   aidilbaihaqi
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
           {/* End About */}
 
