@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   keywords: "aidil baihaqi, programming tips, lyceum, risalah maritim, belajar programming",
   creator: "Aidil Baihaqi",
   applicationName: "ngobarengaidil",
-  authors: {name: "Aidil Baihaqi"}
+  authors: [{name: "Aidil Baihaqi"}]
 };
 
 export default function RootLayout({
