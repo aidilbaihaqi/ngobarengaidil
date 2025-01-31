@@ -7,7 +7,7 @@ export default function Footer() {
           <div className="flex flex-wrap justify-between items-center gap-2">
             <div>
               <p className="text-xs text-gray-600 dark:text-neutral-400">
-                © 2024 Preline Labs.
+                © 2025 Aidil Baihaqi
               </p>
             </div>
             {/* End Col */}
@@ -15,18 +15,23 @@ export default function Footer() {
             {/* List */}
             <ul className="flex flex-wrap items-center">
               <li className="inline-block relative pe-4 text-xs last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-1.5 before:-translate-y-1/2 before:size-[3px] before:rounded-full before:bg-gray-400 dark:text-neutral-500 dark:before:bg-neutral-600">
-                <a className="text-xs text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="#">
-                  X (Twitter)
+                <a className="text-xs text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="https://www.instagram.com/albyhaqee">
+                  Instagram
                 </a>
               </li>
               <li className="inline-block relative pe-4 text-xs last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-1.5 before:-translate-y-1/2 before:size-[3px] before:rounded-full before:bg-gray-400 dark:text-neutral-500 dark:before:bg-neutral-600">
-                <a className="text-xs text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="#">
-                  Dribbble
+                <a className="text-xs text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="https://www.linkedin.com/in/aidilbaihaqi/">
+                  Linkedin
                 </a>
               </li>
               <li className="inline-block pe-4 text-xs">
-                <a className="text-xs text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="#">
+                <a className="text-xs text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="https://github.com/aidilbaihaqi/">
                   Github
+                </a>
+              </li>
+              <li className="inline-block pe-4 text-xs">
+                <a className="text-xs text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="https://www.youtube.com/@albyhaqee">
+                  Youtube
                 </a>
               </li>
               <li className="inline-block">
