@@ -7,6 +7,7 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     './node_modules/preline/preline.js',
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {

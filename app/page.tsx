@@ -25,7 +25,7 @@ export default function Home() {
             <div className="grow">
               <TypewriterEffectSmoothDemo />
               <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400">
-                Web Developer | Content Creator | Awardee of Beasiswa Pendidikan Indonesia
+                Web Developer | Content Creator
               </p>
             </div>
           </div>
@@ -33,7 +33,7 @@ export default function Home() {
 
           {/* About */}
           <div className="mt-8">
-            <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 leading-6">
+            <p className="text-sm text-gray-600 dark:text-neutral-400 leading-6">
               Passionate and results-driven Junior Programmer with over 3 years of experience in software engineering. Skilled in web development, mentoring junior developers, and delivering high-quality freelance projects for diverse clients, including individuals, businesses, and government organizations. Adept at team collaboration, agile methodologies, and leveraging modern tools to solve complex problems efficiently.
             </p>
           </div>
@@ -535,11 +535,11 @@ export default function Home() {
           {/* End Education */}
 
           {/* Honor and Awards */}
-          <div className="mt-10 sm:mt-14">
+          {/* <div className="mt-10 sm:mt-14">
             <h2 className="mb-3 font-medium text-gray-800 dark:text-neutral-200">
               Honor and Awards
             </h2>
-          </div>
+          </div> */}
           {/* End Honor and Awards */}
 
         </div>
