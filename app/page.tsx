@@ -54,7 +54,7 @@ export default function Home() {
                 <dd>
                   <ul>
                     <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                      <Image width={15} height={15} alt="Figma" className="me-1" src="https://skillicons.dev/icons?i=figma&theme=light"/>
+                      <Image width={15} height={15} alt="Figma" className="me-1" src="https://skillicons.dev/icons?i=figma"/>
                       Figma
                     </li>
                     <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
@@ -91,39 +91,39 @@ export default function Home() {
                 <dd>
                   <ul>
                     <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                      <Image width={15} height={15} alt="Laravel" className="me-1" src="https://skillicons.dev/icons?i=laravel&theme=light"/>
+                      <Image width={15} height={15} alt="Laravel" className="me-1" src="https://skillicons.dev/icons?i=laravel"/>
                       Laravel
                     </li>
                     <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                      <Image width={15} height={15} alt="Node.js" className="me-1" src="https://skillicons.dev/icons?i=nodejs&theme=light"/>
+                      <Image width={15} height={15} alt="Node.js" className="me-1" src="https://skillicons.dev/icons?i=nodejs"/>
                       Node.js
                     </li>
                     <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                      <Image width={15} height={15} alt="Tailwind CSS" className="me-1" src="https://skillicons.dev/icons?i=tailwind&theme=light"/>
+                      <Image width={15} height={15} alt="Tailwind CSS" className="me-1" src="https://skillicons.dev/icons?i=tailwind"/>
                       Tailwind CSS
                     </li>
                     <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                      <Image width={15} height={15} alt="React.js" className="me-1" src="https://skillicons.dev/icons?i=react&theme=light"/>
+                      <Image width={15} height={15} alt="React.js" className="me-1" src="https://skillicons.dev/icons?i=react"/>
                       React
                     </li>
                     <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                      <Image width={15} height={15} alt="Express.js" className="me-1" src="https://skillicons.dev/icons?i=express&theme=light"/>
+                      <Image width={15} height={15} alt="Express.js" className="me-1" src="https://skillicons.dev/icons?i=express"/>
                       Express.js
                     </li>
                     <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                      <Image width={15} height={15} alt="Next.js" className="me-1" src="https://skillicons.dev/icons?i=nextjs&theme=light"/>
+                      <Image width={15} height={15} alt="Next.js" className="me-1" src="https://skillicons.dev/icons?i=nextjs"/>
                       Next.js
                     </li>
                     <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                      <Image width={15} height={15} alt="Python" className="me-1" src="https://skillicons.dev/icons?i=python&theme=light"/>
+                      <Image width={15} height={15} alt="Python" className="me-1" src="https://skillicons.dev/icons?i=python"/>
                       Python
                     </li>
                     <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                      <Image width={15} height={15} alt="MySQL" className="me-1" src="https://skillicons.dev/icons?i=mysql&theme=light"/>
+                      <Image width={15} height={15} alt="MySQL" className="me-1" src="https://skillicons.dev/icons?i=mysql"/>
                       MySQL
                     </li>
                     <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                      <Image width={15} height={15} alt="Git" className="me-1" src="https://skillicons.dev/icons?i=git&theme=light"/>
+                      <Image width={15} height={15} alt="Git" className="me-1" src="https://skillicons.dev/icons?i=git"/>
                       Git
                     </li>
                   </ul>
