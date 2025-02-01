@@ -24,7 +24,7 @@ export default function Home() {
             
             <div className="grow">
               <TypewriterEffectSmoothDemo />
-              <p className="text-sm text-gray-600 dark:text-neutral-400">
+              <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400">
                 Web Developer | Content Creator | Awardee of Beasiswa Pendidikan Indonesia
               </p>
             </div>
@@ -33,7 +33,7 @@ export default function Home() {
 
           {/* About */}
           <div className="mt-8">
-            <p className="text-sm text-gray-600 dark:text-neutral-400">
+            <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 leading-6">
               Passionate and results-driven Junior Programmer with over 3 years of experience in software engineering. Skilled in web development, mentoring junior developers, and delivering high-quality freelance projects for diverse clients, including individuals, businesses, and government organizations. Adept at team collaboration, agile methodologies, and leveraging modern tools to solve complex problems efficiently.
             </p>
           </div>
@@ -215,11 +215,11 @@ export default function Home() {
                     Nov 2024 - Present
                   </h3>
 
-                  <p className="font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200">
                     Full Stack Developer at Risalah Maritim, Student Journalism Organization
                   </p>
 
-                  <p className="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                  <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400">
                   Risalah Maritim is a student journalism organization that serves as a news portal, media platform, and creative space for students. It publishes news, opinions, articles, and literary works while acting as a bridge for students to voice their perspectives to the wider world.
                   </p>
 
@@ -273,11 +273,11 @@ export default function Home() {
                     Aug 2024 - Nov 2024
                   </h3>
 
-                  <p className="font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200">
                     Informatic Club Mentor at SMA Negeri 1 Bintan Timur
                   </p>
 
-                  <p className="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                  <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400">
                   Mentored students on programming fundamentals, operating systems, Python, basic artificial
                   intelligence, and computer vision.
                   </p>
@@ -329,11 +329,11 @@ export default function Home() {
                     Dec 2023 - Jul 2024
                   </h3>
 
-                  <p className="font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200">
                     Content Creator at CV Lukan Group
                   </p>
 
-                  <p className="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                  <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400">
                   Created programming course videos for the Lukan Anak IT YouTube channel, simplifying complex
                   topics for beginner programmers.
                   </p>
@@ -376,11 +376,11 @@ export default function Home() {
                     May 2023 - Jun 2023
                   </h3>
 
-                  <p className="font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200">
                     Full Stack Developer Internship at PT Investree x Rakamin Academy
                   </p>
 
-                  <p className="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                  <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400">
                   Completed several dynamic web and REST API projects using Laravel 10 and related packages,
                   incorporating Laravel UI with React JS.
                   </p>
@@ -402,7 +402,7 @@ export default function Home() {
                             <h3 className="font-semibold text-sm text-gray-800 dark:text-neutral-300">
                               PT Investree Randhika Jaya, Investree
                             </h3>
-                            <p className="mt-1 text-sm text-gray-500 dark:text-neutral-500">
+                            <p className="leading-6 mt-1 text-sm text-gray-500 dark:text-neutral-500">
                             A financial technology (fintech) company based in Jakarta, Indonesia. Founded in 2015, Investree focuses on empowering Micro, Small, and Medium Enterprises (MSMEs) by providing easier and more affordable access to capital through a technology-based lending platform.
                             </p>
                           </div>
@@ -447,11 +447,11 @@ export default function Home() {
                     Jan 2022 - Juli 2022
                   </h3>
 
-                  <p className="font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200">
                     Back End Developer Internship at PT Tunas Idea Indonesia
                   </p>
 
-                  <p className="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                  <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400">
                   Design, develop, and maintain RESTful APIs to facilitate secure and efficient data exchange between frontend applications and the backend.
                   </p>
 
@@ -499,11 +499,11 @@ export default function Home() {
                   2023 - Present
                 </h3>
 
-                <p className="font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200">
                   Bachelor`s Degree in Informatics Engineering
                 </p>
 
-                <p className="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400">
                   Universitas Maritim Raja Ali Haji
                 </p>
               </div>
@@ -521,11 +521,11 @@ export default function Home() {
                   2019 - 2023
                 </h3>
 
-                <p className="font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200">
                   High School Diploma in Software Engineering
                 </p>
 
-                <p className="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400">
                   SMK Negeri 1 Bintan Timur
                 </p>
               </div>
