@@ -1,14 +1,19 @@
-"use client";
+"use client"; // Wajib ditambahkan untuk memastikan ini komponen client-side
 
 import { useEffect, useState } from "react";
 
 const ThemeToggle = () => {
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    // Ambil preferensi tema dari localStorage atau default ke dark mode
-    return localStorage.getItem("hs_theme") === "light" ? false : true;
-  });
+  const [isDarkMode, setIsDarkMode] = useState<boolean | null>(null); // Gunakan null sebagai default
 
   useEffect(() => {
+    // Ambil preferensi tema dari localStorage setelah komponen di-mount
+    const savedTheme = localStorage.getItem("hs_theme");
+    setIsDarkMode(savedTheme === "light" ? false : true);
+  }, []);
+
+  useEffect(() => {
+    if (isDarkMode === null) return; // Hindari eksekusi sebelum state terinisialisasi
+
     const html = document.documentElement;
     if (isDarkMode) {
       html.classList.add("dark");
@@ -18,6 +23,10 @@ const ThemeToggle = () => {
       localStorage.setItem("hs_theme", "light");
     }
   }, [isDarkMode]);
+
+  if (isDarkMode === null) {
+    return null; // Hindari render sebelum state terinisialisasi
+  }
 
   return (
     <>
