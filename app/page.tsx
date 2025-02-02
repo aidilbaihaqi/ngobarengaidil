@@ -1,6 +1,7 @@
 "use client";
 
 import { BentoGridThirdDemo } from "./components/Layout/BentoGrid";
+import InfiniteTestimonials from "./components/Layout/InfiniteTestimonials";
 import Main from "./components/Layout/Main";
 import { FlipWordsDemo } from "./components/Text/FlipWords";
 
@@ -46,7 +47,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-
+          <InfiniteTestimonials />
           {/* End Testimonials Section */}
         </div>
       </main>
