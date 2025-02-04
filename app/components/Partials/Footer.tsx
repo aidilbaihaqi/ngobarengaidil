@@ -35,6 +35,11 @@ export default function Footer() {
                   Youtube
                 </a>
               </li>
+              <li className="inline-block pe-4 text-xs">
+                <a className="text-xs text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="https://saweria.co/aidilbaihaqi">
+                  Saweria
+                </a>
+              </li>
               <li className="inline-block">
                 {/* Dark Mode */}
                 <ThemeToggle />
