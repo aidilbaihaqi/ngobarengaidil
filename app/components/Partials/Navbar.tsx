@@ -2,12 +2,10 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 const Navbar = () => {
-  const router = useRouter();
+  const router = typeof window !== 'undefined' ? useRouter() : null;
   const currentPath = router?.pathname || '/';
 
-  const isActiveRoute = (targetPath: string): boolean => {
-    return currentPath === targetPath;
-  };
+  const isActiveRoute = (targetPath) => currentPath === targetPath;
 
   return (
     <div

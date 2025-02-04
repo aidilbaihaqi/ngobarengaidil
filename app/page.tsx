@@ -57,7 +57,7 @@ export default function Home() {
           <div className="border-t dark:border-gray-400 dark:border-opacity-10 mt-10"></div>
 
           {/* Testimonials Section */}
-          <div className="mt-16 md:text-center">
+          <div className="mt-10 md:text-center">
             <div className="mb-5">
               <h4 className="text-3xl md:text-4xl lg:leading-tight max-w-5xl mx-auto md:text-center tracking-tight font-medium text-black dark:text-white">
                 What people say about my services
