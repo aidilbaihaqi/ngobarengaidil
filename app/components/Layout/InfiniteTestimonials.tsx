@@ -44,7 +44,7 @@ const InfiniteTestimonials = () => {
   };
 
   return (
-    <div className="relative w-full overflow-hidden bg-transparent">
+    <div className="relative w-full py-1 overflow-hidden bg-transparent">
       <div className="w-full flex items-center">
         <motion.div
           className="flex space-x-8"
@@ -53,7 +53,7 @@ const InfiniteTestimonials = () => {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="min-w-[300px] bg-white dark:bg-black border-neutral-100 dark:border-white/[0.2] shadow-lg rounded-2xl p-6 text-gray-800 dark:text-gray-200"
+              className="min-w-[300px] bg-white dark:bg-black border-neutral-100 dark:border-white/[0.2] shadow-md rounded-2xl p-6 text-gray-800 dark:text-gray-200"
             >
               <p className="text-sm italic">"{testimonial.text}"</p>
               <div className="mt-4">
@@ -67,7 +67,7 @@ const InfiniteTestimonials = () => {
           {testimonials.map((testimonial) => (
             <div
               key={`${testimonial.id}-clone`}
-              className="min-w-[300px] bg-white dark:bg-black border-neutral-100 dark:border-white/[0.2] shadow-lg rounded-2xl p-6 text-gray-800 dark:text-gray-200"
+              className="min-w-[300px] bg-white dark:bg-black border-neutral-100 dark:border-white/[0.2] shadow-md rounded-2xl p-6 text-gray-800 dark:text-gray-200"
             >
               <p className="text-sm italic">"{testimonial.text}"</p>
               <div className="mt-4">

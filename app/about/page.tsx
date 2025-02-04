@@ -80,6 +80,11 @@ export default function Home() {
 
                       Adobe Premiere Pro
                     </li>
+                    <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <Image width={15} height={15} alt="Adobe Premiere Pro" className="me-1" src="https://skillicons.dev/icons?i=ae"/>
+
+                      Adobe After Effect
+                    </li>
                   </ul>
                 </dd>
               </dl>
@@ -90,6 +95,22 @@ export default function Home() {
                 </dt>
                 <dd>
                   <ul>
+                    <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <Image width={15} height={15} alt="Laravel" className="me-1" src="https://skillicons.dev/icons?i=html"/>
+                      HTML
+                    </li>
+                    <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <Image width={15} height={15} alt="Laravel" className="me-1" src="https://skillicons.dev/icons?i=css"/>
+                      CSS
+                    </li>
+                    <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <Image width={15} height={15} alt="Laravel" className="me-1" src="https://skillicons.dev/icons?i=js"/>
+                      Javascript
+                    </li>
+                    <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <Image width={15} height={15} alt="Laravel" className="me-1" src="https://skillicons.dev/icons?i=ts"/>
+                      Typescript
+                    </li>
                     <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
                       <Image width={15} height={15} alt="Laravel" className="me-1" src="https://skillicons.dev/icons?i=laravel"/>
                       Laravel
