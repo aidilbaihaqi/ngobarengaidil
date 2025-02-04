@@ -13,7 +13,7 @@ export default function Home() {
     <Main>
       {/* Main Content */}
       <main id="content">
-        <div className="w-full max-w-4xl mx-auto px-4 pt-10 sm:px-6 lg:px-8">
+        <div className="w-full max-w-4xl mb-10 mx-auto px-4 pt-10 sm:px-6 lg:px-8">
           {/* About */}
           <div className="md:text-center">
             <motion.div

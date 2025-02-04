@@ -53,9 +53,9 @@ const InfiniteTestimonials = () => {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="min-w-[300px] bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 text-gray-800 dark:text-gray-200"
+              className="min-w-[300px] bg-white dark:bg-black border-neutral-100 dark:border-white/[0.2] shadow-lg rounded-2xl p-6 text-gray-800 dark:text-gray-200"
             >
-              <p className="text-lg italic">"{testimonial.text}"</p>
+              <p className="text-sm italic">"{testimonial.text}"</p>
               <div className="mt-4">
                 <h4 className="font-semibold">{testimonial.name}</h4>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -67,9 +67,9 @@ const InfiniteTestimonials = () => {
           {testimonials.map((testimonial) => (
             <div
               key={`${testimonial.id}-clone`}
-              className="min-w-[300px] bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 text-gray-800 dark:text-gray-200"
+              className="min-w-[300px] bg-white dark:bg-black border-neutral-100 dark:border-white/[0.2] shadow-lg rounded-2xl p-6 text-gray-800 dark:text-gray-200"
             >
-              <p className="text-lg italic">"{testimonial.text}"</p>
+              <p className="text-sm italic">"{testimonial.text}"</p>
               <div className="mt-4">
                 <h4 className="font-semibold">{testimonial.name}</h4>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
