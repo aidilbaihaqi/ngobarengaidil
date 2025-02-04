@@ -296,10 +296,10 @@ const SkeletonFive = () => {
 };
 const items = [
   {
-    title: "AI Content Generation",
+    title: "Mentoring Online and Offline",
     description: (
       <span className="text-sm">
-        Experience the power of AI in generating unique content.
+        I`ll teach you about programming language
       </span>
     ),
     header: <SkeletonOne />,
@@ -307,32 +307,34 @@ const items = [
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "Automated Proofreading",
+    title: "Assignment Tutor",
     description: (
       <span className="text-sm">
-        Let AI handle the proofreading of your documents.
+        Help you to finish about your paper, report, essay, and presentation
       </span>
     ),
     header: <SkeletonTwo />,
     className: "md:col-span-1",
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
+
   {
-    title: "Contextual Suggestions",
+    title: "Fast and Cheap Website or Android Application",
     description: (
       <span className="text-sm">
-        Get AI-powered suggestions based on your writing context.
+        Build your dream website and Android app with me!
       </span>
     ),
-    header: <SkeletonThree />,
+    header: <SkeletonFive />,
     className: "md:col-span-1",
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
   },
+  
   {
-    title: "Sentiment Analysis",
+    title: "Advertising",
     description: (
       <span className="text-sm">
-        Understand the sentiment of your text with AI analysis.
+        Provides logo, poster, banner and other graphic design assets.
       </span>
     ),
     header: <SkeletonFour />,
@@ -340,15 +342,16 @@ const items = [
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
   },
 
+
   {
-    title: "Text Summarization",
+    title: "Source Code Market",
     description: (
       <span className="text-sm">
-        Summarize your lengthy documents with AI technology.
+        Some program code that I have worked on
       </span>
     ),
-    header: <SkeletonFive />,
+    header: <SkeletonThree />,
     className: "md:col-span-1",
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
 ];
