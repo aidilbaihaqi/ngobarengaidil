@@ -25,7 +25,7 @@ export default function Home() {
             <div className="grow">
               <TypewriterEffectSmoothDemo />
               <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400">
-                Web Developer | Content Creator
+                Software Engineer | Content Creator | IT Mentor 
               </p>
             </div>
           </div>
