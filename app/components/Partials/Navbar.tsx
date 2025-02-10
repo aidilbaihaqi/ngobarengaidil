@@ -16,7 +16,7 @@ const navLinks = [
 export default function AuthLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }) {
   const pathname = usePathname();
   return (
@@ -31,6 +31,7 @@ export default function AuthLayout({
             </Link>
           )
         })}
+        {children}
       </div>
     </div>
   )
