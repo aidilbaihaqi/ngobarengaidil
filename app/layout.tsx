@@ -4,6 +4,8 @@ import "./globals.css";
 import PrelineScript from "./components/PrelineScript";
 import { GridBackground } from "./components/ui/grid-background";
 
+import CursorSparkle from "./components/ui/cursor-sparkle";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -33,7 +35,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-neutral-900`}
       >
+
         <GridBackground />
+        <CursorSparkle />
         {children}
 
       <PrelineScript />
