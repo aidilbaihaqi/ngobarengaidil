@@ -4,15 +4,16 @@ import Main from "@/app/components/Layout/Main";
 import Image from "next/image";
 import { TypewriterEffectSmoothDemo } from "@/app/components/Text/TypewriterEffectSmooth";
 
+
 export default function Home() {
   return (
     <Main>
       {/* Main Content */}
       <main id="content">
-        <div className="w-full max-w-4xl mx-auto pt-5 md:pt-16 px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-5xl mx-auto pt-5 md:pt-16 px-4 sm:px-6 lg:px-8 text-left">
           {/* Profile */}
-          <div className="flex items-center gap-x-3">
-            <div className="shrink-0">
+          <div className="flex flex-col items-start gap-x-3">
+            <div className="shrink-0 mb-4">
             <Image
               src={"/image/aidil.jpg"}
               alt="Aidil Baihaqi"
@@ -22,9 +23,9 @@ export default function Home() {
             />
             </div>
             
-            <div className="grow">
+            <div className="grow text-left">
               <TypewriterEffectSmoothDemo />
-              <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400">
+              <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left">
                 Software Engineer | Content Creator | IT Mentor 
               </p>
             </div>
@@ -32,24 +33,24 @@ export default function Home() {
           {/* End Profile */}
 
           {/* About */}
-          <div className="mt-8">
-            <p className="text-sm text-gray-600 dark:text-neutral-400 leading-6">
-              Passionate and results-driven Junior Programmer with over 3 years of experience in software engineering. Skilled in web development, mentoring junior developers, and delivering high-quality freelance projects for diverse clients, including individuals, businesses, and government organizations. Adept at team collaboration, agile methodologies, and leveraging modern tools to solve complex problems efficiently.
+          <div className="mt-8 text-left">
+            <p className="text-sm text-gray-600 dark:text-neutral-400 leading-6 text-left">
+              Passionate and results-driven Junior Programmer with over 5 years of experience in software engineering. Skilled in web development, mentoring junior developers, and delivering high-quality freelance projects for diverse clients, including individuals, businesses, and government organizations. Adept at team collaboration, agile methodologies, and leveraging modern tools to solve complex problems efficiently.
             </p>
           </div>
           {/* End About */}
 
           {/* Skills */}
-          <div className="my-10 sm:my-14">
-            <h2 className="mb-5 font-medium text-gray-800 dark:text-neutral-200">
+          <div className="mt-10 sm:mt-14 text-left">
+            <h2 className="mb-5 font-medium text-gray-800 dark:text-neutral-200 text-left">
               Skills
             </h2>
 
             {/* List */}
-            <div className="space-y-3">
-              <dl className="flex flex-col sm:flex-row gap-1">
-                <dt className="min-w-40">
-                  <span className="block text-sm text-gray-500 dark:text-neutral-500">Design Tools:</span>
+            <div className="space-y-3 text-left">
+              <dl className="flex flex-col sm:flex-row gap-1 justify-start">
+                <dt className="min-w-40 text-left">
+                  <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">Design Tools:</span>
                 </dt>
                 <dd>
                   <ul>
@@ -69,9 +70,9 @@ export default function Home() {
                 </dd>
               </dl>
 
-              <dl className="flex flex-col sm:flex-row gap-1">
-                <dt className="min-w-40">
-                  <span className="block text-sm text-gray-500 dark:text-neutral-500">Filming Tools:</span>
+              <dl className="flex flex-col sm:flex-row gap-1 justify-start">
+                <dt className="min-w-40 text-left">
+                  <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">Filming Tools:</span>
                 </dt>
                 <dd>
                   <ul>
@@ -89,9 +90,9 @@ export default function Home() {
                 </dd>
               </dl>
 
-              <dl className="flex flex-col sm:flex-row gap-1">
-                <dt className="min-w-40">
-                  <span className="block text-sm text-gray-500 dark:text-neutral-500">Development:</span>
+              <dl className="flex flex-col sm:flex-row gap-1 justify-start">
+                <dt className="min-w-40 text-left">
+                  <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">Development:</span>
                 </dt>
                 <dd>
                   <ul>
@@ -147,13 +148,41 @@ export default function Home() {
                       <Image width={15} height={15} alt="Git" className="me-1" src="https://skillicons.dev/icons?i=git"/>
                       Git
                     </li>
+                    <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <Image width={15} height={15} alt="Bootstrap" className="me-1" src="https://skillicons.dev/icons?i=bootstrap"/>
+                      Bootstrap
+                    </li>
+                    <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <Image width={15} height={15} alt="Remix" className="me-1" src="https://skillicons.dev/icons?i=remix"/>
+                      Remix JS
+                    </li>
+                    <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <Image width={15} height={15} alt="MongoDB" className="me-1" src="https://skillicons.dev/icons?i=mongodb"/>
+                      MongoDB
+                    </li>
+                    <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <Image width={15} height={15} alt="Firebase" className="me-1" src="https://skillicons.dev/icons?i=firebase"/>
+                      Firebase
+                    </li>
+                    <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <Image width={15} height={15} alt="GitHub" className="me-1" src="https://skillicons.dev/icons?i=github"/>
+                      GitHub
+                    </li>
+                    <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <Image width={15} height={15} alt="VS Code" className="me-1" src="https://skillicons.dev/icons?i=vscode"/>
+                      VS Code
+                    </li>
+                    <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <Image width={15} height={15} alt="Netlify" className="me-1" src="https://skillicons.dev/icons?i=netlify"/>
+                      Netlify
+                    </li>
                   </ul>
                 </dd>
               </dl>
 
-              <dl className="flex flex-col sm:flex-row gap-1">
-                <dt className="min-w-40">
-                  <span className="block text-sm text-gray-500 dark:text-neutral-500">Design Expertise:</span>
+              <dl className="flex flex-col sm:flex-row gap-1 justify-start">
+                <dt className="min-w-40 text-left">
+                  <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">Design Expertise:</span>
                 </dt>
                 <dd>
                   <ul>
@@ -173,9 +202,9 @@ export default function Home() {
                 </dd>
               </dl>
 
-              <dl className="flex flex-col sm:flex-row gap-1">
-                <dt className="min-w-40">
-                  <span className="block text-sm text-gray-500 dark:text-neutral-500">Soft Skills:</span>
+              <dl className="flex flex-col sm:flex-row gap-1 justify-start">
+                <dt className="min-w-40 text-left">
+                  <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">Soft Skills:</span>
                 </dt>
                 <dd>
                   <ul>
@@ -206,8 +235,8 @@ export default function Home() {
           {/* End Skills */}
 
           {/* Experience */}
-          <div className="mt-10 sm:mt-14">
-            <h2 className="mb-5 font-medium text-gray-800 dark:text-neutral-200">
+          <div className="mt-10 sm:mt-14 text-left">
+            <h2 className="mb-5 font-medium text-gray-800 dark:text-neutral-200 text-left">
               Experience
             </h2>
 
@@ -231,16 +260,16 @@ export default function Home() {
                 {/* End Icon */}
 
                 {/* Right Content */}
-                <div className="grow pb-8 group-last:pb-0">
-                  <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400">
+                <div className="grow pb-8 group-last:pb-0 text-left">
+                  <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
                     Nov 2024 - Present
                   </h3>
 
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
                     Full Stack Developer at Risalah Maritim, Student Journalism Organization
                   </p>
 
-                  <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                  <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
                   Risalah Maritim is a student journalism organization that serves as a news portal, media platform, and creative space for students. It publishes news, opinions, articles, and literary works while acting as a bridge for students to voice their perspectives to the wider world.
                   </p>
 
@@ -289,16 +318,16 @@ export default function Home() {
                 {/* End Icon */}
 
                 {/* Right Content */}
-                <div className="grow pb-8 group-last:pb-0">
-                  <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400">
+                <div className="grow pb-8 group-last:pb-0 text-left">
+                  <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
                     Aug 2024 - Nov 2024
                   </h3>
 
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
                     Informatic Club Mentor at SMA Negeri 1 Bintan Timur
                   </p>
 
-                  <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                  <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
                   Mentored students on programming fundamentals, operating systems, Python, basic artificial
                   intelligence, and computer vision.
                   </p>
@@ -345,16 +374,16 @@ export default function Home() {
                 {/* End Icon */}
 
                 {/* Right Content */}
-                <div className="grow pb-8 group-last:pb-0">
-                  <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400">
+                <div className="grow pb-8 group-last:pb-0 text-left">
+                  <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
                     Dec 2023 - Jul 2024
                   </h3>
 
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
                     Content Creator at CV Lukan Group
                   </p>
 
-                  <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                  <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
                   Created programming course videos for the Lukan Anak IT YouTube channel, simplifying complex
                   topics for beginner programmers.
                   </p>
@@ -392,16 +421,16 @@ export default function Home() {
                 {/* End Icon */}
 
                 {/* Right Content */}
-                <div className="grow pb-8 group-last:pb-0">
-                  <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400">
+                <div className="grow pb-8 group-last:pb-0 text-left">
+                  <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
                     May 2023 - Jun 2023
                   </h3>
 
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
                     Full Stack Developer Internship at PT Investree x Rakamin Academy
                   </p>
 
-                  <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                  <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
                   Completed several dynamic web and REST API projects using Laravel 10 and related packages,
                   incorporating Laravel UI with React JS.
                   </p>
@@ -409,17 +438,19 @@ export default function Home() {
                   <div className="mt-3">
                     {/* Card */}
                     <a className="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-700" href="#">
-                      <div className="relative flex items-center overflow-hidden">
-                        <Image
-                          src={"/image/logo-investree.svg"}
-                          width={32}
-                          height={0}
-                          alt="PT Investree"
-                          className="w-32 sm:w-48 h-full absolute inset-0 object-cover rounded-s-lg"
-                        />
+                      <div className="flex flex-col sm:flex-row items-start sm:items-center overflow-hidden">
+                        <div className="flex-shrink-0 w-full sm:w-32 md:w-48 h-24 sm:h-auto">
+                          <Image
+                            src={"/image/logo-investree.svg"}
+                            width={192}
+                            height={96}
+                            alt="PT Investree"
+                            className="w-full h-full object-cover rounded-t-lg sm:rounded-t-none sm:rounded-s-lg"
+                          />
+                        </div>
 
-                        <div className="grow p-4 ms-32 sm:ms-48">
-                          <div className="min-h-24 flex flex-col justify-center">
+                        <div className="flex-1 p-4">
+                          <div className="flex flex-col justify-center">
                             <h3 className="font-semibold text-sm text-gray-800 dark:text-neutral-300">
                               PT Investree Randhika Jaya, Investree
                             </h3>
@@ -463,16 +494,16 @@ export default function Home() {
                 {/* End Icon */}
 
                 {/* Right Content */}
-                <div className="grow pb-8 group-last:pb-0">
-                  <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400">
+                <div className="grow pb-8 group-last:pb-0 text-left">
+                  <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
                     Jan 2022 - Juli 2022
                   </h3>
 
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
                     Back End Developer Internship at PT Tunas Idea Indonesia
                   </p>
 
-                  <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                  <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
                   Design, develop, and maintain RESTful APIs to facilitate secure and efficient data exchange between frontend applications and the backend.
                   </p>
 
@@ -499,14 +530,14 @@ export default function Home() {
           {/* End Experience */}
 
           {/* Education */}
-          <div className="mt-10 sm:mt-14">
-            <h2 className="mb-3 font-medium text-gray-800 dark:text-neutral-200">
+          <div className="mt-10 sm:mt-14 text-left">
+            <h2 className="mb-3 font-medium text-gray-800 dark:text-neutral-200 text-left">
               Education
             </h2>
 
             {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700">
+              <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
 
                 <Image 
                   src={"/image/logo-umrah.png"}
@@ -516,20 +547,20 @@ export default function Home() {
                   className="shrink-0 size-10 mb-3"
                 />
 
-                <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400">
+                <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
                   2023 - Present
                 </h3>
 
-                <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
                   Bachelor`s Degree in Informatics Engineering
                 </p>
 
-                <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
                   Universitas Maritim Raja Ali Haji
                 </p>
               </div>
 
-              <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700">
+              <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                 <Image 
                   src={"/image/logo-smkn1.svg"}
                   width={400}
@@ -538,15 +569,15 @@ export default function Home() {
                   className="shrink-0 size-10 mb-3"
                 />
 
-                <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400">
+                <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
                   2019 - 2023
                 </h3>
 
-                <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200">
+                <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
                   High School Diploma in Software Engineering
                 </p>
 
-                <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
                   SMK Negeri 1 Bintan Timur
                 </p>
               </div>
@@ -554,6 +585,156 @@ export default function Home() {
             {/* End Grid */}
           </div>
           {/* End Education */}
+
+          {/* Certificates */}
+          <div className="mt-10 sm:mt-14 text-left">
+            <h2 className="mb-3 font-medium text-gray-800 dark:text-neutral-200 text-left">
+              Certificates
+            </h2>
+
+            {/* Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                <div className="flex items-center mb-3">
+                  <Image 
+                    src={"/image/logo-dicoding.png"}
+                    width={40}
+                    height={40}
+                    alt="Dicoding"
+                    className="shrink-0 size-10 mr-3"
+                  />
+                  <div>
+                    <h3 className="text-xs text-gray-600 dark:text-neutral-400 text-left">
+                      2023
+                    </h3>
+                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                      Belajar Dasar Pemrograman Web
+                    </p>
+                  </div>
+                </div>
+                <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                  Dicoding Indonesia
+                </p>
+              </div>
+
+              <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                <div className="flex items-center mb-3">
+                  <Image 
+                    src={"/image/logo-dicoding.png"}
+                    width={40}
+                    height={40}
+                    alt="Dicoding"
+                    className="shrink-0 size-10 mr-3"
+                  />
+                  <div>
+                    <h3 className="text-xs text-gray-600 dark:text-neutral-400 text-left">
+                      2023
+                    </h3>
+                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                      Belajar Fundamental Front-End Web Development
+                    </p>
+                  </div>
+                </div>
+                <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                  Dicoding Indonesia
+                </p>
+              </div>
+
+              <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                <div className="flex items-center mb-3">
+                  <Image 
+                    src={"/image/logo-dicoding.png"}
+                    width={40}
+                    height={40}
+                    alt="Dicoding"
+                    className="shrink-0 size-10 mr-3"
+                  />
+                  <div>
+                    <h3 className="text-xs text-gray-600 dark:text-neutral-400 text-left">
+                      2023
+                    </h3>
+                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                      Belajar Membuat Front-End Web untuk Pemula
+                    </p>
+                  </div>
+                </div>
+                <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                  Dicoding Indonesia
+                </p>
+              </div>
+
+              <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                <div className="flex items-center mb-3">
+                  <Image 
+                    src={"/image/logo-rakamin.webp"}
+                    width={40}
+                    height={40}
+                    alt="Rakamin Academy"
+                    className="shrink-0 size-10 mr-3 rounded-full"
+                  />
+                  <div>
+                    <h3 className="text-xs text-gray-600 dark:text-neutral-400 text-left">
+                      2023
+                    </h3>
+                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                      Full Stack Developer Bootcamp
+                    </p>
+                  </div>
+                </div>
+                <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                  Rakamin Academy x PT Investree
+                </p>
+              </div>
+
+              <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                <div className="flex items-center mb-3">
+                  <Image 
+                    src={"/image/logo-coursera.png"}
+                    width={40}
+                    height={40}
+                    alt="Coursera"
+                    className="shrink-0 size-10 mr-3"
+                  />
+                  <div>
+                    <h3 className="text-xs text-gray-600 dark:text-neutral-400 text-left">
+                      2022
+                    </h3>
+                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                      Introduction to Web Development with HTML, CSS, JavaScript
+                    </p>
+                  </div>
+                </div>
+                <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                  IBM via Coursera
+                </p>
+              </div>
+
+              <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                <div className="flex items-center mb-3">
+                  <Image 
+                    src={"/image/logo-freecodecamp.png"}
+                    width={40}
+                    height={40}
+                    alt="freeCodeCamp"
+                    className="shrink-0 size-10 mr-3"
+                  />
+                  <div>
+                    <h3 className="text-xs text-gray-600 dark:text-neutral-400 text-left">
+                      2022
+                    </h3>
+                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                      Responsive Web Design
+                    </p>
+                  </div>
+                </div>
+                <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                  freeCodeCamp
+                </p>
+              </div>
+            </div>
+            {/* End Grid */}
+          </div>
+          {/* End Certificates */}
 
           {/* Honor and Awards */}
           {/* <div className="mt-10 sm:mt-14">

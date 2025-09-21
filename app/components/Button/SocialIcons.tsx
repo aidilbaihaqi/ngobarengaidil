@@ -4,7 +4,7 @@ import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 export default function SocialIcons() {
   return (
-    <div className="flex mt-3 md:justify-center space-x-4 text-2xl">
+    <div className="flex mt-3 justify-center space-x-4 text-2xl">
       <a href="http://instagram.com/albyhaqee" target="_blank" className="text-pink-500 dark:text-pink-300 hover:text-pink-700 dark:hover:text-pink-500">
         <FontAwesomeIcon icon={faInstagram} />
       </a>

@@ -1,93 +1,92 @@
-"use client"; // Wajib ditambahkan untuk memastikan ini komponen client-side
+"use client";
 
 import { useEffect, useState } from "react";
 
 const ThemeToggle = () => {
-  const [isDarkMode, setIsDarkMode] = useState<boolean | null>(null); // Gunakan null sebagai default
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Ambil preferensi tema dari localStorage setelah komponen di-mount
-    const savedTheme = localStorage.getItem("hs_theme");
-    setIsDarkMode(savedTheme === "light" ? false : true);
+    setMounted(true);
+    // Check for saved theme preference or default to light theme
+    const savedTheme = localStorage.getItem("theme");
+    
+    if (savedTheme) {
+      setIsDarkMode(savedTheme === "dark");
+    } else {
+      // Default to light theme
+      setIsDarkMode(false);
+    }
   }, []);
 
   useEffect(() => {
-    if (isDarkMode === null) return; // Hindari eksekusi sebelum state terinisialisasi
+    if (!mounted) return;
 
     const html = document.documentElement;
     if (isDarkMode) {
       html.classList.add("dark");
-      localStorage.setItem("hs_theme", "dark");
+      localStorage.setItem("theme", "dark");
     } else {
       html.classList.remove("dark");
-      localStorage.setItem("hs_theme", "light");
+      localStorage.setItem("theme", "light");
     }
-  }, [isDarkMode]);
+  }, [isDarkMode, mounted]);
 
-  if (isDarkMode === null) {
-    return null; // Hindari render sebelum state terinisialisasi
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
+  if (!mounted) {
+    return (
+      <div className="size-7 border border-gray-200 rounded-full animate-pulse bg-gray-100 dark:bg-gray-800 dark:border-gray-700"></div>
+    );
   }
 
   return (
-    <>
-      {/* Dark Mode Button */}
-      <button
-        type="button"
-        className={`${
-          isDarkMode ? "hidden" : "flex"
-        } relative justify-center items-center size-7 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700`}
-        onClick={() => setIsDarkMode(true)}
-      >
-        <span className="sr-only">Dark</span>
+    <button
+      onClick={toggleTheme}
+      className={`
+        relative w-10 h-10 rounded-full border transition-all duration-300 ease-in-out flex items-center justify-center
+        ${
+          isDarkMode 
+            ? 'bg-gray-800 border-gray-600 text-yellow-400 hover:bg-gray-700 hover:border-gray-500' 
+            : 'bg-white border-gray-300 text-gray-600 hover:bg-gray-50 hover:border-gray-400'
+        }
+        focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
+        shadow-sm hover:shadow-md transform hover:scale-105 active:scale-95
+      `}
+      aria-label={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+    >
+      <div className="relative w-5 h-5">
+        {/* Sun Icon (Light Mode) */}
         <svg
-          className="shrink-0 size-3.5"
+          className={`absolute inset-0 w-5 h-5 transition-all duration-300 ${
+            isDarkMode ? 'opacity-0 rotate-90 scale-75' : 'opacity-100 rotate-0 scale-100'
+          }`}
+          fill="currentColor"
+          viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
         >
-          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          <path
+            fillRule="evenodd"
+            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+            clipRule="evenodd"
+          />
         </svg>
-      </button>
 
-      {/* Light Mode Button */}
-      <button
-        type="button"
-        className={`${
-          isDarkMode ? "flex" : "hidden"
-        } relative justify-center items-center size-7 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700`}
-        onClick={() => setIsDarkMode(false)}
-      >
-        <span className="sr-only">Light</span>
+        {/* Moon Icon (Dark Mode) */}
         <svg
-          className="shrink-0 size-3.5"
+          className={`absolute inset-0 w-5 h-5 transition-all duration-300 ${
+            isDarkMode ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-90 scale-75'
+          }`}
+          fill="currentColor"
+          viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
         >
-          <circle cx="12" cy="12" r="4"></circle>
-          <path d="M12 2v2"></path>
-          <path d="M12 20v2"></path>
-          <path d="m4.93 4.93 1.41 1.41"></path>
-          <path d="m17.66 17.66 1.41 1.41"></path>
-          <path d="M2 12h2"></path>
-          <path d="M20 12h2"></path>
-          <path d="m6.34 17.66-1.41 1.41"></path>
-          <path d="m19.07 4.93-1.41 1.41"></path>
+          <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
         </svg>
-      </button>
-    </>
+      </div>
+    </button>
   );
 };
 
