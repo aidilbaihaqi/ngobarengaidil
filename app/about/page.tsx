@@ -26,7 +26,7 @@ export default function Home() {
             <div className="grow text-left">
               <TypewriterEffectSmoothDemo />
               <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                Software Engineer | Content Creator | IT Mentor 
+                Software Engineer | Content Creator | IT Mentor | AI Enthusiast
               </p>
             </div>
           </div>
@@ -242,7 +242,138 @@ export default function Home() {
 
             {/* Timeline */}
             <div>
-              {/* Item */}
+              {/* Item - PT Arus Digital Sinergi */}
+              <div className="group relative flex gap-x-5">
+                {/* Icon */}
+                <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                  <div className="relative z-10 size-6 flex justify-center items-center">
+                  <Image
+                    src={"/image/logo-ads.png"}
+                    alt="PT Arus Digital Sinergi"
+                    width={32}
+                    height={32}
+                    className="shrink-0 size-6 rounded-full"
+                  />
+                  </div>
+                </div>
+                {/* End Icon */}
+
+                {/* Right Content */}
+                <div className="grow pb-8 group-last:pb-0 text-left">
+                  <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                    Apr 2025 - Present · 6 mos
+                  </h3>
+
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                    Full Stack Developer at PT Arus Digital Sinergi
+                  </p>
+
+                  <p className="leading-6 mt-2 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                    Developed and delivered comprehensive full-stack solutions including company profile websites, Enterprise Resource Planning (ERP) systems, Minimum Viable Products (MVPs), and large-scale enterprise applications. Successfully managed end-to-end project development from conception to deployment, utilizing modern web technologies and mobile frameworks to create scalable, user-centric solutions.
+                  </p>
+
+                  <div className="mt-3">
+                    {/* Card */}
+                    <a className="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-700" href="#">
+                      <div className="flex flex-col sm:flex-row items-start sm:items-center overflow-hidden">
+                        <div className="flex-shrink-0 w-full sm:w-32 md:w-48 h-24 sm:h-auto">
+                          <Image
+                            src={"/image/banner-ads.jpg"}
+                            width={192}
+                            height={96}
+                            alt="PT Arus Digital Sinergi"
+                            className="w-full h-full object-cover rounded-t-lg sm:rounded-t-none sm:rounded-s-lg"
+                          />
+                        </div>
+
+                        <div className="flex-1 p-4">
+                          <div className="flex flex-col justify-center">
+                            <h3 className="font-semibold text-sm text-gray-800 dark:text-neutral-300">
+                              PT Arus Digital Sinergi
+                            </h3>
+                            <p className="leading-6 mt-1 text-sm text-gray-500 dark:text-neutral-500">
+                              PT Arus Digital Sinergi is a technology company based in Tanjungpinang, Kepulauan Riau, specializing in digital solutions such as website and mobile application development, ERP customization, and tailored software systems. With a focus on innovation and efficiency, the company provides services that empower businesses and organizations to streamline their operations, strengthen their digital presence, and embrace technology-driven transformation. Through its commitment to collaboration and impact, Arus Digital Sinergi positions itself as a trusted partner for clients seeking reliable and scalable IT solutions.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    {/* End Card */}
+                  </div>
+                </div>
+                {/* End Right Content */}
+              </div>
+              {/* End Item */}
+
+              {/* Item - Back End Developer */}
+              <div className="group relative flex gap-x-5">
+                {/* Icon */}
+                <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                  <div className="relative z-10 size-6 flex justify-center items-center">
+                  <Image
+                    src={"/image/logo-ads.png"}
+                    alt="PT Arus Digital Sinergi"
+                    width={32}
+                    height={32}
+                    className="shrink-0 size-6 rounded-full"
+                  />
+                  </div>
+                </div>
+                {/* End Icon */}
+
+                {/* Right Content */}
+                <div className="grow pb-8 group-last:pb-0 text-left">
+                  <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                    Mar 2025 - Apr 2025 · 2 mos
+                  </h3>
+
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                    Back End Developer at PT Arus Digital Sinergi
+                  </p>
+
+                  <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                    Specialized in backend development, designing and implementing robust server-side architectures, RESTful APIs, and database management systems. Focused on building scalable backend solutions, optimizing database performance, and ensuring secure data handling for web and mobile applications.
+                  </p>
+                </div>
+                {/* End Right Content */}
+              </div>
+              {/* End Item */}
+
+              {/* Item - Beasiswa Pendidikan Indonesia */}
+              <div className="group relative flex gap-x-5">
+                {/* Icon */}
+                <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                  <div className="relative z-10 size-6 flex justify-center items-center">
+                  <Image
+                    src={"/image/logo-bpi.jpg"}
+                    alt="Beasiswa Pendidikan Indonesia"
+                    width={32}
+                    height={32}
+                    className="shrink-0 size-6 rounded-full"
+                  />
+                  </div>
+                </div>
+                {/* End Icon */}
+
+                {/* Right Content */}
+                <div className="grow pb-8 group-last:pb-0 text-left">
+                  <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                    Aug 2023 - Present · 2 yrs 2 mos
+                  </h3>
+
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                    Beasiswa Pendidikan Indonesia Awardee
+                  </p>
+
+                  <p className="leading-6 mt-2 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                    Selected as Beasiswa Pendidikan Indonesia awardee, previously qualified for Beasiswa Indonesia Maju S1 Overseas program for Computer Science at Kyoto University. Actively engaged in social impact projects, IELTS and SAT preparation programs, cultural exchange initiatives, and educational outreach across Indonesia to promote digital literacy and technology advancement.
+                  </p>
+                </div>
+                {/* End Right Content */}
+              </div>
+              {/* End Item */}
+
+              {/* Item - Risalah Maritim */}
               <div className="group relative flex gap-x-5">
                 {/* Icon */}
                 <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
