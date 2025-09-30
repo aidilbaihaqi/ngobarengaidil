@@ -242,6 +242,40 @@ export default function Home() {
 
             {/* Timeline */}
             <div>
+              {/* Item - Beasiswa Pendidikan Indonesia */}
+              <div className="group relative flex gap-x-5">
+                {/* Icon */}
+                <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                  <div className="relative z-10 size-6 flex justify-center items-center">
+                  <Image
+                    src={"/image/logo-bpi.jpg"}
+                    alt="Beasiswa Pendidikan Indonesia"
+                    width={32}
+                    height={32}
+                    className="shrink-0 size-6 rounded-full"
+                  />
+                  </div>
+                </div>
+                {/* End Icon */}
+
+                {/* Right Content */}
+                <div className="grow pb-8 group-last:pb-0 text-left">
+                  <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                    Aug 2023 - Present · 2 yrs 2 mos
+                  </h3>
+
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                    Beasiswa Pendidikan Indonesia Awardee
+                  </p>
+
+                  <p className="leading-6 mt-2 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                    Selected as Beasiswa Pendidikan Indonesia awardee, previously qualified for Beasiswa Indonesia Maju S1 Overseas program for Computer Science at Kyoto University. Actively engaged in social impact projects, IELTS and SAT preparation programs, cultural exchange initiatives, and educational outreach across Indonesia to promote digital literacy and technology advancement.
+                  </p>
+                </div>
+                {/* End Right Content */}
+              </div>
+              {/* End Item */}
+
               {/* Item - PT Arus Digital Sinergi */}
               <div className="group relative flex gap-x-5">
                 {/* Icon */}
@@ -261,7 +295,7 @@ export default function Home() {
                 {/* Right Content */}
                 <div className="grow pb-8 group-last:pb-0 text-left">
                   <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
-                    Apr 2025 - Present · 6 mos
+                    Apr 2025 - September 2025 · 7 mos
                   </h3>
 
                   <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
@@ -333,40 +367,6 @@ export default function Home() {
 
                   <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
                     Specialized in backend development, designing and implementing robust server-side architectures, RESTful APIs, and database management systems. Focused on building scalable backend solutions, optimizing database performance, and ensuring secure data handling for web and mobile applications.
-                  </p>
-                </div>
-                {/* End Right Content */}
-              </div>
-              {/* End Item */}
-
-              {/* Item - Beasiswa Pendidikan Indonesia */}
-              <div className="group relative flex gap-x-5">
-                {/* Icon */}
-                <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-                  <div className="relative z-10 size-6 flex justify-center items-center">
-                  <Image
-                    src={"/image/logo-bpi.jpg"}
-                    alt="Beasiswa Pendidikan Indonesia"
-                    width={32}
-                    height={32}
-                    className="shrink-0 size-6 rounded-full"
-                  />
-                  </div>
-                </div>
-                {/* End Icon */}
-
-                {/* Right Content */}
-                <div className="grow pb-8 group-last:pb-0 text-left">
-                  <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
-                    Aug 2023 - Present · 2 yrs 2 mos
-                  </h3>
-
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                    Beasiswa Pendidikan Indonesia Awardee
-                  </p>
-
-                  <p className="leading-6 mt-2 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                    Selected as Beasiswa Pendidikan Indonesia awardee, previously qualified for Beasiswa Indonesia Maju S1 Overseas program for Computer Science at Kyoto University. Actively engaged in social impact projects, IELTS and SAT preparation programs, cultural exchange initiatives, and educational outreach across Indonesia to promote digital literacy and technology advancement.
                   </p>
                 </div>
                 {/* End Right Content */}
