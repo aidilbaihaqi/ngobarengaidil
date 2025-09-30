@@ -49,7 +49,7 @@ const ThemeToggle = () => {
         relative w-10 h-10 rounded-full border transition-all duration-300 ease-in-out flex items-center justify-center
         ${
           isDarkMode 
-            ? 'bg-gray-800 border-gray-600 text-yellow-400 hover:bg-gray-700 hover:border-gray-500' 
+            ? 'bg-black-800 border-gray-600 text-yellow-400 hover:bg-black-700 hover:border-gray-500' 
             : 'bg-white border-gray-300 text-gray-600 hover:bg-gray-50 hover:border-gray-400'
         }
         focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2

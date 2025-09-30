@@ -6,16 +6,24 @@ import Image from "next/image";
 import { BentoGridThirdDemo } from "./components/Layout/BentoGrid";
 import Main from "./components/Layout/Main";
 import { FlipWordsDemo } from "./components/Text/FlipWords";
+import ClickSpark from "./components/ui/ClickSpark";
 
 import { cn } from "@/lib/utils";
 import React from "react";
 
 export default function Home() {
   return (
-    
-    <Main>
-      {/* Main Content */}
-      <main id="content">
+    <ClickSpark
+      sparkColor="#3b82f6"
+      sparkSize={12}
+      sparkRadius={20}
+      sparkCount={10}
+      duration={500}
+      easing="ease-out"
+    >
+      <Main>
+        {/* Main Content */}
+        <main id="content">
         <div className="w-full max-w-5xl mb-10 mx-auto px-4 pt-10 sm:px-6 lg:px-8">
           {/* About */}
           <div className="text-center">
@@ -66,5 +74,6 @@ export default function Home() {
         </div>
       </main>
     </Main>
+    </ClickSpark>
   );
 }

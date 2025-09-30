@@ -3,13 +3,22 @@
 import Main from "@/app/components/Layout/Main";
 import Image from "next/image";
 import { TypewriterEffectSmoothDemo } from "@/app/components/Text/TypewriterEffectSmooth";
+import ClickSpark from "@/app/components/ui/ClickSpark";
 
 
 export default function Home() {
   return (
-    <Main>
-      {/* Main Content */}
-      <main id="content">
+    <ClickSpark
+      sparkColor="#8b5cf6"
+      sparkSize={10}
+      sparkRadius={18}
+      sparkCount={8}
+      duration={450}
+      easing="ease-out"
+    >
+      <Main>
+        {/* Main Content */}
+        <main id="content">
         <div className="w-full max-w-5xl mx-auto pt-5 md:pt-16 px-4 sm:px-6 lg:px-8 text-left">
           {/* Profile */}
           <div className="flex flex-col items-start gap-x-3">
@@ -718,12 +727,12 @@ export default function Home() {
           {/* End Education */}
 
           {/* Certificates */}
-          <div className="mt-10 sm:mt-14 text-left">
+          {/* <div className="mt-10 sm:mt-14 text-left">
             <h2 className="mb-3 font-medium text-gray-800 dark:text-neutral-200 text-left">
               Certificates
             </h2>
 
-            {/* Grid */}
+            
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                 <div className="flex items-center mb-3">
@@ -863,8 +872,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            {/* End Grid */}
-          </div>
+          </div> */}
           {/* End Certificates */}
 
           {/* Honor and Awards */}
@@ -878,5 +886,6 @@ export default function Home() {
         </div>
       </main>
     </Main>
+    </ClickSpark>
   );
 }
