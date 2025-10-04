@@ -49,7 +49,7 @@ export default function Home() {
             </motion.div>
             <FlipWordsDemo />
             <p className="text-sm text-gray-600 dark:text-neutral-400 mt-3 leading-6 text-center">
-              Passionate and results-driven Junior Programmer with over 5 years of experience in software engineering. Skilled in web development, mentoring junior developers, and delivering high-quality freelance projects for diverse clients, including individuals, businesses, and government organizations. Adept at team collaboration, agile methodologies, and leveraging modern tools to solve complex problems efficiently.
+              Passionate and results-driven Programmer with over 5 years of experience in software engineering. Skilled in web development, mentoring junior developers, and delivering high-quality freelance projects for diverse clients, including individuals, businesses, and government organizations. Adept at team collaboration, agile methodologies, and leveraging modern tools to solve complex problems efficiently.
             </p>
             <SocialIcons />
           </div>
