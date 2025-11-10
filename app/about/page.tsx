@@ -4,6 +4,7 @@ import Main from "@/app/components/Layout/Main";
 import Image from "next/image";
 import { TypewriterEffectSmoothDemo } from "@/app/components/Text/TypewriterEffectSmooth";
 import ClickSpark from "@/app/components/ui/ClickSpark";
+import AwardCarousel from "@/app/components/ui/AwardCarousel";
 
 
 export default function Home() {
@@ -700,6 +701,10 @@ export default function Home() {
                   <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
                     Universitas Maritim Raja Ali Haji
                   </p>
+
+                  <p className="mt-2 text-xs text-gray-500 dark:text-neutral-500 text-left">
+                    Current GPA: <span className="font-semibold text-gray-700 dark:text-neutral-300">3.72/4.00</span>
+                  </p>
                 </div>
 
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
@@ -722,168 +727,252 @@ export default function Home() {
                   <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
                     SMK Negeri 1 Bintan Timur
                   </p>
+
+                  <p className="mt-2 text-xs text-gray-500 dark:text-neutral-500 text-left">
+                    Final Grade: <span className="font-semibold text-gray-700 dark:text-neutral-300">91.8/100</span>
+                  </p>
                 </div>
               </div>
               {/* End Grid */}
             </div>
             {/* End Education */}
 
-            {/* Certificates */}
-            {/* <div className="mt-10 sm:mt-14 text-left">
-            <h2 className="mb-3 font-medium text-gray-800 dark:text-neutral-200 text-left">
-              Certificates
-            </h2>
+            {/* Certifications */}
+            <div className="mt-10 sm:mt-14 text-left">
+              <h2 className="mb-3 font-medium text-gray-800 dark:text-neutral-200 text-left">
+                Certifications
+              </h2>
 
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
-                <div className="flex items-center mb-3">
-                  <Image 
-                    src={"/image/logo-dicoding.png"}
-                    width={40}
-                    height={40}
-                    alt="Dicoding"
-                    className="shrink-0 size-10 mr-3"
-                  />
-                  <div>
-                    <h3 className="text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      2023
-                    </h3>
-                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                      Belajar Dasar Pemrograman Web
+              {/* Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {/* Certification Card 1 */}
+                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-1">
+                    Certified Developer Alibaba Cloud Certification
+                  </p>
+                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-3">
+                    Alibaba Cloud
+                  </p>
+                  <div className="space-y-1">
+                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                      Certificate ID: <span className="text-gray-700 dark:text-neutral-300">ACCD0173710100006451</span>
+                    </p>
+                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                      Expires: Jan 28, 2026
                     </p>
                   </div>
                 </div>
-                <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                  Dicoding Indonesia
-                </p>
-              </div>
 
-              <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
-                <div className="flex items-center mb-3">
-                  <Image 
-                    src={"/image/logo-dicoding.png"}
-                    width={40}
-                    height={40}
-                    alt="Dicoding"
-                    className="shrink-0 size-10 mr-3"
-                  />
-                  <div>
-                    <h3 className="text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      2023
-                    </h3>
-                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                      Belajar Fundamental Front-End Web Development
+                {/* Certification Card 2 */}
+                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-1">
+                    Pemateri Webinar Sharing is Caring &quot;Kebutuhan Talenta di Era Digital&quot; Politeknik Negeri Jakarta x Train4best x Lu kan Anak IT
+                  </p>
+                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-3">
+                    Train4best
+                  </p>
+                  <div className="space-y-1">
+                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                      Certificate ID: <span className="text-gray-700 dark:text-neutral-300">Not Included</span>
+                    </p>
+                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                      Expires: No Expiration
                     </p>
                   </div>
                 </div>
-                <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                  Dicoding Indonesia
-                </p>
-              </div>
 
-              <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
-                <div className="flex items-center mb-3">
-                  <Image 
-                    src={"/image/logo-dicoding.png"}
-                    width={40}
-                    height={40}
-                    alt="Dicoding"
-                    className="shrink-0 size-10 mr-3"
-                  />
-                  <div>
-                    <h3 className="text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      2023
-                    </h3>
-                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                      Belajar Membuat Front-End Web untuk Pemula
+                {/* Certification Card 3 */}
+                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-1">
+                    Pemateri Webinar Programming &quot;Cicip Programming Pemula: Fast build app with Laravel Vibe Coding&quot;
+                  </p>
+                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-3">
+                    Batam Linux User Group
+                  </p>
+                  <div className="space-y-1">
+                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                      Certificate ID: <span className="text-gray-700 dark:text-neutral-300">Not Included</span>
+                    </p>
+                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                      Expires: No Expiration
                     </p>
                   </div>
                 </div>
-                <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                  Dicoding Indonesia
-                </p>
-              </div>
 
-              <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
-                <div className="flex items-center mb-3">
-                  <Image 
-                    src={"/image/logo-rakamin.webp"}
-                    width={40}
-                    height={40}
-                    alt="Rakamin Academy"
-                    className="shrink-0 size-10 mr-3 rounded-full"
-                  />
-                  <div>
-                    <h3 className="text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      2023
-                    </h3>
-                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                      Full Stack Developer Bootcamp
+                {/* Certification Card 4 */}
+                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-1">
+                    Offline Event Baparekraf Developer Day Yogyakarta, 2024
+                  </p>
+                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-3">
+                    Kementerian Pariwisata dan Ekonomi Kreatif Republik Indonesia
+                  </p>
+                  <div className="space-y-1">
+                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                      Certificate ID: <span className="text-gray-700 dark:text-neutral-300">Not Included</span>
+                    </p>
+                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                      Expires: No Expiration
                     </p>
                   </div>
                 </div>
-                <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                  Rakamin Academy x PT Investree
-                </p>
-              </div>
 
-              <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
-                <div className="flex items-center mb-3">
-                  <Image 
-                    src={"/image/logo-coursera.png"}
-                    width={40}
-                    height={40}
-                    alt="Coursera"
-                    className="shrink-0 size-10 mr-3"
-                  />
-                  <div>
-                    <h3 className="text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      2022
-                    </h3>
-                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                      Introduction to Web Development with HTML, CSS, JavaScript
+                {/* Certification Card 5 */}
+                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-1">
+                    Virtual Internship Full Stack Developer on PT Investree
+                  </p>
+                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-3">
+                    Rakamin Academy
+                  </p>
+                  <div className="space-y-1">
+                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                      Certificate ID: <span className="text-gray-700 dark:text-neutral-300">1986211APAGII462023</span>
+                    </p>
+                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                      Expires: No Expiration
                     </p>
                   </div>
                 </div>
-                <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                  IBM via Coursera
-                </p>
-              </div>
 
-              <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
-                <div className="flex items-center mb-3">
-                  <Image 
-                    src={"/image/logo-freecodecamp.png"}
-                    width={40}
-                    height={40}
-                    alt="freeCodeCamp"
-                    className="shrink-0 size-10 mr-3"
-                  />
-                  <div>
-                    <h3 className="text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      2022
-                    </h3>
-                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                      Responsive Web Design
+                {/* Certification Card 6 */}
+                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-1">
+                    Internship Junior Web Developer on PT Tunas Idea Indonesia
+                  </p>
+                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-3">
+                    PT Tunas Idea Indonesia
+                  </p>
+                  <div className="space-y-1">
+                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                      Certificate ID: <span className="text-gray-700 dark:text-neutral-300">Not Included</span>
+                    </p>
+                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                      Expires: No Expiration
                     </p>
                   </div>
                 </div>
-                <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                  freeCodeCamp
-                </p>
+
+                {/* Certification Card 7 */}
+                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-1">
+                    Peserta Seminar IT-FEST &quot;Mengenal Lebih Dalam Tentang Web Developer&quot; di Institut Teknologi Adhi Tama, Surabaya 2020
+                  </p>
+                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-3">
+                    Institut Teknologi Adhi Tama, Surabaya
+                  </p>
+                  <div className="space-y-1">
+                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                      Certificate ID: <span className="text-gray-700 dark:text-neutral-300">130/WEBINAR/HMJ_SISFOKOM/ITATS/IX/2020</span>
+                    </p>
+                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                      Expires: No Expiration
+                    </p>
+                  </div>
+                </div>
+
+                {/* Certification Card 8 */}
+                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-1">
+                    Web Development Bootcamp Infinite Learning
+                  </p>
+                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-3">
+                    Infinite Learning, Batam
+                  </p>
+                  <div className="space-y-1">
+                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                      Certificate ID: <span className="text-gray-700 dark:text-neutral-300">0029/IL-FEBOOTCAMP/III/2024</span>
+                    </p>
+                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                      Expires: No Expiration
+                    </p>
+                  </div>
+                </div>
               </div>
+              {/* End Grid */}
             </div>
-          </div> */}
-            {/* End Certificates */}
+            {/* End Certifications */}
 
-            {/* Honor and Awards */}
-            {/* <div className="mt-10 sm:mt-14">
-            <h2 className="mb-3 font-medium text-gray-800 dark:text-neutral-200">
-              Honor and Awards
-            </h2>
-          </div> */}
-            {/* End Honor and Awards */}
+            {/* Awards */}
+            <div className="mt-10 sm:mt-14 text-left">
+              <h2 className="mb-3 font-medium text-gray-800 dark:text-neutral-200 text-left">
+                Awards
+              </h2>
+
+              {/* Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {/* Award Card 1 */}
+                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                  <AwardCarousel
+                    images={[
+                      "/image/award-bpi-1.jpg",
+                      "/image/award-bpi-2.jpg",
+                      "/image/award-bpi-3.jpg"
+                    ]}
+                    alt="Beasiswa Pendidikan Indonesia"
+                  />
+
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
+                    Beasiswa Pendidikan Indonesia Awardee
+                  </p>
+
+                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
+                    Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi
+                  </p>
+
+                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                    Year: 2023
+                  </p>
+                </div>
+
+                {/* Award Card 2 */}
+                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                  <AwardCarousel
+                    images={[
+                      "/image/award-graduate-1.jpg",
+                      "/image/award-graduate-2.jpg"
+                    ]}
+                    alt="Best Graduate"
+                  />
+
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
+                    Best Graduate in Informatics Engineering
+                  </p>
+
+                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
+                    Universitas Maritim Raja Ali Haji
+                  </p>
+
+                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                    Year: 2023
+                  </p>
+                </div>
+
+                {/* Award Card 3 - Example */}
+                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                  <AwardCarousel
+                    images={[
+                      "/image/award-hackathon-1.jpg"
+                    ]}
+                    alt="Hackathon Winner"
+                  />
+
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
+                    1st Place - National Hackathon Competition
+                  </p>
+
+                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
+                    Indonesian Tech Community
+                  </p>
+
+                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                    Year: 2024
+                  </p>
+                </div>
+              </div>
+              {/* End Grid */}
+            </div>
+            {/* End Awards */}
 
           </div>
         </main>
