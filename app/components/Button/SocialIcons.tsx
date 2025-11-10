@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faLinkedin, faGithub, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faLinkedin, faGithub, faYoutube, faTiktok } from "@fortawesome/free-brands-svg-icons";
 import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 export default function SocialIcons() {
@@ -7,6 +7,9 @@ export default function SocialIcons() {
     <div className="flex mt-3 justify-center space-x-4 text-2xl">
       <a href="http://instagram.com/albyhaqee" target="_blank" className="text-pink-500 dark:text-pink-300 hover:text-pink-700 dark:hover:text-pink-500">
         <FontAwesomeIcon icon={faInstagram} />
+      </a>
+      <a href="https://www.tiktok.com/@albyhaqee" target="_blank" className="text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
+        <FontAwesomeIcon icon={faTiktok} />
       </a>
       <a href="https://www.linkedin.com/in/aidilbaihaqi/" target="_blank" className="text-blue-700 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-600">
         <FontAwesomeIcon icon={faLinkedin} />

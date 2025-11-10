@@ -43,7 +43,7 @@ export default function ProjectsPage() {
       <Main>
         {/* Main Content */}
         <main id="content">
-          <div className="w-full max-w-7xl mx-auto pt-5 md:pt-16 px-4 sm:px-6 lg:px-8 pb-20">
+          <div className="w-full max-w-6xl mx-auto pt-5 md:pt-16 px-4 sm:px-6 lg:px-8 pb-20">
             {/* Header */}
             <div className="mb-16 text-center">
               <h1 className="text-5xl md:text-6xl font-bold text-gray-800 dark:text-white mb-4">
