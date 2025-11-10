@@ -7,11 +7,15 @@ import { GridBackground } from "./components/ui/grid-background";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: 'swap',
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: 'swap',
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -20,7 +24,23 @@ export const metadata: Metadata = {
   keywords: "aidil baihaqi, programming tips, lyceum, risalah maritim, belajar programming",
   creator: "Aidil Baihaqi",
   applicationName: "ngobarengaidil",
-  authors: [{name: "Aidil Baihaqi"}]
+  authors: [{name: "Aidil Baihaqi"}],
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    title: 'Aidil Baihaqi - Personal and Blog Website',
+    description: 'Personal website, portfolio, blog, software engineer roadmap, programming tips of Code Aidil',
+    siteName: 'ngobarengaidil',
+  },
 };
 
 export default function RootLayout({
@@ -29,7 +49,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#3b82f6" />
+        <link rel="apple-touch-icon" href="/image/aidil.jpg" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-neutral-900`}
       >
