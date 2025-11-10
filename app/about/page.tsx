@@ -905,23 +905,22 @@ export default function Home() {
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <AwardCarousel
                     images={[
-                      "/image/award-bpi-1.jpg",
-                      "/image/award-bpi-2.jpg",
-                      "/image/award-bpi-3.jpg"
+                      "/image/award-bioinformatics-1.jpg",
+                      "/image/award-bioinformatics-2.jpg"
                     ]}
-                    alt="Beasiswa Pendidikan Indonesia"
+                    alt="Bioinformatics Competition"
                   />
 
                   <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
-                    Beasiswa Pendidikan Indonesia Awardee
+                    Finalist - Bioinformatics & Synthetic Biology Competition Mentor for SMA Negeri 1 Tanjungpinang
                   </p>
 
                   <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
-                    Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi
+                    Institut Teknologi Bandung
                   </p>
 
                   <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
-                    Year: 2023
+                    Year: 2025
                   </p>
                 </div>
 
@@ -929,14 +928,15 @@ export default function Home() {
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <AwardCarousel
                     images={[
-                      "/image/award-graduate-1.jpg",
-                      "/image/award-graduate-2.jpg"
+                      "/image/award-ai-entrepreneurship-1.jpg",
+                      "/image/award-ai-entrepreneurship-2.jpg",
+                      "/image/award-ai-entrepreneurship-3.jpg"
                     ]}
-                    alt="Best Graduate"
+                    alt="AI Entrepreneurship Competition"
                   />
 
                   <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
-                    Best Graduate in Informatics Engineering
+                    1st Place – AI Entrepreneurship Competition
                   </p>
 
                   <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
@@ -944,25 +944,97 @@ export default function Home() {
                   </p>
 
                   <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
-                    Year: 2023
+                    Year: 2025
                   </p>
                 </div>
 
-                {/* Award Card 3 - Example */}
+                {/* Award Card 3 */}
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <AwardCarousel
                     images={[
-                      "/image/award-hackathon-1.jpg"
+                      "/image/award-idfest-1.jpg",
+                      "/image/award-idfest-2.jpg"
                     ]}
-                    alt="Hackathon Winner"
+                    alt="ID Fest Developer Day"
                   />
 
                   <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
-                    1st Place - National Hackathon Competition
+                    Finalist – ID Fest Developer Day, Jakarta
                   </p>
 
                   <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
-                    Indonesian Tech Community
+                    Kementerian Komunikasi dan Digital Republik Indonesia
+                  </p>
+
+                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                    Year: 2025
+                  </p>
+                </div>
+
+                {/* Award Card 4 */}
+                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                  <AwardCarousel
+                    images={[
+                      "/image/award-foss-2025-1.jpg",
+                      "/image/award-foss-2025-2.jpg",
+                      "/image/award-foss-2025-3.jpg"
+                    ]}
+                    alt="Festival Open Source Software 2025"
+                  />
+
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
+                    1st Place - Festival Open Source Software, Batam
+                  </p>
+
+                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
+                    Batam Linux User Group, Politeknik Negeri Batam
+                  </p>
+
+                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                    Year: 2025
+                  </p>
+                </div>
+
+                {/* Award Card 5 */}
+                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                  <AwardCarousel
+                    images={[
+                      "/image/award-foss-2024-1.jpg",
+                      "/image/award-foss-2024-2.jpg"
+                    ]}
+                    alt="Festival Open Source Software 2024"
+                  />
+
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
+                    2nd Place – Festival Open Source Software, Batam
+                  </p>
+
+                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
+                    Batam Linux User Group, Politeknik Negeri Batam
+                  </p>
+
+                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                    Year: 2024
+                  </p>
+                </div>
+
+                {/* Award Card 6 */}
+                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                  <AwardCarousel
+                    images={[
+                      "/image/award-baparekraf-1.jpg",
+                      "/image/award-baparekraf-2.jpg",
+                      "/image/award-baparekraf-3.jpg"
+                    ]}
+                    alt="Baparekraf Developer Day"
+                  />
+
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
+                    1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta
+                  </p>
+
+                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
+                    Kementerian Pariwisata dan Ekonomi Kreatif
                   </p>
 
                   <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
