@@ -766,7 +766,7 @@ export default function Home() {
                 {/* Certification Card 2 */}
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-1">
-                    Pemateri Webinar Sharing is Caring &quot;Kebutuhan Talenta di Era Digital&quot; Politeknik Negeri Jakarta x Train4best x Lu kan Anak IT
+                    Webinar Speaker - Sharing is Caring &quot;Talent Needs in the Digital Era&quot; Politeknik Negeri Jakarta x Train4best x Lu kan Anak IT
                   </p>
                   <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-3">
                     Train4best
@@ -784,7 +784,7 @@ export default function Home() {
                 {/* Certification Card 3 */}
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-1">
-                    Pemateri Webinar Programming &quot;Cicip Programming Pemula: Fast build app with Laravel Vibe Coding&quot;
+                    Programming Webinar Speaker &quot;Beginner Programming Taste: Fast Build App with Laravel Vibe Coding&quot;
                   </p>
                   <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-3">
                     Batam Linux User Group
@@ -805,7 +805,7 @@ export default function Home() {
                     Offline Event Baparekraf Developer Day Yogyakarta, 2024
                   </p>
                   <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-3">
-                    Kementerian Pariwisata dan Ekonomi Kreatif Republik Indonesia
+                    Ministry of Tourism and Creative Economy of the Republic of Indonesia
                   </p>
                   <div className="space-y-1">
                     <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
@@ -856,7 +856,7 @@ export default function Home() {
                 {/* Certification Card 7 */}
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-1">
-                    Peserta Seminar IT-FEST &quot;Mengenal Lebih Dalam Tentang Web Developer&quot; di Institut Teknologi Adhi Tama, Surabaya 2020
+                    IT-FEST Seminar Participant &quot;Getting to Know Web Developer in Depth&quot; at Institut Teknologi Adhi Tama, Surabaya 2020
                   </p>
                   <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-3">
                     Institut Teknologi Adhi Tama, Surabaya
