@@ -8,7 +8,7 @@ import Main from "./components/Layout/Main";
 import { FlipWordsDemo } from "./components/Text/FlipWords";
 import ClickSpark from "./components/ui/ClickSpark";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/app/lib/utils";
 import React from "react";
 
 export default function Home() {

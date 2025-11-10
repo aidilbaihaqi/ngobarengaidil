@@ -997,7 +997,11 @@ export default function Home() {
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <AwardCarousel
                     images={[
-                      "/image/awards/2nd Place – Festival Open Source Software, Batam.JPG"
+                      "/image/awards/2nd Place – Festival Open Source Software, Batam_1.JPG",
+                      "/image/awards/2nd Place – Festival Open Source Software, Batam_2.JPG",
+                      "/image/awards/2nd Place – Festival Open Source Software, Batam_3.JPG",
+                      "/image/awards/2nd Place – Festival Open Source Software, Batam_4.JPG",
+                      "/image/awards/2nd Place – Festival Open Source Software, Batam_5.JPG",
                     ]}
                     alt="Festival Open Source Software 2024"
                   />
@@ -1019,7 +1023,9 @@ export default function Home() {
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <AwardCarousel
                     images={[
-                      "/image/awards/1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta.png"
+                      "/image/awards/1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta_1.JPG",
+                      "/image/awards/1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta_2.JPG",
+                      "/image/awards/1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta_3.JPG",
                     ]}
                     alt="Baparekraf Developer Day"
                   />
