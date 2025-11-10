@@ -2,7 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import LoadingCircle from "./LoadingCircle";
+import { usePathname } from "next/navigation";
+import SkeletonLoader from "../ui/SkeletonLoader";
+import ContentSkeleton from "../ui/ContentSkeleton";
+import AboutSkeleton from "../ui/AboutSkeleton";
 
 interface PageLoaderProps {
   children: React.ReactNode;
@@ -10,14 +13,25 @@ interface PageLoaderProps {
 
 export default function PageLoader({ children }: PageLoaderProps) {
   const [isLoading, setIsLoading] = useState(true);
+  const pathname = usePathname();
 
   useEffect(() => {
+    setIsLoading(true);
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1500); // 1.5 seconds loading duration
+    }, 800); // Reduced to 0.8 seconds for better UX
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [pathname]);
+
+  // Determine which skeleton to show based on route
+  const getSkeletonComponent = () => {
+    if (pathname === "/projects") return SkeletonLoader;
+    if (pathname === "/about") return AboutSkeleton;
+    return ContentSkeleton;
+  };
+
+  const SkeletonComponent = getSkeletonComponent();
 
   return (
     <>
@@ -28,11 +42,10 @@ export default function PageLoader({ children }: PageLoaderProps) {
             initial={{ opacity: 1 }}
             exit={{ 
               opacity: 0,
-              scale: 0.95,
-              transition: { duration: 0.5, ease: "easeInOut" }
+              transition: { duration: 0.3, ease: "easeInOut" }
             }}
           >
-            <LoadingCircle />
+            <SkeletonComponent />
           </motion.div>
         )}
       </AnimatePresence>
@@ -43,18 +56,15 @@ export default function PageLoader({ children }: PageLoaderProps) {
             key="content"
             initial={{ 
               opacity: 0,
-              y: 20,
-              scale: 0.98
+              y: 10,
             }}
             animate={{ 
               opacity: 1,
               y: 0,
-              scale: 1
             }}
             transition={{ 
-              duration: 0.6,
+              duration: 0.4,
               ease: "easeOut",
-              delay: 0.1
             }}
           >
             {children}
