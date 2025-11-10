@@ -35,7 +35,7 @@ export default function Home() {
               <div className="grow text-left">
                 <TypewriterEffectSmoothDemo />
                 <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                  Software Engineer | Content Creator | IT Mentor | AI Enthusiast
+                  Software Engineer | Content Creator | IT Mentor | AI and Machine Learning Enthusiast focused on Bioinformatics
                 </p>
               </div>
             </div>
@@ -306,7 +306,7 @@ export default function Home() {
                   {/* Right Content */}
                   <div className="grow pb-8 group-last:pb-0 text-left">
                     <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      Apr 2025 - September 2025 · 7 mos
+                      Apr 2025 - September 2025 · 6 mos
                     </h3>
 
                     <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
@@ -404,7 +404,7 @@ export default function Home() {
                   {/* Right Content */}
                   <div className="grow pb-8 group-last:pb-0 text-left">
                     <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      Nov 2024 - Present
+                      May 2023 - Nov 2025 · 2 yrs 5 mos
                     </h3>
 
                     <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
@@ -462,7 +462,7 @@ export default function Home() {
                   {/* Right Content */}
                   <div className="grow pb-8 group-last:pb-0 text-left">
                     <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      Aug 2024 - Nov 2024
+                      Aug 2024 - Nov 2024 · 3 mos
                     </h3>
 
                     <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
@@ -518,7 +518,7 @@ export default function Home() {
                   {/* Right Content */}
                   <div className="grow pb-8 group-last:pb-0 text-left">
                     <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      Dec 2023 - Jul 2024
+                      Dec 2023 - Jul 2024 · 7 mos
                     </h3>
 
                     <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
@@ -565,7 +565,7 @@ export default function Home() {
                   {/* Right Content */}
                   <div className="grow pb-8 group-last:pb-0 text-left">
                     <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      May 2023 - Jun 2023
+                      May 2023 - Jun 2023 · 1 mos
                     </h3>
 
                     <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
@@ -638,7 +638,7 @@ export default function Home() {
                   {/* Right Content */}
                   <div className="grow pb-8 group-last:pb-0 text-left">
                     <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      Jan 2022 - Juli 2022
+                      Jan 2022 - Juli 2022 · 6 mos
                     </h3>
 
                     <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
