@@ -905,8 +905,9 @@ export default function Home() {
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <AwardCarousel
                     images={[
-                      "/image/award-bioinformatics-1.jpg",
-                      "/image/award-bioinformatics-2.jpg"
+                      "/image/awards/finalist_bioinformatic_1.png",
+                      "/image/awards/finalist_bioinformatic_2.png",
+                      "/image/awards/finalist_bioinformatic_3.jpg"
                     ]}
                     alt="Bioinformatics Competition"
                   />
@@ -928,9 +929,9 @@ export default function Home() {
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <AwardCarousel
                     images={[
-                      "/image/award-ai-entrepreneurship-1.jpg",
-                      "/image/award-ai-entrepreneurship-2.jpg",
-                      "/image/award-ai-entrepreneurship-3.jpg"
+                      "/image/awards/1st Place – AI Entrepreneurship Competition_1.jpg",
+                      "/image/awards/1st Place – AI Entrepreneurship Competition_2.jpg",
+                      "/image/awards/1st Place – AI Entrepreneurship Competition_3.jpg"
                     ]}
                     alt="AI Entrepreneurship Competition"
                   />
@@ -952,32 +953,8 @@ export default function Home() {
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <AwardCarousel
                     images={[
-                      "/image/award-idfest-1.jpg",
-                      "/image/award-idfest-2.jpg"
-                    ]}
-                    alt="ID Fest Developer Day"
-                  />
-
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
-                    Finalist – ID Fest Developer Day, Jakarta
-                  </p>
-
-                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
-                    Kementerian Komunikasi dan Digital Republik Indonesia
-                  </p>
-
-                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
-                    Year: 2025
-                  </p>
-                </div>
-
-                {/* Award Card 4 */}
-                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
-                  <AwardCarousel
-                    images={[
-                      "/image/award-foss-2025-1.jpg",
-                      "/image/award-foss-2025-2.jpg",
-                      "/image/award-foss-2025-3.jpg"
+                      "/image/awards/1st Place - Festival Open Source Software, Batam_1.jpg",
+                      "/image/awards/1st Place - Festival Open Source Software, Batam_2.jpg"
                     ]}
                     alt="Festival Open Source Software 2025"
                   />
@@ -995,12 +972,11 @@ export default function Home() {
                   </p>
                 </div>
 
-                {/* Award Card 5 */}
+                {/* Award Card 4 */}
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <AwardCarousel
                     images={[
-                      "/image/award-foss-2024-1.jpg",
-                      "/image/award-foss-2024-2.jpg"
+                      "/image/awards/2nd Place – Festival Open Source Software, Batam.JPG"
                     ]}
                     alt="Festival Open Source Software 2024"
                   />
@@ -1018,13 +994,11 @@ export default function Home() {
                   </p>
                 </div>
 
-                {/* Award Card 6 */}
+                {/* Award Card 5 */}
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <AwardCarousel
                     images={[
-                      "/image/award-baparekraf-1.jpg",
-                      "/image/award-baparekraf-2.jpg",
-                      "/image/award-baparekraf-3.jpg"
+                      "/image/awards/1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta.png"
                     ]}
                     alt="Baparekraf Developer Day"
                   />
