@@ -2,9 +2,14 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['skillicons.dev'],
     dangerouslyAllowSVG: true,
     remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'skillicons.dev',
+        port: '',
+        pathname: '/**',
+      },
       {
         protocol: 'https',
         hostname: 'images.unsplash.com',

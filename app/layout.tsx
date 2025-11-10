@@ -18,6 +18,12 @@ const geistMono = Geist_Mono({
   preload: true,
 });
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export const metadata: Metadata = {
   title: "Aidil Baihaqi - Personal and Blog Website",
   description: "Personal website, portfolio, blog, software engineer roadmap, programming tips of Code Aidil",
@@ -25,11 +31,6 @@ export const metadata: Metadata = {
   creator: "Aidil Baihaqi",
   applicationName: "ngobarengaidil",
   authors: [{name: "Aidil Baihaqi"}],
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
-  },
   robots: {
     index: true,
     follow: true,
