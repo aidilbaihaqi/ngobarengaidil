@@ -1,7 +1,18 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
 import Navbar from "./Navbar";
 import ThemeToggle from "../Button/ThemeButton";
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <>
       {/* Header */}
@@ -12,9 +23,7 @@ export default function Header() {
             <div className="px-4 md:px-0 flex justify-between items-center">
               {/* Logo */}
               <div>
-                <a className="flex-none rounded-md text-xl inline-block font-semibold focus:outline-none focus:opacity-80" href="#" aria-label="ngobarengaidil">
-
-
+                <Link className="flex-none rounded-md text-xl inline-block font-semibold focus:outline-none focus:opacity-80" href="/" aria-label="Go to homepage">
                   <svg className="w-30 h-auto" width="45" height="30" viewBox="0 0 50 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M44.7487 17.694L40.7533 13.8128L42.1232 11.1872L46.8035 15.7534L44.7487 17.694Z" className="fill-gray-900 dark:fill-white" fill="currentColor" />
                     <path d="M45.0912 19.2922L40.525 23.7443L41.7807 26.3699L47.6026 20.5479L45.0912 19.2922Z" className="fill-gray-900 dark:fill-white" fill="currentColor" />
@@ -27,11 +36,7 @@ export default function Header() {
                     <path d="M30.791 9.57477L27.9077 8.32482C27.9396 5.92663 27.6355 4.64183 27.4795 4.2992L33.0013 -3.36938e-05L33.7443 6.9856C32.4106 7.25939 31.2573 8.87784 30.791 9.57477Z" className="fill-gray-900 dark:fill-white" fill="currentColor" />
                     <ellipse cx="30.9163" cy="5.13108" rx="0.951285" ry="0.952547" transform="rotate(-6.07113 30.9163 5.13108)" className="fill-gray-900 dark:fill-white" fill="currentColor" />
                   </svg>
-
-
-
-
-                </a>
+                </Link>
               </div>
               {/* End Logo */}
 
@@ -40,21 +45,31 @@ export default function Header() {
                 <ThemeToggle />
                 
                 {/* Hamburger Button */}
-                <button type="button" className="hs-collapse-toggle flex justify-center items-center size-6 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" id="hs-navbar-header-floating-collapse" aria-expanded="false" aria-controls="hs-navbar-header-floating" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-header-floating">
-                  <svg className="hs-collapse-open:hidden shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="3" x2="21" y1="6" y2="6" />
-                    <line x1="3" x2="21" y1="12" y2="12" />
-                    <line x1="3" x2="21" y1="18" y2="18" />
-                  </svg>
-                  <svg className="hs-collapse-open:block hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M18 6 6 18" />
-                    <path d="m6 6 12 12" />
-                  </svg>
+                <button 
+                  type="button" 
+                  className="flex justify-center items-center size-6 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" 
+                  aria-expanded={isMenuOpen} 
+                  aria-controls="mobile-nav-menu" 
+                  aria-label="Toggle navigation"
+                  onClick={toggleMenu}
+                >
+                  {!isMenuOpen ? (
+                    <svg className="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="3" x2="21" y1="6" y2="6" />
+                      <line x1="3" x2="21" y1="12" y2="12" />
+                      <line x1="3" x2="21" y1="18" y2="18" />
+                    </svg>
+                  ) : (
+                    <svg className="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M18 6 6 18" />
+                      <path d="m6 6 12 12" />
+                    </svg>
+                  )}
                 </button>
               </div>
             </div>
 
-            <Navbar />
+            <Navbar isOpen={isMenuOpen} onLinkClick={() => setIsMenuOpen(false)} />
           </nav>
 
           {/* Container 2: Theme Button (Desktop only) */}

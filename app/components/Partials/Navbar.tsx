@@ -12,14 +12,23 @@ const navLinks = [
   {name: 'Contact', href: '/contact'}
 ];
 
-export default function AuthLayout({
-  children,
-}: {
+interface NavbarProps {
   children?: React.ReactNode;
-}) {
+  isOpen?: boolean;
+  onLinkClick?: () => void;
+}
+
+export default function Navbar({
+  children,
+  isOpen = false,
+  onLinkClick,
+}: NavbarProps) {
   const pathname = usePathname();
   return (
-    <div id="hs-navbar-header-floating" className="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow md:block" aria-labelledby="hs-navbar-header-floating-collapse">
+    <div 
+      id="mobile-nav-menu" 
+      className={`${isOpen ? 'block' : 'hidden'} overflow-hidden transition-all duration-300 basis-full grow md:block`}
+    >
       <div className="flex flex-col md:flex-row md:items-center md:justify-end gap-2 md:gap-3 mt-3 md:mt-0 py-2 md:py-0 md:ps-7">
         {navLinks.map((link) => {
           const isActive = pathname === link.href || (pathname.startsWith(link.href) && link.href !== "/");
@@ -33,6 +42,7 @@ export default function AuthLayout({
               href={link.href} 
               aria-current={isActive ? "page" : undefined} 
               key={link.name}
+              onClick={onLinkClick}
             >
               {link.name}
               {!isActive && (
