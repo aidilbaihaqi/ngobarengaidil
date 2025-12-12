@@ -55,7 +55,7 @@ export default function Home() {
             <div className="flex flex-col items-start gap-x-3">
               <div className="shrink-0 mb-4">
                 <Image
-                  src={"/image/aidilbaihaqi.webp"}
+                  src={"/image-optimized/aidilbaihaqi.webp"}
                   alt="Aidil Baihaqi"
                   width={64}
                   height={64}
@@ -646,7 +646,7 @@ export default function Home() {
                   <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
                     <div className="relative z-10 size-6 flex justify-center items-center">
                       <Image
-                        src={"/image/logo-rakamin.webp"}
+                        src={"/image-optimized/logo-rakamin.webp"}
                         alt="Risalah Maritim"
                         width={32}
                         height={32}

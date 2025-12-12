@@ -60,8 +60,8 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full p-1">
                   <div className="relative w-full h-full rounded-full overflow-hidden bg-white dark:bg-gray-900">
                     <Image
-                      src="/image/aidilbaihaqi.webp"
-                      alt="Aidil Baihaqi - Software Engineer, Content Creator, IT Mentor"
+                      src="/image-optimized/aidilbaihaqi.webp"
+                      alt="Aidil Baihaqi - Full Stack Engineer, Data Scientist, MLops"
                       fill
                       sizes="(max-width: 768px) 160px, 208px"
                       style={{ objectFit: 'cover' }}
