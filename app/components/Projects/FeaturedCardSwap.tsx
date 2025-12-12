@@ -150,8 +150,11 @@ export default function FeaturedCardSwap({ items }: FeaturedCardSwapProps) {
                   src={activeItem.cover}
                   alt={activeItem.title}
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                   priority={activeIndex === 0}
+                  quality={80}
+                  loading={activeIndex === 0 ? "eager" : "lazy"}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               </div>

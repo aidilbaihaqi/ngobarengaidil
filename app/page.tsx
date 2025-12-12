@@ -3,13 +3,36 @@
 import SocialIcons from "./components/Button/SocialIcons";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { BentoGridThirdDemo } from "./components/Layout/BentoGrid";
+import dynamic from "next/dynamic";
 import Main from "./components/Layout/Main";
 import { FlipWordsDemo } from "./components/Text/FlipWords";
-import ClickSpark from "./components/ui/ClickSpark";
 
-import { cn } from "@/app/lib/utils";
-import React from "react";
+import React, { Suspense } from "react";
+
+// Lazy load heavy components
+const ClickSpark = dynamic(() => import("./components/ui/ClickSpark"), {
+  ssr: false,
+  loading: () => <div className="contents" />,
+});
+
+const BentoGridThirdDemo = dynamic(
+  () => import("./components/Layout/BentoGrid").then((mod) => mod.BentoGridThirdDemo),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          {[1, 2, 3, 4, 5].map((i) => (
+            <div
+              key={i}
+              className={`h-64 bg-neutral-200 dark:bg-neutral-800 rounded-xl animate-pulse ${i === 4 ? 'sm:col-span-2 lg:col-span-2' : ''}`}
+            />
+          ))}
+        </div>
+      </div>
+    ),
+  }
+);
 
 export default function Home() {
   return (
@@ -44,7 +67,8 @@ export default function Home() {
                       style={{ objectFit: 'cover' }}
                       className="transition-transform duration-300 hover:scale-110"
                       priority
-                      quality={85}
+                      quality={80}
+                      fetchPriority="high"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
                   </div>
@@ -72,7 +96,20 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <BentoGridThirdDemo />
+            <Suspense fallback={
+              <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <div
+                      key={i}
+                      className={`h-64 bg-neutral-200 dark:bg-neutral-800 rounded-xl animate-pulse ${i === 4 ? 'sm:col-span-2 lg:col-span-2' : ''}`}
+                    />
+                  ))}
+                </div>
+              </div>
+            }>
+              <BentoGridThirdDemo />
+            </Suspense>
             {/* End Feature Section */}
           </div>
         </main>

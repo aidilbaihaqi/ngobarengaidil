@@ -1,35 +1,80 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense, useMemo } from "react";
+import dynamic from "next/dynamic";
 import Main from "../components/Layout/Main";
-import ClickSpark from "../components/ui/ClickSpark";
-import FeaturedCardSwap from "../components/Projects/FeaturedCardSwap";
-import ProjectFilters from "../components/Projects/ProjectFilters";
-import ProjectsGrid from "../components/Projects/ProjectsGrid";
-import ProjectStats from "../components/Projects/ProjectStats";
 import { featuredProjects, allProjects } from "../data/projects";
 import type { Project } from "../types/project";
+
+// Lazy load heavy components
+const ClickSpark = dynamic(() => import("../components/ui/ClickSpark"), {
+  ssr: false,
+  loading: () => <div className="contents" />,
+});
+
+const FeaturedCardSwap = dynamic(
+  () => import("../components/Projects/FeaturedCardSwap"),
+  {
+    loading: () => (
+      <div className="h-[500px] bg-neutral-200 dark:bg-neutral-800 rounded-2xl animate-pulse" />
+    ),
+  }
+);
+
+const ProjectFilters = dynamic(
+  () => import("../components/Projects/ProjectFilters"),
+  {
+    loading: () => (
+      <div className="h-16 bg-neutral-200 dark:bg-neutral-800 rounded-xl animate-pulse mb-8" />
+    ),
+  }
+);
+
+const ProjectsGrid = dynamic(
+  () => import("../components/Projects/ProjectsGrid"),
+  {
+    loading: () => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[1, 2, 3, 4, 5, 6].map((i) => (
+          <div key={i} className="h-80 bg-neutral-200 dark:bg-neutral-800 rounded-2xl animate-pulse" />
+        ))}
+      </div>
+    ),
+  }
+);
+
+const ProjectStats = dynamic(
+  () => import("../components/Projects/ProjectStats"),
+  {
+    loading: () => (
+      <div className="h-24 bg-neutral-200 dark:bg-neutral-800 rounded-xl animate-pulse mb-8" />
+    ),
+  }
+);
 
 export default function ProjectsPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeFilter, setActiveFilter] = useState("All");
 
-  const filteredProjects = allProjects.filter((project: Project) => {
-    const matchesSearch =
-      searchQuery === "" ||
-      project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      project.stack.some((tech) =>
-        tech.toLowerCase().includes(searchQuery.toLowerCase())
-      ) ||
-      project.tags.some((tag) =>
-        tag.toLowerCase().includes(searchQuery.toLowerCase())
-      );
+  // Memoize filtered projects to prevent unnecessary recalculations
+  const filteredProjects = useMemo(() => {
+    return allProjects.filter((project: Project) => {
+      const matchesSearch =
+        searchQuery === "" ||
+        project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        project.stack.some((tech) =>
+          tech.toLowerCase().includes(searchQuery.toLowerCase())
+        ) ||
+        project.tags.some((tag) =>
+          tag.toLowerCase().includes(searchQuery.toLowerCase())
+        );
 
-    const matchesFilter =
-      activeFilter === "All" || project.tags.includes(activeFilter);
+      const matchesFilter =
+        activeFilter === "All" || project.tags.includes(activeFilter);
 
-    return matchesSearch && matchesFilter;
-  });
+      return matchesSearch && matchesFilter;
+    });
+  }, [searchQuery, activeFilter]);
 
   return (
     <ClickSpark

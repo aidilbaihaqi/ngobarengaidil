@@ -30,13 +30,20 @@ const nextConfig: NextConfig = {
       }
     ],
     formats: ['image/avif', 'image/webp'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    // Optimized device sizes - reduced for faster loading
+    deviceSizes: [640, 750, 1080, 1920],
+    imageSizes: [16, 32, 64, 128, 256],
+    // Minimize image processing time
+    minimumCacheTTL: 31536000,
   },
   // Enable compression
   compress: true,
   // Enable React strict mode for better performance
   reactStrictMode: true,
+  // Experimental optimizations
+  experimental: {
+    optimizeCss: true,
+  },
   // Add security headers
   async headers() {
     return [
@@ -63,6 +70,26 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/image/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        // Cache optimized images
+        source: '/_next/image/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        // Cache static assets
+        source: '/_next/static/:path*',
         headers: [
           {
             key: 'Cache-Control',

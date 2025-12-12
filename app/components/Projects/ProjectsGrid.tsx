@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo, useCallback } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import ProjectCard from "@/app/components/Projects/ProjectCard";
@@ -11,32 +11,44 @@ interface ProjectsGridProps {
   projects: Project[];
 }
 
-const PROJECTS_PER_PAGE = 9;
+const PROJECTS_PER_PAGE = 6; // Reduced for faster initial load
 
 export default function ProjectsGrid({ projects }: ProjectsGridProps) {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [visibleCount, setVisibleCount] = useState(PROJECTS_PER_PAGE);
 
-  const visibleProjects = projects.slice(0, visibleCount);
+  const visibleProjects = useMemo(
+    () => projects.slice(0, visibleCount),
+    [projects, visibleCount]
+  );
   const hasMore = visibleCount < projects.length;
 
-  const handleShowMore = () => {
+  const handleShowMore = useCallback(() => {
     setVisibleCount((prev) => prev + PROJECTS_PER_PAGE);
-  };
+  }, []);
 
+  const handleProjectClick = useCallback((project: Project) => {
+    setSelectedProject(project);
+  }, []);
+
+  const handleCloseModal = useCallback(() => {
+    setSelectedProject(null);
+  }, []);
+
+  // Simplified animation for better performance
   const container = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.05, // Faster stagger
       },
     },
   };
 
   const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 10 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.3 } },
   };
 
   return (
@@ -51,7 +63,7 @@ export default function ProjectsGrid({ projects }: ProjectsGridProps) {
           <motion.div key={project.id} variants={item}>
             <ProjectCard
               project={project}
-              onClick={() => setSelectedProject(project)}
+              onClick={() => handleProjectClick(project)}
             />
           </motion.div>
         ))}
@@ -80,10 +92,12 @@ export default function ProjectsGrid({ projects }: ProjectsGridProps) {
         </div>
       )}
 
-      <ProjectModal
-        project={selectedProject}
-        onClose={() => setSelectedProject(null)}
-      />
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          onClose={handleCloseModal}
+        />
+      )}
     </>
   );
 }

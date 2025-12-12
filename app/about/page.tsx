@@ -2,10 +2,40 @@
 
 import Main from "@/app/components/Layout/Main";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import { TypewriterEffectSmoothDemo } from "@/app/components/Text/TypewriterEffectSmooth";
-import ClickSpark from "@/app/components/ui/ClickSpark";
-import AwardCarousel from "@/app/components/ui/AwardCarousel";
+import { Suspense, memo } from "react";
 
+// Lazy load heavy components
+const ClickSpark = dynamic(() => import("@/app/components/ui/ClickSpark"), {
+  ssr: false,
+  loading: () => <div className="contents" />,
+});
+
+const AwardCarousel = dynamic(() => import("@/app/components/ui/AwardCarousel"), {
+  ssr: false,
+  loading: () => (
+    <div className="h-64 bg-neutral-200 dark:bg-neutral-800 rounded-xl animate-pulse" />
+  ),
+});
+
+// Memoized skill icon component for better performance
+const SkillIcon = memo(function SkillIcon({ icon, name }: { icon: string; name: string }) {
+  return (
+    <li className="me-1 after:content-[','] last:after:content-[''] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+      <Image 
+        width={15} 
+        height={15} 
+        alt={name} 
+        className="me-1" 
+        src={`https://skillicons.dev/icons?i=${icon}`}
+        loading="lazy"
+        unoptimized
+      />
+      {name}
+    </li>
+  );
+});
 
 export default function Home() {
   return (
@@ -27,9 +57,11 @@ export default function Home() {
                 <Image
                   src={"/image/aidilbaihaqi.webp"}
                   alt="Aidil Baihaqi"
-                  width={500}
-                  height={500}
+                  width={64}
+                  height={64}
                   className="shrink-0 size-16 rounded-full"
+                  priority
+                  quality={80}
                 />
               </div>
 
@@ -65,34 +97,13 @@ export default function Home() {
                   </dt>
                   <dd>
                     <ul>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="React" className="me-1" src="https://skillicons.dev/icons?i=react" />
-                        React
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Next.js" className="me-1" src="https://skillicons.dev/icons?i=nextjs" />
-                        Next.js
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Tailwind CSS" className="me-1" src="https://skillicons.dev/icons?i=tailwind" />
-                        TailwindCSS
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="HTML" className="me-1" src="https://skillicons.dev/icons?i=html" />
-                        HTML
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="CSS" className="me-1" src="https://skillicons.dev/icons?i=css" />
-                        CSS
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="JavaScript" className="me-1" src="https://skillicons.dev/icons?i=js" />
-                        JavaScript
-                      </li>
-                      <li className="me-1 inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="TypeScript" className="me-1" src="https://skillicons.dev/icons?i=ts" />
-                        TypeScript
-                      </li>
+                      <SkillIcon icon="react" name="React" />
+                      <SkillIcon icon="nextjs" name="Next.js" />
+                      <SkillIcon icon="tailwind" name="TailwindCSS" />
+                      <SkillIcon icon="html" name="HTML" />
+                      <SkillIcon icon="css" name="CSS" />
+                      <SkillIcon icon="js" name="JavaScript" />
+                      <SkillIcon icon="ts" name="TypeScript" />
                     </ul>
                   </dd>
                 </dl>
@@ -103,26 +114,11 @@ export default function Home() {
                   </dt>
                   <dd>
                     <ul>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Go" className="me-1" src="https://skillicons.dev/icons?i=go" />
-                        Go (Gin)
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Python" className="me-1" src="https://skillicons.dev/icons?i=fastapi" />
-                        FastAPI
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Python" className="me-1" src="https://skillicons.dev/icons?i=flask" />
-                        Flask
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Node.js" className="me-1" src="https://skillicons.dev/icons?i=nodejs" />
-                        Node.js
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="PHP" className="me-1" src="https://skillicons.dev/icons?i=laravel" />
-                        Laravel
-                      </li>
+                      <SkillIcon icon="go" name="Go (Gin)" />
+                      <SkillIcon icon="fastapi" name="FastAPI" />
+                      <SkillIcon icon="flask" name="Flask" />
+                      <SkillIcon icon="nodejs" name="Node.js" />
+                      <SkillIcon icon="laravel" name="Laravel" />
                     </ul>
                   </dd>
                 </dl>
@@ -133,18 +129,9 @@ export default function Home() {
                   </dt>
                   <dd>
                     <ul>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="PostgreSQL" className="me-1" src="https://skillicons.dev/icons?i=postgres" />
-                        PostgreSQL
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="MySQL" className="me-1" src="https://skillicons.dev/icons?i=mysql" />
-                        MySQL
-                      </li>
-                      <li className="me-1 inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="MongoDB" className="me-1" src="https://skillicons.dev/icons?i=sqlite" />
-                        Sqlite
-                      </li>
+                      <SkillIcon icon="postgres" name="PostgreSQL" />
+                      <SkillIcon icon="mysql" name="MySQL" />
+                      <SkillIcon icon="sqlite" name="Sqlite" />
                     </ul>
                   </dd>
                 </dl>
@@ -155,22 +142,10 @@ export default function Home() {
                   </dt>
                   <dd>
                     <ul>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Docker" className="me-1" src="https://skillicons.dev/icons?i=docker" />
-                        Docker
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="WSL" className="me-1" src="https://skillicons.dev/icons?i=linux" />
-                        WSL
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Nginx" className="me-1" src="https://skillicons.dev/icons?i=nginx" />
-                        Nginx
-                      </li>
-                      <li className="me-1 inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Linux" className="me-1" src="https://skillicons.dev/icons?i=linux" />
-                        Linux Server
-                      </li>
+                      <SkillIcon icon="docker" name="Docker" />
+                      <SkillIcon icon="linux" name="WSL" />
+                      <SkillIcon icon="nginx" name="Nginx" />
+                      <SkillIcon icon="linux" name="Linux Server" />
                     </ul>
                   </dd>
                 </dl>
@@ -181,10 +156,7 @@ export default function Home() {
                   </dt>
                   <dd>
                     <ul>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Figma" className="me-1" src="https://skillicons.dev/icons?i=figma" />
-                        Figma
-                      </li>
+                      <SkillIcon icon="figma" name="Figma" />
                       <li className="me-1 inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
                         Canva
                       </li>
@@ -198,14 +170,8 @@ export default function Home() {
                   </dt>
                   <dd>
                     <ul>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Git" className="me-1" src="https://skillicons.dev/icons?i=git" />
-                        Git
-                      </li>
-                      <li className="me-1 inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="GitHub" className="me-1" src="https://skillicons.dev/icons?i=github" />
-                        GitHub
-                      </li>
+                      <SkillIcon icon="git" name="Git" />
+                      <SkillIcon icon="github" name="GitHub" />
                     </ul>
                   </dd>
                 </dl>
@@ -217,7 +183,7 @@ export default function Home() {
                   <dd>
                     <ul>
                       <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        Pandas, Matplotlib, Scikit-Learn, TensorFlow, HuggingFace, Tableau, Google Spreadsheet and Microsoft Excel
+                        Pandas, Matplotlib, Scikit-Learn, TensorFlow, HuggingFace, Tableau, Google Spreadsheet, MS. Excel
                       </li>
                     </ul>
                   </dd>
@@ -303,11 +269,12 @@ export default function Home() {
                   <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
                     <div className="relative z-10 size-6 flex justify-center items-center">
                       <Image
-                        src={"/image/logo-umbiteams.jpg"}
+                        src={"/image-optimized/logo-umbiteams.webp"}
                         alt="UmbiTeams"
                         width={32}
                         height={32}
                         className="shrink-0 size-6 rounded-full"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -350,11 +317,12 @@ export default function Home() {
                         <div className="flex flex-col sm:flex-row items-start sm:items-center overflow-hidden">
                           <div className="hidden sm:flex flex-shrink-0 sm:w-32 md:w-48 h-24 sm:h-auto">
                             <Image
-                              src={"/image/logo-umbiteams.jpg"}
+                              src={"/image-optimized/logo-umbiteams.webp"}
                               width={192}
                               height={96}
                               alt="Logo UmbiTeams"
                               className="w-full h-full object-cover rounded-t-lg sm:rounded-t-none sm:rounded-s-lg"
+                              loading="lazy"
                             />
                           </div>
 
@@ -432,10 +400,11 @@ export default function Home() {
                   <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
                     <div className="relative z-10 size-6 flex justify-center items-center">
                       <Image
-                        src={"/image/logo-ads.png"}
+                        src={"/image-optimized/logo-ads.webp"}
                         alt="PT Arus Digital Sinergi"
                         width={32}
                         height={32}
+                        loading="lazy"
                         className="shrink-0 size-6 rounded-full"
                       />
                     </div>
@@ -481,9 +450,10 @@ export default function Home() {
                         <div className="flex flex-col sm:flex-row items-start sm:items-center overflow-hidden">
                           <div className="hidden sm:flex flex-shrink-0 sm:w-32 md:w-48 h-24 sm:h-auto">
                             <Image
-                              src={"/image/banner-ads.jpg"}
+                              src={"/image-optimized/banner-ads.webp"}
                               width={192}
                               height={96}
+                              loading="lazy"
                               alt="PT Arus Digital Sinergi"
                               className="w-full h-full object-cover sm:rounded-s-lg"
                             />
@@ -806,9 +776,10 @@ export default function Home() {
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
 
                   <Image
-                    src={"/image/logo-umrah.png"}
+                    src={"/image-optimized/logo-umrah.webp"}
                     width={400}
                     height={400}
+                    loading="lazy"
                     alt="Universitas Maritim Raja Ali Haji"
                     className="shrink-0 size-10 mb-3"
                   />
@@ -872,9 +843,9 @@ export default function Home() {
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <AwardCarousel
                     images={[
-                      "/image/awards/bio1.jpg",
-                      "/image/awards/bio2.jpg",
-                      "/image/awards/bio3.jpg"
+                      "/image-optimized/awards/bio1.webp",
+                      "/image-optimized/awards/bio2.webp",
+                      "/image-optimized/awards/bio3.webp"
                     ]}
                     alt="Bioinformatics Competition"
                   />
@@ -896,8 +867,8 @@ export default function Home() {
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <AwardCarousel
                     images={[
-                      "/image/awards/1st Place – AI Entrepreneurship Competition_1.jpg",
-                      "/image/awards/1st Place – AI Entrepreneurship Competition_2.jpg"
+                      "/image-optimized/awards/1st Place – AI Entrepreneurship Competition_1.webp",
+                      "/image-optimized/awards/1st Place – AI Entrepreneurship Competition_2.webp"
                     ]}
                     alt="AI Entrepreneurship Competition"
                   />
@@ -919,8 +890,8 @@ export default function Home() {
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <AwardCarousel
                     images={[
-                      "/image/awards/Finalist – ID Fest Developer Day, Jakarta_1.jpg",
-                      "/image/awards/Finalist – ID Fest Developer Day, Jakarta_2.jpg"
+                      "/image-optimized/awards/Finalist – ID Fest Developer Day, Jakarta_1.webp",
+                      "/image-optimized/awards/Finalist – ID Fest Developer Day, Jakarta_2.webp"
                     ]}
                     alt="ID Fest Developer Day"
                   />
@@ -942,7 +913,7 @@ export default function Home() {
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <AwardCarousel
                     images={[
-                      "/image/awards/1st Place - Festival Open Source Software, Batam, Batam Linux User Group, Politeknik Negeri Batam, 2025.jpg"
+                      "/image-optimized/awards/1st Place - Festival Open Source Software, Batam, Batam Linux User Group, Politeknik Negeri Batam, 2025.webp"
                     ]}
                     alt="Festival Open Source Software 2025"
                   />
@@ -964,11 +935,11 @@ export default function Home() {
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <AwardCarousel
                     images={[
-                      "/image/awards/2nd Place – Festival Open Source Software, Batam_1.JPG",
-                      "/image/awards/2nd Place – Festival Open Source Software, Batam_2.JPG",
-                      "/image/awards/2nd Place – Festival Open Source Software, Batam_3.JPG",
-                      "/image/awards/2nd Place – Festival Open Source Software, Batam_4.JPG",
-                      "/image/awards/2nd Place – Festival Open Source Software, Batam_5.JPG",
+                      "/image-optimized/awards/2nd Place – Festival Open Source Software, Batam_1.webp",
+                      "/image-optimized/awards/2nd Place – Festival Open Source Software, Batam_2.webp",
+                      "/image-optimized/awards/2nd Place – Festival Open Source Software, Batam_3.webp",
+                      "/image-optimized/awards/2nd Place – Festival Open Source Software, Batam_4.webp",
+                      "/image-optimized/awards/2nd Place – Festival Open Source Software, Batam_5.webp",
                     ]}
                     alt="Festival Open Source Software 2024"
                   />
@@ -990,9 +961,9 @@ export default function Home() {
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <AwardCarousel
                     images={[
-                      "/image/awards/1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta_1.JPG",
-                      "/image/awards/1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta_2.JPG",
-                      "/image/awards/1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta_3.JPG",
+                      "/image-optimized/awards/1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta_1.webp",
+                      "/image-optimized/awards/1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta_2.webp",
+                      "/image-optimized/awards/1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta_3.webp",
                     ]}
                     alt="Baparekraf Developer Day"
                   />

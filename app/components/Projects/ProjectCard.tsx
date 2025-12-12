@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, memo } from "react";
 import Image from "next/image";
 import { ExternalLink, Github, FileText } from "lucide-react";
 import type { Project } from "@/app/types/project";
@@ -10,8 +10,9 @@ interface ProjectCardProps {
   onClick: () => void;
 }
 
-export default function ProjectCard({ project, onClick }: ProjectCardProps) {
+function ProjectCard({ project, onClick }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
     <div
@@ -22,12 +23,19 @@ export default function ProjectCard({ project, onClick }: ProjectCardProps) {
     >
       <div className="relative h-full bg-white dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-500/20">
         {/* Cover Image */}
-        <div className="relative w-full aspect-video overflow-hidden">
+        <div className="relative w-full aspect-video overflow-hidden bg-gray-200 dark:bg-gray-800">
+          {!imageLoaded && (
+            <div className="absolute inset-0 animate-pulse bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800" />
+          )}
           <Image
             src={project.cover}
             alt={project.title}
             fill
-            className="object-cover transition-transform duration-500 group-hover:scale-110"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className={`object-cover transition-all duration-500 group-hover:scale-110 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+            loading="lazy"
+            quality={75}
+            onLoad={() => setImageLoaded(true)}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
         </div>
@@ -141,3 +149,6 @@ export default function ProjectCard({ project, onClick }: ProjectCardProps) {
     </div>
   );
 }
+
+// Memoize to prevent unnecessary re-renders
+export default memo(ProjectCard);
