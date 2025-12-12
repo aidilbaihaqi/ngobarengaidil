@@ -1,6 +1,25 @@
+# Robots.txt for ngobarengaidil.com - Aidil Baihaqi Portfolio
+
 # Allow all crawlers
 User-agent: *
 Allow: /
 
+# Disallow admin or private paths (if any)
+Disallow: /api/
+Disallow: /_next/
+
+# Crawl delay for politeness
+Crawl-delay: 1
+
 # Sitemap location
 Sitemap: https://ngobarengaidil.com/sitemap.xml
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing specific
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
