@@ -1,6 +1,5 @@
 "use client";
 import { cn } from "@/app/lib/utils";
-import React from "react";
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 import {
   IconBoxAlignRightFilled,
@@ -10,7 +9,6 @@ import {
   IconTableColumn,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export function BentoGridThirdDemo() {
   return (
@@ -196,225 +194,117 @@ const SkeletonTwo = () => {
   );
 };
 const SkeletonThree = () => {
-  const variants = {
-    initial: {
-      y: 0,
-      opacity: 0.8,
-    },
-    animate: {
-      y: [-2, 2, -2],
-      opacity: [0.8, 1, 0.8],
-      transition: {
-        duration: 4,
-        repeat: Infinity,
-        ease: "easeInOut",
-        delay: 1,
-      },
-    },
-  };
-  
-  const codeVariants = {
-    initial: {
-      opacity: 0.6,
-    },
-    animate: {
-      opacity: [0.6, 1, 0.6],
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        delay: 1.5,
-        ease: "easeInOut",
-      },
-    },
-  };
+  const codeFiles = [
+    { name: "react-app.tsx", color: "from-blue-500 to-cyan-500", icon: "⚛️" },
+    { name: "api-server.js", color: "from-yellow-500 to-orange-500", icon: "🔥" },
+    { name: "mobile-app.kt", color: "from-purple-500 to-pink-500", icon: "📱" },
+  ];
 
   return (
     <motion.div
-      initial="initial"
-      animate="animate"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2 p-2 rounded-lg overflow-hidden"
-      style={{
-        background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-      }}
+      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-1.5 p-2 rounded-lg overflow-hidden"
     >
       {/* Header */}
-      <motion.div
-        variants={variants}
-        className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg p-2"
-      >
-        <div className="h-6 w-6 rounded-lg bg-gradient-to-r from-purple-400 to-pink-400 flex items-center justify-center flex-shrink-0">
-          <span className="text-white text-[10px] font-bold">💻</span>
+      <div className="flex items-center space-x-1.5 mb-1">
+        <div className="h-5 w-5 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center flex-shrink-0">
+          <span className="text-white text-[10px]">💾</span>
         </div>
-        <div className="flex-1 min-w-0">
-          <p className="text-white text-xs font-semibold truncate">Source Code Market</p>
-          <p className="text-white/70 text-[10px] truncate">Premium code solutions</p>
-        </div>
-        <div className="h-5 w-5 rounded-full bg-green-400 flex items-center justify-center flex-shrink-0">
-          <span className="text-white text-[8px]">✓</span>
-        </div>
-      </motion.div>
+        <span className="text-[10px] font-semibold text-gray-700 dark:text-gray-300">Source Code</span>
+      </div>
 
-      {/* Code Snippets */}
-      <motion.div
-        variants={codeVariants}
-        className="flex-1 bg-black/20 backdrop-blur-sm rounded-lg p-2 space-y-1 overflow-hidden"
-      >
-        <div className="flex items-center space-x-1">
-          <div className="w-2 h-2 rounded-full bg-red-400 flex-shrink-0"></div>
-          <div className="w-2 h-2 rounded-full bg-yellow-400 flex-shrink-0"></div>
-          <div className="w-2 h-2 rounded-full bg-green-400 flex-shrink-0"></div>
-          <span className="text-white/60 text-[9px] ml-1 truncate">main.js</span>
-        </div>
-        
-        <div className="space-y-0.5 overflow-hidden">
-          <div className="flex items-center space-x-1 min-w-0">
-            <span className="text-purple-300 text-[9px] flex-shrink-0">const</span>
-            <span className="text-blue-300 text-[9px] flex-shrink-0">api</span>
-            <span className="text-white/70 text-[9px] flex-shrink-0">=</span>
-            <span className="text-green-300 text-[9px] truncate">'premium-code'</span>
-          </div>
-          <div className="flex items-center space-x-1 min-w-0">
-            <span className="text-purple-300 text-[9px] flex-shrink-0">function</span>
-            <span className="text-yellow-300 text-[9px] truncate">buyCode()</span>
-            <span className="text-white/70 text-[9px] flex-shrink-0">{`{`}</span>
-          </div>
-          <div className="flex items-center space-x-2 min-w-0">
-            <span className="text-white/40 text-[9px] flex-shrink-0">  return</span>
-            <span className="text-green-300 text-[9px] truncate">'success'</span>
-          </div>
-          <div className="flex items-center">
-            <span className="text-white/70 text-[9px]">{`}`}</span>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Market Stats */}
-      <motion.div
-        variants={variants}
-        className="flex items-center justify-between bg-white/10 backdrop-blur-sm rounded-lg p-2"
-      >
-        <div className="flex items-center space-x-1 min-w-0">
-          <div className="h-4 w-4 rounded bg-gradient-to-r from-green-400 to-blue-400 flex items-center justify-center flex-shrink-0">
-            <span className="text-white text-[8px]">📈</span>
-          </div>
-          <div className="min-w-0">
-            <p className="text-white text-[10px] font-medium truncate">50+ Projects</p>
-            <p className="text-white/60 text-[8px] truncate">Available</p>
-          </div>
-        </div>
-        <div className="flex space-x-0.5 flex-shrink-0">
-          <div className="w-1.5 h-3 bg-green-400 rounded-sm"></div>
-          <div className="w-1.5 h-4 bg-blue-400 rounded-sm"></div>
-          <div className="w-1.5 h-2 bg-purple-400 rounded-sm"></div>
-          <div className="w-1.5 h-3.5 bg-pink-400 rounded-sm"></div>
-        </div>
-      </motion.div>
+      {/* Code Files */}
+      <div className="flex-1 flex flex-col justify-center space-y-1.5">
+        {codeFiles.map((file) => (
+          <motion.div
+            key={file.name}
+            whileHover={{ scale: 1.03, x: 3, transition: { duration: 0.2 } }}
+            className="flex items-center space-x-1.5 p-1.5 rounded-md border border-neutral-200 dark:border-white/[0.1] bg-white dark:bg-black/50 backdrop-blur-sm cursor-pointer transition-colors hover:bg-gray-50 dark:hover:bg-black/70"
+          >
+            <div className={`h-5 w-5 rounded-md bg-gradient-to-r ${file.color} flex items-center justify-center flex-shrink-0`}>
+              <span className="text-[10px]">{file.icon}</span>
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className="text-[9px] font-medium text-gray-700 dark:text-gray-300 truncate">{file.name}</p>
+              <div className="flex items-center space-x-1 mt-0.5">
+                <div className="h-1 w-1 rounded-full bg-green-500"></div>
+                <span className="text-[7px] text-gray-500 dark:text-gray-400">Available</span>
+              </div>
+            </div>
+            <div className="text-gray-400 dark:text-gray-500 text-[10px] flex-shrink-0">
+              ⚙️
+            </div>
+          </motion.div>
+        ))}
+      </div>
     </motion.div>
   );
 };
 const SkeletonFour = () => {
-  const first = {
-    initial: {
-      x: 20,
-      rotate: -5,
+  const designItems = [
+    { 
+      name: "Logo Design", 
+      icon: "🎨", 
+      bgColor: "bg-pink-50 dark:bg-pink-950/20",
+      iconBg: "from-pink-400 to-rose-400",
+      description: "Brand Identity"
     },
-    hover: {
-      x: 0,
-      rotate: 0,
+    { 
+      name: "Poster", 
+      icon: "📄", 
+      bgColor: "bg-blue-50 dark:bg-blue-950/20",
+      iconBg: "from-blue-400 to-cyan-400",
+      description: "Print Design"
     },
-  };
-  const second = {
-    initial: {
-      x: -20,
-      rotate: 5,
+    { 
+      name: "Banner", 
+      icon: "🖼️", 
+      bgColor: "bg-green-50 dark:bg-green-950/20",
+      iconBg: "from-green-400 to-emerald-400",
+      description: "Web Graphics"
     },
-    hover: {
-      x: 0,
-      rotate: 0,
+    { 
+      name: "Social Media", 
+      icon: "📱", 
+      bgColor: "bg-purple-50 dark:bg-purple-950/20",
+      iconBg: "from-purple-400 to-violet-400",
+      description: "Digital Content"
     },
-  };
-  const third = {
-    initial: {
-      y: 10,
-      opacity: 0.8,
-    },
-    hover: {
-      y: 0,
-      opacity: 1,
-    },
-  };
+  ];
+
   return (
     <motion.div
-      initial="initial"
-      animate="initial"
-      whileHover="hover"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2 p-2 overflow-hidden"
+      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col p-3 overflow-hidden"
     >
-      {/* Design Tools */}
-      <motion.div
-        variants={first}
-        className="h-1/3 w-full rounded-lg bg-gradient-to-r from-pink-100 to-purple-100 dark:from-pink-900/20 dark:to-purple-900/20 p-2 border border-neutral-200 dark:border-white/[0.1] flex items-center space-x-2"
-      >
-        <div className="h-6 w-6 rounded-lg bg-gradient-to-r from-pink-500 to-purple-500 flex-shrink-0 flex items-center justify-center">
-          <span className="text-white text-[10px] font-bold">🎨</span>
-        </div>
-        <div className="flex-1 min-w-0">
-          <p className="text-[10px] font-semibold text-gray-700 dark:text-gray-300 truncate">Design Tools</p>
-          <div className="flex space-x-1 mt-1">
-            <div className="w-2 h-2 rounded bg-orange-400 flex-shrink-0"></div>
-            <div className="w-2 h-2 rounded bg-blue-400 flex-shrink-0"></div>
-            <div className="w-2 h-2 rounded bg-purple-400 flex-shrink-0"></div>
-            <div className="w-2 h-2 rounded bg-green-400 flex-shrink-0"></div>
-          </div>
-        </div>
-      </motion.div>
 
-      {/* Creative Process */}
-      <motion.div
-        variants={second}
-        className="h-1/3 w-full rounded-lg bg-gradient-to-r from-blue-100 to-cyan-100 dark:from-blue-900/20 dark:to-cyan-900/20 p-2 border border-neutral-200 dark:border-white/[0.1] flex items-center space-x-2"
-      >
-        <div className="flex-1 flex items-center space-x-2 min-w-0">
-          <div className="h-5 w-5 rounded bg-gradient-to-r from-yellow-400 to-orange-400 flex items-center justify-center flex-shrink-0">
-            <span className="text-white text-[8px]">💡</span>
-          </div>
-          <div className="flex-1 min-w-0">
-            <div className="flex space-x-1">
-              <motion.div
-                initial={{ width: "0%" }}
-                animate={{ width: "100%" }}
-                transition={{ duration: 1, delay: 0.2 }}
-                className="h-1.5 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full"
-              />
+      {/* Design Items Grid */}
+      <div className="grid grid-cols-2 gap-2 flex-1">
+        {designItems.map((item, index) => (
+          <motion.div
+            key={item.name}
+            initial={{ opacity: 0.8 }}
+            whileHover={{ 
+              scale: 1.05, 
+              opacity: 1,
+              y: -2,
+              transition: { duration: 0.2, ease: "easeOut" }
+            }}
+            className={`${item.bgColor} rounded-lg p-2 border border-gray-200/50 dark:border-white/[0.05] cursor-pointer transition-shadow hover:shadow-md dark:hover:shadow-lg dark:hover:shadow-white/[0.05]`}
+          >
+            <div className="flex flex-col items-center justify-center h-full space-y-1">
+              <motion.div 
+                whileHover={{ rotate: [0, -10, 10, -10, 0], transition: { duration: 0.5 } }}
+                className={`h-8 w-8 rounded-lg bg-gradient-to-r ${item.iconBg} flex items-center justify-center flex-shrink-0 shadow-sm`}
+              >
+                <span className="text-sm">{item.icon}</span>
+              </motion.div>
+              <div className="text-center">
+                <p className="text-[10px] font-semibold text-gray-700 dark:text-gray-300 truncate">{item.name}</p>
+                <p className="text-[8px] text-gray-500 dark:text-gray-400 truncate">{item.description}</p>
+              </div>
             </div>
-            <p className="text-[9px] text-gray-600 dark:text-gray-400 mt-1 truncate">Creative Process</p>
-          </div>
-        </div>
-        <div className="h-6 w-6 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex-shrink-0 flex items-center justify-center">
-          <span className="text-white text-[10px] font-bold">✨</span>
-        </div>
-      </motion.div>
-
-      {/* Marketing Assets */}
-      <motion.div
-        variants={third}
-        className="h-1/3 w-full rounded-lg bg-gradient-to-r from-green-100 to-emerald-100 dark:from-green-900/20 dark:to-emerald-900/20 p-2 border border-neutral-200 dark:border-white/[0.1] flex items-center space-x-2"
-      >
-        <div className="h-6 w-6 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 flex-shrink-0 flex items-center justify-center">
-          <span className="text-white text-[10px] font-bold">📊</span>
-        </div>
-        <div className="flex-1 min-w-0">
-          <p className="text-[10px] font-semibold text-gray-700 dark:text-gray-300 truncate">Marketing Assets</p>
-          <div className="flex items-center space-x-2 mt-1">
-            <div className="flex space-x-1 flex-shrink-0">
-              <div className="w-1.5 h-1.5 rounded-full bg-red-400"></div>
-              <div className="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
-              <div className="w-1.5 h-1.5 rounded-full bg-green-400"></div>
-            </div>
-            <span className="text-[9px] text-gray-500 dark:text-gray-400 truncate">Logo • Banner • Poster</span>
-          </div>
-        </div>
-      </motion.div>
+          </motion.div>
+        ))}
+      </div>
     </motion.div>
   );
 };
@@ -463,7 +353,7 @@ const SkeletonFive = () => {
       </motion.div>
 
       {/* Development Icons */}
-      <div className="flex flex-row space-x-1 justify-center">
+      <div className="flex flex-row space-x-1">
         <motion.div
           variants={variants}
           className="h-6 w-6 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-500 flex items-center justify-center flex-shrink-0"

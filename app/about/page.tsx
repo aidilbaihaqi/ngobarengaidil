@@ -25,7 +25,7 @@ export default function Home() {
             <div className="flex flex-col items-start gap-x-3">
               <div className="shrink-0 mb-4">
                 <Image
-                  src={"/image/aidil.jpg"}
+                  src={"/image/aidilbaihaqi.webp"}
                   alt="Aidil Baihaqi"
                   width={500}
                   height={500}
@@ -36,7 +36,7 @@ export default function Home() {
               <div className="grow text-left">
                 <TypewriterEffectSmoothDemo />
                 <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                  Software Engineer | Content Creator | IT Mentor | AI and Machine Learning Enthusiast focused on Bioinformatics
+                  Full Stack Engineer | Data Science and Machine Learning Enthusiast Focused on Bioinformatics | IT and Web Mentor
                 </p>
               </div>
             </div>
@@ -45,7 +45,7 @@ export default function Home() {
             {/* About */}
             <div className="mt-8 text-left">
               <p className="text-sm text-gray-600 dark:text-neutral-400 leading-6 text-left">
-                Passionate and results-driven Programmer with over 5 years of experience in software engineering. Skilled in web development, mentoring junior developers, and delivering high-quality freelance projects for diverse clients, including individuals, businesses, and government organizations. Adept at team collaboration, agile methodologies, and leveraging modern tools to solve complex problems efficiently.
+                Passionate and results-driven programmer with strong experience in software engineering,specializing in backend development, data-driven systems, and AI-based applications.Experienced in building scalable web systems, collaborating in multidisciplinary teams, and delivering high-quality projects for academic, community, and organizational needs.Proficient in modern development tools and agile workflows to solve complex problems efficiently.
               </p>
             </div>
             {/* End About */}
@@ -61,93 +61,120 @@ export default function Home() {
 
                 <dl className="flex flex-col sm:flex-row gap-1 justify-start">
                   <dt className="min-w-40 text-left">
-                    <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">Development:</span>
+                    <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">Frontend:</span>
                   </dt>
                   <dd>
                     <ul>
                       <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Laravel" className="me-1" src="https://skillicons.dev/icons?i=html" />
-                        HTML
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Laravel" className="me-1" src="https://skillicons.dev/icons?i=css" />
-                        CSS
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Laravel" className="me-1" src="https://skillicons.dev/icons?i=js" />
-                        Javascript
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Laravel" className="me-1" src="https://skillicons.dev/icons?i=ts" />
-                        Typescript
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Laravel" className="me-1" src="https://skillicons.dev/icons?i=laravel" />
-                        Laravel
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Node.js" className="me-1" src="https://skillicons.dev/icons?i=nodejs" />
-                        Node.js
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Tailwind CSS" className="me-1" src="https://skillicons.dev/icons?i=tailwind" />
-                        Tailwind CSS
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="React.js" className="me-1" src="https://skillicons.dev/icons?i=react" />
+                        <Image width={15} height={15} alt="React" className="me-1" src="https://skillicons.dev/icons?i=react" />
                         React
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Express.js" className="me-1" src="https://skillicons.dev/icons?i=express" />
-                        Express.js
                       </li>
                       <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
                         <Image width={15} height={15} alt="Next.js" className="me-1" src="https://skillicons.dev/icons?i=nextjs" />
                         Next.js
                       </li>
                       <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Python" className="me-1" src="https://skillicons.dev/icons?i=python" />
-                        Python
+                        <Image width={15} height={15} alt="Tailwind CSS" className="me-1" src="https://skillicons.dev/icons?i=tailwind" />
+                        TailwindCSS
+                      </li>
+                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                        <Image width={15} height={15} alt="HTML" className="me-1" src="https://skillicons.dev/icons?i=html" />
+                        HTML
+                      </li>
+                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                        <Image width={15} height={15} alt="CSS" className="me-1" src="https://skillicons.dev/icons?i=css" />
+                        CSS
+                      </li>
+                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                        <Image width={15} height={15} alt="JavaScript" className="me-1" src="https://skillicons.dev/icons?i=js" />
+                        JavaScript
+                      </li>
+                      <li className="me-1 inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                        <Image width={15} height={15} alt="TypeScript" className="me-1" src="https://skillicons.dev/icons?i=ts" />
+                        TypeScript
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+
+                <dl className="flex flex-col sm:flex-row gap-1 justify-start">
+                  <dt className="min-w-40 text-left">
+                    <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">Backend:</span>
+                  </dt>
+                  <dd>
+                    <ul>
+                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                        <Image width={15} height={15} alt="Go" className="me-1" src="https://skillicons.dev/icons?i=go" />
+                        Go (Gin)
+                      </li>
+                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                        <Image width={15} height={15} alt="Python" className="me-1" src="https://skillicons.dev/icons?i=fastapi" />
+                        FastAPI
+                      </li>
+                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                        <Image width={15} height={15} alt="Python" className="me-1" src="https://skillicons.dev/icons?i=flask" />
+                        Flask
+                      </li>
+                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                        <Image width={15} height={15} alt="Node.js" className="me-1" src="https://skillicons.dev/icons?i=nodejs" />
+                        Node.js
+                      </li>
+                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                        <Image width={15} height={15} alt="PHP" className="me-1" src="https://skillicons.dev/icons?i=laravel" />
+                        Laravel
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+
+                <dl className="flex flex-col sm:flex-row gap-1 justify-start">
+                  <dt className="min-w-40 text-left">
+                    <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">Database:</span>
+                  </dt>
+                  <dd>
+                    <ul>
+                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                        <Image width={15} height={15} alt="PostgreSQL" className="me-1" src="https://skillicons.dev/icons?i=postgres" />
+                        PostgreSQL
                       </li>
                       <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
                         <Image width={15} height={15} alt="MySQL" className="me-1" src="https://skillicons.dev/icons?i=mysql" />
                         MySQL
                       </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Git" className="me-1" src="https://skillicons.dev/icons?i=git" />
-                        Git
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Bootstrap" className="me-1" src="https://skillicons.dev/icons?i=bootstrap" />
-                        Bootstrap
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Remix" className="me-1" src="https://skillicons.dev/icons?i=remix" />
-                        Remix JS
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="MongoDB" className="me-1" src="https://skillicons.dev/icons?i=mongodb" />
-                        MongoDB
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Firebase" className="me-1" src="https://skillicons.dev/icons?i=firebase" />
-                        Firebase
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="GitHub" className="me-1" src="https://skillicons.dev/icons?i=github" />
-                        GitHub
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="VS Code" className="me-1" src="https://skillicons.dev/icons?i=vscode" />
-                        VS Code
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Netlify" className="me-1" src="https://skillicons.dev/icons?i=netlify" />
-                        Netlify
+                      <li className="me-1 inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                        <Image width={15} height={15} alt="MongoDB" className="me-1" src="https://skillicons.dev/icons?i=sqlite" />
+                        Sqlite
                       </li>
                     </ul>
                   </dd>
                 </dl>
+
+                <dl className="flex flex-col sm:flex-row gap-1 justify-start">
+                  <dt className="min-w-40 text-left">
+                    <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">DevOps:</span>
+                  </dt>
+                  <dd>
+                    <ul>
+                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                        <Image width={15} height={15} alt="Docker" className="me-1" src="https://skillicons.dev/icons?i=docker" />
+                        Docker
+                      </li>
+                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                        <Image width={15} height={15} alt="WSL" className="me-1" src="https://skillicons.dev/icons?i=linux" />
+                        WSL
+                      </li>
+                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                        <Image width={15} height={15} alt="Nginx" className="me-1" src="https://skillicons.dev/icons?i=nginx" />
+                        Nginx
+                      </li>
+                      <li className="me-1 inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                        <Image width={15} height={15} alt="Linux" className="me-1" src="https://skillicons.dev/icons?i=linux" />
+                        Linux Server
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+
                 <dl className="flex flex-col sm:flex-row gap-1 justify-start">
                   <dt className="min-w-40 text-left">
                     <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">Design Tools:</span>
@@ -158,13 +185,8 @@ export default function Home() {
                         <Image width={15} height={15} alt="Figma" className="me-1" src="https://skillicons.dev/icons?i=figma" />
                         Figma
                       </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Adobe Photoshop" className="me-1" src="https://skillicons.dev/icons?i=photoshop" />
-                        Adobe Photoshop
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Adobe illustrator" className="me-1" src="https://skillicons.dev/icons?i=illustrator" />
-                        Adobe Illustrator
+                      <li className="me-1 inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                        Canva
                       </li>
                     </ul>
                   </dd>
@@ -172,43 +194,30 @@ export default function Home() {
 
                 <dl className="flex flex-col sm:flex-row gap-1 justify-start">
                   <dt className="min-w-40 text-left">
-                    <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">Filming Tools:</span>
+                    <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">Version Control:</span>
                   </dt>
                   <dd>
                     <ul>
                       <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Adobe Premiere Pro" className="me-1" src="https://skillicons.dev/icons?i=premiere" />
-
-                        Adobe Premiere Pro
+                        <Image width={15} height={15} alt="Git" className="me-1" src="https://skillicons.dev/icons?i=git" />
+                        Git
                       </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        <Image width={15} height={15} alt="Adobe Premiere Pro" className="me-1" src="https://skillicons.dev/icons?i=ae" />
-
-                        Adobe After Effect
+                      <li className="me-1 inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                        <Image width={15} height={15} alt="GitHub" className="me-1" src="https://skillicons.dev/icons?i=github" />
+                        GitHub
                       </li>
                     </ul>
                   </dd>
                 </dl>
 
-
-
                 <dl className="flex flex-col sm:flex-row gap-1 justify-start">
                   <dt className="min-w-40 text-left">
-                    <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">Design Expertise:</span>
+                    <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">Data & AI:</span>
                   </dt>
                   <dd>
                     <ul>
                       <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        UI/UX Design
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        Design Systems
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        Custom Illustrations
-                      </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        Responsive Design
+                        Pandas, Matplotlib, Scikit-Learn, TensorFlow, HuggingFace, Tableau, Google Spreadsheet and Microsoft Excel
                       </li>
                     </ul>
                   </dd>
@@ -255,8 +264,8 @@ export default function Home() {
               {/* Timeline */}
               <div>
                 {/* Item - Beasiswa Pendidikan Indonesia */}
-                <div className="group relative flex gap-x-5">
-                  {/* Icon */}
+                {/* <div className="group relative flex gap-x-5">
+                  
                   <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
                     <div className="relative z-10 size-6 flex justify-center items-center">
                       <Image
@@ -268,9 +277,9 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  {/* End Icon */}
+                  
 
-                  {/* Right Content */}
+                  
                   <div className="grow pb-8 group-last:pb-0 text-left">
                     <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
                       Aug 2023 - Present · 2 yrs 2 mos
@@ -283,6 +292,135 @@ export default function Home() {
                     <p className="leading-6 mt-2 text-sm text-gray-600 dark:text-neutral-400 text-left">
                       Selected as Beasiswa Pendidikan Indonesia awardee, previously qualified for Beasiswa Indonesia Maju S1 Overseas program for Computer Science at Kyoto University. Actively engaged in social impact projects, IELTS and SAT preparation programs, cultural exchange initiatives, and educational outreach across Indonesia to promote digital literacy and technology advancement.
                     </p>
+                  </div>
+                  
+                </div> */}
+                {/* End Item */}
+
+                {/* Item - UmbiTeams */}
+                <div className="group relative flex gap-x-5">
+                  {/* Icon */}
+                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                    <div className="relative z-10 size-6 flex justify-center items-center">
+                      <Image
+                        src={"/image/logo-umbiteams.jpg"}
+                        alt="UmbiTeams"
+                        width={32}
+                        height={32}
+                        className="shrink-0 size-6 rounded-full"
+                      />
+                    </div>
+                  </div>
+                  {/* End Icon */}
+
+                  {/* Right Content */}
+                  <div className="grow pb-8 group-last:pb-0 text-left">
+                    <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                      Oct 2025 - Present
+                    </h3>
+
+                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                      Co-Founder | Backend Developer & ML Engineer at UmbiTeams
+                    </p>
+
+                    <ul className="list-disc ms-6 mt-3 space-y-1.5">
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Designed and developed backend systems, including APIs, database architecture, and server-side logic for client projects.
+                      </li>
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Implemented machine learning solutions to support intelligent features such as data processing, prediction, and automation.
+                      </li>
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Collaborated with frontend developers and UI/UX designers to deliver cohesive, user-centric digital products.
+                      </li>
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Managed end-to-end project development from initial requirements analysis to deployment and maintenance.
+                      </li>
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Ensured system scalability, performance, and maintainability using modern development tools and best practices.
+                      </li>
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Supported freelance project delivery for various clients, adapting solutions to diverse business and organizational needs.
+                      </li>
+                    </ul>
+
+                    <div className="mt-3">
+                      {/* Card */}
+                      <a className="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-700" href="#">
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center overflow-hidden">
+                          <div className="hidden sm:flex flex-shrink-0 sm:w-32 md:w-48 h-24 sm:h-auto">
+                            <Image
+                              src={"/image/logo-umbiteams.jpg"}
+                              width={192}
+                              height={96}
+                              alt="Logo UmbiTeams"
+                              className="w-full h-full object-cover rounded-t-lg sm:rounded-t-none sm:rounded-s-lg"
+                            />
+                          </div>
+
+                          <div className="flex-1 p-4">
+                            <div className="flex flex-col justify-center">
+                              <h3 className="font-semibold text-sm text-gray-800 dark:text-neutral-300">
+                                UmbiTeams
+                              </h3>
+                              <p className="leading-6 mt-1 text-sm text-gray-500 dark:text-neutral-500">
+                                UmbiTeams is a freelance-based technology team that focuses on providing end-to-end digital solutions, ranging from website and backend system development to UI/UX design and data-driven solutions. UmbiTeams helps individuals, businesses, and organizations build efficient, scalable digital products that meet user needs, with a collaborative approach focused on technical quality and real impact.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                      {/* End Card */}
+                    </div>
+                  </div>
+                  {/* End Right Content */}
+                </div>
+                {/* End Item */}
+
+                {/* Item - SMAN 1 Tanjungpinang Bioinformatics Mentor */}
+                <div className="group relative flex gap-x-5">
+                  {/* Icon */}
+                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                    <div className="relative z-10 size-6 flex justify-center items-center">
+                      <Image
+                        src={"/image/logo-sman1tpi.svg"}
+                        alt="SMAN 1 Tanjungpinang"
+                        width={32}
+                        height={32}
+                        className="shrink-0 size-6 rounded-full"
+                      />
+                    </div>
+                  </div>
+                  {/* End Icon */}
+
+                  {/* Right Content */}
+                  <div className="grow pb-8 group-last:pb-0 text-left">
+                    <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                      Jul 2025 - Nov 2025 · 5 mos
+                    </h3>
+
+                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                      Bioinformatics Mentor - Contract / Competition Program at SMAN 1 Tanjungpinang
+                    </p>
+
+                    <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                      Mentored the informatics team for the National Bioinformatics and Synthetic Biology Competition, focusing on 3D web visualization for genomics, sequence analysis, and ML-based data interpretation.
+                    </p>
+
+                    <ul className="list-disc ms-6 mt-3 space-y-1.5">
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Mentored the informatics team for the National Bioinformatics and Synthetic Biology Competition, focusing on 3D web visualization for genomics, sequence analysis, and ML-based data interpretation.
+                      </li>
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Guided students in developing an interactive 3D website to present genomic and analytical insights using modern web technologies.
+                      </li>
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Designed an IoT-based prototype for a smart sprayer and early detection system for <i>Ralstonia solanacearum</i>, integrating sensor data flow and conceptual ML-driven alerts.
+                      </li>
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Provided technical direction and structured learning materials to strengthen students&apos; understanding of bioinformatics application in digital and IoT-driven solutions.
+                      </li>
+                    </ul>
                   </div>
                   {/* End Right Content */}
                 </div>
@@ -307,28 +445,47 @@ export default function Home() {
                   {/* Right Content */}
                   <div className="grow pb-8 group-last:pb-0 text-left">
                     <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      Apr 2025 - September 2025 · 6 mos
+                      Mar 2025 - September 2025 · 8 mos
                     </h3>
 
                     <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
                       Full Stack Developer at PT Arus Digital Sinergi
                     </p>
 
-                    <p className="leading-6 mt-2 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                      Developed and delivered comprehensive full-stack solutions including company profile websites, Enterprise Resource Planning (ERP) systems, Minimum Viable Products (MVPs), and large-scale enterprise applications. Successfully managed end-to-end project development from conception to deployment, utilizing modern web technologies and mobile frameworks to create scalable, user-centric solutions.
-                    </p>
+                    <ul className="mt-2 text-sm text-gray-600 dark:text-neutral-400 list-disc list-inside space-y-1 text-left">
+                      <li>
+                        Developed and delivered full-stack solutions including company profile websites,
+                        ERP systems, MVPs, and enterprise-scale applications.
+                      </li>
+                      <li>
+                        Managed end-to-end development processes from requirements gathering,
+                        system design, implementation, to deployment.
+                      </li>
+                      <li>
+                        Built scalable and user-centric web and mobile applications using modern
+                        web technologies and frameworks.
+                      </li>
+                      <li>
+                        Collaborated closely with cross-functional teams to translate business
+                        requirements into effective technical solutions.
+                      </li>
+                      <li>
+                        Ensured code quality, performance, and maintainability through structured
+                        development workflows and best practices.
+                      </li>
+                    </ul>
 
                     <div className="mt-3">
                       {/* Card */}
                       <a className="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-700" href="#">
                         <div className="flex flex-col sm:flex-row items-start sm:items-center overflow-hidden">
-                          <div className="flex-shrink-0 w-full sm:w-32 md:w-48 h-24 sm:h-auto">
+                          <div className="hidden sm:flex flex-shrink-0 sm:w-32 md:w-48 h-24 sm:h-auto">
                             <Image
                               src={"/image/banner-ads.jpg"}
                               width={192}
                               height={96}
                               alt="PT Arus Digital Sinergi"
-                              className="w-full h-full object-cover rounded-t-lg sm:rounded-t-none sm:rounded-s-lg"
+                              className="w-full h-full object-cover sm:rounded-s-lg"
                             />
                           </div>
 
@@ -346,40 +503,6 @@ export default function Home() {
                       </a>
                       {/* End Card */}
                     </div>
-                  </div>
-                  {/* End Right Content */}
-                </div>
-                {/* End Item */}
-
-                {/* Item - Back End Developer */}
-                <div className="group relative flex gap-x-5">
-                  {/* Icon */}
-                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-                    <div className="relative z-10 size-6 flex justify-center items-center">
-                      <Image
-                        src={"/image/logo-ads.png"}
-                        alt="PT Arus Digital Sinergi"
-                        width={32}
-                        height={32}
-                        className="shrink-0 size-6 rounded-full"
-                      />
-                    </div>
-                  </div>
-                  {/* End Icon */}
-
-                  {/* Right Content */}
-                  <div className="grow pb-8 group-last:pb-0 text-left">
-                    <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      Mar 2025 - Apr 2025 · 2 mos
-                    </h3>
-
-                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                      Back End Developer at PT Arus Digital Sinergi
-                    </p>
-
-                    <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                      Specialized in backend development, designing and implementing robust server-side architectures, RESTful APIs, and database management systems. Focused on building scalable backend solutions, optimizing database performance, and ensuring secure data handling for web and mobile applications.
-                    </p>
                   </div>
                   {/* End Right Content */}
                 </div>
@@ -582,13 +705,13 @@ export default function Home() {
                       {/* Card */}
                       <a className="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-700" href="#">
                         <div className="flex flex-col sm:flex-row items-start sm:items-center overflow-hidden">
-                          <div className="flex-shrink-0 w-full sm:w-32 md:w-48 h-24 sm:h-auto">
+                          <div className="hidden sm:flex flex-shrink-0 sm:w-32 md:w-48 h-24 sm:h-auto">
                             <Image
                               src={"/image/logo-investree.svg"}
                               width={192}
                               height={96}
                               alt="PT Investree"
-                              className="w-full h-full object-cover rounded-t-lg sm:rounded-t-none sm:rounded-s-lg"
+                              className="w-full h-full object-cover sm:rounded-s-lg"
                             />
                           </div>
 
@@ -736,6 +859,160 @@ export default function Home() {
               {/* End Grid */}
             </div>
             {/* End Education */}
+
+            {/* Awards */}
+            <div className="mt-10 sm:mt-14 text-left">
+              <h2 className="mb-3 font-medium text-gray-800 dark:text-neutral-200 text-left">
+                Awards
+              </h2>
+
+              {/* Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {/* Award Card 1 */}
+                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                  <AwardCarousel
+                    images={[
+                      "/image/awards/bio1.jpg",
+                      "/image/awards/bio2.jpg",
+                      "/image/awards/bio3.jpg"
+                    ]}
+                    alt="Bioinformatics Competition"
+                  />
+
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
+                    Gold Medal - National Bioinformatics & Synthetic Biology Competition, Institue Technology of Bandung
+                  </p>
+
+                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
+                    Institut Teknologi Bandung
+                  </p>
+
+                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                    Year: 2025
+                  </p>
+                </div>
+
+                {/* Award Card 2 */}
+                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                  <AwardCarousel
+                    images={[
+                      "/image/awards/1st Place – AI Entrepreneurship Competition_1.jpg",
+                      "/image/awards/1st Place – AI Entrepreneurship Competition_2.jpg"
+                    ]}
+                    alt="AI Entrepreneurship Competition"
+                  />
+
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
+                    1st Place – AL Ahmadi International Youthpreneurship Competition, Batam
+                  </p>
+
+                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
+                    Universitas Maritim Raja Ali Haji
+                  </p>
+
+                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                    Year: 2025
+                  </p>
+                </div>
+
+                {/* Award Card 3 */}
+                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                  <AwardCarousel
+                    images={[
+                      "/image/awards/Finalist – ID Fest Developer Day, Jakarta_1.jpg",
+                      "/image/awards/Finalist – ID Fest Developer Day, Jakarta_2.jpg"
+                    ]}
+                    alt="ID Fest Developer Day"
+                  />
+
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
+                    Finalist – ID Fest Developer Day, Jakarta
+                  </p>
+
+                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
+                    Kementerian Komunikasi dan Digital Republik Indonesia
+                  </p>
+
+                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                    Year: 2025
+                  </p>
+                </div>
+
+                {/* Award Card 4 */}
+                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                  <AwardCarousel
+                    images={[
+                      "/image/awards/1st Place - Festival Open Source Software, Batam, Batam Linux User Group, Politeknik Negeri Batam, 2025.jpg"
+                    ]}
+                    alt="Festival Open Source Software 2025"
+                  />
+
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
+                    1st Place - Festival Open Source Software, Batam
+                  </p>
+
+                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
+                    Batam Linux User Group, Politeknik Negeri Batam
+                  </p>
+
+                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                    Year: 2025
+                  </p>
+                </div>
+
+                {/* Award Card 5 */}
+                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                  <AwardCarousel
+                    images={[
+                      "/image/awards/2nd Place – Festival Open Source Software, Batam_1.JPG",
+                      "/image/awards/2nd Place – Festival Open Source Software, Batam_2.JPG",
+                      "/image/awards/2nd Place – Festival Open Source Software, Batam_3.JPG",
+                      "/image/awards/2nd Place – Festival Open Source Software, Batam_4.JPG",
+                      "/image/awards/2nd Place – Festival Open Source Software, Batam_5.JPG",
+                    ]}
+                    alt="Festival Open Source Software 2024"
+                  />
+
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
+                    2nd Place – Festival Open Source Software, Batam
+                  </p>
+
+                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
+                    Batam Linux User Group, Politeknik Negeri Batam
+                  </p>
+
+                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                    Year: 2024
+                  </p>
+                </div>
+
+                {/* Award Card 6 */}
+                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                  <AwardCarousel
+                    images={[
+                      "/image/awards/1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta_1.JPG",
+                      "/image/awards/1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta_2.JPG",
+                      "/image/awards/1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta_3.JPG",
+                    ]}
+                    alt="Baparekraf Developer Day"
+                  />
+
+                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
+                    1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta
+                  </p>
+
+                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
+                    Kementerian Pariwisata dan Ekonomi Kreatif
+                  </p>
+
+                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                    Year: 2024
+                  </p>
+                </div>
+              </div>
+              {/* End Grid */}
+            </div>
+            {/* End Awards */}
 
             {/* Certifications */}
             <div className="mt-10 sm:mt-14 text-left">
@@ -892,160 +1169,6 @@ export default function Home() {
               {/* End Grid */}
             </div>
             {/* End Certifications */}
-
-            {/* Awards */}
-            <div className="mt-10 sm:mt-14 text-left">
-              <h2 className="mb-3 font-medium text-gray-800 dark:text-neutral-200 text-left">
-                Awards
-              </h2>
-
-              {/* Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {/* Award Card 1 */}
-                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
-                  <AwardCarousel
-                    images={[
-                      "/image/awards/finalist_bioinformatic_1.jpg",
-                      "/image/awards/finalist_bioinformatic_2.png",
-                      "/image/awards/finalist_bioinformatic_3.png"
-                    ]}
-                    alt="Bioinformatics Competition"
-                  />
-
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
-                    Finalist - Bioinformatics & Synthetic Biology Competition Mentor for SMA Negeri 1 Tanjungpinang
-                  </p>
-
-                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
-                    Institut Teknologi Bandung
-                  </p>
-
-                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
-                    Year: 2025
-                  </p>
-                </div>
-
-                {/* Award Card 2 */}
-                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
-                  <AwardCarousel
-                    images={[
-                      "/image/awards/1st Place – AI Entrepreneurship Competition_1.jpg",
-                      "/image/awards/1st Place – AI Entrepreneurship Competition_2.jpg"
-                    ]}
-                    alt="AI Entrepreneurship Competition"
-                  />
-
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
-                    1st Place – AI Entrepreneurship Competition
-                  </p>
-
-                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
-                    Universitas Maritim Raja Ali Haji
-                  </p>
-
-                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
-                    Year: 2025
-                  </p>
-                </div>
-
-                {/* Award Card 3 */}
-                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
-                  <AwardCarousel
-                    images={[
-                      "/image/awards/Finalist – ID Fest Developer Day, Jakarta_1.jpg",
-                      "/image/awards/Finalist – ID Fest Developer Day, Jakarta_2.jpg"
-                    ]}
-                    alt="ID Fest Developer Day"
-                  />
-
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
-                    Finalist – ID Fest Developer Day, Jakarta
-                  </p>
-
-                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
-                    Kementerian Komunikasi dan Digital Republik Indonesia
-                  </p>
-
-                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
-                    Year: 2025
-                  </p>
-                </div>
-
-                {/* Award Card 4 */}
-                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
-                  <AwardCarousel
-                    images={[
-                      "/image/awards/1st Place - Festival Open Source Software, Batam, Batam Linux User Group, Politeknik Negeri Batam, 2025.jpg"
-                    ]}
-                    alt="Festival Open Source Software 2025"
-                  />
-
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
-                    1st Place - Festival Open Source Software, Batam
-                  </p>
-
-                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
-                    Batam Linux User Group, Politeknik Negeri Batam
-                  </p>
-
-                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
-                    Year: 2025
-                  </p>
-                </div>
-
-                {/* Award Card 5 */}
-                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
-                  <AwardCarousel
-                    images={[
-                      "/image/awards/2nd Place – Festival Open Source Software, Batam_1.JPG",
-                      "/image/awards/2nd Place – Festival Open Source Software, Batam_2.JPG",
-                      "/image/awards/2nd Place – Festival Open Source Software, Batam_3.JPG",
-                      "/image/awards/2nd Place – Festival Open Source Software, Batam_4.JPG",
-                      "/image/awards/2nd Place – Festival Open Source Software, Batam_5.JPG",
-                    ]}
-                    alt="Festival Open Source Software 2024"
-                  />
-
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
-                    2nd Place – Festival Open Source Software, Batam
-                  </p>
-
-                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
-                    Batam Linux User Group, Politeknik Negeri Batam
-                  </p>
-
-                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
-                    Year: 2024
-                  </p>
-                </div>
-
-                {/* Award Card 6 */}
-                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
-                  <AwardCarousel
-                    images={[
-                      "/image/awards/1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta_1.JPG",
-                      "/image/awards/1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta_2.JPG",
-                      "/image/awards/1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta_3.JPG",
-                    ]}
-                    alt="Baparekraf Developer Day"
-                  />
-
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
-                    1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta
-                  </p>
-
-                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
-                    Kementerian Pariwisata dan Ekonomi Kreatif
-                  </p>
-
-                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
-                    Year: 2024
-                  </p>
-                </div>
-              </div>
-              {/* End Grid */}
-            </div>
-            {/* End Awards */}
 
           </div>
         </main>
