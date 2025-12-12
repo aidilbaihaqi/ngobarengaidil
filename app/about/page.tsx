@@ -351,7 +351,7 @@ export default function Home() {
                   <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
                     <div className="relative z-10 size-6 flex justify-center items-center">
                       <Image
-                        src={"/image/logo-sman1tpi.svg"}
+                        src={"/image-optimized/logo-sman1tpi.svg"}
                         alt="SMAN 1 Tanjungpinang"
                         width={32}
                         height={32}
@@ -484,7 +484,7 @@ export default function Home() {
                   <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
                     <div className="relative z-10 size-6 flex justify-center items-center">
                       <Image
-                        src={"/image/logo-risalahmaritim.svg"}
+                        src={"/image-optimized/logo-risalahmaritim.svg"}
                         alt="Risalah Maritim"
                         width={32}
                         height={32}
@@ -543,7 +543,7 @@ export default function Home() {
                   <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
                     <div className="relative z-10 size-6 flex justify-center items-center">
                       <Image
-                        src={"/image/logo-sma1.svg"}
+                        src={"/image-optimized/logo-sma1.svg"}
                         alt="SMAN 1 Bintan Timur"
                         width={32}
                         height={32}
@@ -599,7 +599,7 @@ export default function Home() {
                   <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
                     <div className="relative z-10 size-6 flex justify-center items-center">
                       <Image
-                        src={"/image/logo-lukananakit.svg"}
+                        src={"/image-optimized/logo-lukananakit.svg"}
                         alt="Lu Kan Anak IT"
                         width={32}
                         height={32}
@@ -677,7 +677,7 @@ export default function Home() {
                         <div className="flex flex-col sm:flex-row items-start sm:items-center overflow-hidden">
                           <div className="hidden sm:flex flex-shrink-0 sm:w-32 md:w-48 h-24 sm:h-auto">
                             <Image
-                              src={"/image/logo-investree.svg"}
+                              src={"/image-optimized/logo-investree.svg"}
                               width={192}
                               height={96}
                               alt="PT Investree"
@@ -719,7 +719,7 @@ export default function Home() {
                   <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
                     <div className="relative z-10 size-6 flex justify-center items-center">
                       <Image
-                        src={"/image/logo-tunas.svg"}
+                        src={"/image-optimized/logo-tunas.svg"}
                         alt="PT Tunas Idea Indonesia"
                         width={32}
                         height={32}
@@ -803,7 +803,7 @@ export default function Home() {
 
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <Image
-                    src={"/image/logo-smkn1.svg"}
+                    src={"/image-optimized/logo-smkn1.svg"}
                     width={400}
                     height={400}
                     alt="SMK Negeri 1 Bintan Timur"
