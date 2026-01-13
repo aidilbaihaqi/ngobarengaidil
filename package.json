@@ -21,7 +21,7 @@
     "framer-motion": "^12.0.6",
     "lucide-react": "^0.544.0",
     "motion": "^12.0.6",
-    "next": "^16.0.1",
+    "next": "16.0.10",
     "preline": "^2.7.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
