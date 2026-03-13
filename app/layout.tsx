@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     url: baseUrl,
     title: 'Aidil Baihaqi - Full Stack AI Engineer',
     description: 'Aidil Baihaqi is a Full Stack AI Engineer specializing in building scalable web applications, intelligent backend architectures, and data-driven machine learning solutions.',
-    siteName: 'Aidil Baihaqi',
+    siteName: 'Personal Website Aidil Baihaqi',
     images: [
       {
         url: '/image-optimized/aidilbaihaqi.webp',
@@ -122,7 +122,7 @@ const jsonLd = {
 const websiteJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'Aidil Baihaqi - Personal Website',
+  name: 'Personal Website Aidil Baihaqi',
   url: baseUrl,
   description: 'Personal website, portfolio, and blog of Aidil Baihaqi, featuring insights on software engineering, AI, and programming tips.',
 };
