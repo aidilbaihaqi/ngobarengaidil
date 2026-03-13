@@ -23,11 +23,11 @@ const AwardCarousel = dynamic(() => import("@/app/components/ui/AwardCarousel"),
 const SkillIcon = memo(function SkillIcon({ icon, name }: { icon: string; name: string }) {
   return (
     <li className="me-1 after:content-[','] last:after:content-[''] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-      <Image 
-        width={15} 
-        height={15} 
-        alt={name} 
-        className="me-1" 
+      <Image
+        width={15}
+        height={15}
+        alt={name}
+        className="me-1"
         src={`https://skillicons.dev/icons?i=${icon}`}
         loading="lazy"
         unoptimized
@@ -36,6 +36,25 @@ const SkillIcon = memo(function SkillIcon({ icon, name }: { icon: string; name: 
     </li>
   );
 });
+
+const calculateDuration = (startDateStr: string) => {
+  const startDate = new Date(startDateStr);
+  const currentDate = new Date();
+  
+  const totalMonths = (currentDate.getFullYear() - startDate.getFullYear()) * 12 + (currentDate.getMonth() - startDate.getMonth()) + 1;
+  const years = Math.floor(totalMonths / 12);
+  const months = totalMonths % 12;
+  
+  let durationStr = "";
+  if (years > 0) {
+    durationStr += `${years} yr${years > 1 ? 's' : ''} `;
+  }
+  if (months > 0) {
+    durationStr += `${months} mo${months > 1 ? 's' : ''}`;
+  }
+  
+  return durationStr.trim();
+};
 
 export default function Home() {
   return (
@@ -68,7 +87,7 @@ export default function Home() {
               <div className="grow text-left">
                 <TypewriterEffectSmoothDemo />
                 <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                  Full Stack Engineer | Data Science and Machine Learning Enthusiast Focused on Bioinformatics | IT and Web Mentor
+                  Full Stack Developer | Data and Machine Learning Enthusiast | IT and Web Mentor
                 </p>
               </div>
             </div>
@@ -183,7 +202,7 @@ export default function Home() {
                   <dd>
                     <ul>
                       <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        Pandas, Matplotlib, Scikit-Learn, TensorFlow, HuggingFace, Tableau, Google Spreadsheet, MS. Excel
+                        Pandas, Matplotlib, Scikit-Learn, TensorFlow, Google Colaboratory, Kaggle, HuggingFace, Tableau, Google Spreadsheet, MS. Excel
                       </li>
                     </ul>
                   </dd>
@@ -229,38 +248,91 @@ export default function Home() {
 
               {/* Timeline */}
               <div>
-                {/* Item - Beasiswa Pendidikan Indonesia */}
-                {/* <div className="group relative flex gap-x-5">
-                  
+                {/* Item - Coding Camp */}
+                <div className="group relative flex gap-x-5">
+                  {/* Icon */}
                   <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
                     <div className="relative z-10 size-6 flex justify-center items-center">
                       <Image
-                        src={"/image/logo-bpi.jpg"}
-                        alt="Beasiswa Pendidikan Indonesia"
+                        src={"/image-optimized/logo-dbs.webp"} // TODO: Ensure to add logo-codingcamp.webp in public/image-optimized/
+                        alt="Coding Camp"
                         width={32}
                         height={32}
                         className="shrink-0 size-6 rounded-full"
+                        loading="lazy"
                       />
                     </div>
                   </div>
-                  
+                  {/* End Icon */}
 
-                  
+                  {/* Right Content */}
                   <div className="grow pb-8 group-last:pb-0 text-left">
                     <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      Aug 2023 - Present · 2 yrs 2 mos
+                      Feb 2026 - Present · {calculateDuration("2026-02-01")}
                     </h3>
 
                     <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                      Beasiswa Pendidikan Indonesia Awardee
+                      AI Engineer Cohort - Seasonal at Coding Camp powered by DBS Foundation
                     </p>
 
-                    <p className="leading-6 mt-2 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                      Selected as Beasiswa Pendidikan Indonesia awardee, previously qualified for Beasiswa Indonesia Maju S1 Overseas program for Computer Science at Kyoto University. Actively engaged in social impact projects, IELTS and SAT preparation programs, cultural exchange initiatives, and educational outreach across Indonesia to promote digital literacy and technology advancement.
+                    <ul className="list-disc ms-6 mt-3 space-y-1.5">
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Completed an intensive training program consisting of 934 hours of study focused on mastering Artificial Intelligence (AI) technology with industry standards.
+                      </li>
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Developed advanced Machine Learning (Classification, Regression, Clustering) and Deep Learning models using TensorFlow and Keras to solve complex problems.
+                      </li>
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Apply Natural Language Processing (NLP), Computer Vision, and Time Series Forecasting techniques in digital solution development.
+                      </li>
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Collaborate in a cross-disciplinary team (AI, Data Science, Full-Stack) to complete a Capstone Project (250 hours) using Design Thinking and Problem Solving methodologies to solve real-world issues in society.
+                      </li>
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Manage project planning and execution professionally through the preparation of Project Plans and Project Briefs.
+                      </li>
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Hone non-technical skills through Instructor-Led Training (ILT) sessions covering Project Management, Persuasive Communication, Growth Mindset, and Financial Literacy.
+                      </li>
+                    </ul>
+
+                    <p className="leading-6 mt-3 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                      <strong>Skills:</strong> Machine Learning · Project-based Learning · English · Cross-team Collaboration
                     </p>
+
+                    <div className="mt-3">
+                      {/* Card */}
+                      <a className="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-700" href="#" target="_blank" rel="noopener noreferrer">
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center overflow-hidden">
+                          <div className="hidden sm:flex flex-shrink-0 sm:w-32 md:w-48 h-24 sm:h-auto bg-gray-100 dark:bg-neutral-800">
+                            <Image
+                              src={"/image-optimized/logo-codingcamp.webp"} // TODO: Ensure to add banner-codingcamp.webp in public/image-optimized/
+                              width={192}
+                              height={96}
+                              alt="Coding Camp 2026"
+                              className="w-full h-full object-cover rounded-t-lg sm:rounded-t-none sm:rounded-s-lg"
+                              loading="lazy"
+                            />
+                          </div>
+
+                          <div className="flex-1 p-4">
+                            <div className="flex flex-col justify-center">
+                              <h3 className="font-semibold text-sm text-gray-800 dark:text-neutral-300">
+                                Coding Camp 2026 powered by DBS Foundation
+                              </h3>
+
+                              <p className="leading-6 mt-1 text-sm text-gray-500 dark:text-neutral-500">
+                                Coding Camp 2026 powered by DBS Foundation is a free and intensive IT training program to create digital talent in Indonesia. The program offers scholarships to study AI, Data Science, or Fullstack Web Development through an industry-standard online curriculum, including soft skills and capstone projects.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                      {/* End Card */}
+                    </div>
                   </div>
-                  
-                </div> */}
+                  {/* End Right Content */}
+                </div>
                 {/* End Item */}
 
                 {/* Item - UmbiTeams */}
@@ -283,11 +355,11 @@ export default function Home() {
                   {/* Right Content */}
                   <div className="grow pb-8 group-last:pb-0 text-left">
                     <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      Oct 2025 - Present
+                      Oct 2025 - Present · {calculateDuration("2025-10-01")}
                     </h3>
 
                     <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                      Co-Founder | Backend Developer & ML Engineer at UmbiTeams
+                      Backend Developer & ML Engineer at UmbiTeams
                     </p>
 
                     <ul className="list-disc ms-6 mt-3 space-y-1.5">
@@ -340,6 +412,92 @@ export default function Home() {
                       </a>
                       {/* End Card */}
                     </div>
+                  </div>
+                  {/* End Right Content */}
+                </div>
+                {/* End Item */}
+
+                {/* Item - Beasiswa Pendidikan Indonesia */}
+                <div className="group relative flex gap-x-5">
+                  {/* Icon */}
+                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                    <div className="relative z-10 size-6 flex justify-center items-center">
+                      <Image
+                        src={"/image-optimized/logo-bpi.webp"}
+                        alt="Beasiswa Pendidikan Indonesia"
+                        width={32}
+                        height={32}
+                        className="shrink-0 size-6 rounded-full"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  {/* End Icon */}
+
+                  {/* Right Content */}
+                  <div className="grow pb-8 group-last:pb-0 text-left">
+                    <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                      Aug 2023 - Present · {calculateDuration("2023-08-01")}
+                    </h3>
+
+                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                      Awardee of Indonesia Education Scholarship
+                    </p>
+
+                    <p className="leading-6 mt-3 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                      Selected as Indonesia Education Scholarship awardee, previously qualified for Indonesia Maju Scholarship S1 Overseas program for Computer Science at Kyoto University. Actively engaged in social impact projects, IELTS and SAT preparation programs, cultural exchange initiatives, and educational outreach across Indonesia to promote digital literacy and technology advancement.
+                    </p>
+
+                    <p className="leading-6 mt-3 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                      <strong>Skills:</strong> English · Communication · Public Speaking · Project-based Learning
+                    </p>
+                  </div>
+                  {/* End Right Content */}
+                </div>
+                {/* End Item */}
+
+                {/* Item - BPS */}
+                <div className="group relative flex gap-x-5">
+                  {/* Icon */}
+                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                    <div className="relative z-10 size-6 flex justify-center items-center">
+                      <Image
+                        src={"/image-optimized/logo-bps.webp"}
+                        alt="Badan Pusat Statistik"
+                        width={32}
+                        height={32}
+                        className="shrink-0 size-6 rounded-full"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  {/* End Icon */}
+
+                  {/* Right Content */}
+                  <div className="grow pb-8 group-last:pb-0 text-left">
+                    <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                      Jan 2026 - Mar 2026
+                    </h3>
+
+                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                      Data Analyst, Backend Developer (Go), AI & Automation at Central Statistic Agency
+                    </p>
+
+                    <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                      My approach combines statistical analysis with a deep understanding of backend development and automation. I enjoy solving data puzzles using SQL and Python while keeping an eye on the latest trends in Local LLMs and Artificial Intelligence.
+                    </p>
+
+                    <ul className="list-disc ms-6 mt-3 space-y-1.5">
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Uncovering trends and patterns to drive business growth.
+                      </li>
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Building scalable solutions with Golang using Clean Architecture principles.
+                      </li>
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Crafting seamless integrations and automated triggers through n8n.
+                      </li>
+                    </ul>
                   </div>
                   {/* End Right Content */}
                 </div>
