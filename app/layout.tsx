@@ -24,7 +24,7 @@ export const viewport = {
   maximumScale: 5,
 };
 
-const baseUrl = 'https://ngobarengaidil.com';
+const baseUrl = 'https://aidilbaihaqi.id';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -118,6 +118,44 @@ const jsonLd = {
   ],
 };
 
+// JSON-LD for WebSite and Sitelinks Search Box
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Aidil Baihaqi - Personal Website',
+  url: baseUrl,
+  description: 'Personal website, portfolio, dan blog tentang software engineering, AI, dan programming tips.',
+};
+
+// JSON-LD for SiteNavigationElement to encourage Sitelinks in Google
+const navigationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  itemListElement: [
+    {
+      '@type': 'SiteNavigationElement',
+      position: 1,
+      name: 'About Me',
+      description: 'Find out more about Aidil Baihaqi, my experiences, education, and skills.',
+      url: `${baseUrl}/about`
+    },
+    {
+      '@type': 'SiteNavigationElement',
+      position: 2,
+      name: 'Projects',
+      description: 'Explore the portfolio and projects I have worked on, from AI to full stack development.',
+      url: `${baseUrl}/projects`
+    },
+    {
+      '@type': 'SiteNavigationElement',
+      position: 3,
+      name: 'Contact',
+      description: 'Get in touch with me for collaborations, jobs, or any inquiries.',
+      url: `${baseUrl}/contact`
+    }
+  ]
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -141,6 +179,14 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(navigationJsonLd) }}
         />
         <GridBackground />
         {children}

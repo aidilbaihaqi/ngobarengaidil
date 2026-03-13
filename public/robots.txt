@@ -1,4 +1,4 @@
-# Robots.txt for ngobarengaidil.com - Aidil Baihaqi Portfolio
+# Robots.txt for aidilbaihaqi.id - Aidil Baihaqi Portfolio
 
 # Allow all crawlers
 User-agent: *
@@ -12,7 +12,7 @@ Disallow: /_next/
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://ngobarengaidil.com/sitemap.xml
+Sitemap: https://aidilbaihaqi.id/sitemap.xml
 
 # Google specific
 User-agent: Googlebot

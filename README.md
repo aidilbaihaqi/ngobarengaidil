@@ -1,7 +1,7 @@
 # Ngobarengaidil - Blog and Personal Website
 Website portfolio Aidil Baihaqi, dimana didalamnya terdapat beberapa informasi diri serta platform blog terkait artikel atau post yang pernah dibuat oleh author.
 
-<p>Link: <a href="https://ngobarengaidil.com/">ngobarengaidil.com</a></p>
+<p>Link: <a href="https://aidilbaihaqi.id/">aidilbaihaqi.id</a></p>
 <p>Hosting: <a href="https://www.hostinger.com/">Hostinger</a> - Business Shared Hosting. <strong>not VPS</strong></p>
 <p>Deployment: Auto deploy with git access. run code below if your change in views</p>
 
