@@ -29,10 +29,10 @@ const baseUrl = 'https://aidilbaihaqi.id';
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "Aidil Baihaqi - Full Stack Engineer & Data Scientist",
+    default: "Aidil Baihaqi - Full Stack AI Engineer",
     template: "%s | Aidil Baihaqi"
   },
-  description: "Aidil Baihaqi adalah Full Stack Engineer dan Data Scientist. Personal website, portfolio, dan blog tentang software engineering, AI, dan programming tips.",
+  description: "Aidil Baihaqi is a Full Stack AI Engineer specializing in building scalable web applications, intelligent backend architectures, and data-driven machine learning solutions.",
   keywords: [
     "Aidil Baihaqi",
     "aidil baihaqi",
@@ -65,8 +65,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'id_ID',
     url: baseUrl,
-    title: 'Aidil Baihaqi - Full Stack Engineer & Data Scientist',
-    description: 'Aidil Baihaqi adalah Full Stack Engineer dan Data Scientist. Personal website, portfolio, dan blog tentang software engineering, AI, dan programming tips.',
+    title: 'Aidil Baihaqi - Full Stack AI Engineer',
+    description: 'Aidil Baihaqi is a Full Stack AI Engineer specializing in building scalable web applications, intelligent backend architectures, and data-driven machine learning solutions.',
     siteName: 'Aidil Baihaqi',
     images: [
       {
@@ -79,8 +79,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aidil Baihaqi - Full Stack Engineer & Data Scientist',
-    description: 'Personal website, portfolio, dan blog Aidil Baihaqi tentang software engineering dan AI.',
+    title: 'Aidil Baihaqi - Full Stack AI Engineer',
+    description: 'Personal website, portfolio, and blog of Aidil Baihaqi, a Full Stack AI Engineer specializing in software engineering and AI.',
     images: ['/image-optimized/aidilbaihaqi.webp'],
   },
   alternates: {
@@ -99,7 +99,7 @@ const jsonLd = {
   name: 'Aidil Baihaqi',
   url: baseUrl,
   image: `${baseUrl}/image-optimized/aidilbaihaqi.webp`,
-  jobTitle: 'Full Stack Engineer & Data Scientist',
+  jobTitle: 'Full Stack AI Engineer',
   description: 'Passionate and results-driven programmer with strong experience in software engineering, specializing in backend development, data-driven systems, and AI-based applications.',
   sameAs: [
     'https://github.com/aidilbaihaqi',
@@ -124,7 +124,7 @@ const websiteJsonLd = {
   '@type': 'WebSite',
   name: 'Aidil Baihaqi - Personal Website',
   url: baseUrl,
-  description: 'Personal website, portfolio, dan blog tentang software engineering, AI, dan programming tips.',
+  description: 'Personal website, portfolio, and blog of Aidil Baihaqi, featuring insights on software engineering, AI, and programming tips.',
 };
 
 // JSON-LD for SiteNavigationElement to encourage Sitelinks in Google

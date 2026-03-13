@@ -60,8 +60,8 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full p-1">
                   <div className="relative w-full h-full rounded-full overflow-hidden bg-white dark:bg-gray-900">
                     <Image
-                      src="/image-optimized/aidilbaihaqi.webp"
-                      alt="Aidil Baihaqi - Full Stack Engineer, Data Scientist, MLops"
+                      src="/image-optimized/me.webp"
+                      alt="Aidil Baihaqi - Full Stack AI Engineer"
                       fill
                       sizes="(max-width: 768px) 160px, 208px"
                       style={{ objectFit: 'cover' }}
@@ -79,7 +79,7 @@ export default function Home() {
                 Passionate and results-driven programmer with strong experience in software engineering,specializing in backend development, data-driven systems, and AI-based applications.Experienced in building scalable web systems, collaborating in multidisciplinary teams, and delivering high-quality projects for academic, community, and organizational needs.Proficient in modern development tools and agile workflows to solve complex problems efficiently.
               </p>
               <SocialIcons />
-              
+
               {/* CTA Button to About Page */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}

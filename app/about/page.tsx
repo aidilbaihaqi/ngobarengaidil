@@ -40,11 +40,11 @@ const SkillIcon = memo(function SkillIcon({ icon, name }: { icon: string; name: 
 const calculateDuration = (startDateStr: string) => {
   const startDate = new Date(startDateStr);
   const currentDate = new Date();
-  
+
   const totalMonths = (currentDate.getFullYear() - startDate.getFullYear()) * 12 + (currentDate.getMonth() - startDate.getMonth()) + 1;
   const years = Math.floor(totalMonths / 12);
   const months = totalMonths % 12;
-  
+
   let durationStr = "";
   if (years > 0) {
     durationStr += `${years} yr${years > 1 ? 's' : ''} `;
@@ -52,7 +52,7 @@ const calculateDuration = (startDateStr: string) => {
   if (months > 0) {
     durationStr += `${months} mo${months > 1 ? 's' : ''}`;
   }
-  
+
   return durationStr.trim();
 };
 
@@ -74,7 +74,7 @@ export default function Home() {
             <div className="flex flex-col items-start gap-x-3">
               <div className="shrink-0 mb-4">
                 <Image
-                  src={"/image-optimized/aidilbaihaqi.webp"}
+                  src={"/image-optimized/me.webp"}
                   alt="Aidil Baihaqi"
                   width={64}
                   height={64}
