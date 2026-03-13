@@ -10,14 +10,14 @@ interface ProjectFiltersProps {
   setActiveFilter: (filter: string) => void;
 }
 
-const filters = ["All", "AI/ML", "Web Apps", "Open Source", "Research"];
-
 export default function ProjectFilters({
   searchQuery,
   setSearchQuery,
   activeFilter,
   setActiveFilter,
 }: ProjectFiltersProps) {
+  const filters = ["All", "Web Apps", "Mobile Apps", "AI/ML", "Data & Analytics", "Automation", "Open Source"];
+
   return (
     <div className="mb-12 space-y-6">
       {/* Search */}

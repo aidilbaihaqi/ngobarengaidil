@@ -7,7 +7,7 @@ export const featuredProjects: FeaturedItem[] = [
     subtitle: "An advanced computational platform that leverages artificial intelligence and machine learning to revolutionize the analysis of genetic and genomic data, making complex bioinformatics workflows accessible to researchers without extensive programming expertise.",
     cover: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1920&h=1080&fit=crop",
     year: 2025,
-    tags: ["AI/ML", "Bioinformatics", "Python"],
+    tags: ["AI/ML"],
     metric: "Bioinformatics College Projects",
     hrefLive: "#",
     hrefRepo: "https://github.com",
@@ -15,97 +15,125 @@ export const featuredProjects: FeaturedItem[] = [
   },
   {
     id: "1",
+    title: "Ternak Klip",
+    subtitle: "A digital ecosystem bridging content owners and clippers for massive short-form video distribution, powering 100,000+ active users.",
+    cover: "/image-optimized/projects/ternakklip.webp",
+    year: 2026,
+    tags: ["Mobile Apps", "Web Apps"],
+    metric: "100k+ Active Users",
+    hrefLive: "https://ternakklip.com/",
+    accent: "pink",
+  },
+  {
+    id: "2",
+    title: "Aero Flight Fare Scrapper",
+    subtitle: "Automated flight ticket price tracking and interactive dashboard for monitoring domestic flight routes in Indonesia.",
+    cover: "/image-optimized/projects/aero.webp",
+    year: 2026,
+    tags: ["Automation"],
+    metric: "Internal BPS Tool",
+    hrefRepo: "https://github.com/aidilbaihaqi/Aero",
+    accent: "cyan",
+  },
+  {
+    id: "3",
     title: "BengkelAI — Smart Motorcycle Workshop Ecosystem",
     subtitle: "An AI-powered workshop platform that connects riders and mechanics through intelligent diagnostics, digital trust badges, and subscription-based maintenance systems — redefining transparency and efficiency in the motorcycle service industry.",
     cover: "/image-optimized/projects/bengkel-ai.webp",
     year: 2025,
-    tags: ["AI/ML", "IoT", "Web Platform"],
+    tags: ["AI/ML", "Web Apps"],
     metric: "Startup & Applied AI Projects",
     hrefLive: "https://bengkelai.id",
     hrefRepo: "https://github.com/aidilbaihaqi/bengkelai-app",
     accent: "pink",
   },
   {
-    id: "2",
-    title: "Risalah Maritim (News Portal)",
-    subtitle: "The platform delivers up-to-date articles, insights, and publications about maritime affairs with a clean, responsive design for better accessibility. It was built to provide an informative and trustworthy source for readers interested in the maritime sector, from policy and industry updates to community news.",
-    cover: "/image-optimized/projects/risalah maritim.webp",
-    year: 2025,
-    tags: ["Web Apps", "CMS", "Media"],
-    metric: "2,000+ monthly readers",
-    hrefLive: "https://risalahmaritim.com/",
-    accent: "cyan",
-  },
-  {
-    id: "3",
-    title: "Aisyah Sulaiman Theater (Theater Ticket Booking)",
-    subtitle: "Ticket booking application or booking theater seats according to the available show schedule. The reference in making this application is taken from the Cinema XXI Website Application for booking movie theater tickets. My project is open source and can be seen on my github https://github.com/aidilbaihaqi/Samudra-Art-Production",
-    cover: "/image-optimized/projects/aisyah-sulaiman.webp",
-    year: 2025,
-    tags: ["Open Source", "Ticketing", "Community"],
-    metric: "2nd Place FOSS Day Batam",
-    hrefRepo: "https://github.com/aidilbaihaqi/Samudra-Art-Production",
-    accent: "purple",
-  },
-  {
     id: "4",
-    title: "Arus Digital Sinergi (Company Profile)",
-    subtitle: "The platform presents the company’s vision, services, portfolio, and digital innovation projects with a clean and modern design. Built to enhance credibility and brand presence, it highlights the company’s expertise in software development, system design, and digital transformation, while providing potential clients and partners with an engaging and professional online experience.",
-    cover: "/image-optimized/projects/arusdigital.webp",
-    year: 2025,
-    tags: ["Company Profile", "Web Development"],
-    metric: "Launched Q3 2025",
-    hrefLive: "https://arusdigital.id/",
-    accent: "cyan",
-  },
-  {
-    id: "5",
-    title: "LPK Tiga Pilar Maju Sejahtera (Company Profile)",
-    subtitle: "The site showcases the institution’s programs, certifications, and services in workforce development, designed with a user-friendly layout and responsive interface. By combining modern visuals with clear information architecture, the website serves as both a promotional tool and an accessible information hub for students, trainees, and industry partners. It reflects the institution’s mission to empower human resources through structured training and skill development.",
-    cover: "/image-optimized/projects/lpk-tiga-pilar.webp",
-    year: 2025,
-    tags: ["Education", "Profile", "Web Apps"],
-    metric: "Enhanced student engagement by 35%",
-    hrefLive: "https://tigapilartraining.co.id/",
-    accent: "purple",
-  },
-  {
-    id: "6",
     title: "Tribun Batam Production House (Company Profile)",
     subtitle: "The platform highlights the studio’s creative services in multimedia production, including video, photography, and digital content. Designed with a bold and engaging aesthetic, the website presents the company’s portfolio, team, and service offerings in a way that resonates with both corporate clients and creative industries. It not only serves as a branding and promotional tool but also reflects the company’s identity as a dynamic and innovative production house ready to collaborate on diverse creative projects.",
     cover: "/image-optimized/projects/tribun-batam.webp",
     year: 2025,
-    tags: ["Creative", "Media", "Web"],
+    tags: ["Web Apps"],
     metric: "Launched February 2025",
     hrefLive: "https://tribunproductionhouse.com",
     accent: "cyan",
   },
   {
-    id: "7",
+    id: "5",
     title: "Bimbel YM (LMS Application)",
     subtitle: "The platform is designed to support online and hybrid learning with features such as class management, student and teacher dashboards, interactive materials, assessments, and progress tracking. Built with a focus on usability and scalability, it enables seamless communication between teachers and students, while also helping administrators manage academic operations efficiently. The application reflects Bimbel YM’s mission to provide accessible and structured education through digital innovation.",
     cover: "/image-optimized/projects/bimbel-ym.webp",
     year: 2024,
-    tags: ["Web Apps", "Education", "LMS", "ERP"],
+    tags: ["Web Apps"],
     metric: "100+ active students",
     hrefLive: "http://yusnadimengajar.com",
     accent: "purple",
   },
   {
-    id: "8",
+    id: "6",
     title: "SIMPEG (Employee Administration Management)",
     subtitle: "The system digitalizes HR and employee administration processes, covering personnel data management, position and rank tracking, document management, and reporting. Designed with role-based access, it provides tailored dashboards for administrators, staff, and management, ensuring data consistency, transparency, and efficiency. SIMPEG supports UMRAH’s mission to modernize human resource management and improve institutional governance through technology-driven solutions.",
     cover: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&h=1080&fit=crop",
     year: 2024,
-    tags: ["Web Apps", "Information System", "HR"],
+    tags: ["Web Apps"],
     metric: "Serving 500+ employees",
     hrefLive: "http://simpeg.umrah.ac.id",
     accent: "cyan",
   },
+
 ];
 
 export const allProjects: Project[] = [
   // ===== Featured (also listed here) =====
+  {
+    id: "serumpun",
+    title: "Serumpun - SE 2026 Team Performance Monitoring",
+    blurb: "This project is a web-based analytics platform designed to monitor team progress and performance for the 2026 Economic Census (Sensus Ekonomi 2026) in the Riau Islands Province. The dashboard serves as a central data hub to ensure census targets are met on schedule by providing real-time visualizations of task distribution and staff efficiency.",
+    cover: "/image-optimized/projects/serumpun.webp",
+    year: 2026,
+    role: ["Data Analyst"],
+    stack: ["Metabase", "PostgreSQL", "Python"],
+    tags: ["Web Apps", "Data & Analytics"],
+    details: {
+      problem: "Managers for the 2026 Economic Census lacked a centralized, real-time method to track task distribution, staff efficiency, and overall team progress across the Riau Islands.",
+      solution: "Created a comprehensive analytics platform and data hub tailored to visualize census metrics, ensuring targets remain visible and on schedule.",
+      contribution: ["Modeled geographical and performance data in PostgreSQL", "Developed automated Python scripts for data ingestion and cleaning", "Designed interactive dashboards and KPI reports via Metabase"]
+    }
+  },
+  {
+    id: "ternak-klip",
+    title: "Ternak Klip - Creator & Clipper Ecosystem Platform",
+    blurb: "Ternak Klip is a digital ecosystem and community-based platform that bridges the gap between content owners (creators/influencers) and \"clippers\" (short-form video editors). The project focuses on a massive distribution strategy, where long-form video content is repurposed into viral short clips—such as TikToks, Reels, or Shorts—to maximize audience reach and build automated brand awareness through a community network.",
+    cover: "/image-optimized/projects/ternakklip.webp",
+    year: 2026,
+    role: ["Backend Developer", "Devops Engineer"],
+    stack: ["Go", "Next.js", "Flutter", "AWS"],
+    tags: ["Mobile Apps", "Web Apps"],
+    metrics: { users: 100000 },
+    links: { live: "https://ternakklip.com/" },
+    details: {
+      problem: "Content creators struggle to distribute long-form content efficiently, while video editors (clippers) lack a streamlined platform to monetize their skills and collaborate directly with creators.",
+      solution: "Developed a comprehensive digital ecosystem that automates the distribution strategy and connects creators with clippers. Implemented AWS as external storage to reliably handle large-scale video media assets for 100,000+ active users.",
+      contribution: ["Designed robust backend microservices with Go", "Configured scalable infrastructure on AWS", "Integrated CI/CD pipelines to ensure seamless updates"]
+    }
+  },
+  {
+    id: "aero",
+    title: "Aero - Automation Flight Fare Scrapper",
+    blurb: "Aero is a modern, automated flight ticket price tracking application specifically designed for monitoring domestic flight routes in Indonesia. It automatically scrapes, collects, and stores pricing data from various Indonesian airlines and presents it through an interactive dashboard. The primary goal of the app is to help users analyze price trends, monitor price volatility, and compare fares across different airlines.",
+    cover: "/image-optimized/projects/aero.webp",
+    year: 2026,
+    role: ["Backend Developer"],
+    stack: ["FastAPI", "RabbitMQ", "Svelte"],
+    tags: ["Automation"],
+    metrics: { users: 75 },
+    links: { repo: "https://github.com/aidilbaihaqi/Aero" },
+    details: {
+      problem: "BPS employees needed an efficient and automated way to monitor and analyze domestic flight fare volatility in Indonesia without manually checking multiple airline websites.",
+      solution: "Built an automated price tracking system utilizing FastAPI and RabbitMQ for robust background web scraping, visualized via an interactive Svelte dashboard.",
+      contribution: ["Developed the core web scraping engine", "Implemented RabbitMQ for message queuing and task scheduling", "Optimized database queries for fast data retrieval on the dashboard"]
+    }
+  },
   {
     id: "0",
     title: "AI-Powered Bioinformatics Platform",
@@ -115,12 +143,12 @@ export const allProjects: Project[] = [
     teamSize: 4,
     role: ["ML Engineer", "Backend Developer"],
     stack: ["Python", "TensorFlow", "scikit-learn", "BioPython", "FastAPI", "PostgreSQL"],
-    tags: ["AI/ML", "Bioinformatics", "Research"],
-    metrics: { 
+    tags: ["AI/ML"],
+    metrics: {
       awards: ["Finalist - ITB Innovation Competition 2025"],
       performance: "Reduced analysis time by 85%"
     },
-    links: { 
+    links: {
       live: "#",
       repo: "https://github.com"
     },
@@ -150,13 +178,13 @@ export const allProjects: Project[] = [
     teamSize: 5,
     role: ["Full Stack Developer", "ML Engineer", "IoT Integration Specialist"],
     stack: ["Remix.js", "Firebase", "Flask", "Python", "Llama", "scikit-learn", "TensorFlow", "IoT Sensors"],
-    tags: ["AI/ML", "IoT", "Startup", "Web Platform"],
-    metrics: { 
+    tags: ["AI/ML", "Web Apps"],
+    metrics: {
       users: 500,
       performance: "90% diagnostic accuracy",
       awards: ["Featured in Local Startup Ecosystem"]
     },
-    links: { 
+    links: {
       live: "https://bengkelai.id",
       repo: "https://github.com/aidilbaihaqi/bengkelai-app"
     },
@@ -191,7 +219,7 @@ export const allProjects: Project[] = [
     teamSize: 4,
     role: ["Full Stack Developer", "Content System Integrator"],
     stack: ["Laravel", "MySQL", "Blade", "Bootstrap"],
-    tags: ["CMS", "News", "Web"],
+    tags: ["Web Apps"],
     metrics: { users: 2000, uptime: "99.9%" },
     links: { live: "https://risalahmaritim.com/" },
     details: {
@@ -210,7 +238,7 @@ export const allProjects: Project[] = [
     teamSize: 3,
     role: ["Full Stack Developer"],
     stack: ["Laravel", "MySQL", "Tailwind CSS"],
-    tags: ["Ticketing", "Cultural", "Community"],
+    tags: ["Web Apps"],
     metrics: { awards: ["OSS Day Batam 2025 – 1st Place", "OSS Day 2024 – 2nd Place"] },
     links: { repo: "https://github.com/aidilbaihaqi/Samudra-Art-Production" },
     details: {
@@ -229,7 +257,7 @@ export const allProjects: Project[] = [
     teamSize: 2,
     role: ["Frontend Developer"],
     stack: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    tags: ["Corporate", "Web", "Profile"],
+    tags: ["Web Apps"],
     metrics: { performance: "Lighthouse 96/100" },
     links: { live: "https://arusdigital.id/" },
     details: {
@@ -248,7 +276,7 @@ export const allProjects: Project[] = [
     teamSize: 3,
     role: ["Web Developer"],
     stack: ["Laravel", "Tailwind CSS"],
-    tags: ["Education", "Profile"],
+    tags: ["Web Apps"],
     metrics: { users: 1000 },
     links: { live: "https://tigapilartraining.co.id/" },
     details: {
@@ -267,7 +295,7 @@ export const allProjects: Project[] = [
     teamSize: 2,
     role: ["Full Stack Developer"],
     stack: ["Laravel", "Tailwind CSS"],
-    tags: ["Media", "Creative"],
+    tags: ["Web Apps"],
     metrics: { users: 500 },
     links: { live: "https://tribunproductionhouse.com" },
     details: {
@@ -286,7 +314,7 @@ export const allProjects: Project[] = [
     teamSize: 4,
     role: ["Backend Developer"],
     stack: ["Remix.js", "Tailwind CSS", "MySQL", "Docker", "Bun"],
-    tags: ["LMS", "Education"],
+    tags: ["Web Apps"],
     metrics: { users: 120 },
     links: { live: "http://yusnadimengajar.com" },
     details: {
@@ -305,7 +333,7 @@ export const allProjects: Project[] = [
     teamSize: 3,
     role: ["Backend Developer"],
     stack: ["Laravel", "MySQL"],
-    tags: ["Information System", "HR"],
+    tags: ["Web Apps"],
     metrics: { users: 500 },
     links: { live: "http://simpeg.umrah.ac.id" },
     details: {
@@ -326,7 +354,7 @@ export const allProjects: Project[] = [
     teamSize: 2,
     role: ["Full Stack Developer"],
     stack: ["Laravel 11", "MySQL", "Tailwind CSS"],
-    tags: ["Inventory", "Operations", "Web"],
+    tags: ["Web Apps"],
     metrics: { users: 20 },
     links: { repo: "https://github.com/aidilbaihaqi/goods-inventory-kemenkumham" },
     details: {
@@ -345,7 +373,7 @@ export const allProjects: Project[] = [
     teamSize: 1,
     role: ["Full Stack Developer"],
     stack: ["Remix.js", "Firebase RTDB", "TypeScript"],
-    tags: ["IoT", "Realtime", "Web"],
+    tags: ["Web Apps"],
     metrics: { uptime: "99.9%" },
     links: { repo: "https://github.com/aidilbaihaqi/Smart-Entry-Dashboard" },
     details: {
@@ -364,7 +392,7 @@ export const allProjects: Project[] = [
     teamSize: 1,
     role: ["Frontend Developer"],
     stack: ["Next.js", "Tailwind CSS"],
-    tags: ["Landing", "Travel", "Web"],
+    tags: ["Web Apps"],
     links: { repo: "https://github.com/aidilbaihaqi/bintan-bertutur" },
     details: {
       problem: "Travel brand needed a single page to convert visitors.",
@@ -382,7 +410,7 @@ export const allProjects: Project[] = [
     teamSize: 1,
     role: ["Mobile Developer"],
     stack: ["Flutter", "Dart", "Firebase"],
-    tags: ["E-Commerce", "Mobile", "Chat"],
+    tags: ["Web Apps", "Mobile Apps"],
     links: { repo: "https://github.com/aidilbaihaqi/Shamo-App" },
     details: {
       problem: "Buyers and sellers need smooth communication inside the app.",
@@ -400,7 +428,7 @@ export const allProjects: Project[] = [
     teamSize: 2,
     role: ["Full Stack Developer"],
     stack: ["Laravel", "MySQL", "Tailwind CSS"],
-    tags: ["Voting", "Security", "Web"],
+    tags: ["Web Apps"],
     links: { repo: "https://github.com/aidilbaihaqi/vote_isoi" },
     details: {
       problem: "Manual voting was slow and error-prone.",
@@ -418,7 +446,7 @@ export const allProjects: Project[] = [
     teamSize: 2,
     role: ["Full Stack Developer"],
     stack: ["Laravel", "MySQL"],
-    tags: ["Forum", "Security", "Web"],
+    tags: ["Web Apps"],
     links: { repo: "https://github.com/aidilbaihaqi/project-akhir-siskem" },
     details: {
       problem: "Standard forums lacked robust security for student data.",
@@ -436,7 +464,7 @@ export const allProjects: Project[] = [
     teamSize: 1,
     role: ["Java Developer"],
     stack: ["Java", "Swing"],
-    tags: ["Graphics", "Algorithm", "Java"],
+    tags: ["AI/ML"],
     links: { repo: "https://github.com/aidilbaihaqi/project-akhir-grafkom" },
     details: {
       problem: "Understand matrix rotation and rendering pipeline.",
@@ -454,7 +482,7 @@ export const allProjects: Project[] = [
     teamSize: 1,
     role: ["Algorithm Engineer"],
     stack: ["Python", "NetworkX"],
-    tags: ["Algorithm", "Routing", "Simulation"],
+    tags: ["AI/ML"],
     links: { repo: "https://github.com/aidilbaihaqi/Smart-Courier" },
     details: {
       problem: "Courier needs efficient paths across dynamic maps.",
@@ -472,7 +500,7 @@ export const allProjects: Project[] = [
     teamSize: 1,
     role: ["Python Developer"],
     stack: ["Python"],
-    tags: ["CS Theory", "Education"],
+    tags: ["Data & Analytics", "Web Apps"],
     links: { repo: "https://github.com/aidilbaihaqi/turing-machine" },
     details: {
       problem: "Show computation model in a tangible way.",
@@ -490,7 +518,7 @@ export const allProjects: Project[] = [
     teamSize: 1,
     role: ["Web Designer"],
     stack: ["HTML", "CSS", "Bootstrap"],
-    tags: ["Design", "Education", "Web"],
+    tags: ["Web Apps"],
     links: { repo: "https://github.com/aidilbaihaqi/SMKNegeri1BintanTimur" },
     details: {
       problem: "Need a clean school site with easy navigation.",
@@ -508,7 +536,7 @@ export const allProjects: Project[] = [
     teamSize: 1,
     role: ["Product Designer"],
     stack: ["Figma"],
-    tags: ["Design", "Mobile", "Reading"],
+    tags: ["Mobile Apps"],
     links: { repo: "https://github.com/aidilbaihaqi/Zymsread" },
     details: {
       problem: "Readers need simple tracking and delightful UI.",
@@ -526,7 +554,7 @@ export const allProjects: Project[] = [
     teamSize: 2,
     role: ["Full Stack Developer"],
     stack: ["Laravel", "MySQL", "Tailwind CSS"],
-    tags: ["Booking", "Education", "Web"],
+    tags: ["Web Apps"],
     links: { repo: "https://github.com/aidilbaihaqi/peminjaman-lab" },
     details: {
       problem: "Manual booking caused conflicts and lost items.",
@@ -544,7 +572,7 @@ export const allProjects: Project[] = [
     teamSize: 1,
     role: ["Full Stack Developer"],
     stack: ["Laravel", "MySQL"],
-    tags: ["Media", "Internal Tool", "Web"],
+    tags: ["Web Apps"],
     links: { repo: "https://github.com/aidilbaihaqi/notulensi-penyiaran" },
     details: {
       problem: "Broadcast notes were scattered and hard to retrieve.",
@@ -562,7 +590,7 @@ export const allProjects: Project[] = [
     teamSize: 2,
     role: ["Backend Developer"],
     stack: ["Laravel", "MySQL"],
-    tags: ["Education", "Information System", "Web"],
+    tags: ["Web Apps"],
     links: { repo: "https://github.com/aidilbaihaqi/KRS-PoltekkesTPI" },
     details: {
       problem: "Students needed a simpler way to plan and submit courses.",
@@ -580,7 +608,7 @@ export const allProjects: Project[] = [
     teamSize: 2,
     role: ["Full Stack Developer"],
     stack: ["Laravel", "MySQL"],
-    tags: ["Booking", "Operations", "Web"],
+    tags: ["Web Apps"],
     links: { repo: "https://github.com/aidilbaihaqi/PBR-PoltekkesTPI" },
     details: {
       problem: "Resource usage clashed without a central calendar.",
@@ -598,7 +626,7 @@ export const allProjects: Project[] = [
     teamSize: 2,
     role: ["Full Stack Developer"],
     stack: ["Laravel", "MySQL"],
-    tags: ["Public Sector", "Case Tracking", "Web"],
+    tags: ["Web Apps"],
     links: { repo: "https://github.com/aidilbaihaqi/SIPP" },
     details: {
       problem: "Case status updates were not centralized.",
@@ -616,7 +644,7 @@ export const allProjects: Project[] = [
     teamSize: 1,
     role: ["Full Stack Developer"],
     stack: ["Laravel", "MySQL"],
-    tags: ["Forms", "Education", "Web"],
+    tags: ["Web Apps"],
     links: { repo: "https://github.com/aidilbaihaqi/Poltekkes-TPI-SKMA" },
     details: {
       problem: "Manual forms slowed down academic administration.",
@@ -634,7 +662,7 @@ export const allProjects: Project[] = [
     teamSize: 1,
     role: ["Full Stack Developer"],
     stack: ["Laravel", "MySQL", "Tailwind CSS"],
-    tags: ["Travel", "Booking", "Web"],
+    tags: ["Web Apps"],
     links: { repo: "https://github.com/aidilbaihaqi/UhudTour" },
     details: {
       problem: "Pilgrims need clear package info and booking flow.",

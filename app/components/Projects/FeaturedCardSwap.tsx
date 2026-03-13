@@ -10,6 +10,31 @@ interface FeaturedCardSwapProps {
   items: FeaturedItem[];
 }
 
+function ExpandableText({ text }: { text: string }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const isLong = text.length > 150;
+
+  useEffect(() => {
+    setIsExpanded(false);
+  }, [text]);
+
+  return (
+    <div className="text-xl text-gray-600 dark:text-gray-400">
+      <p className={!isExpanded && isLong ? "line-clamp-3 md:line-clamp-4" : ""}>
+        {text}
+      </p>
+      {isLong && (
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="mt-2 text-sm font-semibold text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors focus:outline-none"
+        >
+          {isExpanded ? "Show less" : "Read more"}
+        </button>
+      )}
+    </div>
+  );
+}
+
 export default function FeaturedCardSwap({ items }: FeaturedCardSwapProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -71,7 +96,7 @@ export default function FeaturedCardSwap({ items }: FeaturedCardSwapProps) {
               {activeItem.title}
             </h2>
             {activeItem.subtitle && (
-              <p className="text-xl text-gray-600 dark:text-gray-400">{activeItem.subtitle}</p>
+              <ExpandableText text={activeItem.subtitle} />
             )}
           </div>
 

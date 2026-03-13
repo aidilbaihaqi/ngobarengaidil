@@ -480,7 +480,7 @@ export default function Home() {
                     </h3>
 
                     <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                      Data Analyst, Backend Developer (Go), AI & Automation at Central Statistic Agency
+                      Data Analyst, AI & Automation - Internship at Central Statistic Agency
                     </p>
 
                     <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">

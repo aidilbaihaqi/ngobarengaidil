@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { X, ExternalLink, Github, TrendingUp } from "lucide-react";
@@ -9,6 +9,27 @@ import type { Project } from "@/app/types/project";
 interface ProjectModalProps {
   project: Project | null;
   onClose: () => void;
+}
+
+function ExpandableBlurb({ text }: { text: string }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const isLong = text.length > 200;
+
+  return (
+    <div className="text-gray-600 dark:text-gray-400">
+      <p className={!isExpanded && isLong ? "line-clamp-4" : ""}>
+        {text}
+      </p>
+      {isLong && (
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="mt-2 text-sm font-semibold text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors focus:outline-none"
+        >
+          {isExpanded ? "Show less" : "Read more"}
+        </button>
+      )}
+    </div>
+  );
 }
 
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
@@ -81,7 +102,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                     <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-2">
                       {project.title}
                     </h2>
-                    <p className="text-gray-600 dark:text-gray-400">{project.blurb}</p>
+                    <ExpandableBlurb text={project.blurb} />
                   </div>
 
                   {/* Stats Chips */}
