@@ -955,7 +955,7 @@ export default function Home() {
                   </p>
 
                   <p className="mt-2 text-xs text-gray-500 dark:text-neutral-500 text-left">
-                    Current GPA: <span className="font-semibold text-gray-700 dark:text-neutral-300">3.72/4.00</span>
+                    Current GPA: <span className="font-semibold text-gray-700 dark:text-neutral-300">3.88/4.00</span>
                   </p>
                 </div>
 
