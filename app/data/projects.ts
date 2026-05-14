@@ -13,17 +13,17 @@ export const featuredProjects: FeaturedItem[] = [
     hrefRepo: "https://github.com",
     accent: "purple",
   },
-  {
-    id: "1",
-    title: "Ternak Klip",
-    subtitle: "A digital ecosystem bridging content owners and clippers for massive short-form video distribution, powering 100,000+ active users.",
-    cover: "/image-optimized/projects/ternakklip.webp",
-    year: 2026,
-    tags: ["Mobile Apps", "Web Apps"],
-    metric: "100k+ Active Users",
-    hrefLive: "https://ternakklip.com/",
-    accent: "pink",
-  },
+  // {
+  //   id: "1",
+  //   title: "Ternak Klip",
+  //   subtitle: "A digital ecosystem bridging content owners and clippers for massive short-form video distribution, powering 100,000+ active users.",
+  //   cover: "/image-optimized/projects/ternakklip.webp",
+  //   year: 2026,
+  //   tags: ["Mobile Apps", "Web Apps"],
+  //   metric: "100k+ Active Users",
+  //   hrefLive: "https://ternakklip.com/",
+  //   accent: "pink",
+  // },
   {
     id: "2",
     title: "Aero Flight Fare Scrapper",
@@ -100,23 +100,23 @@ export const allProjects: Project[] = [
       contribution: ["Modeled geographical and performance data in PostgreSQL", "Developed automated Python scripts for data ingestion and cleaning", "Designed interactive dashboards and KPI reports via Metabase"]
     }
   },
-  {
-    id: "ternak-klip",
-    title: "Ternak Klip - Creator & Clipper Ecosystem Platform",
-    blurb: "Ternak Klip is a digital ecosystem and community-based platform that bridges the gap between content owners (creators/influencers) and \"clippers\" (short-form video editors). The project focuses on a massive distribution strategy, where long-form video content is repurposed into viral short clips—such as TikToks, Reels, or Shorts—to maximize audience reach and build automated brand awareness through a community network.",
-    cover: "/image-optimized/projects/ternakklip.webp",
-    year: 2026,
-    role: ["Backend Developer", "Devops Engineer"],
-    stack: ["Go", "Next.js", "Flutter", "AWS"],
-    tags: ["Mobile Apps", "Web Apps"],
-    metrics: { users: 100000 },
-    links: { live: "https://ternakklip.com/" },
-    details: {
-      problem: "Content creators struggle to distribute long-form content efficiently, while video editors (clippers) lack a streamlined platform to monetize their skills and collaborate directly with creators.",
-      solution: "Developed a comprehensive digital ecosystem that automates the distribution strategy and connects creators with clippers. Implemented AWS as external storage to reliably handle large-scale video media assets for 100,000+ active users.",
-      contribution: ["Designed robust backend microservices with Go", "Configured scalable infrastructure on AWS", "Integrated CI/CD pipelines to ensure seamless updates"]
-    }
-  },
+  // {
+  //   id: "ternak-klip",
+  //   title: "Ternak Klip - Creator & Clipper Ecosystem Platform",
+  //   blurb: "Ternak Klip is a digital ecosystem and community-based platform that bridges the gap between content owners (creators/influencers) and \"clippers\" (short-form video editors). The project focuses on a massive distribution strategy, where long-form video content is repurposed into viral short clips—such as TikToks, Reels, or Shorts—to maximize audience reach and build automated brand awareness through a community network.",
+  //   cover: "/image-optimized/projects/ternakklip.webp",
+  //   year: 2026,
+  //   role: ["Backend Developer", "Devops Engineer"],
+  //   stack: ["Go", "Next.js", "Flutter", "AWS"],
+  //   tags: ["Mobile Apps", "Web Apps"],
+  //   metrics: { users: 100000 },
+  //   links: { live: "https://ternakklip.com/" },
+  //   details: {
+  //     problem: "Content creators struggle to distribute long-form content efficiently, while video editors (clippers) lack a streamlined platform to monetize their skills and collaborate directly with creators.",
+  //     solution: "Developed a comprehensive digital ecosystem that automates the distribution strategy and connects creators with clippers. Implemented AWS as external storage to reliably handle large-scale video media assets for 100,000+ active users.",
+  //     contribution: ["Designed robust backend microservices with Go", "Configured scalable infrastructure on AWS", "Integrated CI/CD pipelines to ensure seamless updates"]
+  //   }
+  // },
   {
     id: "aero",
     title: "Aero - Automation Flight Fare Scrapper",

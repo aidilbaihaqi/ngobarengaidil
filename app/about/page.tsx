@@ -4,7 +4,7 @@ import Main from "@/app/components/Layout/Main";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { TypewriterEffectSmoothDemo } from "@/app/components/Text/TypewriterEffectSmooth";
-import { Suspense, memo } from "react";
+import { Suspense, memo, useState } from "react";
 
 // Lazy load heavy components
 const ClickSpark = dynamic(() => import("@/app/components/ui/ClickSpark"), {
@@ -57,6 +57,8 @@ const calculateDuration = (startDateStr: string) => {
 };
 
 export default function Home() {
+  const [showMore, setShowMore] = useState(false);
+
   return (
     <ClickSpark
       sparkColor="#8b5cf6"
@@ -636,6 +638,10 @@ export default function Home() {
                 </div>
                 {/* End Item */}
 
+                {/* Collapsible section */}
+                <div className={`grid transition-all duration-700 ease-in-out ${showMore ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+                <div className={`overflow-hidden transition-opacity duration-500 ${showMore ? 'opacity-100' : 'opacity-0'}`}>
+
                 {/* Item - Risalah Maritim */}
                 <div className="group relative flex gap-x-5">
                   {/* Icon */}
@@ -890,7 +896,7 @@ export default function Home() {
                   {/* Right Content */}
                   <div className="grow pb-8 group-last:pb-0 text-left">
                     <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      Jan 2022 - Juli 2022 · 6 mos
+                      Jan 2022 - Jul 2022 · 6 mos
                     </h3>
 
                     <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
@@ -918,6 +924,26 @@ export default function Home() {
                   {/* End Right Content */}
                 </div>
                 {/* End Item */}
+
+                </div>{/* End overflow-hidden */}
+                </div>{/* End collapsible grid */}
+
+                {/* Load More Button */}
+                <button
+                  onClick={() => setShowMore(!showMore)}
+                  className="mt-2 w-full flex items-center justify-center gap-2 py-2.5 px-4 text-sm font-medium text-gray-600 dark:text-neutral-400 border border-gray-200 dark:border-neutral-700 rounded-lg hover:text-violet-600 dark:hover:text-violet-400 hover:border-violet-300 dark:hover:border-violet-700 transition-all duration-200 cursor-pointer"
+                >
+                  <span>{showMore ? 'Show Less' : 'Load More'}</span>
+                  <svg
+                    className={`w-4 h-4 transition-transform duration-300 ${showMore ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
               </div>
               {/* End Timeline */}
             </div>
@@ -955,7 +981,7 @@ export default function Home() {
                   </p>
 
                   <p className="mt-2 text-xs text-gray-500 dark:text-neutral-500 text-left">
-                    Current GPA: <span className="font-semibold text-gray-700 dark:text-neutral-300">3.72/4.00</span>
+                    Current GPA: <span className="font-semibold text-gray-700 dark:text-neutral-300">3.75/4.00</span>
                   </p>
                 </div>
 
@@ -1059,7 +1085,7 @@ export default function Home() {
                   </p>
 
                   <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
-                    Kementerian Komunikasi dan Digital Republik Indonesia
+                    Ministry of Communication and Digital Affairs of the Republic of Indonesia
                   </p>
 
                   <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
@@ -1131,7 +1157,7 @@ export default function Home() {
                   </p>
 
                   <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
-                    Kementerian Pariwisata dan Ekonomi Kreatif
+                    Ministry of Tourism and Creative Economy of the Republic of Indonesia
                   </p>
 
                   <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">

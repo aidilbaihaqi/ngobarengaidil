@@ -2,9 +2,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faLinkedin, faGithub, faYoutube, faTiktok } from "@fortawesome/free-brands-svg-icons";
 import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
-export default function SocialIcons() {
+export default function SocialIcons({ className }: { className?: string }) {
   return (
-    <nav className="flex mt-3 justify-center space-x-4 text-2xl" aria-label="Social media links">
+    <nav className={`flex mt-3 space-x-4 text-2xl ${className ?? "justify-center"}`} aria-label="Social media links">
       <a 
         href="http://instagram.com/albyhaqee" 
         target="_blank" 

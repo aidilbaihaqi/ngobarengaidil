@@ -9,15 +9,12 @@ export default function Main({children}: Readonly<{
 }>) {
   return (
     <>
-      {/* Header - langsung ter-load */}
       <Header />
 
-      {/* Main Content - dengan loading */}
       <PageLoader>
         {children}
       </PageLoader>
 
-      {/* Footer - langsung ter-load */}
       <Footer />
     </>
   )

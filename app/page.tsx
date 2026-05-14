@@ -76,7 +76,7 @@ export default function Home() {
               </motion.div>
               <FlipWordsDemo />
               <p className="text-sm text-gray-600 dark:text-neutral-400 mt-3 leading-6 text-center">
-                Passionate and results-driven programmer with strong experience in software engineering,specializing in backend development, data-driven systems, and AI-based applications.Experienced in building scalable web systems, collaborating in multidisciplinary teams, and delivering high-quality projects for academic, community, and organizational needs.Proficient in modern development tools and agile workflows to solve complex problems efficiently.
+                I build full-stack web apps, develop AI & ML solutions, and deliver custom source code — while also mentoring developers and helping with academic work like thesis, reports, and data analysis. Whatever you need built, learned, or shipped, I&apos;ve got you covered.
               </p>
               <SocialIcons />
 
