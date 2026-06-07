@@ -29,19 +29,22 @@ const baseUrl = 'https://aidilbaihaqi.id';
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "Aidil Baihaqi - Full Stack AI Engineer",
+    default: "Aidil Baihaqi - Full Stack AI Engineer, IT Mentor & Researcher in Bioinformatics and Medical",
     template: "%s | Aidil Baihaqi"
   },
-  description: "Aidil Baihaqi is a Full Stack AI Engineer specializing in building scalable web applications, intelligent backend architectures, and data-driven machine learning solutions.",
+  description: "Aidil Baihaqi is a Full Stack AI Engineer, IT Mentor, and Researcher in Bioinformatics and Medical fields. Specializing in scalable AI-powered applications, intelligent backend systems, and research-driven solutions at the intersection of technology, biology, and medicine.",
   keywords: [
     "Aidil Baihaqi",
     "aidil baihaqi",
-    "Full Stack Engineer",
-    "Data Scientist",
+    "Full Stack AI Engineer",
+    "IT Mentor",
+    "Bioinformatics Researcher",
+    "Medical Researcher",
     "Software Engineer",
-    "Backend Developer",
-    "MLOps",
     "AI Developer",
+    "Machine Learning",
+    "Bioinformatics",
+    "Medical Technology",
     "ngobarengaidil",
     "programming tips",
     "web developer indonesia"
@@ -65,22 +68,22 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'id_ID',
     url: baseUrl,
-    title: 'Aidil Baihaqi - Full Stack AI Engineer',
-    description: 'Aidil Baihaqi is a Full Stack AI Engineer specializing in building scalable web applications, intelligent backend architectures, and data-driven machine learning solutions.',
+    title: 'Aidil Baihaqi - Full Stack AI Engineer, IT Mentor & Researcher in Bioinformatics and Medical',
+    description: 'Aidil Baihaqi is a Full Stack AI Engineer, IT Mentor, and Researcher in Bioinformatics and Medical fields. Bridging technology, biology, and medicine through intelligent software solutions.',
     siteName: 'Personal Website Aidil Baihaqi',
     images: [
       {
         url: '/image-optimized/aidilbaihaqi.webp',
         width: 800,
         height: 800,
-        alt: 'Aidil Baihaqi - Full Stack Engineer',
+        alt: 'Aidil Baihaqi - Full Stack AI Engineer & Bioinformatics Researcher',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aidil Baihaqi - Full Stack AI Engineer',
-    description: 'Personal website, portfolio, and blog of Aidil Baihaqi, a Full Stack AI Engineer specializing in software engineering and AI.',
+    title: 'Aidil Baihaqi - Full Stack AI Engineer, IT Mentor & Researcher in Bioinformatics and Medical',
+    description: 'Personal website, portfolio, and blog of Aidil Baihaqi — Full Stack AI Engineer, IT Mentor, and Researcher in Bioinformatics and Medical technology.',
     images: ['/image-optimized/aidilbaihaqi.webp'],
   },
   alternates: {
@@ -99,8 +102,8 @@ const jsonLd = {
   name: 'Aidil Baihaqi',
   url: baseUrl,
   image: `${baseUrl}/image-optimized/aidilbaihaqi.webp`,
-  jobTitle: 'Full Stack AI Engineer',
-  description: 'Passionate and results-driven programmer with strong experience in software engineering, specializing in backend development, data-driven systems, and AI-based applications.',
+  jobTitle: 'Full Stack AI Engineer, IT Mentor & Researcher in Bioinformatics and Medical',
+  description: 'Passionate and results-driven engineer with strong experience in software engineering, AI development, IT mentoring, and research in bioinformatics and medical technology. Bridging the gap between technology and life sciences.',
   sameAs: [
     'https://github.com/aidilbaihaqi',
     'https://www.linkedin.com/in/aidilbaihaqi/',
@@ -111,10 +114,13 @@ const jsonLd = {
   knowsAbout: [
     'Software Engineering',
     'Full Stack Development',
-    'Data Science',
+    'Artificial Intelligence',
     'Machine Learning',
-    'Backend Development',
-    'AI Applications'
+    'IT Mentoring',
+    'Bioinformatics',
+    'Medical Technology',
+    'Data Science',
+    'Backend Development'
   ],
 };
 
