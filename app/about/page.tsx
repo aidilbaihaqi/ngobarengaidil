@@ -89,7 +89,7 @@ export default function Home() {
               <div className="grow text-left">
                 <TypewriterEffectSmoothDemo />
                 <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                  Full Stack Developer | Data and Machine Learning Enthusiast | IT and Web Mentor
+                  Full Stack AI Engineer, IT Mentor & Researcher in Bioinformatics and Medical
                 </p>
               </div>
             </div>
@@ -640,292 +640,292 @@ export default function Home() {
 
                 {/* Collapsible section */}
                 <div className={`grid transition-all duration-700 ease-in-out ${showMore ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
-                <div className={`overflow-hidden transition-opacity duration-500 ${showMore ? 'opacity-100' : 'opacity-0'}`}>
+                  <div className={`overflow-hidden transition-opacity duration-500 ${showMore ? 'opacity-100' : 'opacity-0'}`}>
 
-                {/* Item - Risalah Maritim */}
-                <div className="group relative flex gap-x-5">
-                  {/* Icon */}
-                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-                    <div className="relative z-10 size-6 flex justify-center items-center">
-                      <Image
-                        src={"/image-optimized/logo-risalahmaritim.svg"}
-                        alt="Risalah Maritim"
-                        width={32}
-                        height={32}
-                        className="shrink-0 size-6 rounded-full"
-                      />
+                    {/* Item - Risalah Maritim */}
+                    <div className="group relative flex gap-x-5">
+                      {/* Icon */}
+                      <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                        <div className="relative z-10 size-6 flex justify-center items-center">
+                          <Image
+                            src={"/image-optimized/logo-risalahmaritim.svg"}
+                            alt="Risalah Maritim"
+                            width={32}
+                            height={32}
+                            className="shrink-0 size-6 rounded-full"
+                          />
 
-                    </div>
-                  </div>
-                  {/* End Icon */}
-
-                  {/* Right Content */}
-                  <div className="grow pb-8 group-last:pb-0 text-left">
-                    <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      May 2023 - Nov 2025 · 2 yrs 5 mos
-                    </h3>
-
-                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                      Full Stack Developer at Risalah Maritim, Student Journalism Organization
-                    </p>
-
-                    <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                      Risalah Maritim is a student journalism organization that serves as a news portal, media platform, and creative space for students. It publishes news, opinions, articles, and literary works while acting as a bridge for students to voice their perspectives to the wider world.
-                    </p>
-
-                    <ul className="list-disc ms-6 mt-3 space-y-1.5">
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Design, develop, and maintain digital platforms, including websites, mobile applications, and content management systems using React for frontend and Laravel for backend to support student journalism activities.
-                      </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Conduct requirements gathering and analysis to ensure digital solutions align with organizational goals.
-                      </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Plan and implement system architecture, ensuring scalability, security, and efficiency.
-                      </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Develop user-friendly interfaces and robust backend functionalities using appropriate technologies.
-                      </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Perform rigorous testing, troubleshooting, and debugging to maintain system stability and performance
-                      </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Optimize and manage CMS platforms for efficient content publishing and workflow management.
-                      </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Document development processes, system structures, and maintenance guidelines for future reference.
-                      </li>
-                    </ul>
-                  </div>
-                  {/* End Right Content */}
-                </div>
-                {/* End Item */}
-
-                {/* Item */}
-                <div className="group relative flex gap-x-5">
-                  {/* Icon */}
-                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-                    <div className="relative z-10 size-6 flex justify-center items-center">
-                      <Image
-                        src={"/image-optimized/logo-sma1.svg"}
-                        alt="SMAN 1 Bintan Timur"
-                        width={32}
-                        height={32}
-                        className="shrink-0 size-6 rounded-full"
-                      />
-                    </div>
-                  </div>
-                  {/* End Icon */}
-
-                  {/* Right Content */}
-                  <div className="grow pb-8 group-last:pb-0 text-left">
-                    <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      Aug 2024 - Nov 2024 · 3 mos
-                    </h3>
-
-                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                      Informatic Club Mentor at SMA Negeri 1 Bintan Timur
-                    </p>
-
-                    <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                      Mentored students on programming fundamentals, operating systems, Python, basic artificial
-                      intelligence, and computer vision.
-                    </p>
-
-                    <ul className="list-disc ms-6 mt-3 space-y-1.5">
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Guide students in understanding core programming concepts, including data structures, algorithms, and problem-solving techniques.
-                      </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Teach the fundamentals of operating systems, covering processes, memory management, file systems, and system security.
-                      </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Provide hands-on training in Python, focusing on syntax, data manipulation, and application development.
-                      </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Introduce students to AI concepts, including machine learning basics, neural networks, and AI ethics.
-                      </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Help students develop debugging skills and logical approaches to solving technical problems.
-                      </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Provide insights into industry trends, learning resources, and career opportunities in technology.
-                      </li>
-                    </ul>
-                  </div>
-                  {/* End Right Content */}
-                </div>
-                {/* End Item */}
-
-                {/* Item */}
-                <div className="group relative flex gap-x-5">
-                  {/* Icon */}
-                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-                    <div className="relative z-10 size-6 flex justify-center items-center">
-                      <Image
-                        src={"/image-optimized/logo-lukananakit.svg"}
-                        alt="Lu Kan Anak IT"
-                        width={32}
-                        height={32}
-                        className="shrink-0 size-6 rounded-full"
-                      />
-                    </div>
-                  </div>
-                  {/* End Icon */}
-
-                  {/* Right Content */}
-                  <div className="grow pb-8 group-last:pb-0 text-left">
-                    <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      Dec 2023 - Jul 2024 · 7 mos
-                    </h3>
-
-                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                      Content Creator at CV Lukan Group
-                    </p>
-
-                    <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                      Created programming course videos for the Lukan Anak IT YouTube channel, simplifying complex
-                      topics for beginner programmers.
-                    </p>
-
-                    <ul className="list-disc ms-6 mt-3 space-y-1.5">
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        <b>Video Production & Editing:</b> Create high-quality programming course videos for the Lukan Anak IT YouTube channel using Adobe Premiere Pro and CapCut to enhance visuals and maintain smooth transitions.
-                      </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        <b>Scriptwriting & Storyboarding: </b>Plan video structure, create compelling scripts, and design storyboards to ensure clear and effective knowledge delivery.
-                      </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        <b>Thumbnail & Branding Design: </b>Craft eye-catching thumbnails and consistent visual branding using Adobe Illustrator and Figma to optimize video reach and engagement.
-                      </li>
-                    </ul>
-                  </div>
-                  {/* End Right Content */}
-                </div>
-                {/* End Item */}
-
-                {/* Item */}
-                <div className="group relative flex gap-x-5">
-                  {/* Icon */}
-                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-                    <div className="relative z-10 size-6 flex justify-center items-center">
-                      <Image
-                        src={"/image-optimized/logo-rakamin.webp"}
-                        alt="Risalah Maritim"
-                        width={32}
-                        height={32}
-                        className="shrink-0 size-6 rounded-full"
-                      />
-                    </div>
-                  </div>
-                  {/* End Icon */}
-
-                  {/* Right Content */}
-                  <div className="grow pb-8 group-last:pb-0 text-left">
-                    <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      May 2023 - Jun 2023 · 1 mos
-                    </h3>
-
-                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                      Full Stack Developer Internship at PT Investree x Rakamin Academy
-                    </p>
-
-                    <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                      Completed several dynamic web and REST API projects using Laravel 10 and related packages,
-                      incorporating Laravel UI with React JS.
-                    </p>
-
-                    <div className="mt-3">
-                      {/* Card */}
-                      <a className="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-700" href="#">
-                        <div className="flex flex-col sm:flex-row items-start sm:items-center overflow-hidden">
-                          <div className="hidden sm:flex flex-shrink-0 sm:w-32 md:w-48 h-24 sm:h-auto">
-                            <Image
-                              src={"/image-optimized/logo-investree.svg"}
-                              width={192}
-                              height={96}
-                              alt="PT Investree"
-                              className="w-full h-full object-cover sm:rounded-s-lg"
-                            />
-                          </div>
-
-                          <div className="flex-1 p-4">
-                            <div className="flex flex-col justify-center">
-                              <h3 className="font-semibold text-sm text-gray-800 dark:text-neutral-300">
-                                PT Investree Randhika Jaya, Investree
-                              </h3>
-                              <p className="leading-6 mt-1 text-sm text-gray-500 dark:text-neutral-500">
-                                A financial technology (fintech) company based in Jakarta, Indonesia. Founded in 2015, Investree focuses on empowering Micro, Small, and Medium Enterprises (MSMEs) by providing easier and more affordable access to capital through a technology-based lending platform.
-                              </p>
-                            </div>
-                          </div>
                         </div>
-                      </a>
-                      {/* End Card */}
+                      </div>
+                      {/* End Icon */}
+
+                      {/* Right Content */}
+                      <div className="grow pb-8 group-last:pb-0 text-left">
+                        <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                          May 2023 - Nov 2025 · 2 yrs 5 mos
+                        </h3>
+
+                        <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                          Full Stack Developer at Risalah Maritim, Student Journalism Organization
+                        </p>
+
+                        <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                          Risalah Maritim is a student journalism organization that serves as a news portal, media platform, and creative space for students. It publishes news, opinions, articles, and literary works while acting as a bridge for students to voice their perspectives to the wider world.
+                        </p>
+
+                        <ul className="list-disc ms-6 mt-3 space-y-1.5">
+                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                            Design, develop, and maintain digital platforms, including websites, mobile applications, and content management systems using React for frontend and Laravel for backend to support student journalism activities.
+                          </li>
+                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                            Conduct requirements gathering and analysis to ensure digital solutions align with organizational goals.
+                          </li>
+                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                            Plan and implement system architecture, ensuring scalability, security, and efficiency.
+                          </li>
+                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                            Develop user-friendly interfaces and robust backend functionalities using appropriate technologies.
+                          </li>
+                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                            Perform rigorous testing, troubleshooting, and debugging to maintain system stability and performance
+                          </li>
+                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                            Optimize and manage CMS platforms for efficient content publishing and workflow management.
+                          </li>
+                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                            Document development processes, system structures, and maintenance guidelines for future reference.
+                          </li>
+                        </ul>
+                      </div>
+                      {/* End Right Content */}
                     </div>
+                    {/* End Item */}
 
-                    <ul className="list-disc ms-6 mt-3 space-y-1.5">
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        <b>Frontend Development:</b> Developed responsive and dynamic user interfaces using React.js integrated with Laravel UI, ensuring smooth user experiences and modern design practices.
-                      </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        <b>Backend Development:</b> Built and maintained RESTful APIs using Laravel 10, managing database interactions, authentication, and business logic while ensuring security and performance optimization.
-                      </li>
-                    </ul>
-                  </div>
-                  {/* End Right Content */}
-                </div>
-                {/* End Item */}
+                    {/* Item */}
+                    <div className="group relative flex gap-x-5">
+                      {/* Icon */}
+                      <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                        <div className="relative z-10 size-6 flex justify-center items-center">
+                          <Image
+                            src={"/image-optimized/logo-sma1.svg"}
+                            alt="SMAN 1 Bintan Timur"
+                            width={32}
+                            height={32}
+                            className="shrink-0 size-6 rounded-full"
+                          />
+                        </div>
+                      </div>
+                      {/* End Icon */}
 
-                {/* Item */}
-                <div className="group relative flex gap-x-5">
-                  {/* Icon */}
-                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-                    <div className="relative z-10 size-6 flex justify-center items-center">
-                      <Image
-                        src={"/image-optimized/logo-tunas.svg"}
-                        alt="PT Tunas Idea Indonesia"
-                        width={32}
-                        height={32}
-                        className="shrink-0 size-6 rounded-full"
-                      />
+                      {/* Right Content */}
+                      <div className="grow pb-8 group-last:pb-0 text-left">
+                        <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                          Aug 2024 - Nov 2024 · 3 mos
+                        </h3>
+
+                        <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                          Informatic Club Mentor at SMA Negeri 1 Bintan Timur
+                        </p>
+
+                        <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                          Mentored students on programming fundamentals, operating systems, Python, basic artificial
+                          intelligence, and computer vision.
+                        </p>
+
+                        <ul className="list-disc ms-6 mt-3 space-y-1.5">
+                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                            Guide students in understanding core programming concepts, including data structures, algorithms, and problem-solving techniques.
+                          </li>
+                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                            Teach the fundamentals of operating systems, covering processes, memory management, file systems, and system security.
+                          </li>
+                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                            Provide hands-on training in Python, focusing on syntax, data manipulation, and application development.
+                          </li>
+                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                            Introduce students to AI concepts, including machine learning basics, neural networks, and AI ethics.
+                          </li>
+                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                            Help students develop debugging skills and logical approaches to solving technical problems.
+                          </li>
+                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                            Provide insights into industry trends, learning resources, and career opportunities in technology.
+                          </li>
+                        </ul>
+                      </div>
+                      {/* End Right Content */}
                     </div>
-                  </div>
-                  {/* End Icon */}
+                    {/* End Item */}
 
-                  {/* Right Content */}
-                  <div className="grow pb-8 group-last:pb-0 text-left">
-                    <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      Jan 2022 - Jul 2022 · 6 mos
-                    </h3>
+                    {/* Item */}
+                    <div className="group relative flex gap-x-5">
+                      {/* Icon */}
+                      <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                        <div className="relative z-10 size-6 flex justify-center items-center">
+                          <Image
+                            src={"/image-optimized/logo-lukananakit.svg"}
+                            alt="Lu Kan Anak IT"
+                            width={32}
+                            height={32}
+                            className="shrink-0 size-6 rounded-full"
+                          />
+                        </div>
+                      </div>
+                      {/* End Icon */}
 
-                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                      Back End Developer Internship at PT Tunas Idea Indonesia
-                    </p>
+                      {/* Right Content */}
+                      <div className="grow pb-8 group-last:pb-0 text-left">
+                        <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                          Dec 2023 - Jul 2024 · 7 mos
+                        </h3>
 
-                    <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                      Design, develop, and maintain RESTful APIs to facilitate secure and efficient data exchange between frontend applications and the backend.
-                    </p>
+                        <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                          Content Creator at CV Lukan Group
+                        </p>
 
-                    <ul className="list-disc ms-6 mt-3 space-y-1.5">
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        <b>API Development:</b> Design, develop, and maintain RESTful APIs to facilitate secure and efficient data exchange between frontend applications and the backend.
-                      </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        <b>Database Management:</b> Design, optimize, and manage databases using MySQL ensuring data integrity and efficiency.
-                      </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        <b>Performance Optimization:</b> Improve system performance through caching, query optimization, and scalable infrastructure.
-                      </li>
-                    </ul>
+                        <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                          Created programming course videos for the Lukan Anak IT YouTube channel, simplifying complex
+                          topics for beginner programmers.
+                        </p>
+
+                        <ul className="list-disc ms-6 mt-3 space-y-1.5">
+                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                            <b>Video Production & Editing:</b> Create high-quality programming course videos for the Lukan Anak IT YouTube channel using Adobe Premiere Pro and CapCut to enhance visuals and maintain smooth transitions.
+                          </li>
+                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                            <b>Scriptwriting & Storyboarding: </b>Plan video structure, create compelling scripts, and design storyboards to ensure clear and effective knowledge delivery.
+                          </li>
+                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                            <b>Thumbnail & Branding Design: </b>Craft eye-catching thumbnails and consistent visual branding using Adobe Illustrator and Figma to optimize video reach and engagement.
+                          </li>
+                        </ul>
+                      </div>
+                      {/* End Right Content */}
+                    </div>
+                    {/* End Item */}
+
+                    {/* Item */}
+                    <div className="group relative flex gap-x-5">
+                      {/* Icon */}
+                      <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                        <div className="relative z-10 size-6 flex justify-center items-center">
+                          <Image
+                            src={"/image-optimized/logo-rakamin.webp"}
+                            alt="Risalah Maritim"
+                            width={32}
+                            height={32}
+                            className="shrink-0 size-6 rounded-full"
+                          />
+                        </div>
+                      </div>
+                      {/* End Icon */}
+
+                      {/* Right Content */}
+                      <div className="grow pb-8 group-last:pb-0 text-left">
+                        <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                          May 2023 - Jun 2023 · 1 mos
+                        </h3>
+
+                        <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                          Full Stack Developer Internship at PT Investree x Rakamin Academy
+                        </p>
+
+                        <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                          Completed several dynamic web and REST API projects using Laravel 10 and related packages,
+                          incorporating Laravel UI with React JS.
+                        </p>
+
+                        <div className="mt-3">
+                          {/* Card */}
+                          <a className="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-700" href="#">
+                            <div className="flex flex-col sm:flex-row items-start sm:items-center overflow-hidden">
+                              <div className="hidden sm:flex flex-shrink-0 sm:w-32 md:w-48 h-24 sm:h-auto">
+                                <Image
+                                  src={"/image-optimized/logo-investree.svg"}
+                                  width={192}
+                                  height={96}
+                                  alt="PT Investree"
+                                  className="w-full h-full object-cover sm:rounded-s-lg"
+                                />
+                              </div>
+
+                              <div className="flex-1 p-4">
+                                <div className="flex flex-col justify-center">
+                                  <h3 className="font-semibold text-sm text-gray-800 dark:text-neutral-300">
+                                    PT Investree Randhika Jaya, Investree
+                                  </h3>
+                                  <p className="leading-6 mt-1 text-sm text-gray-500 dark:text-neutral-500">
+                                    A financial technology (fintech) company based in Jakarta, Indonesia. Founded in 2015, Investree focuses on empowering Micro, Small, and Medium Enterprises (MSMEs) by providing easier and more affordable access to capital through a technology-based lending platform.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                          {/* End Card */}
+                        </div>
+
+                        <ul className="list-disc ms-6 mt-3 space-y-1.5">
+                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                            <b>Frontend Development:</b> Developed responsive and dynamic user interfaces using React.js integrated with Laravel UI, ensuring smooth user experiences and modern design practices.
+                          </li>
+                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                            <b>Backend Development:</b> Built and maintained RESTful APIs using Laravel 10, managing database interactions, authentication, and business logic while ensuring security and performance optimization.
+                          </li>
+                        </ul>
+                      </div>
+                      {/* End Right Content */}
+                    </div>
+                    {/* End Item */}
+
+                    {/* Item */}
+                    <div className="group relative flex gap-x-5">
+                      {/* Icon */}
+                      <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                        <div className="relative z-10 size-6 flex justify-center items-center">
+                          <Image
+                            src={"/image-optimized/logo-tunas.svg"}
+                            alt="PT Tunas Idea Indonesia"
+                            width={32}
+                            height={32}
+                            className="shrink-0 size-6 rounded-full"
+                          />
+                        </div>
+                      </div>
+                      {/* End Icon */}
+
+                      {/* Right Content */}
+                      <div className="grow pb-8 group-last:pb-0 text-left">
+                        <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                          Jan 2022 - Jul 2022 · 6 mos
+                        </h3>
+
+                        <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                          Back End Developer Internship at PT Tunas Idea Indonesia
+                        </p>
+
+                        <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                          Design, develop, and maintain RESTful APIs to facilitate secure and efficient data exchange between frontend applications and the backend.
+                        </p>
+
+                        <ul className="list-disc ms-6 mt-3 space-y-1.5">
+                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                            <b>API Development:</b> Design, develop, and maintain RESTful APIs to facilitate secure and efficient data exchange between frontend applications and the backend.
+                          </li>
+                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                            <b>Database Management:</b> Design, optimize, and manage databases using MySQL ensuring data integrity and efficiency.
+                          </li>
+                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                            <b>Performance Optimization:</b> Improve system performance through caching, query optimization, and scalable infrastructure.
+                          </li>
+                        </ul>
 
 
-                  </div>
-                  {/* End Right Content */}
-                </div>
-                {/* End Item */}
+                      </div>
+                      {/* End Right Content */}
+                    </div>
+                    {/* End Item */}
 
-                </div>{/* End overflow-hidden */}
+                  </div>{/* End overflow-hidden */}
                 </div>{/* End collapsible grid */}
 
                 {/* Load More Button */}
