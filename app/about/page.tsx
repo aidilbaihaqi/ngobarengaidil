@@ -250,6 +250,88 @@ export default function Home() {
 
               {/* Timeline */}
               <div>
+                {/* Item - UmbiTeams */}
+                <div className="group relative flex gap-x-5">
+                  {/* Icon */}
+                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                    <div className="relative z-10 size-6 flex justify-center items-center">
+                      <Image
+                        src={"/image-optimized/logo-umbiteams.webp"}
+                        alt="UmbiTeams"
+                        width={32}
+                        height={32}
+                        className="shrink-0 size-6 rounded-full"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  {/* End Icon */}
+
+                  {/* Right Content */}
+                  <div className="grow pb-8 group-last:pb-0 text-left">
+                    <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                      Oct 2025 - Present · {calculateDuration("2025-10-01")}
+                    </h3>
+
+                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                      Founder - Software Engineer at UmbiTeams
+                    </p>
+
+                    <ul className="list-disc ms-6 mt-3 space-y-1.5">
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Designed and developed backend systems, including APIs, database architecture, and server-side logic for client projects.
+                      </li>
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Implemented machine learning solutions to support intelligent features such as data processing, prediction, and automation.
+                      </li>
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Collaborated with frontend developers and UI/UX designers to deliver cohesive, user-centric digital products.
+                      </li>
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Managed end-to-end project development from initial requirements analysis to deployment and maintenance.
+                      </li>
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Ensured system scalability, performance, and maintainability using modern development tools and best practices.
+                      </li>
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Supported freelance project delivery for various clients, adapting solutions to diverse business and organizational needs.
+                      </li>
+                    </ul>
+
+                    <div className="mt-3">
+                      {/* Card */}
+                      <a className="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-700" href="#">
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center overflow-hidden">
+                          <div className="hidden sm:flex flex-shrink-0 sm:w-32 md:w-48 h-24 sm:h-auto">
+                            <Image
+                              src={"/image-optimized/logo-umbiteams.webp"}
+                              width={192}
+                              height={96}
+                              alt="Logo UmbiTeams"
+                              className="w-full h-full object-cover rounded-t-lg sm:rounded-t-none sm:rounded-s-lg"
+                              loading="lazy"
+                            />
+                          </div>
+
+                          <div className="flex-1 p-4">
+                            <div className="flex flex-col justify-center">
+                              <h3 className="font-semibold text-sm text-gray-800 dark:text-neutral-300">
+                                UmbiTeams
+                              </h3>
+                              <p className="leading-6 mt-1 text-sm text-gray-500 dark:text-neutral-500">
+                                UmbiTeams is a freelance-based technology team that focuses on providing end-to-end digital solutions, ranging from website and backend system development to UI/UX design and data-driven solutions. UmbiTeams helps individuals, businesses, and organizations build efficient, scalable digital products that meet user needs, with a collaborative approach focused on technical quality and real impact.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                      {/* End Card */}
+                    </div>
+                  </div>
+                  {/* End Right Content */}
+                </div>
+                {/* End Item */}
+
                 {/* Item - Coding Camp */}
                 <div className="group relative flex gap-x-5">
                   {/* Icon */}
@@ -270,7 +352,7 @@ export default function Home() {
                   {/* Right Content */}
                   <div className="grow pb-8 group-last:pb-0 text-left">
                     <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      Feb 2026 - Present · {calculateDuration("2026-02-01")}
+                      Feb 2026 - Jul 2026
                     </h3>
 
                     <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
@@ -337,89 +419,8 @@ export default function Home() {
                 </div>
                 {/* End Item */}
 
-                {/* Item - UmbiTeams */}
-                <div className="group relative flex gap-x-5">
-                  {/* Icon */}
-                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-                    <div className="relative z-10 size-6 flex justify-center items-center">
-                      <Image
-                        src={"/image-optimized/logo-umbiteams.webp"}
-                        alt="UmbiTeams"
-                        width={32}
-                        height={32}
-                        className="shrink-0 size-6 rounded-full"
-                        loading="lazy"
-                      />
-                    </div>
-                  </div>
-                  {/* End Icon */}
-
-                  {/* Right Content */}
-                  <div className="grow pb-8 group-last:pb-0 text-left">
-                    <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      Oct 2025 - Present · {calculateDuration("2025-10-01")}
-                    </h3>
-
-                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                      Backend Developer & ML Engineer at UmbiTeams
-                    </p>
-
-                    <ul className="list-disc ms-6 mt-3 space-y-1.5">
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Designed and developed backend systems, including APIs, database architecture, and server-side logic for client projects.
-                      </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Implemented machine learning solutions to support intelligent features such as data processing, prediction, and automation.
-                      </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Collaborated with frontend developers and UI/UX designers to deliver cohesive, user-centric digital products.
-                      </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Managed end-to-end project development from initial requirements analysis to deployment and maintenance.
-                      </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Ensured system scalability, performance, and maintainability using modern development tools and best practices.
-                      </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Supported freelance project delivery for various clients, adapting solutions to diverse business and organizational needs.
-                      </li>
-                    </ul>
-
-                    <div className="mt-3">
-                      {/* Card */}
-                      <a className="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-700" href="#">
-                        <div className="flex flex-col sm:flex-row items-start sm:items-center overflow-hidden">
-                          <div className="hidden sm:flex flex-shrink-0 sm:w-32 md:w-48 h-24 sm:h-auto">
-                            <Image
-                              src={"/image-optimized/logo-umbiteams.webp"}
-                              width={192}
-                              height={96}
-                              alt="Logo UmbiTeams"
-                              className="w-full h-full object-cover rounded-t-lg sm:rounded-t-none sm:rounded-s-lg"
-                              loading="lazy"
-                            />
-                          </div>
-
-                          <div className="flex-1 p-4">
-                            <div className="flex flex-col justify-center">
-                              <h3 className="font-semibold text-sm text-gray-800 dark:text-neutral-300">
-                                UmbiTeams
-                              </h3>
-                              <p className="leading-6 mt-1 text-sm text-gray-500 dark:text-neutral-500">
-                                UmbiTeams is a freelance-based technology team that focuses on providing end-to-end digital solutions, ranging from website and backend system development to UI/UX design and data-driven solutions. UmbiTeams helps individuals, businesses, and organizations build efficient, scalable digital products that meet user needs, with a collaborative approach focused on technical quality and real impact.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                      {/* End Card */}
-                    </div>
-                  </div>
-                  {/* End Right Content */}
-                </div>
-                {/* End Item */}
-
-                {/* Item - Beasiswa Pendidikan Indonesia */}
+                {/* Item - Beasiswa Pendidikan Indonesia (hidden for now) */}
+                {false && (
                 <div className="group relative flex gap-x-5">
                   {/* Icon */}
                   <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
@@ -456,6 +457,7 @@ export default function Home() {
                   </div>
                   {/* End Right Content */}
                 </div>
+                )}
                 {/* End Item */}
 
                 {/* Item - BPS */}
