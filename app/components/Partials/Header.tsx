@@ -1,26 +1,19 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import Navbar from "./Navbar";
+import FloatingDock from "./FloatingDock";
 import ThemeToggle from "../Button/ThemeButton";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
     <>
       {/* Header */}
-      <header className="sticky top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
-        <div className="mt-4 relative max-w-5xl w-full mx-2 md:mx-auto flex items-center justify-between gap-3">
+      <header className="sticky top-0 inset-x-0 flex flex-wrap lg:justify-start lg:flex-nowrap z-50 w-full text-sm">
+        <div className="mt-4 relative max-w-5xl w-full mx-2 lg:mx-auto flex items-center justify-between gap-3">
           {/* Container 1: Logo + Nav Links */}
-          <nav className="flex-1 bg-white/80 backdrop-blur-md border border-gray-200/60 rounded-[2rem] py-2.5 md:flex md:items-center md:justify-between md:py-0 md:px-4 dark:bg-neutral-900/80 dark:border-neutral-700/60 shadow-lg hover:shadow-xl transition-all duration-300">
-            <div className="px-4 md:px-0 flex justify-between items-center">
+          <nav className="flex-none lg:flex-1 bg-white/80 backdrop-blur-md border border-gray-200/60 rounded-[2rem] py-2.5 lg:flex lg:items-center lg:justify-between lg:py-0 lg:px-4 dark:bg-neutral-900/80 dark:border-neutral-700/60 shadow-lg hover:shadow-xl transition-all duration-300">
+            <div className="px-4 lg:px-0 flex justify-between items-center">
               {/* Logo */}
               <div>
                 <Link className="flex-none rounded-md text-xl inline-block font-semibold focus:outline-none focus:opacity-80" href="/" aria-label="Go to homepage">
@@ -39,47 +32,22 @@ export default function Header() {
                 </Link>
               </div>
               {/* End Logo */}
-
-              <div className="md:hidden flex items-center gap-3">
-                {/* Theme Toggle for Mobile - Always visible */}
-                <ThemeToggle />
-                
-                {/* Hamburger Button */}
-                <button 
-                  type="button" 
-                  className="flex justify-center items-center size-6 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" 
-                  aria-expanded={isMenuOpen} 
-                  aria-controls="mobile-nav-menu" 
-                  aria-label="Toggle navigation"
-                  onClick={toggleMenu}
-                >
-                  {!isMenuOpen ? (
-                    <svg className="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <line x1="3" x2="21" y1="6" y2="6" />
-                      <line x1="3" x2="21" y1="12" y2="12" />
-                      <line x1="3" x2="21" y1="18" y2="18" />
-                    </svg>
-                  ) : (
-                    <svg className="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M18 6 6 18" />
-                      <path d="m6 6 12 12" />
-                    </svg>
-                  )}
-                </button>
-              </div>
             </div>
 
-            <Navbar isOpen={isMenuOpen} onLinkClick={() => setIsMenuOpen(false)} />
+            <Navbar />
           </nav>
 
           {/* Container 2: Theme Button (Desktop only) */}
-          <div className="hidden md:flex">
+          <div className="hidden lg:flex">
             <div className="bg-white/80 backdrop-blur-md border border-gray-200/60 rounded-full p-2 dark:bg-neutral-900/80 dark:border-neutral-700/60 shadow-lg hover:shadow-xl transition-all duration-300">
               <ThemeToggle />
             </div>
           </div>
         </div>
       </header>
+
+      {/* Floating Dock (Tablet & Mobile) */}
+      <FloatingDock />
     </>
   )
 }

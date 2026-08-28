@@ -1,14 +1,13 @@
-import ThemeToggle from "../Button/ThemeButton"
 export default function Footer() {
   return (
     <>
       {/* Footer */}
-      <footer className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <footer className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-28 lg:pb-0">
         <div className="py-6 border-t border-gray-200 dark:border-neutral-700">
           <div className="flex flex-wrap justify-between items-center gap-2">
             <div>
               <p className="text-xs text-gray-600 dark:text-neutral-400">
-                © 2025 Aidil Baihaqi
+                © 2026 Aidil Baihaqi
               </p>
             </div>
             {/* End Col */}

@@ -15,6 +15,14 @@ const ClickSpark = dynamic(() => import("./components/ui/ClickSpark"), {
   loading: () => <div className="contents" />,
 });
 
+const HeroParallaxProjects = dynamic(
+  () => import("./components/Projects/HeroParallaxProjects"),
+  {
+    ssr: false,
+    loading: () => <div className="h-[220vh] md:h-[300vh]" aria-hidden="true" />,
+  }
+);
+
 const BentoGridThirdDemo = dynamic(
   () => import("./components/Layout/BentoGrid").then((mod) => mod.BentoGridThirdDemo),
   {
@@ -47,7 +55,7 @@ export default function Home() {
       <Main>
         {/* Main Content */}
         <main id="content">
-          <div className="w-full max-w-5xl mb-10 mx-auto px-4 pt-10 sm:px-6 lg:px-8">
+          <div className="w-full max-w-5xl mx-auto px-4 pt-10 sm:px-6 lg:px-8">
             {/* About */}
             <div className="text-center" role="main" aria-label="About section">
               <motion.div
@@ -110,8 +118,13 @@ export default function Home() {
               </motion.div>
             </div>
             {/* End About */}
+          </div>
 
-            <div className="border-t dark:border-gray-400 dark:border-opacity-10 mt-10"></div>
+          {/* Interactive Parallax Projects */}
+          <HeroParallaxProjects />
+
+          <div className="w-full max-w-5xl mb-10 mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="border-t dark:border-gray-400 dark:border-opacity-10"></div>
 
             {/* Feature Section */}
             <div className="mt-10 text-center" role="region" aria-label="Services section">
