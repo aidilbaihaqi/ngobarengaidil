@@ -121,7 +121,9 @@ export default function Home() {
           </div>
 
           {/* Interactive Parallax Projects */}
-          <HeroParallaxProjects />
+          <div className="mt-16 md:mt-28">
+            <HeroParallaxProjects />
+          </div>
 
           <div className="w-full max-w-5xl mb-10 mx-auto px-4 sm:px-6 lg:px-8">
             <div className="border-t dark:border-gray-400 dark:border-opacity-10"></div>

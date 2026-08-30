@@ -10,7 +10,7 @@ export default function Header() {
     <>
       {/* Header */}
       <header className="sticky top-0 inset-x-0 flex flex-wrap lg:justify-start lg:flex-nowrap z-50 w-full text-sm">
-        <div className="mt-4 relative max-w-5xl w-full mx-2 lg:mx-auto flex items-center justify-between gap-3">
+        <div className="mt-4 relative max-w-5xl w-full mx-2 lg:mx-auto flex items-center justify-center lg:justify-between gap-3">
           {/* Container 1: Logo + Nav Links */}
           <nav className="flex-none lg:flex-1 bg-white/80 backdrop-blur-md border border-gray-200/60 rounded-[2rem] py-2.5 lg:flex lg:items-center lg:justify-between lg:py-0 lg:px-4 dark:bg-neutral-900/80 dark:border-neutral-700/60 shadow-lg hover:shadow-xl transition-all duration-300">
             <div className="px-4 lg:px-0 flex justify-between items-center">

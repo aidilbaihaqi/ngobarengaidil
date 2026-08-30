@@ -62,7 +62,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[220vh] md:h-[300vh] py-24 md:py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="min-h-[220vh] md:min-h-[300vh] pt-24 md:pt-40 pb-[540px] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header title={title} description={description} />
       <motion.div
@@ -114,7 +114,7 @@ export const Header = ({
   description?: React.ReactNode;
 }) => {
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
+    <div className="max-w-7xl relative mx-auto pt-20 md:pt-32 pb-12 md:pb-20 px-4 w-full left-0 top-0">
       <h1 className="text-2xl md:text-7xl font-bold text-gray-800 dark:text-white">
         {title ?? (
           <>
