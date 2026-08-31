@@ -24,7 +24,7 @@ export const viewport = {
   maximumScale: 5,
 };
 
-const baseUrl = 'https://aidilbaihaqi.id';
+const baseUrl = 'https://www.aidilbaihaqi.id';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),

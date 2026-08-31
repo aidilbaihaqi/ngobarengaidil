@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 
-const baseUrl = 'https://aidilbaihaqi.id'
+const baseUrl = 'https://www.aidilbaihaqi.id'
 
 // Rebuild time — updated on every deploy, so lastmod reflects the live content.
 const lastModified = new Date()
