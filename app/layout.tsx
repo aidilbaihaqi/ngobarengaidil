@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     images: ['/image-optimized/aidilbaihaqi.webp'],
   },
   alternates: {
-    canonical: baseUrl,
+    canonical: '/',
   },
   verification: {
     // Add your Google Search Console verification code here

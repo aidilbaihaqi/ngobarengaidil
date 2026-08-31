@@ -1,44 +1,38 @@
 import { MetadataRoute } from 'next'
-import { allProjects } from './data/projects'
+
+const baseUrl = 'https://aidilbaihaqi.id'
+
+// Rebuild time — updated on every deploy, so lastmod reflects the live content.
+const lastModified = new Date()
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://aidilbaihaqi.id'
-
-  // Static pages
-  const staticPages: MetadataRoute.Sitemap = [
+  // Only routes that actually resolve. A URL in the sitemap that 404s is
+  // reported as an error in Search Console and lowers crawl trust, so project
+  // entries stay out until app/projects/[id]/page.tsx exists.
+  return [
     {
       url: baseUrl,
-      lastModified: new Date('2026-06-07'),
+      lastModified,
       changeFrequency: 'weekly',
       priority: 1.0,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date('2026-06-07'),
+      lastModified,
       changeFrequency: 'monthly',
-      priority: 0.9,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/projects`,
-      lastModified: new Date('2026-06-07'),
+      lastModified,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date('2026-06-01'),
+      lastModified,
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.5,
     },
   ]
-
-  // Dynamic project pages — one URL per project
-  const projectPages: MetadataRoute.Sitemap = allProjects.map((project) => ({
-    url: `${baseUrl}/projects/${project.id}`,
-    lastModified: new Date(`${project.year}-01-01`),
-    changeFrequency: 'yearly' as const,
-    priority: 0.6,
-  }))
-
-  return [...staticPages, ...projectPages]
 }
