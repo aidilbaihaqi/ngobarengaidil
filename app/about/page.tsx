@@ -421,42 +421,42 @@ export default function Home() {
 
                 {/* Item - Beasiswa Pendidikan Indonesia (hidden for now) */}
                 {false && (
-                <div className="group relative flex gap-x-5">
-                  {/* Icon */}
-                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-                    <div className="relative z-10 size-6 flex justify-center items-center">
-                      <Image
-                        src={"/image-optimized/logo-bpi.webp"}
-                        alt="Beasiswa Pendidikan Indonesia"
-                        width={32}
-                        height={32}
-                        className="shrink-0 size-6 rounded-full"
-                        loading="lazy"
-                      />
+                  <div className="group relative flex gap-x-5">
+                    {/* Icon */}
+                    <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                      <div className="relative z-10 size-6 flex justify-center items-center">
+                        <Image
+                          src={"/image-optimized/logo-bpi.webp"}
+                          alt="Beasiswa Pendidikan Indonesia"
+                          width={32}
+                          height={32}
+                          className="shrink-0 size-6 rounded-full"
+                          loading="lazy"
+                        />
+                      </div>
                     </div>
+                    {/* End Icon */}
+
+                    {/* Right Content */}
+                    <div className="grow pb-8 group-last:pb-0 text-left">
+                      <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                        Aug 2023 - Present · {calculateDuration("2023-08-01")}
+                      </h3>
+
+                      <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                        Awardee of Indonesia Education Scholarship
+                      </p>
+
+                      <p className="leading-6 mt-3 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                        Selected as Indonesia Education Scholarship awardee, previously qualified for Indonesia Maju Scholarship S1 Overseas program for Computer Science at Kyoto University. Actively engaged in social impact projects, IELTS and SAT preparation programs, cultural exchange initiatives, and educational outreach across Indonesia to promote digital literacy and technology advancement.
+                      </p>
+
+                      <p className="leading-6 mt-3 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                        <strong>Skills:</strong> English · Communication · Public Speaking · Project-based Learning
+                      </p>
+                    </div>
+                    {/* End Right Content */}
                   </div>
-                  {/* End Icon */}
-
-                  {/* Right Content */}
-                  <div className="grow pb-8 group-last:pb-0 text-left">
-                    <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      Aug 2023 - Present · {calculateDuration("2023-08-01")}
-                    </h3>
-
-                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                      Awardee of Indonesia Education Scholarship
-                    </p>
-
-                    <p className="leading-6 mt-3 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                      Selected as Indonesia Education Scholarship awardee, previously qualified for Indonesia Maju Scholarship S1 Overseas program for Computer Science at Kyoto University. Actively engaged in social impact projects, IELTS and SAT preparation programs, cultural exchange initiatives, and educational outreach across Indonesia to promote digital literacy and technology advancement.
-                    </p>
-
-                    <p className="leading-6 mt-3 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                      <strong>Skills:</strong> English · Communication · Public Speaking · Project-based Learning
-                    </p>
-                  </div>
-                  {/* End Right Content */}
-                </div>
                 )}
                 {/* End Item */}
 
@@ -983,7 +983,7 @@ export default function Home() {
                   </p>
 
                   <p className="mt-2 text-xs text-gray-500 dark:text-neutral-500 text-left">
-                    Current GPA: <span className="font-semibold text-gray-700 dark:text-neutral-300">3.75/4.00</span>
+                    Current GPA: <span className="font-semibold text-gray-700 dark:text-neutral-300">3.8/4.00</span>
                   </p>
                 </div>
 
