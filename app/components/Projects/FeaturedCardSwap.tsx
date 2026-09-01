@@ -19,14 +19,16 @@ function ExpandableText({ text }: { text: string }) {
   }, [text]);
 
   return (
-    <div className="text-xl text-gray-600 dark:text-gray-400">
-      <p className={!isExpanded && isLong ? "line-clamp-3 md:line-clamp-4" : ""}>
+    <div className="text-xl text-ink-soft">
+      <p
+        className={!isExpanded && isLong ? "line-clamp-3 md:line-clamp-4" : ""}
+      >
         {text}
       </p>
       {isLong && (
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="mt-2 text-sm font-semibold text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors focus:outline-none"
+          className="mt-2 text-sm font-semibold text-signal-ink dark:text-signal hover:text-signal-ink dark:hover:text-signal transition-colors focus:outline-none"
         >
           {isExpanded ? "Show less" : "Read more"}
         </button>
@@ -68,9 +70,9 @@ export default function FeaturedCardSwap({ items }: FeaturedCardSwapProps) {
 
   const activeItem = items[activeIndex];
   const accentColors = {
-    purple: "from-purple-500/20 to-purple-600/20 border-purple-500/50",
-    cyan: "from-cyan-500/20 to-cyan-600/20 border-cyan-500/50",
-    pink: "from-pink-500/20 to-pink-600/20 border-pink-500/50",
+    purple: "bg-signal/15 border-signal/50",
+    cyan: "bg-signal/15 border-signal/50",
+    pink: "bg-signal/15 border-signal/50",
   };
 
   return (
@@ -92,7 +94,7 @@ export default function FeaturedCardSwap({ items }: FeaturedCardSwapProps) {
           className="space-y-6"
         >
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-3">
+            <h2 className="text-4xl md:text-5xl font-bold text-ink mb-3">
               {activeItem.title}
             </h2>
             {activeItem.subtitle && (
@@ -106,7 +108,7 @@ export default function FeaturedCardSwap({ items }: FeaturedCardSwapProps) {
               {activeItem.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-3 py-1 text-xs font-mono bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-full text-gray-700 dark:text-gray-300"
+                  className="px-3 py-1 text-xs font-mono bg-ground-deep/5 border border-rule dark:border-white/10 rounded-full text-ink-soft"
                 >
                   {tag}
                 </span>
@@ -116,8 +118,8 @@ export default function FeaturedCardSwap({ items }: FeaturedCardSwapProps) {
 
           {/* Metric */}
           {activeItem.metric && (
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/30 rounded-full">
-              <span className="text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-signal/10 border border-signal/30 rounded-full">
+              <span className="text-sm font-semibold text-signal-ink">
                 {activeItem.metric}
               </span>
             </div>
@@ -130,7 +132,7 @@ export default function FeaturedCardSwap({ items }: FeaturedCardSwapProps) {
                 href={activeItem.hrefLive}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 text-white font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-signal-ink hover:bg-signal text-ground font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-signal/50 focus:ring-offset-2"
                 aria-label={`View live demo of ${activeItem.title}`}
               >
                 <ExternalLink className="w-4 h-4" />
@@ -142,7 +144,7 @@ export default function FeaturedCardSwap({ items }: FeaturedCardSwapProps) {
                 href={activeItem.hrefRepo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 border border-gray-200 dark:border-white/10 text-gray-800 dark:text-white font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-white/50 focus:ring-offset-2"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-ground-deep/5 hover:bg-ground-deep/10 border border-rule dark:border-white/10 text-ink font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-white/50 focus:ring-offset-2"
                 aria-label={`View source code of ${activeItem.title}`}
               >
                 <Github className="w-4 h-4" />
@@ -189,14 +191,14 @@ export default function FeaturedCardSwap({ items }: FeaturedCardSwapProps) {
           {/* Navigation Arrows */}
           <button
             onClick={goToPrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 bg-white/90 dark:bg-black/50 hover:bg-white dark:hover:bg-black/70 border border-gray-200 dark:border-white/10 rounded-full text-gray-800 dark:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-white/50"
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 bg-white/90/50 hover:bg-white/70 border border-rule dark:border-white/10 rounded-full text-ink transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-white/50"
             aria-label="Previous project"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={goToNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3 bg-white/90 dark:bg-black/50 hover:bg-white dark:hover:bg-black/70 border border-gray-200 dark:border-white/10 rounded-full text-gray-800 dark:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-white/50"
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3 bg-white/90/50 hover:bg-white/70 border border-rule dark:border-white/10 rounded-full text-ink transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-white/50"
             aria-label="Next project"
           >
             <ChevronRight className="w-6 h-6" />
@@ -212,7 +214,7 @@ export default function FeaturedCardSwap({ items }: FeaturedCardSwapProps) {
             onClick={() => setActiveIndex(index)}
             className={`h-2 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/50 ${
               index === activeIndex
-                ? "w-8 bg-gradient-to-r from-purple-500 to-cyan-500"
+                ? "w-8 bg-signal"
                 : "w-2 bg-white/20 hover:bg-white/40"
             }`}
             aria-label={`Go to project ${index + 1}`}

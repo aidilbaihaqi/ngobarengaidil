@@ -38,7 +38,7 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
           observer.unobserve(element);
         }
       },
-      { threshold }
+      { threshold },
     );
 
     observer.observe(element);

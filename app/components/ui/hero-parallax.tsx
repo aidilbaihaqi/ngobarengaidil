@@ -37,27 +37,27 @@ export const HeroParallax = ({
 
   const translateX = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, 1000]),
-    springConfig
+    springConfig,
   );
   const translateXReverse = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, -1000]),
-    springConfig
+    springConfig,
   );
   const rotateX = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [15, 0]),
-    springConfig
+    springConfig,
   );
   const opacity = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
-    springConfig
+    springConfig,
   );
   const rotateZ = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [20, 0]),
-    springConfig
+    springConfig,
   );
   const translateY = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
-    springConfig
+    springConfig,
   );
   return (
     <div
@@ -115,14 +115,14 @@ export const Header = ({
 }) => {
   return (
     <div className="max-w-7xl relative mx-auto pt-20 md:pt-32 pb-12 md:pb-20 px-4 w-full left-0 top-0">
-      <h1 className="text-2xl md:text-7xl font-bold text-gray-800 dark:text-white">
+      <h1 className="text-2xl md:text-7xl font-bold text-ink">
         {title ?? (
           <>
             Things I&apos;ve <br /> designed &amp; shipped
           </>
         )}
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 text-gray-600 dark:text-neutral-300">
+      <p className="max-w-2xl text-base md:text-xl mt-8 text-ink-soft">
         {description ??
           "A selection of full-stack, AI, and automation projects — built with modern frameworks for startups, institutions, and communities. Scroll to explore."}
       </p>

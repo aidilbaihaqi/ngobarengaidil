@@ -16,18 +16,18 @@ const FeaturedCardSwap = dynamic(
   () => import("../components/Projects/FeaturedCardSwap"),
   {
     loading: () => (
-      <div className="h-[500px] bg-neutral-200 dark:bg-neutral-800 rounded-2xl animate-pulse" />
+      <div className="h-[500px] bg-ground-deep rounded-2xl animate-pulse" />
     ),
-  }
+  },
 );
 
 const ProjectFilters = dynamic(
   () => import("../components/Projects/ProjectFilters"),
   {
     loading: () => (
-      <div className="h-16 bg-neutral-200 dark:bg-neutral-800 rounded-xl animate-pulse mb-8" />
+      <div className="h-16 bg-ground-deep rounded-xl animate-pulse mb-8" />
     ),
-  }
+  },
 );
 
 const ProjectsGrid = dynamic(
@@ -36,20 +36,23 @@ const ProjectsGrid = dynamic(
     loading: () => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {[1, 2, 3, 4, 5, 6].map((i) => (
-          <div key={i} className="h-80 bg-neutral-200 dark:bg-neutral-800 rounded-2xl animate-pulse" />
+          <div
+            key={i}
+            className="h-80 bg-ground-deep rounded-2xl animate-pulse"
+          />
         ))}
       </div>
     ),
-  }
+  },
 );
 
 const ProjectStats = dynamic(
   () => import("../components/Projects/ProjectStats"),
   {
     loading: () => (
-      <div className="h-24 bg-neutral-200 dark:bg-neutral-800 rounded-xl animate-pulse mb-8" />
+      <div className="h-24 bg-ground-deep rounded-xl animate-pulse mb-8" />
     ),
-  }
+  },
 );
 
 export default function ProjectsPage() {
@@ -63,10 +66,10 @@ export default function ProjectsPage() {
         searchQuery === "" ||
         project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         project.stack.some((tech) =>
-          tech.toLowerCase().includes(searchQuery.toLowerCase())
+          tech.toLowerCase().includes(searchQuery.toLowerCase()),
         ) ||
         project.tags.some((tag) =>
-          tag.toLowerCase().includes(searchQuery.toLowerCase())
+          tag.toLowerCase().includes(searchQuery.toLowerCase()),
         );
 
       const matchesFilter =
@@ -91,12 +94,12 @@ export default function ProjectsPage() {
           <div className="w-full max-w-6xl mx-auto pt-5 md:pt-16 px-4 sm:px-6 lg:px-8 pb-20">
             {/* Header */}
             <div className="mb-16 text-center">
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-800 dark:text-white mb-4">
+              <h1 className="text-5xl md:text-6xl font-bold text-ink mb-4">
                 Projects
               </h1>
-              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                A collection of my work in AI/ML, web development, and open source
-                contributions
+              <p className="text-lg text-ink-soft max-w-2xl mx-auto">
+                A collection of my work in AI/ML, web development, and open
+                source contributions
               </p>
             </div>
 
@@ -105,7 +108,7 @@ export default function ProjectsPage() {
 
             {/* Featured Projects - Card Swap */}
             <section className="mb-20">
-              <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-8">
+              <h2 className="text-3xl font-bold text-ink mb-8">
                 Featured Projects
               </h2>
               <FeaturedCardSwap items={featuredProjects} />

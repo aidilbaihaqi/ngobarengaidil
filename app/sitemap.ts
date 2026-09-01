@@ -1,9 +1,9 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from "next";
 
-const baseUrl = 'https://www.aidilbaihaqi.id'
+const baseUrl = "https://www.aidilbaihaqi.id";
 
 // Rebuild time — updated on every deploy, so lastmod reflects the live content.
-const lastModified = new Date()
+const lastModified = new Date();
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Only routes that actually resolve. A URL in the sitemap that 404s is
@@ -13,26 +13,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: baseUrl,
       lastModified,
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly",
       priority: 1.0,
     },
     {
       url: `${baseUrl}/about`,
       lastModified,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/projects`,
       lastModified,
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/contact`,
       lastModified,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.5,
     },
-  ]
+  ];
 }

@@ -10,6 +10,9 @@ export function TypewriterEffectSmoothDemo() {
     },
   ];
   return (
-    <TypewriterEffectSmooth words={words} className="text-lg font-medium text-gray-800 dark:text-neutral-200"/>
+    <TypewriterEffectSmooth
+      words={words}
+      className="text-lg font-medium text-ink"
+    />
   );
 }

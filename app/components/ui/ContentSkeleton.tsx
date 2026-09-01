@@ -85,7 +85,7 @@ export default function ContentSkeleton() {
         </div>
       </div>
 
-      <div className="border-t dark:border-gray-400 dark:border-opacity-10 mt-10 mb-10"></div>
+      <div className="border-t dark:border-opacity-10 mt-10 mb-10"></div>
 
       {/* Feature Section Skeleton */}
       <div className="mt-10">

@@ -125,7 +125,7 @@ export default function AboutSkeleton() {
                       duration: 2,
                       repeat: Infinity,
                       ease: "linear",
-                      delay: (i * 0.1) + (j * 0.02),
+                      delay: i * 0.1 + j * 0.02,
                     }}
                     style={{
                       backgroundSize: "200% 100%",

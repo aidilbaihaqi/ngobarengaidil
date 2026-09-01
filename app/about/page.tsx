@@ -12,17 +12,26 @@ const ClickSpark = dynamic(() => import("@/app/components/ui/ClickSpark"), {
   loading: () => <div className="contents" />,
 });
 
-const AwardCarousel = dynamic(() => import("@/app/components/ui/AwardCarousel"), {
-  ssr: false,
-  loading: () => (
-    <div className="h-64 bg-neutral-200 dark:bg-neutral-800 rounded-xl animate-pulse" />
-  ),
-});
+const AwardCarousel = dynamic(
+  () => import("@/app/components/ui/AwardCarousel"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="h-64 bg-ground-deep rounded-xl animate-pulse" />
+    ),
+  },
+);
 
 // Memoized skill icon component for better performance
-const SkillIcon = memo(function SkillIcon({ icon, name }: { icon: string; name: string }) {
+const SkillIcon = memo(function SkillIcon({
+  icon,
+  name,
+}: {
+  icon: string;
+  name: string;
+}) {
   return (
-    <li className="me-1 after:content-[','] last:after:content-[''] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+    <li className="me-1 after:content-[','] last:after:content-[''] inline-flex items-center text-sm text-ink">
       <Image
         width={15}
         height={15}
@@ -41,16 +50,19 @@ const calculateDuration = (startDateStr: string) => {
   const startDate = new Date(startDateStr);
   const currentDate = new Date();
 
-  const totalMonths = (currentDate.getFullYear() - startDate.getFullYear()) * 12 + (currentDate.getMonth() - startDate.getMonth()) + 1;
+  const totalMonths =
+    (currentDate.getFullYear() - startDate.getFullYear()) * 12 +
+    (currentDate.getMonth() - startDate.getMonth()) +
+    1;
   const years = Math.floor(totalMonths / 12);
   const months = totalMonths % 12;
 
   let durationStr = "";
   if (years > 0) {
-    durationStr += `${years} yr${years > 1 ? 's' : ''} `;
+    durationStr += `${years} yr${years > 1 ? "s" : ""} `;
   }
   if (months > 0) {
-    durationStr += `${months} mo${months > 1 ? 's' : ''}`;
+    durationStr += `${months} mo${months > 1 ? "s" : ""}`;
   }
 
   return durationStr.trim();
@@ -88,8 +100,9 @@ export default function Home() {
 
               <div className="grow text-left">
                 <TypewriterEffectSmoothDemo />
-                <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                  Full Stack AI Engineer, IT Mentor & Researcher in Bioinformatics and Medical
+                <p className="leading-6 text-sm text-ink-soft text-left">
+                  Full Stack AI Engineer, IT Mentor & Researcher in
+                  Bioinformatics and Medical
                 </p>
               </div>
             </div>
@@ -97,24 +110,30 @@ export default function Home() {
 
             {/* About */}
             <div className="mt-8 text-left">
-              <p className="text-sm text-gray-600 dark:text-neutral-400 leading-6 text-left">
-                Passionate and results-driven programmer with strong experience in software engineering,specializing in backend development, data-driven systems, and AI-based applications.Experienced in building scalable web systems, collaborating in multidisciplinary teams, and delivering high-quality projects for academic, community, and organizational needs.Proficient in modern development tools and agile workflows to solve complex problems efficiently.
+              <p className="text-sm text-ink-soft leading-6 text-left">
+                Passionate and results-driven programmer with strong experience
+                in software engineering,specializing in backend development,
+                data-driven systems, and AI-based applications.Experienced in
+                building scalable web systems, collaborating in
+                multidisciplinary teams, and delivering high-quality projects
+                for academic, community, and organizational needs.Proficient in
+                modern development tools and agile workflows to solve complex
+                problems efficiently.
               </p>
             </div>
             {/* End About */}
 
             {/* Skills */}
             <div className="mt-10 sm:mt-14 text-left">
-              <h2 className="mb-5 font-medium text-gray-800 dark:text-neutral-200 text-left">
-                Skills
-              </h2>
+              <h2 className="mb-5 font-medium text-ink text-left">Skills</h2>
 
               {/* List */}
               <div className="space-y-3 text-left">
-
                 <dl className="flex flex-col sm:flex-row gap-1 justify-start">
                   <dt className="min-w-40 text-left">
-                    <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">Frontend:</span>
+                    <span className="block text-sm text-muted text-left">
+                      Frontend:
+                    </span>
                   </dt>
                   <dd>
                     <ul>
@@ -131,7 +150,9 @@ export default function Home() {
 
                 <dl className="flex flex-col sm:flex-row gap-1 justify-start">
                   <dt className="min-w-40 text-left">
-                    <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">Backend:</span>
+                    <span className="block text-sm text-muted text-left">
+                      Backend:
+                    </span>
                   </dt>
                   <dd>
                     <ul>
@@ -146,7 +167,9 @@ export default function Home() {
 
                 <dl className="flex flex-col sm:flex-row gap-1 justify-start">
                   <dt className="min-w-40 text-left">
-                    <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">Database:</span>
+                    <span className="block text-sm text-muted text-left">
+                      Database:
+                    </span>
                   </dt>
                   <dd>
                     <ul>
@@ -159,7 +182,9 @@ export default function Home() {
 
                 <dl className="flex flex-col sm:flex-row gap-1 justify-start">
                   <dt className="min-w-40 text-left">
-                    <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">DevOps:</span>
+                    <span className="block text-sm text-muted text-left">
+                      DevOps:
+                    </span>
                   </dt>
                   <dd>
                     <ul>
@@ -173,12 +198,14 @@ export default function Home() {
 
                 <dl className="flex flex-col sm:flex-row gap-1 justify-start">
                   <dt className="min-w-40 text-left">
-                    <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">Design Tools:</span>
+                    <span className="block text-sm text-muted text-left">
+                      Design Tools:
+                    </span>
                   </dt>
                   <dd>
                     <ul>
                       <SkillIcon icon="figma" name="Figma" />
-                      <li className="me-1 inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <li className="me-1 inline-flex items-center text-sm text-ink">
                         Canva
                       </li>
                     </ul>
@@ -187,7 +214,9 @@ export default function Home() {
 
                 <dl className="flex flex-col sm:flex-row gap-1 justify-start">
                   <dt className="min-w-40 text-left">
-                    <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">Version Control:</span>
+                    <span className="block text-sm text-muted text-left">
+                      Version Control:
+                    </span>
                   </dt>
                   <dd>
                     <ul>
@@ -199,12 +228,16 @@ export default function Home() {
 
                 <dl className="flex flex-col sm:flex-row gap-1 justify-start">
                   <dt className="min-w-40 text-left">
-                    <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">Data & AI:</span>
+                    <span className="block text-sm text-muted text-left">
+                      Data & AI:
+                    </span>
                   </dt>
                   <dd>
                     <ul>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-                        Pandas, Matplotlib, Scikit-Learn, TensorFlow, Google Colaboratory, Kaggle, HuggingFace, Tableau, Google Spreadsheet, MS. Excel
+                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-ink">
+                        Pandas, Matplotlib, Scikit-Learn, TensorFlow, Google
+                        Colaboratory, Kaggle, HuggingFace, Tableau, Google
+                        Spreadsheet, MS. Excel
                       </li>
                     </ul>
                   </dd>
@@ -212,26 +245,28 @@ export default function Home() {
 
                 <dl className="flex flex-col sm:flex-row gap-1 justify-start">
                   <dt className="min-w-40 text-left">
-                    <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">Soft Skills:</span>
+                    <span className="block text-sm text-muted text-left">
+                      Soft Skills:
+                    </span>
                   </dt>
                   <dd>
                     <ul>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-ink">
                         Strong communication
                       </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-ink">
                         Problem-solving
                       </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-ink">
                         Attention to detail
                       </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-ink">
                         Time management
                       </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-ink">
                         Coaching & Mentoring
                       </li>
-                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                      <li className="me-1 after:content-[','] inline-flex items-center text-sm text-ink">
                         Critical Thinking
                       </li>
                     </ul>
@@ -244,7 +279,7 @@ export default function Home() {
 
             {/* Experience */}
             <div className="mt-10 sm:mt-14 text-left">
-              <h2 className="mb-5 font-medium text-gray-800 dark:text-neutral-200 text-left">
+              <h2 className="mb-5 font-medium text-ink text-left">
                 Experience
               </h2>
 
@@ -253,7 +288,7 @@ export default function Home() {
                 {/* Item - UmbiTeams */}
                 <div className="group relative flex gap-x-5">
                   {/* Icon */}
-                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-ground-deep dark:after:bg-surface">
                     <div className="relative z-10 size-6 flex justify-center items-center">
                       <Image
                         src={"/image-optimized/logo-umbiteams.webp"}
@@ -269,38 +304,52 @@ export default function Home() {
 
                   {/* Right Content */}
                   <div className="grow pb-8 group-last:pb-0 text-left">
-                    <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                    <h3 className="mb-1 text-xs text-ink-soft text-left">
                       Oct 2025 - Present · {calculateDuration("2025-10-01")}
                     </h3>
 
-                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                    <p className="leading-6 font-semibold text-sm text-ink text-left">
                       Founder - Software Engineer at UmbiTeams
                     </p>
 
                     <ul className="list-disc ms-6 mt-3 space-y-1.5">
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Designed and developed backend systems, including APIs, database architecture, and server-side logic for client projects.
+                      <li className="ps-1 text-sm text-ink-soft">
+                        Designed and developed backend systems, including APIs,
+                        database architecture, and server-side logic for client
+                        projects.
                       </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Implemented machine learning solutions to support intelligent features such as data processing, prediction, and automation.
+                      <li className="ps-1 text-sm text-ink-soft">
+                        Implemented machine learning solutions to support
+                        intelligent features such as data processing,
+                        prediction, and automation.
                       </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Collaborated with frontend developers and UI/UX designers to deliver cohesive, user-centric digital products.
+                      <li className="ps-1 text-sm text-ink-soft">
+                        Collaborated with frontend developers and UI/UX
+                        designers to deliver cohesive, user-centric digital
+                        products.
                       </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Managed end-to-end project development from initial requirements analysis to deployment and maintenance.
+                      <li className="ps-1 text-sm text-ink-soft">
+                        Managed end-to-end project development from initial
+                        requirements analysis to deployment and maintenance.
                       </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Ensured system scalability, performance, and maintainability using modern development tools and best practices.
+                      <li className="ps-1 text-sm text-ink-soft">
+                        Ensured system scalability, performance, and
+                        maintainability using modern development tools and best
+                        practices.
                       </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Supported freelance project delivery for various clients, adapting solutions to diverse business and organizational needs.
+                      <li className="ps-1 text-sm text-ink-soft">
+                        Supported freelance project delivery for various
+                        clients, adapting solutions to diverse business and
+                        organizational needs.
                       </li>
                     </ul>
 
                     <div className="mt-3">
                       {/* Card */}
-                      <a className="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-700" href="#">
+                      <a
+                        className="block border border-rule rounded-lg hover:shadow-sm focus:outline-none"
+                        href="#"
+                      >
                         <div className="flex flex-col sm:flex-row items-start sm:items-center overflow-hidden">
                           <div className="hidden sm:flex flex-shrink-0 sm:w-32 md:w-48 h-24 sm:h-auto">
                             <Image
@@ -315,11 +364,19 @@ export default function Home() {
 
                           <div className="flex-1 p-4">
                             <div className="flex flex-col justify-center">
-                              <h3 className="font-semibold text-sm text-gray-800 dark:text-neutral-300">
+                              <h3 className="font-semibold text-sm text-ink">
                                 UmbiTeams
                               </h3>
-                              <p className="leading-6 mt-1 text-sm text-gray-500 dark:text-neutral-500">
-                                UmbiTeams is a freelance-based technology team that focuses on providing end-to-end digital solutions, ranging from website and backend system development to UI/UX design and data-driven solutions. UmbiTeams helps individuals, businesses, and organizations build efficient, scalable digital products that meet user needs, with a collaborative approach focused on technical quality and real impact.
+                              <p className="leading-6 mt-1 text-sm text-muted">
+                                UmbiTeams is a freelance-based technology team
+                                that focuses on providing end-to-end digital
+                                solutions, ranging from website and backend
+                                system development to UI/UX design and
+                                data-driven solutions. UmbiTeams helps
+                                individuals, businesses, and organizations build
+                                efficient, scalable digital products that meet
+                                user needs, with a collaborative approach
+                                focused on technical quality and real impact.
                               </p>
                             </div>
                           </div>
@@ -335,7 +392,7 @@ export default function Home() {
                 {/* Item - Coding Camp */}
                 <div className="group relative flex gap-x-5">
                   {/* Icon */}
-                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-ground-deep dark:after:bg-surface">
                     <div className="relative z-10 size-6 flex justify-center items-center">
                       <Image
                         src={"/image-optimized/logo-dbs.webp"} // TODO: Ensure to add logo-codingcamp.webp in public/image-optimized/
@@ -351,44 +408,65 @@ export default function Home() {
 
                   {/* Right Content */}
                   <div className="grow pb-8 group-last:pb-0 text-left">
-                    <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                    <h3 className="mb-1 text-xs text-ink-soft text-left">
                       Feb 2026 - Jul 2026
                     </h3>
 
-                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                      AI Engineer Cohort - Seasonal at Coding Camp powered by DBS Foundation
+                    <p className="leading-6 font-semibold text-sm text-ink text-left">
+                      AI Engineer Cohort - Seasonal at Coding Camp powered by
+                      DBS Foundation
                     </p>
 
                     <ul className="list-disc ms-6 mt-3 space-y-1.5">
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Completed an intensive training program consisting of 934 hours of study focused on mastering Artificial Intelligence (AI) technology with industry standards.
+                      <li className="ps-1 text-sm text-ink-soft">
+                        Completed an intensive training program consisting of
+                        934 hours of study focused on mastering Artificial
+                        Intelligence (AI) technology with industry standards.
                       </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Developed advanced Machine Learning (Classification, Regression, Clustering) and Deep Learning models using TensorFlow and Keras to solve complex problems.
+                      <li className="ps-1 text-sm text-ink-soft">
+                        Developed advanced Machine Learning (Classification,
+                        Regression, Clustering) and Deep Learning models using
+                        TensorFlow and Keras to solve complex problems.
                       </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Apply Natural Language Processing (NLP), Computer Vision, and Time Series Forecasting techniques in digital solution development.
+                      <li className="ps-1 text-sm text-ink-soft">
+                        Apply Natural Language Processing (NLP), Computer
+                        Vision, and Time Series Forecasting techniques in
+                        digital solution development.
                       </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Collaborate in a cross-disciplinary team (AI, Data Science, Full-Stack) to complete a Capstone Project (250 hours) using Design Thinking and Problem Solving methodologies to solve real-world issues in society.
+                      <li className="ps-1 text-sm text-ink-soft">
+                        Collaborate in a cross-disciplinary team (AI, Data
+                        Science, Full-Stack) to complete a Capstone Project (250
+                        hours) using Design Thinking and Problem Solving
+                        methodologies to solve real-world issues in society.
                       </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Manage project planning and execution professionally through the preparation of Project Plans and Project Briefs.
+                      <li className="ps-1 text-sm text-ink-soft">
+                        Manage project planning and execution professionally
+                        through the preparation of Project Plans and Project
+                        Briefs.
                       </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Hone non-technical skills through Instructor-Led Training (ILT) sessions covering Project Management, Persuasive Communication, Growth Mindset, and Financial Literacy.
+                      <li className="ps-1 text-sm text-ink-soft">
+                        Hone non-technical skills through Instructor-Led
+                        Training (ILT) sessions covering Project Management,
+                        Persuasive Communication, Growth Mindset, and Financial
+                        Literacy.
                       </li>
                     </ul>
 
-                    <p className="leading-6 mt-3 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                      <strong>Skills:</strong> Machine Learning · Project-based Learning · English · Cross-team Collaboration
+                    <p className="leading-6 mt-3 text-sm text-ink-soft text-left">
+                      <strong>Skills:</strong> Machine Learning · Project-based
+                      Learning · English · Cross-team Collaboration
                     </p>
 
                     <div className="mt-3">
                       {/* Card */}
-                      <a className="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-700" href="#" target="_blank" rel="noopener noreferrer">
+                      <a
+                        className="block border border-rule rounded-lg hover:shadow-sm focus:outline-none"
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <div className="flex flex-col sm:flex-row items-start sm:items-center overflow-hidden">
-                          <div className="hidden sm:flex flex-shrink-0 sm:w-32 md:w-48 h-24 sm:h-auto bg-gray-100 dark:bg-neutral-800">
+                          <div className="hidden sm:flex flex-shrink-0 sm:w-32 md:w-48 h-24 sm:h-auto bg-ground-deep">
                             <Image
                               src={"/image-optimized/logo-codingcamp.webp"} // TODO: Ensure to add banner-codingcamp.webp in public/image-optimized/
                               width={192}
@@ -401,12 +479,18 @@ export default function Home() {
 
                           <div className="flex-1 p-4">
                             <div className="flex flex-col justify-center">
-                              <h3 className="font-semibold text-sm text-gray-800 dark:text-neutral-300">
+                              <h3 className="font-semibold text-sm text-ink">
                                 Coding Camp 2026 powered by DBS Foundation
                               </h3>
 
-                              <p className="leading-6 mt-1 text-sm text-gray-500 dark:text-neutral-500">
-                                Coding Camp 2026 powered by DBS Foundation is a free and intensive IT training program to create digital talent in Indonesia. The program offers scholarships to study AI, Data Science, or Fullstack Web Development through an industry-standard online curriculum, including soft skills and capstone projects.
+                              <p className="leading-6 mt-1 text-sm text-muted">
+                                Coding Camp 2026 powered by DBS Foundation is a
+                                free and intensive IT training program to create
+                                digital talent in Indonesia. The program offers
+                                scholarships to study AI, Data Science, or
+                                Fullstack Web Development through an
+                                industry-standard online curriculum, including
+                                soft skills and capstone projects.
                               </p>
                             </div>
                           </div>
@@ -421,49 +505,56 @@ export default function Home() {
 
                 {/* Item - Beasiswa Pendidikan Indonesia (hidden for now) */}
                 {false && (
-                <div className="group relative flex gap-x-5">
-                  {/* Icon */}
-                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-                    <div className="relative z-10 size-6 flex justify-center items-center">
-                      <Image
-                        src={"/image-optimized/logo-bpi.webp"}
-                        alt="Beasiswa Pendidikan Indonesia"
-                        width={32}
-                        height={32}
-                        className="shrink-0 size-6 rounded-full"
-                        loading="lazy"
-                      />
+                  <div className="group relative flex gap-x-5">
+                    {/* Icon */}
+                    <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-ground-deep dark:after:bg-surface">
+                      <div className="relative z-10 size-6 flex justify-center items-center">
+                        <Image
+                          src={"/image-optimized/logo-bpi.webp"}
+                          alt="Beasiswa Pendidikan Indonesia"
+                          width={32}
+                          height={32}
+                          className="shrink-0 size-6 rounded-full"
+                          loading="lazy"
+                        />
+                      </div>
                     </div>
+                    {/* End Icon */}
+
+                    {/* Right Content */}
+                    <div className="grow pb-8 group-last:pb-0 text-left">
+                      <h3 className="mb-1 text-xs text-ink-soft text-left">
+                        Aug 2023 - Present · {calculateDuration("2023-08-01")}
+                      </h3>
+
+                      <p className="leading-6 font-semibold text-sm text-ink text-left">
+                        Awardee of Indonesia Education Scholarship
+                      </p>
+
+                      <p className="leading-6 mt-3 text-sm text-ink-soft text-left">
+                        Selected as Indonesia Education Scholarship awardee,
+                        previously qualified for Indonesia Maju Scholarship S1
+                        Overseas program for Computer Science at Kyoto
+                        University. Actively engaged in social impact projects,
+                        IELTS and SAT preparation programs, cultural exchange
+                        initiatives, and educational outreach across Indonesia
+                        to promote digital literacy and technology advancement.
+                      </p>
+
+                      <p className="leading-6 mt-3 text-sm text-ink-soft text-left">
+                        <strong>Skills:</strong> English · Communication ·
+                        Public Speaking · Project-based Learning
+                      </p>
+                    </div>
+                    {/* End Right Content */}
                   </div>
-                  {/* End Icon */}
-
-                  {/* Right Content */}
-                  <div className="grow pb-8 group-last:pb-0 text-left">
-                    <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
-                      Aug 2023 - Present · {calculateDuration("2023-08-01")}
-                    </h3>
-
-                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                      Awardee of Indonesia Education Scholarship
-                    </p>
-
-                    <p className="leading-6 mt-3 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                      Selected as Indonesia Education Scholarship awardee, previously qualified for Indonesia Maju Scholarship S1 Overseas program for Computer Science at Kyoto University. Actively engaged in social impact projects, IELTS and SAT preparation programs, cultural exchange initiatives, and educational outreach across Indonesia to promote digital literacy and technology advancement.
-                    </p>
-
-                    <p className="leading-6 mt-3 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                      <strong>Skills:</strong> English · Communication · Public Speaking · Project-based Learning
-                    </p>
-                  </div>
-                  {/* End Right Content */}
-                </div>
                 )}
                 {/* End Item */}
 
                 {/* Item - BPS */}
                 <div className="group relative flex gap-x-5">
                   {/* Icon */}
-                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-ground-deep dark:after:bg-surface">
                     <div className="relative z-10 size-6 flex justify-center items-center">
                       <Image
                         src={"/image-optimized/logo-bps.webp"}
@@ -479,27 +570,34 @@ export default function Home() {
 
                   {/* Right Content */}
                   <div className="grow pb-8 group-last:pb-0 text-left">
-                    <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                    <h3 className="mb-1 text-xs text-ink-soft text-left">
                       Jan 2026 - Mar 2026
                     </h3>
 
-                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                      Data Analyst, AI & Automation - Internship at Central Statistic Agency
+                    <p className="leading-6 font-semibold text-sm text-ink text-left">
+                      Data Analyst, AI & Automation - Internship at Central
+                      Statistic Agency
                     </p>
 
-                    <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                      My approach combines statistical analysis with a deep understanding of backend development and automation. I enjoy solving data puzzles using SQL and Python while keeping an eye on the latest trends in Local LLMs and Artificial Intelligence.
+                    <p className="leading-6 mt-1 text-sm text-ink-soft text-left">
+                      My approach combines statistical analysis with a deep
+                      understanding of backend development and automation. I
+                      enjoy solving data puzzles using SQL and Python while
+                      keeping an eye on the latest trends in Local LLMs and
+                      Artificial Intelligence.
                     </p>
 
                     <ul className="list-disc ms-6 mt-3 space-y-1.5">
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                      <li className="ps-1 text-sm text-ink-soft">
                         Uncovering trends and patterns to drive business growth.
                       </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Building scalable solutions with Golang using Clean Architecture principles.
+                      <li className="ps-1 text-sm text-ink-soft">
+                        Building scalable solutions with Golang using Clean
+                        Architecture principles.
                       </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Crafting seamless integrations and automated triggers through n8n.
+                      <li className="ps-1 text-sm text-ink-soft">
+                        Crafting seamless integrations and automated triggers
+                        through n8n.
                       </li>
                     </ul>
                   </div>
@@ -510,7 +608,7 @@ export default function Home() {
                 {/* Item - SMAN 1 Tanjungpinang Bioinformatics Mentor */}
                 <div className="group relative flex gap-x-5">
                   {/* Icon */}
-                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-ground-deep dark:after:bg-surface">
                     <div className="relative z-10 size-6 flex justify-center items-center">
                       <Image
                         src={"/image-optimized/logo-sman1tpi.svg"}
@@ -525,30 +623,45 @@ export default function Home() {
 
                   {/* Right Content */}
                   <div className="grow pb-8 group-last:pb-0 text-left">
-                    <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                    <h3 className="mb-1 text-xs text-ink-soft text-left">
                       Jul 2025 - Nov 2025 · 5 mos
                     </h3>
 
-                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                      Bioinformatics Mentor - Contract / Competition Program at SMAN 1 Tanjungpinang
+                    <p className="leading-6 font-semibold text-sm text-ink text-left">
+                      Bioinformatics Mentor - Contract / Competition Program at
+                      SMAN 1 Tanjungpinang
                     </p>
 
-                    <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                      Mentored the informatics team for the National Bioinformatics and Synthetic Biology Competition, focusing on 3D web visualization for genomics, sequence analysis, and ML-based data interpretation.
+                    <p className="leading-6 mt-1 text-sm text-ink-soft text-left">
+                      Mentored the informatics team for the National
+                      Bioinformatics and Synthetic Biology Competition, focusing
+                      on 3D web visualization for genomics, sequence analysis,
+                      and ML-based data interpretation.
                     </p>
 
                     <ul className="list-disc ms-6 mt-3 space-y-1.5">
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Mentored the informatics team for the National Bioinformatics and Synthetic Biology Competition, focusing on 3D web visualization for genomics, sequence analysis, and ML-based data interpretation.
+                      <li className="ps-1 text-sm text-ink-soft">
+                        Mentored the informatics team for the National
+                        Bioinformatics and Synthetic Biology Competition,
+                        focusing on 3D web visualization for genomics, sequence
+                        analysis, and ML-based data interpretation.
                       </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Guided students in developing an interactive 3D website to present genomic and analytical insights using modern web technologies.
+                      <li className="ps-1 text-sm text-ink-soft">
+                        Guided students in developing an interactive 3D website
+                        to present genomic and analytical insights using modern
+                        web technologies.
                       </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Designed an IoT-based prototype for a smart sprayer and early detection system for <i>Ralstonia solanacearum</i>, integrating sensor data flow and conceptual ML-driven alerts.
+                      <li className="ps-1 text-sm text-ink-soft">
+                        Designed an IoT-based prototype for a smart sprayer and
+                        early detection system for <i>Ralstonia solanacearum</i>
+                        , integrating sensor data flow and conceptual ML-driven
+                        alerts.
                       </li>
-                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                        Provided technical direction and structured learning materials to strengthen students&apos; understanding of bioinformatics application in digital and IoT-driven solutions.
+                      <li className="ps-1 text-sm text-ink-soft">
+                        Provided technical direction and structured learning
+                        materials to strengthen students&apos; understanding of
+                        bioinformatics application in digital and IoT-driven
+                        solutions.
                       </li>
                     </ul>
                   </div>
@@ -559,7 +672,7 @@ export default function Home() {
                 {/* Item - PT Arus Digital Sinergi */}
                 <div className="group relative flex gap-x-5">
                   {/* Icon */}
-                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-ground-deep dark:after:bg-surface">
                     <div className="relative z-10 size-6 flex justify-center items-center">
                       <Image
                         src={"/image-optimized/logo-ads.webp"}
@@ -575,40 +688,48 @@ export default function Home() {
 
                   {/* Right Content */}
                   <div className="grow pb-8 group-last:pb-0 text-left">
-                    <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                    <h3 className="mb-1 text-xs text-ink-soft text-left">
                       Mar 2025 - September 2025 · 8 mos
                     </h3>
 
-                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                    <p className="leading-6 font-semibold text-sm text-ink text-left">
                       Full Stack Developer at PT Arus Digital Sinergi
                     </p>
 
-                    <ul className="mt-2 text-sm text-gray-600 dark:text-neutral-400 list-disc list-inside space-y-1 text-left">
+                    <ul className="mt-2 text-sm text-ink-soft list-disc list-inside space-y-1 text-left">
                       <li>
-                        Developed and delivered full-stack solutions including company profile websites,
-                        ERP systems, MVPs, and enterprise-scale applications.
+                        Developed and delivered full-stack solutions including
+                        company profile websites, ERP systems, MVPs, and
+                        enterprise-scale applications.
                       </li>
                       <li>
-                        Managed end-to-end development processes from requirements gathering,
-                        system design, implementation, to deployment.
+                        Managed end-to-end development processes from
+                        requirements gathering, system design, implementation,
+                        to deployment.
                       </li>
                       <li>
-                        Built scalable and user-centric web and mobile applications using modern
-                        web technologies and frameworks.
+                        Built scalable and user-centric web and mobile
+                        applications using modern web technologies and
+                        frameworks.
                       </li>
                       <li>
-                        Collaborated closely with cross-functional teams to translate business
-                        requirements into effective technical solutions.
+                        Collaborated closely with cross-functional teams to
+                        translate business requirements into effective technical
+                        solutions.
                       </li>
                       <li>
-                        Ensured code quality, performance, and maintainability through structured
-                        development workflows and best practices.
+                        Ensured code quality, performance, and maintainability
+                        through structured development workflows and best
+                        practices.
                       </li>
                     </ul>
 
                     <div className="mt-3">
                       {/* Card */}
-                      <a className="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-700" href="#">
+                      <a
+                        className="block border border-rule rounded-lg hover:shadow-sm focus:outline-none"
+                        href="#"
+                      >
                         <div className="flex flex-col sm:flex-row items-start sm:items-center overflow-hidden">
                           <div className="hidden sm:flex flex-shrink-0 sm:w-32 md:w-48 h-24 sm:h-auto">
                             <Image
@@ -623,11 +744,24 @@ export default function Home() {
 
                           <div className="flex-1 p-4">
                             <div className="flex flex-col justify-center">
-                              <h3 className="font-semibold text-sm text-gray-800 dark:text-neutral-300">
+                              <h3 className="font-semibold text-sm text-ink">
                                 PT Arus Digital Sinergi
                               </h3>
-                              <p className="leading-6 mt-1 text-sm text-gray-500 dark:text-neutral-500">
-                                PT Arus Digital Sinergi is a technology company based in Tanjungpinang, Kepulauan Riau, specializing in digital solutions such as website and mobile application development, ERP customization, and tailored software systems. With a focus on innovation and efficiency, the company provides services that empower businesses and organizations to streamline their operations, strengthen their digital presence, and embrace technology-driven transformation. Through its commitment to collaboration and impact, Arus Digital Sinergi positions itself as a trusted partner for clients seeking reliable and scalable IT solutions.
+                              <p className="leading-6 mt-1 text-sm text-muted">
+                                PT Arus Digital Sinergi is a technology company
+                                based in Tanjungpinang, Kepulauan Riau,
+                                specializing in digital solutions such as
+                                website and mobile application development, ERP
+                                customization, and tailored software systems.
+                                With a focus on innovation and efficiency, the
+                                company provides services that empower
+                                businesses and organizations to streamline their
+                                operations, strengthen their digital presence,
+                                and embrace technology-driven transformation.
+                                Through its commitment to collaboration and
+                                impact, Arus Digital Sinergi positions itself as
+                                a trusted partner for clients seeking reliable
+                                and scalable IT solutions.
                               </p>
                             </div>
                           </div>
@@ -641,13 +775,16 @@ export default function Home() {
                 {/* End Item */}
 
                 {/* Collapsible section */}
-                <div className={`grid transition-all duration-700 ease-in-out ${showMore ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
-                  <div className={`overflow-hidden transition-opacity duration-500 ${showMore ? 'opacity-100' : 'opacity-0'}`}>
-
+                <div
+                  className={`grid transition-all duration-700 ease-in-out ${showMore ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
+                >
+                  <div
+                    className={`overflow-hidden transition-opacity duration-500 ${showMore ? "opacity-100" : "opacity-0"}`}
+                  >
                     {/* Item - Risalah Maritim */}
                     <div className="group relative flex gap-x-5">
                       {/* Icon */}
-                      <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                      <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-ground-deep dark:after:bg-surface">
                         <div className="relative z-10 size-6 flex justify-center items-center">
                           <Image
                             src={"/image-optimized/logo-risalahmaritim.svg"}
@@ -656,46 +793,63 @@ export default function Home() {
                             height={32}
                             className="shrink-0 size-6 rounded-full"
                           />
-
                         </div>
                       </div>
                       {/* End Icon */}
 
                       {/* Right Content */}
                       <div className="grow pb-8 group-last:pb-0 text-left">
-                        <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                        <h3 className="mb-1 text-xs text-ink-soft text-left">
                           May 2023 - Nov 2025 · 2 yrs 5 mos
                         </h3>
 
-                        <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                          Full Stack Developer at Risalah Maritim, Student Journalism Organization
+                        <p className="leading-6 font-semibold text-sm text-ink text-left">
+                          Full Stack Developer at Risalah Maritim, Student
+                          Journalism Organization
                         </p>
 
-                        <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                          Risalah Maritim is a student journalism organization that serves as a news portal, media platform, and creative space for students. It publishes news, opinions, articles, and literary works while acting as a bridge for students to voice their perspectives to the wider world.
+                        <p className="leading-6 mt-1 text-sm text-ink-soft text-left">
+                          Risalah Maritim is a student journalism organization
+                          that serves as a news portal, media platform, and
+                          creative space for students. It publishes news,
+                          opinions, articles, and literary works while acting as
+                          a bridge for students to voice their perspectives to
+                          the wider world.
                         </p>
 
                         <ul className="list-disc ms-6 mt-3 space-y-1.5">
-                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                            Design, develop, and maintain digital platforms, including websites, mobile applications, and content management systems using React for frontend and Laravel for backend to support student journalism activities.
+                          <li className="ps-1 text-sm text-ink-soft">
+                            Design, develop, and maintain digital platforms,
+                            including websites, mobile applications, and content
+                            management systems using React for frontend and
+                            Laravel for backend to support student journalism
+                            activities.
                           </li>
-                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                            Conduct requirements gathering and analysis to ensure digital solutions align with organizational goals.
+                          <li className="ps-1 text-sm text-ink-soft">
+                            Conduct requirements gathering and analysis to
+                            ensure digital solutions align with organizational
+                            goals.
                           </li>
-                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                            Plan and implement system architecture, ensuring scalability, security, and efficiency.
+                          <li className="ps-1 text-sm text-ink-soft">
+                            Plan and implement system architecture, ensuring
+                            scalability, security, and efficiency.
                           </li>
-                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                            Develop user-friendly interfaces and robust backend functionalities using appropriate technologies.
+                          <li className="ps-1 text-sm text-ink-soft">
+                            Develop user-friendly interfaces and robust backend
+                            functionalities using appropriate technologies.
                           </li>
-                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                            Perform rigorous testing, troubleshooting, and debugging to maintain system stability and performance
+                          <li className="ps-1 text-sm text-ink-soft">
+                            Perform rigorous testing, troubleshooting, and
+                            debugging to maintain system stability and
+                            performance
                           </li>
-                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                            Optimize and manage CMS platforms for efficient content publishing and workflow management.
+                          <li className="ps-1 text-sm text-ink-soft">
+                            Optimize and manage CMS platforms for efficient
+                            content publishing and workflow management.
                           </li>
-                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                            Document development processes, system structures, and maintenance guidelines for future reference.
+                          <li className="ps-1 text-sm text-ink-soft">
+                            Document development processes, system structures,
+                            and maintenance guidelines for future reference.
                           </li>
                         </ul>
                       </div>
@@ -706,7 +860,7 @@ export default function Home() {
                     {/* Item */}
                     <div className="group relative flex gap-x-5">
                       {/* Icon */}
-                      <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                      <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-ground-deep dark:after:bg-surface">
                         <div className="relative z-10 size-6 flex justify-center items-center">
                           <Image
                             src={"/image-optimized/logo-sma1.svg"}
@@ -721,37 +875,47 @@ export default function Home() {
 
                       {/* Right Content */}
                       <div className="grow pb-8 group-last:pb-0 text-left">
-                        <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                        <h3 className="mb-1 text-xs text-ink-soft text-left">
                           Aug 2024 - Nov 2024 · 3 mos
                         </h3>
 
-                        <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                        <p className="leading-6 font-semibold text-sm text-ink text-left">
                           Informatic Club Mentor at SMA Negeri 1 Bintan Timur
                         </p>
 
-                        <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                          Mentored students on programming fundamentals, operating systems, Python, basic artificial
+                        <p className="leading-6 mt-1 text-sm text-ink-soft text-left">
+                          Mentored students on programming fundamentals,
+                          operating systems, Python, basic artificial
                           intelligence, and computer vision.
                         </p>
 
                         <ul className="list-disc ms-6 mt-3 space-y-1.5">
-                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                            Guide students in understanding core programming concepts, including data structures, algorithms, and problem-solving techniques.
+                          <li className="ps-1 text-sm text-ink-soft">
+                            Guide students in understanding core programming
+                            concepts, including data structures, algorithms, and
+                            problem-solving techniques.
                           </li>
-                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                            Teach the fundamentals of operating systems, covering processes, memory management, file systems, and system security.
+                          <li className="ps-1 text-sm text-ink-soft">
+                            Teach the fundamentals of operating systems,
+                            covering processes, memory management, file systems,
+                            and system security.
                           </li>
-                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                            Provide hands-on training in Python, focusing on syntax, data manipulation, and application development.
+                          <li className="ps-1 text-sm text-ink-soft">
+                            Provide hands-on training in Python, focusing on
+                            syntax, data manipulation, and application
+                            development.
                           </li>
-                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                            Introduce students to AI concepts, including machine learning basics, neural networks, and AI ethics.
+                          <li className="ps-1 text-sm text-ink-soft">
+                            Introduce students to AI concepts, including machine
+                            learning basics, neural networks, and AI ethics.
                           </li>
-                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                            Help students develop debugging skills and logical approaches to solving technical problems.
+                          <li className="ps-1 text-sm text-ink-soft">
+                            Help students develop debugging skills and logical
+                            approaches to solving technical problems.
                           </li>
-                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                            Provide insights into industry trends, learning resources, and career opportunities in technology.
+                          <li className="ps-1 text-sm text-ink-soft">
+                            Provide insights into industry trends, learning
+                            resources, and career opportunities in technology.
                           </li>
                         </ul>
                       </div>
@@ -762,7 +926,7 @@ export default function Home() {
                     {/* Item */}
                     <div className="group relative flex gap-x-5">
                       {/* Icon */}
-                      <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                      <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-ground-deep dark:after:bg-surface">
                         <div className="relative z-10 size-6 flex justify-center items-center">
                           <Image
                             src={"/image-optimized/logo-lukananakit.svg"}
@@ -777,28 +941,39 @@ export default function Home() {
 
                       {/* Right Content */}
                       <div className="grow pb-8 group-last:pb-0 text-left">
-                        <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                        <h3 className="mb-1 text-xs text-ink-soft text-left">
                           Dec 2023 - Jul 2024 · 7 mos
                         </h3>
 
-                        <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                        <p className="leading-6 font-semibold text-sm text-ink text-left">
                           Content Creator at CV Lukan Group
                         </p>
 
-                        <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                          Created programming course videos for the Lukan Anak IT YouTube channel, simplifying complex
-                          topics for beginner programmers.
+                        <p className="leading-6 mt-1 text-sm text-ink-soft text-left">
+                          Created programming course videos for the Lukan Anak
+                          IT YouTube channel, simplifying complex topics for
+                          beginner programmers.
                         </p>
 
                         <ul className="list-disc ms-6 mt-3 space-y-1.5">
-                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                            <b>Video Production & Editing:</b> Create high-quality programming course videos for the Lukan Anak IT YouTube channel using Adobe Premiere Pro and CapCut to enhance visuals and maintain smooth transitions.
+                          <li className="ps-1 text-sm text-ink-soft">
+                            <b>Video Production & Editing:</b> Create
+                            high-quality programming course videos for the Lukan
+                            Anak IT YouTube channel using Adobe Premiere Pro and
+                            CapCut to enhance visuals and maintain smooth
+                            transitions.
                           </li>
-                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                            <b>Scriptwriting & Storyboarding: </b>Plan video structure, create compelling scripts, and design storyboards to ensure clear and effective knowledge delivery.
+                          <li className="ps-1 text-sm text-ink-soft">
+                            <b>Scriptwriting & Storyboarding: </b>Plan video
+                            structure, create compelling scripts, and design
+                            storyboards to ensure clear and effective knowledge
+                            delivery.
                           </li>
-                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                            <b>Thumbnail & Branding Design: </b>Craft eye-catching thumbnails and consistent visual branding using Adobe Illustrator and Figma to optimize video reach and engagement.
+                          <li className="ps-1 text-sm text-ink-soft">
+                            <b>Thumbnail & Branding Design: </b>Craft
+                            eye-catching thumbnails and consistent visual
+                            branding using Adobe Illustrator and Figma to
+                            optimize video reach and engagement.
                           </li>
                         </ul>
                       </div>
@@ -809,7 +984,7 @@ export default function Home() {
                     {/* Item */}
                     <div className="group relative flex gap-x-5">
                       {/* Icon */}
-                      <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                      <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-ground-deep dark:after:bg-surface">
                         <div className="relative z-10 size-6 flex justify-center items-center">
                           <Image
                             src={"/image-optimized/logo-rakamin.webp"}
@@ -824,22 +999,27 @@ export default function Home() {
 
                       {/* Right Content */}
                       <div className="grow pb-8 group-last:pb-0 text-left">
-                        <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                        <h3 className="mb-1 text-xs text-ink-soft text-left">
                           May 2023 - Jun 2023 · 1 mos
                         </h3>
 
-                        <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                          Full Stack Developer Internship at PT Investree x Rakamin Academy
+                        <p className="leading-6 font-semibold text-sm text-ink text-left">
+                          Full Stack Developer Internship at PT Investree x
+                          Rakamin Academy
                         </p>
 
-                        <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                          Completed several dynamic web and REST API projects using Laravel 10 and related packages,
-                          incorporating Laravel UI with React JS.
+                        <p className="leading-6 mt-1 text-sm text-ink-soft text-left">
+                          Completed several dynamic web and REST API projects
+                          using Laravel 10 and related packages, incorporating
+                          Laravel UI with React JS.
                         </p>
 
                         <div className="mt-3">
                           {/* Card */}
-                          <a className="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-700" href="#">
+                          <a
+                            className="block border border-rule rounded-lg hover:shadow-sm focus:outline-none"
+                            href="#"
+                          >
                             <div className="flex flex-col sm:flex-row items-start sm:items-center overflow-hidden">
                               <div className="hidden sm:flex flex-shrink-0 sm:w-32 md:w-48 h-24 sm:h-auto">
                                 <Image
@@ -853,11 +1033,17 @@ export default function Home() {
 
                               <div className="flex-1 p-4">
                                 <div className="flex flex-col justify-center">
-                                  <h3 className="font-semibold text-sm text-gray-800 dark:text-neutral-300">
+                                  <h3 className="font-semibold text-sm text-ink">
                                     PT Investree Randhika Jaya, Investree
                                   </h3>
-                                  <p className="leading-6 mt-1 text-sm text-gray-500 dark:text-neutral-500">
-                                    A financial technology (fintech) company based in Jakarta, Indonesia. Founded in 2015, Investree focuses on empowering Micro, Small, and Medium Enterprises (MSMEs) by providing easier and more affordable access to capital through a technology-based lending platform.
+                                  <p className="leading-6 mt-1 text-sm text-muted">
+                                    A financial technology (fintech) company
+                                    based in Jakarta, Indonesia. Founded in
+                                    2015, Investree focuses on empowering Micro,
+                                    Small, and Medium Enterprises (MSMEs) by
+                                    providing easier and more affordable access
+                                    to capital through a technology-based
+                                    lending platform.
                                   </p>
                                 </div>
                               </div>
@@ -867,11 +1053,18 @@ export default function Home() {
                         </div>
 
                         <ul className="list-disc ms-6 mt-3 space-y-1.5">
-                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                            <b>Frontend Development:</b> Developed responsive and dynamic user interfaces using React.js integrated with Laravel UI, ensuring smooth user experiences and modern design practices.
+                          <li className="ps-1 text-sm text-ink-soft">
+                            <b>Frontend Development:</b> Developed responsive
+                            and dynamic user interfaces using React.js
+                            integrated with Laravel UI, ensuring smooth user
+                            experiences and modern design practices.
                           </li>
-                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                            <b>Backend Development:</b> Built and maintained RESTful APIs using Laravel 10, managing database interactions, authentication, and business logic while ensuring security and performance optimization.
+                          <li className="ps-1 text-sm text-ink-soft">
+                            <b>Backend Development:</b> Built and maintained
+                            RESTful APIs using Laravel 10, managing database
+                            interactions, authentication, and business logic
+                            while ensuring security and performance
+                            optimization.
                           </li>
                         </ul>
                       </div>
@@ -882,7 +1075,7 @@ export default function Home() {
                     {/* Item */}
                     <div className="group relative flex gap-x-5">
                       {/* Icon */}
-                      <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                      <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-ground-deep dark:after:bg-surface">
                         <div className="relative z-10 size-6 flex justify-center items-center">
                           <Image
                             src={"/image-optimized/logo-tunas.svg"}
@@ -897,55 +1090,68 @@ export default function Home() {
 
                       {/* Right Content */}
                       <div className="grow pb-8 group-last:pb-0 text-left">
-                        <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                        <h3 className="mb-1 text-xs text-ink-soft text-left">
                           Jan 2022 - Jul 2022 · 6 mos
                         </h3>
 
-                        <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                          Back End Developer Internship at PT Tunas Idea Indonesia
+                        <p className="leading-6 font-semibold text-sm text-ink text-left">
+                          Back End Developer Internship at PT Tunas Idea
+                          Indonesia
                         </p>
 
-                        <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                          Design, develop, and maintain RESTful APIs to facilitate secure and efficient data exchange between frontend applications and the backend.
+                        <p className="leading-6 mt-1 text-sm text-ink-soft text-left">
+                          Design, develop, and maintain RESTful APIs to
+                          facilitate secure and efficient data exchange between
+                          frontend applications and the backend.
                         </p>
 
                         <ul className="list-disc ms-6 mt-3 space-y-1.5">
-                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                            <b>API Development:</b> Design, develop, and maintain RESTful APIs to facilitate secure and efficient data exchange between frontend applications and the backend.
+                          <li className="ps-1 text-sm text-ink-soft">
+                            <b>API Development:</b> Design, develop, and
+                            maintain RESTful APIs to facilitate secure and
+                            efficient data exchange between frontend
+                            applications and the backend.
                           </li>
-                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                            <b>Database Management:</b> Design, optimize, and manage databases using MySQL ensuring data integrity and efficiency.
+                          <li className="ps-1 text-sm text-ink-soft">
+                            <b>Database Management:</b> Design, optimize, and
+                            manage databases using MySQL ensuring data integrity
+                            and efficiency.
                           </li>
-                          <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
-                            <b>Performance Optimization:</b> Improve system performance through caching, query optimization, and scalable infrastructure.
+                          <li className="ps-1 text-sm text-ink-soft">
+                            <b>Performance Optimization:</b> Improve system
+                            performance through caching, query optimization, and
+                            scalable infrastructure.
                           </li>
                         </ul>
-
-
                       </div>
                       {/* End Right Content */}
                     </div>
                     {/* End Item */}
-
-                  </div>{/* End overflow-hidden */}
-                </div>{/* End collapsible grid */}
+                  </div>
+                  {/* End overflow-hidden */}
+                </div>
+                {/* End collapsible grid */}
 
                 {/* Load More Button */}
                 <button
                   onClick={() => setShowMore(!showMore)}
-                  className="mt-2 w-full flex items-center justify-center gap-2 py-2.5 px-4 text-sm font-medium text-gray-600 dark:text-neutral-400 border border-gray-200 dark:border-neutral-700 rounded-lg hover:text-violet-600 dark:hover:text-violet-400 hover:border-violet-300 dark:hover:border-violet-700 transition-all duration-200 cursor-pointer"
+                  className="mt-2 w-full flex items-center justify-center gap-2 py-2.5 px-4 text-sm font-medium text-ink-soft border border-rule rounded-lg hover:text-signal-ink dark:hover:text-signal hover:border-signal/40 dark:hover:border-signal/40 transition-all duration-200 cursor-pointer"
                 >
-                  <span>{showMore ? 'Show Less' : 'Load More'}</span>
+                  <span>{showMore ? "Show Less" : "Load More"}</span>
                   <svg
-                    className={`w-4 h-4 transition-transform duration-300 ${showMore ? 'rotate-180' : ''}`}
+                    className={`w-4 h-4 transition-transform duration-300 ${showMore ? "rotate-180" : ""}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
                   </svg>
                 </button>
-
               </div>
               {/* End Timeline */}
             </div>
@@ -953,14 +1159,11 @@ export default function Home() {
 
             {/* Education */}
             <div className="mt-10 sm:mt-14 text-left">
-              <h2 className="mb-3 font-medium text-gray-800 dark:text-neutral-200 text-left">
-                Education
-              </h2>
+              <h2 className="mb-3 font-medium text-ink text-left">Education</h2>
 
               {/* Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
-
+                <div className="p-4 border border-rule rounded-lg text-left">
                   <Image
                     src={"/image-optimized/logo-umrah.webp"}
                     width={400}
@@ -970,24 +1173,27 @@ export default function Home() {
                     className="shrink-0 size-10 mb-3"
                   />
 
-                  <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                  <h3 className="mb-1 text-xs text-ink-soft text-left">
                     2023 - Present
                   </h3>
 
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                  <p className="leading-6 font-semibold text-sm text-ink text-left">
                     Bachelor`s Degree in Informatics Engineering
                   </p>
 
-                  <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                  <p className="leading-6 mt-1 text-sm text-ink-soft text-left">
                     Universitas Maritim Raja Ali Haji
                   </p>
 
-                  <p className="mt-2 text-xs text-gray-500 dark:text-neutral-500 text-left">
-                    Current GPA: <span className="font-semibold text-gray-700 dark:text-neutral-300">3.75/4.00</span>
+                  <p className="mt-2 text-xs text-muted text-left">
+                    Current GPA:{" "}
+                    <span className="font-semibold text-ink-soft">
+                      3.8/4.00
+                    </span>
                   </p>
                 </div>
 
-                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                <div className="p-4 border border-rule rounded-lg text-left">
                   <Image
                     src={"/image-optimized/logo-smkn1.svg"}
                     width={400}
@@ -996,20 +1202,23 @@ export default function Home() {
                     className="shrink-0 size-10 mb-3"
                   />
 
-                  <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                  <h3 className="mb-1 text-xs text-ink-soft text-left">
                     2019 - 2023
                   </h3>
 
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                  <p className="leading-6 font-semibold text-sm text-ink text-left">
                     High School Diploma in Software Engineering
                   </p>
 
-                  <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                  <p className="leading-6 mt-1 text-sm text-ink-soft text-left">
                     SMK Negeri 1 Bintan Timur
                   </p>
 
-                  <p className="mt-2 text-xs text-gray-500 dark:text-neutral-500 text-left">
-                    Final Grade: <span className="font-semibold text-gray-700 dark:text-neutral-300">91.8/100</span>
+                  <p className="mt-2 text-xs text-muted text-left">
+                    Final Grade:{" "}
+                    <span className="font-semibold text-ink-soft">
+                      91.8/100
+                    </span>
                   </p>
                 </div>
               </div>
@@ -1019,106 +1228,99 @@ export default function Home() {
 
             {/* Awards */}
             <div className="mt-10 sm:mt-14 text-left">
-              <h2 className="mb-3 font-medium text-gray-800 dark:text-neutral-200 text-left">
-                Awards
-              </h2>
+              <h2 className="mb-3 font-medium text-ink text-left">Awards</h2>
 
               {/* Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {/* Award Card 1 */}
-                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                <div className="p-4 border border-rule rounded-lg text-left">
                   <AwardCarousel
                     images={[
                       "/image-optimized/awards/bio1.webp",
                       "/image-optimized/awards/bio2.webp",
-                      "/image-optimized/awards/bio3.webp"
+                      "/image-optimized/awards/bio3.webp",
                     ]}
                     alt="Bioinformatics Competition"
                   />
 
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
-                    Gold Medal - National Bioinformatics & Synthetic Biology Competition, Institue Technology of Bandung
+                  <p className="leading-6 font-semibold text-sm text-ink text-left mb-2">
+                    Gold Medal - National Bioinformatics & Synthetic Biology
+                    Competition, Institue Technology of Bandung
                   </p>
 
-                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
+                  <p className="leading-6 text-sm text-ink-soft text-left mb-1">
                     Institut Teknologi Bandung
                   </p>
 
-                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
-                    Year: 2025
-                  </p>
+                  <p className="text-xs text-muted text-left">Year: 2025</p>
                 </div>
 
                 {/* Award Card 2 */}
-                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                <div className="p-4 border border-rule rounded-lg text-left">
                   <AwardCarousel
                     images={[
                       "/image-optimized/awards/1st Place – AI Entrepreneurship Competition_1.webp",
-                      "/image-optimized/awards/1st Place – AI Entrepreneurship Competition_2.webp"
+                      "/image-optimized/awards/1st Place – AI Entrepreneurship Competition_2.webp",
                     ]}
                     alt="AI Entrepreneurship Competition"
                   />
 
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
-                    1st Place – AL Ahmadi International Youthpreneurship Competition, Batam
+                  <p className="leading-6 font-semibold text-sm text-ink text-left mb-2">
+                    1st Place – AL Ahmadi International Youthpreneurship
+                    Competition, Batam
                   </p>
 
-                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
+                  <p className="leading-6 text-sm text-ink-soft text-left mb-1">
                     Universitas Maritim Raja Ali Haji
                   </p>
 
-                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
-                    Year: 2025
-                  </p>
+                  <p className="text-xs text-muted text-left">Year: 2025</p>
                 </div>
 
                 {/* Award Card 3 */}
-                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                <div className="p-4 border border-rule rounded-lg text-left">
                   <AwardCarousel
                     images={[
                       "/image-optimized/awards/Finalist – ID Fest Developer Day, Jakarta_1.webp",
-                      "/image-optimized/awards/Finalist – ID Fest Developer Day, Jakarta_2.webp"
+                      "/image-optimized/awards/Finalist – ID Fest Developer Day, Jakarta_2.webp",
                     ]}
                     alt="ID Fest Developer Day"
                   />
 
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
+                  <p className="leading-6 font-semibold text-sm text-ink text-left mb-2">
                     Finalist – ID Fest Developer Day, Jakarta
                   </p>
 
-                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
-                    Ministry of Communication and Digital Affairs of the Republic of Indonesia
+                  <p className="leading-6 text-sm text-ink-soft text-left mb-1">
+                    Ministry of Communication and Digital Affairs of the
+                    Republic of Indonesia
                   </p>
 
-                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
-                    Year: 2025
-                  </p>
+                  <p className="text-xs text-muted text-left">Year: 2025</p>
                 </div>
 
                 {/* Award Card 4 */}
-                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                <div className="p-4 border border-rule rounded-lg text-left">
                   <AwardCarousel
                     images={[
-                      "/image-optimized/awards/1st Place - Festival Open Source Software, Batam, Batam Linux User Group, Politeknik Negeri Batam, 2025.webp"
+                      "/image-optimized/awards/1st Place - Festival Open Source Software, Batam, Batam Linux User Group, Politeknik Negeri Batam, 2025.webp",
                     ]}
                     alt="Festival Open Source Software 2025"
                   />
 
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
+                  <p className="leading-6 font-semibold text-sm text-ink text-left mb-2">
                     1st Place - Festival Open Source Software, Batam
                   </p>
 
-                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
+                  <p className="leading-6 text-sm text-ink-soft text-left mb-1">
                     Batam Linux User Group, Politeknik Negeri Batam
                   </p>
 
-                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
-                    Year: 2025
-                  </p>
+                  <p className="text-xs text-muted text-left">Year: 2025</p>
                 </div>
 
                 {/* Award Card 5 */}
-                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                <div className="p-4 border border-rule rounded-lg text-left">
                   <AwardCarousel
                     images={[
                       "/image-optimized/awards/2nd Place – Festival Open Source Software, Batam_1.webp",
@@ -1130,21 +1332,19 @@ export default function Home() {
                     alt="Festival Open Source Software 2024"
                   />
 
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
+                  <p className="leading-6 font-semibold text-sm text-ink text-left mb-2">
                     2nd Place – Festival Open Source Software, Batam
                   </p>
 
-                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
+                  <p className="leading-6 text-sm text-ink-soft text-left mb-1">
                     Batam Linux User Group, Politeknik Negeri Batam
                   </p>
 
-                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
-                    Year: 2024
-                  </p>
+                  <p className="text-xs text-muted text-left">Year: 2024</p>
                 </div>
 
                 {/* Award Card 6 */}
-                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
+                <div className="p-4 border border-rule rounded-lg text-left">
                   <AwardCarousel
                     images={[
                       "/image-optimized/awards/1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta_1.webp",
@@ -1154,17 +1354,17 @@ export default function Home() {
                     alt="Baparekraf Developer Day"
                   />
 
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-2">
-                    1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta
+                  <p className="leading-6 font-semibold text-sm text-ink text-left mb-2">
+                    1 of 1100 programmers invited to the Baparekraf Developer
+                    Day, Yogyakarta
                   </p>
 
-                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-1">
-                    Ministry of Tourism and Creative Economy of the Republic of Indonesia
+                  <p className="leading-6 text-sm text-ink-soft text-left mb-1">
+                    Ministry of Tourism and Creative Economy of the Republic of
+                    Indonesia
                   </p>
 
-                  <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
-                    Year: 2024
-                  </p>
+                  <p className="text-xs text-muted text-left">Year: 2024</p>
                 </div>
               </div>
               {/* End Grid */}
@@ -1173,151 +1373,171 @@ export default function Home() {
 
             {/* Certifications */}
             <div className="mt-10 sm:mt-14 text-left">
-              <h2 className="mb-3 font-medium text-gray-800 dark:text-neutral-200 text-left">
+              <h2 className="mb-3 font-medium text-ink text-left">
                 Certifications
               </h2>
 
               {/* Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {/* Certification Card 1 */}
-                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-1">
+                <div className="p-4 border border-rule rounded-lg text-left">
+                  <p className="leading-6 font-semibold text-sm text-ink text-left mb-1">
                     Certified Developer Alibaba Cloud Certification
                   </p>
-                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-3">
+                  <p className="leading-6 text-sm text-ink-soft text-left mb-3">
                     Alibaba Cloud
                   </p>
                   <div className="space-y-1">
-                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
-                      Certificate ID: <span className="text-gray-700 dark:text-neutral-300">ACCD0173710100006451</span>
+                    <p className="text-xs text-muted text-left">
+                      Certificate ID:{" "}
+                      <span className="text-ink-soft">
+                        ACCD0173710100006451
+                      </span>
                     </p>
-                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                    <p className="text-xs text-muted text-left">
                       Expires: Jan 28, 2026
                     </p>
                   </div>
                 </div>
 
                 {/* Certification Card 2 */}
-                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-1">
-                    Webinar Speaker - Sharing is Caring &quot;Talent Needs in the Digital Era&quot; Politeknik Negeri Jakarta x Train4best x Lu kan Anak IT
+                <div className="p-4 border border-rule rounded-lg text-left">
+                  <p className="leading-6 font-semibold text-sm text-ink text-left mb-1">
+                    Webinar Speaker - Sharing is Caring &quot;Talent Needs in
+                    the Digital Era&quot; Politeknik Negeri Jakarta x Train4best
+                    x Lu kan Anak IT
                   </p>
-                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-3">
+                  <p className="leading-6 text-sm text-ink-soft text-left mb-3">
                     Train4best
                   </p>
                   <div className="space-y-1">
-                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
-                      Certificate ID: <span className="text-gray-700 dark:text-neutral-300">Not Included</span>
+                    <p className="text-xs text-muted text-left">
+                      Certificate ID:{" "}
+                      <span className="text-ink-soft">Not Included</span>
                     </p>
-                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                    <p className="text-xs text-muted text-left">
                       Expires: No Expiration
                     </p>
                   </div>
                 </div>
 
                 {/* Certification Card 3 */}
-                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-1">
-                    Programming Webinar Speaker &quot;Beginner Programming Taste: Fast Build App with Laravel Vibe Coding&quot;
+                <div className="p-4 border border-rule rounded-lg text-left">
+                  <p className="leading-6 font-semibold text-sm text-ink text-left mb-1">
+                    Programming Webinar Speaker &quot;Beginner Programming
+                    Taste: Fast Build App with Laravel Vibe Coding&quot;
                   </p>
-                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-3">
+                  <p className="leading-6 text-sm text-ink-soft text-left mb-3">
                     Batam Linux User Group
                   </p>
                   <div className="space-y-1">
-                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
-                      Certificate ID: <span className="text-gray-700 dark:text-neutral-300">Not Included</span>
+                    <p className="text-xs text-muted text-left">
+                      Certificate ID:{" "}
+                      <span className="text-ink-soft">Not Included</span>
                     </p>
-                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                    <p className="text-xs text-muted text-left">
                       Expires: No Expiration
                     </p>
                   </div>
                 </div>
 
                 {/* Certification Card 4 */}
-                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-1">
+                <div className="p-4 border border-rule rounded-lg text-left">
+                  <p className="leading-6 font-semibold text-sm text-ink text-left mb-1">
                     Offline Event Baparekraf Developer Day Yogyakarta, 2024
                   </p>
-                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-3">
-                    Ministry of Tourism and Creative Economy of the Republic of Indonesia
+                  <p className="leading-6 text-sm text-ink-soft text-left mb-3">
+                    Ministry of Tourism and Creative Economy of the Republic of
+                    Indonesia
                   </p>
                   <div className="space-y-1">
-                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
-                      Certificate ID: <span className="text-gray-700 dark:text-neutral-300">Not Included</span>
+                    <p className="text-xs text-muted text-left">
+                      Certificate ID:{" "}
+                      <span className="text-ink-soft">Not Included</span>
                     </p>
-                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                    <p className="text-xs text-muted text-left">
                       Expires: No Expiration
                     </p>
                   </div>
                 </div>
 
                 {/* Certification Card 5 */}
-                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-1">
+                <div className="p-4 border border-rule rounded-lg text-left">
+                  <p className="leading-6 font-semibold text-sm text-ink text-left mb-1">
                     Virtual Internship Full Stack Developer on PT Investree
                   </p>
-                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-3">
+                  <p className="leading-6 text-sm text-ink-soft text-left mb-3">
                     Rakamin Academy
                   </p>
                   <div className="space-y-1">
-                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
-                      Certificate ID: <span className="text-gray-700 dark:text-neutral-300">1986211APAGII462023</span>
+                    <p className="text-xs text-muted text-left">
+                      Certificate ID:{" "}
+                      <span className="text-ink-soft">1986211APAGII462023</span>
                     </p>
-                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                    <p className="text-xs text-muted text-left">
                       Expires: No Expiration
                     </p>
                   </div>
                 </div>
 
                 {/* Certification Card 6 */}
-                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-1">
+                <div className="p-4 border border-rule rounded-lg text-left">
+                  <p className="leading-6 font-semibold text-sm text-ink text-left mb-1">
                     Internship Junior Web Developer on PT Tunas Idea Indonesia
                   </p>
-                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-3">
+                  <p className="leading-6 text-sm text-ink-soft text-left mb-3">
                     PT Tunas Idea Indonesia
                   </p>
                   <div className="space-y-1">
-                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
-                      Certificate ID: <span className="text-gray-700 dark:text-neutral-300">Not Included</span>
+                    <p className="text-xs text-muted text-left">
+                      Certificate ID:{" "}
+                      <span className="text-ink-soft">Not Included</span>
                     </p>
-                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                    <p className="text-xs text-muted text-left">
                       Expires: No Expiration
                     </p>
                   </div>
                 </div>
 
                 {/* Certification Card 7 */}
-                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-1">
-                    IT-FEST Seminar Participant &quot;Getting to Know Web Developer in Depth&quot; at Institut Teknologi Adhi Tama, Surabaya 2020
+                <div className="p-4 border border-rule rounded-lg text-left">
+                  <p className="leading-6 font-semibold text-sm text-ink text-left mb-1">
+                    IT-FEST Seminar Participant &quot;Getting to Know Web
+                    Developer in Depth&quot; at Institut Teknologi Adhi Tama,
+                    Surabaya 2020
                   </p>
-                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-3">
+                  <p className="leading-6 text-sm text-ink-soft text-left mb-3">
                     Institut Teknologi Adhi Tama, Surabaya
                   </p>
                   <div className="space-y-1">
-                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
-                      Certificate ID: <span className="text-gray-700 dark:text-neutral-300">130/WEBINAR/HMJ_SISFOKOM/ITATS/IX/2020</span>
+                    <p className="text-xs text-muted text-left">
+                      Certificate ID:{" "}
+                      <span className="text-ink-soft">
+                        130/WEBINAR/HMJ_SISFOKOM/ITATS/IX/2020
+                      </span>
                     </p>
-                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                    <p className="text-xs text-muted text-left">
                       Expires: No Expiration
                     </p>
                   </div>
                 </div>
 
                 {/* Certification Card 8 */}
-                <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
-                  <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left mb-1">
+                <div className="p-4 border border-rule rounded-lg text-left">
+                  <p className="leading-6 font-semibold text-sm text-ink text-left mb-1">
                     Web Development Bootcamp Infinite Learning
                   </p>
-                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left mb-3">
+                  <p className="leading-6 text-sm text-ink-soft text-left mb-3">
                     Infinite Learning, Batam
                   </p>
                   <div className="space-y-1">
-                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
-                      Certificate ID: <span className="text-gray-700 dark:text-neutral-300">0029/IL-FEBOOTCAMP/III/2024</span>
+                    <p className="text-xs text-muted text-left">
+                      Certificate ID:{" "}
+                      <span className="text-ink-soft">
+                        0029/IL-FEBOOTCAMP/III/2024
+                      </span>
                     </p>
-                    <p className="text-xs text-gray-500 dark:text-neutral-500 text-left">
+                    <p className="text-xs text-muted text-left">
                       Expires: No Expiration
                     </p>
                   </div>
@@ -1326,7 +1546,6 @@ export default function Home() {
               {/* End Grid */}
             </div>
             {/* End Certifications */}
-
           </div>
         </main>
       </Main>

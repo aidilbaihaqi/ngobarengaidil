@@ -14,20 +14,20 @@ export default function AwardCarousel({ images, alt }: AwardCarouselProps) {
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1,
     );
   };
 
   const goToNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1,
     );
   };
 
   if (images.length === 0) return null;
 
   return (
-    <div className="relative w-full h-48 mb-3 rounded-lg overflow-hidden bg-gray-100 dark:bg-neutral-800">
+    <div className="relative w-full h-48 mb-3 rounded-lg overflow-hidden bg-ground-deep">
       <Image
         src={images[currentIndex]}
         alt={`${alt} - ${currentIndex + 1}`}
@@ -62,7 +62,7 @@ export default function AwardCarousel({ images, alt }: AwardCarouselProps) {
                 onClick={() => setCurrentIndex(index)}
                 className={`w-2 h-2 rounded-full transition-colors ${
                   index === currentIndex
-                    ? "bg-white"
+                    ? "bg-surface"
                     : "bg-white/50 hover:bg-white/75"
                 }`}
                 aria-label={`Go to image ${index + 1}`}

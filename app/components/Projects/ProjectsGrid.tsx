@@ -19,7 +19,7 @@ export default function ProjectsGrid({ projects }: ProjectsGridProps) {
 
   const visibleProjects = useMemo(
     () => projects.slice(0, visibleCount),
-    [projects, visibleCount]
+    [projects, visibleCount],
   );
   const hasMore = visibleCount < projects.length;
 
@@ -71,7 +71,7 @@ export default function ProjectsGrid({ projects }: ProjectsGridProps) {
 
       {projects.length === 0 && (
         <div className="text-center py-20">
-          <p className="text-gray-600 dark:text-gray-400 text-lg">
+          <p className="text-ink-soft text-lg">
             No projects found matching your criteria.
           </p>
         </div>
@@ -84,7 +84,7 @@ export default function ProjectsGrid({ projects }: ProjectsGridProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             onClick={handleShowMore}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 text-white font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-signal-ink hover:bg-signal text-ground font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-signal/50 focus:ring-offset-2 shadow-lg hover:shadow-xl"
           >
             <span>Show More Projects</span>
             <ChevronDown className="w-5 h-5" />
@@ -93,10 +93,7 @@ export default function ProjectsGrid({ projects }: ProjectsGridProps) {
       )}
 
       {selectedProject && (
-        <ProjectModal
-          project={selectedProject}
-          onClose={handleCloseModal}
-        />
+        <ProjectModal project={selectedProject} onClose={handleCloseModal} />
       )}
     </>
   );

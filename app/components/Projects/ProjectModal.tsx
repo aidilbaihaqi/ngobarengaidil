@@ -16,14 +16,12 @@ function ExpandableBlurb({ text }: { text: string }) {
   const isLong = text.length > 200;
 
   return (
-    <div className="text-gray-600 dark:text-gray-400">
-      <p className={!isExpanded && isLong ? "line-clamp-4" : ""}>
-        {text}
-      </p>
+    <div className="text-ink-soft">
+      <p className={!isExpanded && isLong ? "line-clamp-4" : ""}>{text}</p>
       {isLong && (
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="mt-2 text-sm font-semibold text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors focus:outline-none"
+          className="mt-2 text-sm font-semibold text-signal-ink dark:text-signal hover:text-signal-ink dark:hover:text-signal transition-colors focus:outline-none"
         >
           {isExpanded ? "Show less" : "Read more"}
         </button>
@@ -72,13 +70,13 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
                 transition={{ duration: 0.3 }}
-                className="relative w-full max-w-4xl bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-white/10 rounded-2xl shadow-2xl overflow-hidden"
+                className="relative w-full max-w-4xl bg-surface dark:bg-[#0a0a0a] border border-rule dark:border-white/10 rounded-2xl shadow-2xl overflow-hidden"
                 onClick={(e) => e.stopPropagation()}
               >
                 {/* Close Button */}
                 <button
                   onClick={onClose}
-                  className="absolute top-4 right-4 z-10 p-2 bg-white/90 dark:bg-black/50 hover:bg-white dark:hover:bg-black/70 border border-gray-200 dark:border-white/10 rounded-full text-gray-800 dark:text-white transition-all duration-300"
+                  className="absolute top-4 right-4 z-10 p-2 bg-white/90/50 hover:bg-white/70 border border-rule dark:border-white/10 rounded-full text-ink transition-all duration-300"
                   aria-label="Close modal"
                 >
                   <X className="w-6 h-6" />
@@ -99,7 +97,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 <div className="p-8 space-y-8">
                   {/* Header */}
                   <div>
-                    <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-2">
+                    <h2 className="text-3xl font-bold text-ink mb-2">
                       {project.title}
                     </h2>
                     <ExpandableBlurb text={project.blurb} />
@@ -109,16 +107,16 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   {project.metrics && (
                     <div className="flex flex-wrap gap-3">
                       {project.metrics.users && (
-                        <div className="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/30 rounded-lg">
-                          <p className="text-xs text-gray-400">Users</p>
-                          <p className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
+                        <div className="px-4 py-2 bg-signal/10 border border-signal/30 rounded-lg">
+                          <p className="text-xs text-muted">Users</p>
+                          <p className="text-lg font-bold text-signal-ink">
                             {project.metrics.users.toLocaleString()}+
                           </p>
                         </div>
                       )}
                       {project.metrics.performance && (
                         <div className="px-4 py-2 bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/30 rounded-lg">
-                          <p className="text-xs text-gray-400">Performance</p>
+                          <p className="text-xs text-muted">Performance</p>
                           <p className="text-lg font-bold text-green-400 flex items-center gap-1">
                             <TrendingUp className="w-4 h-4" />
                             {project.metrics.performance}
@@ -126,9 +124,9 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                         </div>
                       )}
                       {project.metrics.uptime && (
-                        <div className="px-4 py-2 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 border border-blue-500/30 rounded-lg">
-                          <p className="text-xs text-gray-400">Uptime</p>
-                          <p className="text-lg font-bold text-blue-400">
+                        <div className="px-4 py-2 bg-signal/10 border border-signal/30 rounded-lg">
+                          <p className="text-xs text-muted">Uptime</p>
+                          <p className="text-lg font-bold text-signal">
                             {project.metrics.uptime}
                           </p>
                         </div>
@@ -140,11 +138,11 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {/* Problem */}
                     {project.details?.problem && (
-                      <div className="p-6 bg-purple-50 dark:bg-white/5 border border-purple-200 dark:border-white/10 rounded-xl">
-                        <h3 className="text-lg font-bold text-purple-600 dark:text-purple-400 mb-3">
+                      <div className="p-6 bg-signal/10/5 border border-signal/40 dark:border-white/10 rounded-xl">
+                        <h3 className="text-lg font-bold text-signal-ink dark:text-signal mb-3">
                           Problem
                         </h3>
-                        <p className="text-sm text-gray-700 dark:text-gray-300">
+                        <p className="text-sm text-ink-soft">
                           {project.details.problem}
                         </p>
                       </div>
@@ -152,11 +150,11 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
                     {/* Solution */}
                     {project.details?.solution && (
-                      <div className="p-6 bg-cyan-50 dark:bg-white/5 border border-cyan-200 dark:border-white/10 rounded-xl">
-                        <h3 className="text-lg font-bold text-cyan-600 dark:text-cyan-400 mb-3">
+                      <div className="p-6 bg-signal/10/5 border border-signal/40 dark:border-white/10 rounded-xl">
+                        <h3 className="text-lg font-bold text-signal-ink dark:text-signal mb-3">
                           Solution
                         </h3>
-                        <p className="text-sm text-gray-700 dark:text-gray-300">
+                        <p className="text-sm text-ink-soft">
                           {project.details.solution}
                         </p>
                       </div>
@@ -164,17 +162,19 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
                     {/* Contributions */}
                     {project.details?.contribution && (
-                      <div className="p-6 bg-pink-50 dark:bg-white/5 border border-pink-200 dark:border-white/10 rounded-xl">
-                        <h3 className="text-lg font-bold text-pink-600 dark:text-pink-400 mb-3">
+                      <div className="p-6 bg-signal/10/5 border border-signal/40 dark:border-white/10 rounded-xl">
+                        <h3 className="text-lg font-bold text-signal-ink dark:text-signal mb-3">
                           Contributions
                         </h3>
                         <ul className="space-y-2">
                           {project.details.contribution.map((item, idx) => (
                             <li
                               key={idx}
-                              className="text-sm text-gray-700 dark:text-gray-300 flex items-start gap-2"
+                              className="text-sm text-ink-soft flex items-start gap-2"
                             >
-                              <span className="text-pink-600 dark:text-pink-400 mt-1">•</span>
+                              <span className="text-signal-ink dark:text-signal mt-1">
+                                •
+                              </span>
                               <span>{item}</span>
                             </li>
                           ))}
@@ -185,14 +185,14 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
                   {/* Tech Stack */}
                   <div>
-                    <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-3">
+                    <h3 className="text-lg font-bold text-ink mb-3">
                       Tech Stack
                     </h3>
                     <div className="flex flex-wrap gap-2">
                       {project.stack.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1 text-sm font-mono bg-purple-500/10 border border-purple-500/30 rounded-lg text-purple-300"
+                          className="px-3 py-1 text-sm font-mono bg-signal/10 border border-signal/30 rounded-lg text-signal"
                         >
                           {tech}
                         </span>
@@ -207,7 +207,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                         href={project.links.live}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 text-white font-semibold rounded-xl transition-all duration-300"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-signal-ink hover:bg-signal text-ground font-semibold rounded-xl transition-all duration-300"
                       >
                         <ExternalLink className="w-5 h-5" />
                         View Live
@@ -218,7 +218,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                         href={project.links.repo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 border border-gray-200 dark:border-white/10 text-gray-800 dark:text-white font-semibold rounded-xl transition-all duration-300"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-ground-deep/5 hover:bg-ground-deep/10 border border-rule dark:border-white/10 text-ink font-semibold rounded-xl transition-all duration-300"
                       >
                         <Github className="w-5 h-5" />
                         View Code

@@ -38,7 +38,7 @@ const navLinks: { name: string; href: string; icon: React.ReactNode }[] = [
     ),
   },
   {
-    name: "Project",
+    name: "Work",
     href: "/projects",
     icon: (
       <svg {...iconProps}>
@@ -65,7 +65,7 @@ export default function FloatingDock() {
     <div className="lg:hidden fixed inset-x-0 bottom-4 z-50 flex justify-center px-4 pointer-events-none">
       <nav
         aria-label="Primary"
-        className="pointer-events-auto flex items-center gap-1 rounded-full border border-gray-200/60 bg-white/80 px-2 py-2 shadow-lg backdrop-blur-md dark:border-neutral-700/60 dark:bg-neutral-900/80"
+        className="pointer-events-auto flex items-center gap-1 rounded-lg border border-rule bg-surface/90 px-2 py-2 shadow-lg backdrop-blur-md"
       >
         {navLinks.map((link) => {
           const isActive =
@@ -77,24 +77,21 @@ export default function FloatingDock() {
               href={link.href}
               aria-label={link.name}
               aria-current={isActive ? "page" : undefined}
-              className={`group relative flex size-10 items-center justify-center rounded-full transition-all duration-300 active:scale-95 ${
+              className={`group relative flex size-10 items-center justify-center rounded-md transition-all duration-300 active:scale-95 ${
                 isActive
-                  ? "bg-blue-600/10 text-blue-600 dark:bg-blue-400/10 dark:text-blue-400"
-                  : "text-gray-500 hover:bg-gray-100 hover:text-gray-800 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-neutral-200"
+                  ? "bg-signal/10 text-signal-ink"
+                  : "text-muted hover:bg-ground-deep hover:text-ink"
               }`}
             >
               {link.icon}
-              <span className="pointer-events-none absolute -top-9 left-1/2 -translate-x-1/2 scale-90 whitespace-nowrap rounded-md bg-gray-900 px-2 py-1 text-[11px] font-medium text-white opacity-0 transition-all duration-200 group-hover:scale-100 group-hover:opacity-100 dark:bg-neutral-100 dark:text-neutral-900">
+              <span className="pointer-events-none absolute -top-9 left-1/2 -translate-x-1/2 scale-90 whitespace-nowrap rounded-sm bg-ink px-2 py-1 font-mono text-micro uppercase tracking-label text-ground opacity-0 transition-all duration-200 group-hover:scale-100 group-hover:opacity-100">
                 {link.name}
               </span>
             </Link>
           );
         })}
 
-        <span
-          className="mx-1 h-6 w-px bg-gray-200 dark:bg-neutral-700"
-          aria-hidden="true"
-        />
+        <span className="mx-1 h-6 w-px bg-rule" aria-hidden="true" />
 
         <ThemeToggle />
       </nav>

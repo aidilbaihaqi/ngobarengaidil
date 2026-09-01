@@ -4,19 +4,19 @@ import { motion } from "framer-motion";
 
 export default function LoadingCircle() {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-gray-900">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-surface">
       <div className="relative">
         {/* Outer rotating circle */}
         <motion.div
-          className="w-16 h-16 border-4 border-gray-200 dark:border-gray-700 rounded-full"
+          className="w-16 h-16 border-4 border-rule rounded-full"
           animate={{ rotate: 360 }}
           transition={{
             duration: 1,
             repeat: Infinity,
-            ease: "linear"
+            ease: "linear",
           }}
         />
-        
+
         {/* Inner rotating gradient circle */}
         <motion.div
           className="absolute inset-0 w-16 h-16 border-4 border-transparent border-t-blue-500 border-r-purple-500 border-b-pink-500 border-l-blue-400 rounded-full"
@@ -24,10 +24,10 @@ export default function LoadingCircle() {
           transition={{
             duration: 1,
             repeat: Infinity,
-            ease: "linear"
+            ease: "linear",
           }}
         />
-        
+
         {/* Center dot */}
         <motion.div
           className="absolute inset-0 flex items-center justify-center"
@@ -37,22 +37,22 @@ export default function LoadingCircle() {
             duration: 0.8,
             repeat: Infinity,
             repeatType: "reverse",
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
         >
-          <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
+          <div className="w-2 h-2 bg-signal rounded-full" />
         </motion.div>
       </div>
-      
+
       {/* Loading text */}
       <motion.p
-        className="absolute mt-24 text-sm text-gray-600 dark:text-gray-400 font-medium"
+        className="absolute mt-24 text-sm text-ink-soft font-medium"
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1, 0] }}
         transition={{
           duration: 2,
           repeat: Infinity,
-          ease: "easeInOut"
+          ease: "easeInOut",
         }}
       >
         Take a Coffee...

@@ -5,7 +5,8 @@ export const featuredProjects: FeaturedItem[] = [
     id: "1",
     title: "AI-Powered Bioinformatics Platform",
     subtitle: "Revolutionizing genetic data analysis with machine learning",
-    cover: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1920&h=1080&fit=crop",
+    cover:
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1920&h=1080&fit=crop",
     year: 2025,
     tags: ["AI/ML", "Bioinformatics", "Python"],
     metric: "Finalist - ITB Competition 2025",
@@ -17,7 +18,8 @@ export const featuredProjects: FeaturedItem[] = [
     id: "2",
     title: "Smart City Dashboard",
     subtitle: "Real-time analytics for urban management",
-    cover: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=1920&h=1080&fit=crop",
+    cover:
+      "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=1920&h=1080&fit=crop",
     year: 2025,
     tags: ["Web Apps", "IoT", "React"],
     metric: "2,000+ active users",
@@ -29,7 +31,8 @@ export const featuredProjects: FeaturedItem[] = [
     id: "3",
     title: "Open Source Dev Tools",
     subtitle: "Productivity tools for modern developers",
-    cover: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1920&h=1080&fit=crop",
+    cover:
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1920&h=1080&fit=crop",
     year: 2024,
     tags: ["Open Source", "CLI", "TypeScript"],
     metric: "5K+ GitHub stars",
@@ -45,7 +48,8 @@ export const allProjects: Project[] = [
     title: "AI-Powered Bioinformatics Platform",
     blurb:
       "A comprehensive platform for analyzing genetic data using advanced machine learning algorithms",
-    cover: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1920&h=1080&fit=crop",
+    cover:
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1920&h=1080&fit=crop",
     year: 2025,
     teamSize: 4,
     role: ["Full Stack Developer", "ML Engineer"],
@@ -83,7 +87,8 @@ export const allProjects: Project[] = [
     title: "Smart City Dashboard",
     blurb:
       "Real-time monitoring and analytics platform for urban infrastructure management",
-    cover: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=1920&h=1080&fit=crop",
+    cover:
+      "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=1920&h=1080&fit=crop",
     year: 2025,
     teamSize: 6,
     role: ["Frontend Lead"],
@@ -113,7 +118,8 @@ export const allProjects: Project[] = [
     id: "3",
     title: "Open Source Dev Tools",
     blurb: "A collection of CLI tools to boost developer productivity",
-    cover: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1920&h=1080&fit=crop",
+    cover:
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1920&h=1080&fit=crop",
     year: 2024,
     role: ["Creator", "Maintainer"],
     stack: ["TypeScript", "Node.js", "Commander.js"],
@@ -140,7 +146,8 @@ export const allProjects: Project[] = [
     id: "4",
     title: "E-Commerce Platform",
     blurb: "Full-featured online marketplace with payment integration",
-    cover: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1920&h=1080&fit=crop",
+    cover:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1920&h=1080&fit=crop",
     year: 2024,
     teamSize: 5,
     role: ["Full Stack Developer"],
@@ -169,7 +176,8 @@ export const allProjects: Project[] = [
     id: "5",
     title: "AI Chatbot for Customer Service",
     blurb: "Intelligent chatbot powered by natural language processing",
-    cover: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=1920&h=1080&fit=crop",
+    cover:
+      "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=1920&h=1080&fit=crop",
     year: 2024,
     teamSize: 3,
     role: ["AI Engineer", "Backend Developer"],
@@ -199,7 +207,8 @@ export const allProjects: Project[] = [
     id: "6",
     title: "Portfolio Design System",
     blurb: "Modern design system for personal portfolio websites",
-    cover: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=1920&h=1080&fit=crop",
+    cover:
+      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=1920&h=1080&fit=crop",
     year: 2024,
     role: ["Designer", "Developer"],
     stack: ["React", "Tailwind CSS", "Framer Motion", "Storybook"],

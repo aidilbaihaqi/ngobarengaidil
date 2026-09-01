@@ -10,7 +10,7 @@ const ThemeToggle = () => {
     setMounted(true);
     // Check for saved theme preference or default to light theme
     const savedTheme = localStorage.getItem("theme");
-    
+
     if (savedTheme) {
       setIsDarkMode(savedTheme === "dark");
     } else {
@@ -38,30 +38,23 @@ const ThemeToggle = () => {
 
   if (!mounted) {
     return (
-      <div className="size-7 border border-gray-200 rounded-full animate-pulse bg-gray-100 dark:bg-gray-800 dark:border-gray-700"></div>
+      <div className="size-10 rounded-md border border-rule bg-ground-deep animate-pulse"></div>
     );
   }
 
   return (
     <button
       onClick={toggleTheme}
-      className={`
-        relative w-10 h-10 rounded-full border transition-all duration-300 ease-in-out flex items-center justify-center
-        ${
-          isDarkMode 
-            ? 'bg-black-800 border-gray-600 text-yellow-400 hover:bg-black-700 hover:border-gray-500' 
-            : 'bg-white border-gray-300 text-gray-600 hover:bg-gray-50 hover:border-gray-400'
-        }
-        focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
-        shadow-sm hover:shadow-md transform hover:scale-105 active:scale-95
-      `}
-      aria-label={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+      className="relative flex h-10 w-10 items-center justify-center rounded-md border border-rule bg-surface text-muted transition-colors duration-300 hover:border-signal hover:text-signal-ink focus:outline-none active:scale-95"
+      aria-label={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
     >
       <div className="relative w-5 h-5">
         {/* Sun Icon (Light Mode) */}
         <svg
           className={`absolute inset-0 w-5 h-5 transition-all duration-300 ${
-            isDarkMode ? 'opacity-0 rotate-90 scale-75' : 'opacity-100 rotate-0 scale-100'
+            isDarkMode
+              ? "opacity-0 rotate-90 scale-75"
+              : "opacity-100 rotate-0 scale-100"
           }`}
           fill="currentColor"
           viewBox="0 0 20 20"
@@ -77,7 +70,9 @@ const ThemeToggle = () => {
         {/* Moon Icon (Dark Mode) */}
         <svg
           className={`absolute inset-0 w-5 h-5 transition-all duration-300 ${
-            isDarkMode ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-90 scale-75'
+            isDarkMode
+              ? "opacity-100 rotate-0 scale-100"
+              : "opacity-0 -rotate-90 scale-75"
           }`}
           fill="currentColor"
           viewBox="0 0 20 20"

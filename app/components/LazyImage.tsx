@@ -1,15 +1,15 @@
 "use client";
 
-import Image, { ImageProps } from 'next/image';
-import { useState, useRef, useEffect, memo } from 'react';
+import Image, { ImageProps } from "next/image";
+import { useState, useRef, useEffect, memo } from "react";
 
-interface LazyImageProps extends Omit<ImageProps, 'onLoad'> {
+interface LazyImageProps extends Omit<ImageProps, "onLoad"> {
   rootMargin?: string;
   threshold?: number;
 }
 
 function LazyImageComponent({
-  rootMargin = '200px',
+  rootMargin = "200px",
   threshold = 0.1,
   className,
   ...props
@@ -26,7 +26,7 @@ function LazyImageComponent({
           observer.disconnect();
         }
       },
-      { rootMargin, threshold }
+      { rootMargin, threshold },
     );
 
     if (imgRef.current) {
@@ -40,16 +40,21 @@ function LazyImageComponent({
     <div ref={imgRef} className="relative">
       {/* Placeholder skeleton */}
       {!isLoaded && (
-        <div 
-          className={`absolute inset-0 bg-gray-200 dark:bg-gray-800 animate-pulse ${className}`}
-          style={{ aspectRatio: props.width && props.height ? `${props.width}/${props.height}` : 'auto' }}
+        <div
+          className={`absolute inset-0 bg-ground-deep animate-pulse ${className}`}
+          style={{
+            aspectRatio:
+              props.width && props.height
+                ? `${props.width}/${props.height}`
+                : "auto",
+          }}
         />
       )}
-      
+
       {isInView && (
         <Image
           {...props}
-          className={`${className} transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+          className={`${className} transition-opacity duration-300 ${isLoaded ? "opacity-100" : "opacity-0"}`}
           onLoad={() => setIsLoaded(true)}
           loading="lazy"
         />

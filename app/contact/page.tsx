@@ -27,9 +27,9 @@ export default function ContactPage() {
 
     // Create mailto link
     const mailtoLink = `mailto:aidilmusirjun@gmail.com?subject=${encodeURIComponent(
-      formData.subject
+      formData.subject,
     )}&body=${encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`,
     )}`;
 
     // Open email client
@@ -37,7 +37,7 @@ export default function ContactPage() {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({
       ...formData,
@@ -50,37 +50,40 @@ export default function ContactPage() {
       name: "Instagram",
       icon: faInstagram,
       url: "http://instagram.com/albyhaqee",
-      color: "text-pink-500 dark:text-pink-300 hover:text-pink-700 dark:hover:text-pink-500",
+      color:
+        "text-signal-ink dark:text-signal hover:text-signal-ink dark:hover:text-signal-ink",
     },
     {
       name: "TikTok",
       icon: faTiktok,
       url: "https://www.tiktok.com/@albyhaqee",
-      color: "text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300",
+      color: "text-ink hover:text-ink-soft",
     },
     {
       name: "LinkedIn",
       icon: faLinkedin,
       url: "https://www.linkedin.com/in/aidilbaihaqi/",
-      color: "text-blue-700 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-600",
+      color:
+        "text-signal-ink dark:text-signal hover:text-signal-ink dark:hover:text-signal-ink",
     },
     {
       name: "GitHub",
       icon: faGithub,
       url: "https://github.com/aidilbaihaqi",
-      color: "text-gray-900 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400",
+      color: "text-ink hover:text-ink-soft",
     },
     {
       name: "YouTube",
       icon: faYoutube,
       url: "https://www.youtube.com/@albyhaqee",
-      color: "text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-500",
+      color:
+        "text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-500",
     },
     {
       name: "Saweria",
       icon: faCoffee,
       url: "https://saweria.co/aidilbaihaqi",
-      color: "text-red-900 dark:text-gray-300 hover:text-red-950 dark:hover:text-gray-400",
+      color: "text-red-900 hover:text-red-950",
     },
   ];
 
@@ -99,18 +102,19 @@ export default function ContactPage() {
           <div className="w-full max-w-5xl mx-auto pt-5 md:pt-16 px-4 sm:px-6 lg:px-8 pb-20">
             {/* Header */}
             <div className="mb-16 text-center">
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-800 dark:text-white mb-4">
+              <h1 className="text-5xl md:text-6xl font-bold text-ink mb-4">
                 Get In Touch
               </h1>
-              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                Have a project in mind or just want to say hi? Feel free to reach out!
+              <p className="text-lg text-ink-soft max-w-2xl mx-auto">
+                Have a project in mind or just want to say hi? Feel free to
+                reach out!
               </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Form */}
-              <div className="bg-white dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-2xl p-8">
-                <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">
+              <div className="bg-white/5 backdrop-blur-xl border border-rule dark:border-white/10 rounded-2xl p-8">
+                <h2 className="text-2xl font-bold text-ink mb-6">
                   Send Me a Message
                 </h2>
 
@@ -119,12 +123,12 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                      className="block text-sm font-medium text-ink-soft mb-2"
                     >
                       Your Name
                     </label>
                     <div className="relative">
-                      <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                      <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted" />
                       <input
                         type="text"
                         id="name"
@@ -132,7 +136,7 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full pl-11 pr-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-xl text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all duration-300"
+                        className="w-full pl-11 pr-4 py-3 bg-ground-deep/5 border border-rule dark:border-white/10 rounded-xl text-ink placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-signal/50 focus:border-signal/50 transition-all duration-300"
                         placeholder="John Doe"
                       />
                     </div>
@@ -142,12 +146,12 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                      className="block text-sm font-medium text-ink-soft mb-2"
                     >
                       Your Email
                     </label>
                     <div className="relative">
-                      <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                      <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted" />
                       <input
                         type="email"
                         id="email"
@@ -155,7 +159,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full pl-11 pr-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-xl text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all duration-300"
+                        className="w-full pl-11 pr-4 py-3 bg-ground-deep/5 border border-rule dark:border-white/10 rounded-xl text-ink placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-signal/50 focus:border-signal/50 transition-all duration-300"
                         placeholder="john@example.com"
                       />
                     </div>
@@ -165,12 +169,12 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="subject"
-                      className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                      className="block text-sm font-medium text-ink-soft mb-2"
                     >
                       Subject
                     </label>
                     <div className="relative">
-                      <MessageSquare className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                      <MessageSquare className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted" />
                       <input
                         type="text"
                         id="subject"
@@ -178,17 +182,17 @@ export default function ContactPage() {
                         value={formData.subject}
                         onChange={handleChange}
                         required
-                        className="w-full pl-11 pr-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-xl text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all duration-300"
+                        className="w-full pl-11 pr-4 py-3 bg-ground-deep/5 border border-rule dark:border-white/10 rounded-xl text-ink placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-signal/50 focus:border-signal/50 transition-all duration-300"
                         placeholder="Project Inquiry"
                       />
                     </div>
- </div>
+                  </div>
 
                   {/* Message */}
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                      className="block text-sm font-medium text-ink-soft mb-2"
                     >
                       Message
                     </label>
@@ -199,7 +203,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-xl text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all duration-300 resize-none"
+                      className="w-full px-4 py-3 bg-ground-deep/5 border border-rule dark:border-white/10 rounded-xl text-ink placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-signal/50 focus:border-signal/50 transition-all duration-300 resize-none"
                       placeholder="Tell me about your project..."
                     />
                   </div>
@@ -207,7 +211,7 @@ export default function ContactPage() {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 text-white font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 shadow-lg hover:shadow-xl"
+                    className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-signal-ink hover:bg-signal text-ground font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-signal/50 focus:ring-offset-2 shadow-lg hover:shadow-xl"
                   >
                     <Send className="w-5 h-5" />
                     Send Message
@@ -218,23 +222,23 @@ export default function ContactPage() {
               {/* Contact Info & Social Media */}
               <div className="space-y-8">
                 {/* Contact Info */}
-                <div className="bg-white dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-2xl p-8">
-                  <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">
+                <div className="bg-white/5 backdrop-blur-xl border border-rule dark:border-white/10 rounded-2xl p-8">
+                  <h2 className="text-2xl font-bold text-ink mb-6">
                     Contact Information
                   </h2>
 
                   <div className="space-y-4">
                     <div className="flex items-start gap-4">
-                      <div className="p-3 bg-purple-100 dark:bg-purple-500/10 border border-purple-200 dark:border-purple-500/30 rounded-xl">
-                        <Mail className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+                      <div className="p-3 bg-signal/10 dark:bg-signal/10 border border-signal/40 dark:border-signal/30 rounded-xl">
+                        <Mail className="w-6 h-6 text-signal-ink dark:text-signal" />
                       </div>
                       <div>
-                        <h3 className="text-sm font-semibold text-gray-800 dark:text-white mb-1">
+                        <h3 className="text-sm font-semibold text-ink mb-1">
                           Email
                         </h3>
                         <a
                           href="mailto:aidilmusirjun@gmail.com"
-                          className="text-sm text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                          className="text-sm text-ink-soft hover:text-signal-ink dark:hover:text-signal transition-colors"
                         >
                           aidilmusirjun@gmail.com
                         </a>
@@ -242,14 +246,14 @@ export default function ContactPage() {
                     </div>
 
                     <div className="flex items-start gap-4">
-                      <div className="p-3 bg-cyan-100 dark:bg-cyan-500/10 border border-cyan-200 dark:border-cyan-500/30 rounded-xl">
-                        <MessageSquare className="w-6 h-6 text-cyan-600 dark:text-cyan-400" />
+                      <div className="p-3 bg-signal/10 dark:bg-signal/10 border border-signal/40 dark:border-signal/30 rounded-xl">
+                        <MessageSquare className="w-6 h-6 text-signal-ink dark:text-signal" />
                       </div>
                       <div>
-                        <h3 className="text-sm font-semibold text-gray-800 dark:text-white mb-1">
+                        <h3 className="text-sm font-semibold text-ink mb-1">
                           Response Time
                         </h3>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                        <p className="text-sm text-ink-soft">
                           Usually within 24 hours
                         </p>
                       </div>
@@ -258,8 +262,8 @@ export default function ContactPage() {
                 </div>
 
                 {/* Social Media */}
-                <div className="bg-white dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-2xl p-8">
-                  <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">
+                <div className="bg-white/5 backdrop-blur-xl border border-rule dark:border-white/10 rounded-2xl p-8">
+                  <h2 className="text-2xl font-bold text-ink mb-6">
                     Connect With Me
                   </h2>
 
@@ -270,13 +274,13 @@ export default function ContactPage() {
                         href={social.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 p-4 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-xl hover:border-purple-300 dark:hover:border-purple-500/50 transition-all duration-300 group"
+                        className="flex items-center gap-3 p-4 bg-ground-deep/5 border border-rule dark:border-white/10 rounded-xl hover:border-signal/40 dark:hover:border-signal/50 transition-all duration-300 group"
                       >
                         <FontAwesomeIcon
                           icon={social.icon}
                           className={`text-2xl ${social.color} transition-colors`}
                         />
-                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                        <span className="text-sm font-medium text-ink-soft group-hover:text-signal-ink dark:group-hover:text-signal transition-colors">
                           {social.name}
                         </span>
                       </a>

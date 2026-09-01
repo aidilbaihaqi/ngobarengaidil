@@ -1,6 +1,9 @@
 "use client";
 import React from "react";
-import { HeroParallax, type ParallaxProduct } from "@/app/components/ui/hero-parallax";
+import {
+  HeroParallax,
+  type ParallaxProduct,
+} from "@/app/components/ui/hero-parallax";
 import { featuredProjects, allProjects } from "@/app/data/projects";
 
 // Build the parallax deck from real portfolio data (featured first, then fill

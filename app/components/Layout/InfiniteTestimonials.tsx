@@ -46,35 +46,28 @@ const InfiniteTestimonials = () => {
   return (
     <div className="relative w-full py-1 overflow-hidden bg-transparent">
       <div className="w-full flex items-center">
-        <motion.div
-          className="flex space-x-8"
-          {...animationSettings}
-        >
+        <motion.div className="flex space-x-8" {...animationSettings}>
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="min-w-[300px] bg-white dark:bg-black border-neutral-100 dark:border-white/[0.2] shadow-md rounded-2xl p-6 text-gray-800 dark:text-gray-200"
+              className="min-w-[300px] bg-surface border-rule dark:border-white/[0.2] shadow-md rounded-2xl p-6 text-ink"
             >
               <p className="text-sm italic">"{testimonial.text}"</p>
               <div className="mt-4">
                 <h4 className="font-semibold">{testimonial.name}</h4>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  {testimonial.role}
-                </p>
+                <p className="text-sm text-muted">{testimonial.role}</p>
               </div>
             </div>
           ))}
           {testimonials.map((testimonial) => (
             <div
               key={`${testimonial.id}-clone`}
-              className="min-w-[300px] bg-white dark:bg-black border-neutral-100 dark:border-white/[0.2] shadow-md rounded-2xl p-6 text-gray-800 dark:text-gray-200"
+              className="min-w-[300px] bg-surface border-rule dark:border-white/[0.2] shadow-md rounded-2xl p-6 text-ink"
             >
               <p className="text-sm italic">"{testimonial.text}"</p>
               <div className="mt-4">
                 <h4 className="font-semibold">{testimonial.name}</h4>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  {testimonial.role}
-                </p>
+                <p className="text-sm text-muted">{testimonial.role}</p>
               </div>
             </div>
           ))}
