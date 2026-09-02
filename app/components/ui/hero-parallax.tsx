@@ -60,9 +60,13 @@ export const HeroParallax = ({
     springConfig
   );
   return (
+    // Height comes from the deck itself, not from the viewport. A `min-h` in vh
+    // stretched this section on tall screens while the rows stayed a fixed pixel
+    // height, leaving a dead band under the last row that grew with the window.
+    // The bottom padding only has to hold the deck's final translateY (+500px).
     <div
       ref={ref}
-      className="min-h-[220vh] md:min-h-[300vh] pt-24 md:pt-40 pb-[540px] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="pt-24 md:pt-40 pb-[660px] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       {/*
         The deck sweeps up behind the heading, so the heading cannot rely on the

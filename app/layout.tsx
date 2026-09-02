@@ -173,6 +173,19 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/*
+          Runs before first paint, so a dark-mode reader never sees a frame of
+          light-theme colours. ThemeToggle only adds `.dark` from an effect,
+          which lands after hydration — until then every `dark:` utility was
+          inactive and text meant to be white rendered near-black.
+          Defaults to light when nothing is stored, matching ThemeToggle.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark')}catch(e){}})()",
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://images.unsplash.com" />
