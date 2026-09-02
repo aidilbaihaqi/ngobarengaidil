@@ -68,16 +68,6 @@ export const HeroParallax = ({
       ref={ref}
       className="pt-24 md:pt-40 pb-[660px] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
-      {/*
-        The deck sweeps up behind the heading, so the heading cannot rely on the
-        page background for contrast — dark type landed on dark screenshots and
-        light type on pale ones. A scrim in the page colour sits between the two
-        and fades out before it reaches the cards.
-      */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 z-10 h-[70vh] bg-gradient-to-b from-white via-white/85 to-transparent dark:from-neutral-900 dark:via-neutral-900/85"
-      />
       <div className="relative z-20">
         <Header title={title} description={description} />
       </div>
@@ -130,15 +120,20 @@ export const Header = ({
   description?: React.ReactNode;
 }) => {
   return (
+    // The deck sweeps up behind this text, so it cannot rely on the page
+    // background for contrast: dark type can land on a dark screenshot and light
+    // type on a pale one. The glow is carried by the type itself rather than by
+    // a scrim over the section, which would cover the grid background and read
+    // as a grey band across the top of the section.
     <div className="max-w-7xl relative mx-auto pt-20 md:pt-32 pb-12 md:pb-20 px-4 w-full left-0 top-0">
-      <h1 className="text-2xl md:text-7xl font-bold text-gray-800 dark:text-white">
+      <h1 className="text-2xl md:text-7xl font-bold text-gray-800 dark:text-white [text-shadow:0_2px_16px_rgb(255_255_255/0.9)] dark:[text-shadow:0_2px_16px_rgb(10_10_10/0.9)]">
         {title ?? (
           <>
             Things I&apos;ve <br /> designed &amp; shipped
           </>
         )}
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 text-gray-600 dark:text-neutral-300">
+      <p className="max-w-2xl text-base md:text-xl mt-8 text-gray-600 dark:text-neutral-300 [text-shadow:0_1px_10px_rgb(255_255_255/0.9)] dark:[text-shadow:0_1px_10px_rgb(10_10_10/0.9)]">
         {description ??
           "A selection of full-stack, AI, and automation projects — built with modern frameworks for startups, institutions, and communities. Scroll to explore."}
       </p>
