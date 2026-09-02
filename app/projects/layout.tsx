@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Projects – Aidil Baihaqi",
+  title: "Projects",
   description:
-    "Explore my portfolio of AI/ML projects, web applications, and open source contributions. From bioinformatics platforms to smart city dashboards.",
+    "Explore my portfolio of AI, web, and automation projects — from company profile sites and custom dashboards to AI assistants and internal tools.",
   alternates: {
     canonical: "/projects",
   },
   openGraph: {
     title: "Projects – Aidil Baihaqi",
     description:
-      "Explore my portfolio of AI/ML projects, web applications, and open source contributions.",
+      "Explore my portfolio of AI, web, and automation projects built for real businesses.",
     type: "website",
   },
 };

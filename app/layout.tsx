@@ -29,25 +29,28 @@ const baseUrl = 'https://www.aidilbaihaqi.id';
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "Aidil Baihaqi - Full Stack AI Engineer, IT Mentor & Researcher in Bioinformatics and Medical",
+    default: "Aidil Baihaqi - AI, Web Development & Business Digitalization",
     template: "%s | Aidil Baihaqi"
   },
-  description: "Aidil Baihaqi is a Full Stack AI Engineer, IT Mentor, and Researcher in Bioinformatics and Medical fields. Specializing in scalable AI-powered applications, intelligent backend systems, and research-driven solutions at the intersection of technology, biology, and medicine.",
+  description: "Aidil Baihaqi builds AI solutions, websites, and workflow automation that digitize how businesses run — from company profile sites and custom dashboards to AI assistants and the systems that tie them together. Also an IT mentor, with source code handed over so your team can keep building.",
   keywords: [
     "Aidil Baihaqi",
     "aidil baihaqi",
     "Full Stack AI Engineer",
     "IT Mentor",
-    "Bioinformatics Researcher",
-    "Medical Researcher",
-    "Software Engineer",
     "AI Developer",
     "Machine Learning",
-    "Bioinformatics",
-    "Medical Technology",
-    "ngobarengaidil",
-    "programming tips",
-    "web developer indonesia"
+    "Web Developer",
+    "Business Digitalization",
+    "Workflow Automation",
+    "Custom Dashboard",
+    "Company Profile Website",
+    "Software Engineer",
+    "digitalisasi bisnis",
+    "jasa pembuatan website",
+    "jasa AI",
+    "web developer indonesia",
+    "ngobarengaidil"
   ],
   creator: "Aidil Baihaqi",
   publisher: "Aidil Baihaqi",
@@ -68,22 +71,22 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'id_ID',
     url: baseUrl,
-    title: 'Aidil Baihaqi - Full Stack AI Engineer, IT Mentor & Researcher in Bioinformatics and Medical',
-    description: 'Aidil Baihaqi is a Full Stack AI Engineer, IT Mentor, and Researcher in Bioinformatics and Medical fields. Bridging technology, biology, and medicine through intelligent software solutions.',
+    title: 'Aidil Baihaqi - AI, Web Development & Business Digitalization',
+    description: 'AI solutions, websites, and workflow automation that digitize how businesses run — built end to end, with the source code handed over.',
     siteName: 'Personal Website Aidil Baihaqi',
     images: [
       {
         url: '/image-optimized/aidilbaihaqi.webp',
         width: 800,
         height: 800,
-        alt: 'Aidil Baihaqi - Full Stack AI Engineer & Bioinformatics Researcher',
+        alt: 'Aidil Baihaqi - Full Stack AI Engineer & IT Mentor',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aidil Baihaqi - Full Stack AI Engineer, IT Mentor & Researcher in Bioinformatics and Medical',
-    description: 'Personal website, portfolio, and blog of Aidil Baihaqi — Full Stack AI Engineer, IT Mentor, and Researcher in Bioinformatics and Medical technology.',
+    title: 'Aidil Baihaqi - AI, Web Development & Business Digitalization',
+    description: 'Portfolio of Aidil Baihaqi — AI solutions, websites, and business digitalization, plus IT mentoring.',
     images: ['/image-optimized/aidilbaihaqi.webp'],
   },
   alternates: {
@@ -102,8 +105,8 @@ const jsonLd = {
   name: 'Aidil Baihaqi',
   url: baseUrl,
   image: `${baseUrl}/image-optimized/aidilbaihaqi.webp`,
-  jobTitle: 'Full Stack AI Engineer, IT Mentor & Researcher in Bioinformatics and Medical',
-  description: 'Passionate and results-driven engineer with strong experience in software engineering, AI development, IT mentoring, and research in bioinformatics and medical technology. Bridging the gap between technology and life sciences.',
+  jobTitle: 'Full Stack AI Engineer & IT Mentor',
+  description: 'Engineer building AI solutions, websites, and workflow automation that digitize how businesses run. Also mentors developers and hands over the source code so teams can keep building.',
   sameAs: [
     'https://github.com/aidilbaihaqi',
     'https://www.linkedin.com/in/aidilbaihaqi/',
@@ -112,15 +115,15 @@ const jsonLd = {
     'https://www.tiktok.com/@albyhaqee'
   ],
   knowsAbout: [
-    'Software Engineering',
-    'Full Stack Development',
     'Artificial Intelligence',
     'Machine Learning',
-    'IT Mentoring',
-    'Bioinformatics',
-    'Medical Technology',
-    'Data Science',
-    'Backend Development'
+    'Full Stack Development',
+    'Web Development',
+    'Business Digitalization',
+    'Workflow Automation',
+    'Backend Development',
+    'Data Analysis',
+    'IT Mentoring'
   ],
 };
 
@@ -130,7 +133,7 @@ const websiteJsonLd = {
   '@type': 'WebSite',
   name: 'Personal Website Aidil Baihaqi',
   url: baseUrl,
-  description: 'Personal website, portfolio, and blog of Aidil Baihaqi, featuring insights on software engineering, AI, and programming tips.',
+  description: 'Portfolio of Aidil Baihaqi — AI solutions, websites, and business digitalization, plus IT mentoring and custom builds.',
 };
 
 // JSON-LD for SiteNavigationElement to encourage Sitelinks in Google
@@ -149,7 +152,7 @@ const navigationJsonLd = {
       '@type': 'SiteNavigationElement',
       position: 2,
       name: 'Projects',
-      description: 'Explore the portfolio and projects I have worked on, from AI to full stack development.',
+      description: 'Explore the projects I have shipped — AI, websites, dashboards, and business automation.',
       url: `${baseUrl}/projects`
     },
     {

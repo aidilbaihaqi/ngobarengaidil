@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact – Aidil Baihaqi",
+  title: "Contact",
   description:
-    "Get in touch with Aidil Baihaqi for project inquiries, collaborations, or just to say hi. Available for freelance work and consulting.",
+    "Get in touch with Aidil Baihaqi about a website, an AI build, or digitizing how your business runs. Available for freelance work, consulting, and mentoring.",
   alternates: {
     canonical: "/contact",
   },
   openGraph: {
     title: "Contact – Aidil Baihaqi",
     description:
-      "Get in touch with Aidil Baihaqi for project inquiries, collaborations, or just to say hi.",
+      "Get in touch about a website, an AI build, or digitizing how your business runs.",
     type: "website",
   },
 };
