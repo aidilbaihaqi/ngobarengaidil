@@ -7,7 +7,7 @@ import {
   useTransform,
   useSpring,
   MotionValue,
-} from "motion/react";
+} from "framer-motion";
 
 export type ParallaxProduct = {
   title: string;

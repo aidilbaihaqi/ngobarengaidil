@@ -174,10 +174,15 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
-        <link rel="preload" as="image" href="/image/aidilbaihaqi.webp" type="image/webp" />
+        {/*
+          No manual image preload here: the hero portrait is a next/image with
+          `priority`, so Next emits the preload for the exact transformed URL it
+          will request. A hand-written preload of the raw file would fetch a
+          second, unused copy.
+        */}
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#3b82f6" />
-        <link rel="apple-touch-icon" href="/image-optimized/aidil.webp" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/image-optimized/apple-touch-icon.png" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-neutral-900`}

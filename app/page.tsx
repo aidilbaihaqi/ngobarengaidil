@@ -3,9 +3,10 @@
 import SocialIcons from "./components/Button/SocialIcons";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import dynamic from "next/dynamic";
 import Main from "./components/Layout/Main";
-import { FlipWordsDemo } from "./components/Text/FlipWords";
+import { LayoutTextFlip } from "./components/ui/layout-text-flip";
 
 import React, { Suspense } from "react";
 
@@ -42,6 +43,29 @@ const BentoGridThirdDemo = dynamic(
   }
 );
 
+// The terms the headline plate cycles through. Each one has to close the
+// sentence "I build ___ for biology and medicine." on its own.
+const buildWords = [
+  "AI systems",
+  "data pipelines",
+  "research tools",
+  "web platforms",
+];
+
+// One orchestrated load: the hero sets in top-to-bottom, then it is done.
+const rise = {
+  hidden: { opacity: 0, y: 14 },
+  show: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.06 * i,
+      duration: 0.5,
+      ease: [0.2, 0.8, 0.2, 1] as const,
+    },
+  }),
+};
+
 export default function Home() {
   return (
     <ClickSpark
@@ -55,69 +79,140 @@ export default function Home() {
       <Main>
         {/* Main Content */}
         <main id="content">
-          <div className="w-full max-w-5xl mx-auto px-4 pt-10 sm:px-6 lg:px-8">
-            {/* About */}
-            <div className="text-center" role="main" aria-label="About section">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                className="relative w-40 h-40 md:w-52 mx-auto mb-5 md:h-52 rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-500 via-purple-500 to-pink-500 shadow-xl hover:shadow-2xl transition-shadow duration-300"
+          <div className="w-full max-w-5xl mx-auto px-4 pt-10 sm:px-6 lg:px-8 lg:pt-16">
+            {/* Hero */}
+            <section aria-label="Introduction">
+              <motion.p
+                custom={0}
+                initial="hidden"
+                animate="show"
+                variants={rise}
+                className="text-xs font-medium uppercase tracking-[0.2em] text-gray-500 dark:text-neutral-500"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full p-1">
-                  <div className="relative w-full h-full rounded-full overflow-hidden bg-white dark:bg-gray-900">
-                    <Image
-                      src="/image-optimized/me.webp"
-                      alt="Aidil Baihaqi - Full Stack AI Engineer"
-                      fill
-                      sizes="(max-width: 768px) 160px, 208px"
-                      style={{ objectFit: 'cover' }}
-                      className="transition-transform duration-300 hover:scale-110"
-                      priority
-                      quality={80}
-                      fetchPriority="high"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
-                  </div>
-                </div>
-              </motion.div>
-              <FlipWordsDemo />
-              <p className="text-sm text-gray-600 dark:text-neutral-400 mt-3 leading-6 text-center">
-                I build full-stack web apps, develop AI & ML solutions, and deliver custom source code — while also mentoring developers and helping with academic work like thesis, reports, and data analysis. Whatever you need built, learned, or shipped, I&apos;ve got you covered.
-              </p>
-              <SocialIcons />
+                Aidil Baihaqi · Full-Stack AI · Bioinformatics · Mentoring
+              </motion.p>
 
-              {/* CTA Button to About Page */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="mt-6"
-              >
-                <a
-                  href="/about"
-                  className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
-                >
-                  Learn More About Me
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+              <div className="mt-6 grid gap-x-12 gap-y-10 lg:grid-cols-[1fr_15rem] lg:items-start">
+                <div>
+                  <motion.h1
+                    custom={1}
+                    initial="hidden"
+                    animate="show"
+                    variants={rise}
+                    className="text-4xl md:text-6xl font-bold tracking-tight text-black dark:text-white"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 7l5 5m0 0l-5 5m5-5H6"
-                    />
-                  </svg>
-                </a>
-              </motion.div>
-            </div>
-            {/* End About */}
+                    {/* The stable sentence, for crawlers and screen readers. */}
+                    <span className="sr-only">
+                      I build AI systems, data pipelines, research tools, and web
+                      platforms for biology and medicine.
+                    </span>
+
+                    {/* The visual line. Hidden from AT so the sentence above
+                        is not read twice. */}
+                    <span aria-hidden="true">
+                      <LayoutTextFlip
+                        text="I build"
+                        words={buildWords}
+                        trailing="for biology and medicine."
+                      />
+                    </span>
+                  </motion.h1>
+
+                  <motion.p
+                    custom={2}
+                    initial="hidden"
+                    animate="show"
+                    variants={rise}
+                    className="mt-7 max-w-[54ch] text-base md:text-lg text-gray-600 dark:text-neutral-400 leading-relaxed"
+                  >
+                    Full-stack engineering, applied machine learning, and research
+                    at the point where software meets the life sciences.
+                  </motion.p>
+
+                  <motion.p
+                    custom={3}
+                    initial="hidden"
+                    animate="show"
+                    variants={rise}
+                    className="mt-4 max-w-[54ch] text-sm text-gray-600 dark:text-neutral-400 leading-6"
+                  >
+                    I also mentor developers and help with academic work like
+                    thesis, reports, and data analysis. Whatever you need built,
+                    learned, or shipped, I&apos;ve got you covered.
+                  </motion.p>
+
+                  <motion.div
+                    custom={4}
+                    initial="hidden"
+                    animate="show"
+                    variants={rise}
+                    className="mt-8 flex flex-wrap items-center gap-3"
+                  >
+                    <Link
+                      href="/projects"
+                      className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                    >
+                      See the work
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-4 w-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M13 7l5 5m0 0l-5 5m5-5H6"
+                        />
+                      </svg>
+                    </Link>
+
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center px-6 py-3 text-sm font-medium rounded-full border border-gray-300 text-gray-700 hover:border-gray-400 dark:border-white/15 dark:text-neutral-300 dark:hover:border-white/30 transition-all duration-300"
+                    >
+                      Start a conversation
+                    </Link>
+                  </motion.div>
+
+                  <motion.div
+                    custom={5}
+                    initial="hidden"
+                    animate="show"
+                    variants={rise}
+                  >
+                    <SocialIcons className="justify-start mt-8" />
+                  </motion.div>
+                </div>
+
+                {/* Portrait, in the gradient ring this site uses for it */}
+                <motion.div
+                  custom={2}
+                  initial="hidden"
+                  animate="show"
+                  variants={rise}
+                  className="order-first w-40 max-w-full mx-auto sm:w-52 lg:order-none lg:mx-0 lg:w-full lg:max-w-[15rem]"
+                >
+                  <div className="rounded-2xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-1 shadow-xl">
+                    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[0.85rem] bg-white dark:bg-gray-900">
+                      <Image
+                        src="/image-optimized/me.webp"
+                        alt="Aidil Baihaqi - Full Stack AI Engineer"
+                        fill
+                        sizes="(max-width: 1024px) 208px, 240px"
+                        style={{ objectFit: 'cover' }}
+                        priority
+                        quality={80}
+                        fetchPriority="high"
+                      />
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </section>
+            {/* End Hero */}
           </div>
 
           {/* Interactive Parallax Projects */}
