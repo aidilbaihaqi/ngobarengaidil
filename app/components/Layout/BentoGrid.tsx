@@ -3,7 +3,26 @@ import { cn } from "@/app/lib/utils";
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { IconBrain, IconCode, IconMessages, IconBook, IconPackage } from "@tabler/icons-react";
+import {
+  IconBrain,
+  IconCode,
+  IconMessages,
+  IconBook,
+  IconPackage,
+  IconBrandReact,
+  IconSettings,
+  IconDatabase,
+  IconRocket,
+  IconChartBar,
+  IconPresentation,
+  IconPalette,
+  IconMicroscope,
+  IconFolder,
+  IconUser,
+} from "@tabler/icons-react";
+
+// Tile glyphs are drawn, not typed: emoji fall back to a blank box wherever the
+// platform has no emoji font, which left these cards looking empty.
 
 // ── Skeleton 1: IT Mentoring — looping chat bubbles ──────────────────────────
 const SkeletonOne = () => {
@@ -62,10 +81,10 @@ const SkeletonOne = () => {
 // ── Skeleton 2: Full Stack Web Dev — tech stack layers on hover ───────────────
 const SkeletonTwo = () => {
   const layers = [
-    { label: "Frontend", tech: "Next.js · React", icon: "⚛️", color: "from-blue-400 to-cyan-400" },
-    { label: "Backend", tech: "Go · FastAPI", icon: "⚙️", color: "from-purple-400 to-violet-500" },
-    { label: "Database", tech: "PostgreSQL · MySQL", icon: "🗄️", color: "from-green-400 to-emerald-500" },
-    { label: "Deploy", tech: "Docker · Nginx · VPS", icon: "🚀", color: "from-orange-400 to-red-400" },
+    { label: "Frontend", tech: "Next.js · React", Icon: IconBrandReact, color: "from-blue-400 to-cyan-400" },
+    { label: "Backend", tech: "Go · FastAPI", Icon: IconSettings, color: "from-purple-400 to-violet-500" },
+    { label: "Database", tech: "PostgreSQL · MySQL", Icon: IconDatabase, color: "from-green-400 to-emerald-500" },
+    { label: "Deploy", tech: "Docker · Nginx · VPS", Icon: IconRocket, color: "from-orange-400 to-red-400" },
   ];
 
   return (
@@ -84,9 +103,9 @@ const SkeletonTwo = () => {
           className="flex items-center gap-2"
         >
           <div
-            className={`w-6 h-6 rounded-md bg-gradient-to-br ${layer.color} flex items-center justify-center flex-shrink-0 shadow-sm text-[11px]`}
+            className={`w-6 h-6 rounded-md bg-gradient-to-br ${layer.color} flex items-center justify-center flex-shrink-0 shadow-sm`}
           >
-            {layer.icon}
+            <layer.Icon className="h-3.5 w-3.5 text-white" />
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-1 mb-0.5">
@@ -201,10 +220,10 @@ const SkeletonThree = () => {
 // ── Skeleton 4: Assignment Tutor — connected service icons on hover ───────────
 const SkeletonFour = () => {
   const services = [
-    { icon: "📊", label: "Reports & Thesis", color: "from-blue-400 to-cyan-500" },
-    { icon: "🎯", label: "Presentations", color: "from-purple-400 to-violet-500" },
-    { icon: "📐", label: "Graphic Design", color: "from-pink-400 to-rose-500" },
-    { icon: "🔬", label: "Data Analysis", color: "from-green-400 to-emerald-500" },
+    { Icon: IconChartBar, label: "Reports & Thesis", color: "from-blue-400 to-cyan-500" },
+    { Icon: IconPresentation, label: "Presentations", color: "from-purple-400 to-violet-500" },
+    { Icon: IconPalette, label: "Graphic Design", color: "from-pink-400 to-rose-500" },
+    { Icon: IconMicroscope, label: "Data Analysis", color: "from-green-400 to-emerald-500" },
   ];
 
   return (
@@ -232,7 +251,7 @@ const SkeletonFour = () => {
             className="flex flex-col items-center gap-2 z-10"
           >
             <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${s.color} flex items-center justify-center shadow-md`}>
-              <span className="text-lg">{s.icon}</span>
+              <s.Icon className="h-5 w-5 text-white" />
             </div>
             <span className="text-[8px] font-medium text-gray-600 dark:text-gray-400 text-center leading-tight">
               {s.label}
@@ -264,7 +283,7 @@ const SkeletonFive = () => {
         >
           <div className="w-12 h-10 bg-yellow-400 dark:bg-yellow-500 rounded-lg flex items-center justify-center shadow-md relative">
             <div className="absolute -top-1.5 left-1 w-4 h-1.5 bg-yellow-500 dark:bg-yellow-600 rounded-t-md" />
-            <span className="text-xl">📁</span>
+            <IconFolder className="h-5 w-5 text-yellow-900" />
           </div>
           <span className="text-[9px] text-gray-500 dark:text-gray-400 font-medium">Source Code</span>
         </motion.div>
@@ -292,7 +311,7 @@ const SkeletonFive = () => {
           className="flex flex-col items-center gap-1.5"
         >
           <div className="w-12 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-md">
-            <span className="text-xl">👤</span>
+            <IconUser className="h-5 w-5 text-white" />
           </div>
           <span className="text-[9px] text-gray-500 dark:text-gray-400 font-medium">Client</span>
         </motion.div>

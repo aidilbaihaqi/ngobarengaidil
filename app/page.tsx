@@ -44,12 +44,12 @@ const BentoGridThirdDemo = dynamic(
 );
 
 // The terms the headline plate cycles through. Each one has to close the
-// sentence "I build ___ for biology and medicine." on its own.
+// sentence "I build ___ to digitize your business." on its own.
 const buildWords = [
-  "AI systems",
-  "data pipelines",
-  "research tools",
-  "web platforms",
+  "AI solutions",
+  "websites",
+  "automations",
+  "internal tools",
 ];
 
 // One orchestrated load: the hero sets in top-to-bottom, then it is done.
@@ -81,7 +81,10 @@ export default function Home() {
         <main id="content">
           <div className="w-full max-w-5xl mx-auto px-4 pt-10 sm:px-6 lg:px-8 lg:pt-16">
             {/* Hero */}
-            <section aria-label="Introduction">
+            <section
+              aria-label="Introduction"
+              className="text-center lg:text-left"
+            >
               <motion.p
                 custom={0}
                 initial="hidden"
@@ -89,10 +92,10 @@ export default function Home() {
                 variants={rise}
                 className="text-xs font-medium uppercase tracking-[0.2em] text-gray-500 dark:text-neutral-500"
               >
-                Aidil Baihaqi · Full-Stack AI · Bioinformatics · Mentoring
+                Aidil Baihaqi · AI · Web Development · Business Digitalization
               </motion.p>
 
-              <div className="mt-6 grid gap-x-12 gap-y-10 lg:grid-cols-[1fr_15rem] lg:items-start">
+              <div className="mt-6 grid gap-x-12 gap-y-10 lg:grid-cols-[1fr_18rem] lg:items-start">
                 <div>
                   <motion.h1
                     custom={1}
@@ -103,17 +106,18 @@ export default function Home() {
                   >
                     {/* The stable sentence, for crawlers and screen readers. */}
                     <span className="sr-only">
-                      I build AI systems, data pipelines, research tools, and web
-                      platforms for biology and medicine.
+                      I build AI solutions, websites, automations, and internal
+                      tools to digitize your business.
                     </span>
 
                     {/* The visual line. Hidden from AT so the sentence above
                         is not read twice. */}
                     <span aria-hidden="true">
                       <LayoutTextFlip
+                        className="items-center lg:items-start"
                         text="I build"
                         words={buildWords}
-                        trailing="for biology and medicine."
+                        trailing="to digitize your business."
                       />
                     </span>
                   </motion.h1>
@@ -123,10 +127,10 @@ export default function Home() {
                     initial="hidden"
                     animate="show"
                     variants={rise}
-                    className="mt-7 max-w-[54ch] text-base md:text-lg text-gray-600 dark:text-neutral-400 leading-relaxed"
+                    className="mt-7 max-w-[54ch] mx-auto lg:mx-0 text-base md:text-lg text-gray-600 dark:text-neutral-400 leading-relaxed"
                   >
-                    Full-stack engineering, applied machine learning, and research
-                    at the point where software meets the life sciences.
+                    Web development, applied AI, and workflow automation — turning
+                    manual, offline processes into systems that run on their own.
                   </motion.p>
 
                   <motion.p
@@ -134,11 +138,12 @@ export default function Home() {
                     initial="hidden"
                     animate="show"
                     variants={rise}
-                    className="mt-4 max-w-[54ch] text-sm text-gray-600 dark:text-neutral-400 leading-6"
+                    className="mt-4 max-w-[54ch] mx-auto lg:mx-0 text-sm text-gray-600 dark:text-neutral-400 leading-6"
                   >
-                    I also mentor developers and help with academic work like
-                    thesis, reports, and data analysis. Whatever you need built,
-                    learned, or shipped, I&apos;ve got you covered.
+                    From a company profile site to a custom dashboard, an AI
+                    assistant, or the system that ties them together. I also
+                    mentor developers and hand over the source code, so your team
+                    can keep building after I hand it off.
                   </motion.p>
 
                   <motion.div
@@ -146,7 +151,7 @@ export default function Home() {
                     initial="hidden"
                     animate="show"
                     variants={rise}
-                    className="mt-8 flex flex-wrap items-center gap-3"
+                    className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-3"
                   >
                     <Link
                       href="/projects"
@@ -183,17 +188,17 @@ export default function Home() {
                     animate="show"
                     variants={rise}
                   >
-                    <SocialIcons className="justify-start mt-8" />
+                    <SocialIcons className="justify-center lg:justify-start mt-8" />
                   </motion.div>
                 </div>
 
                 {/* Portrait, in the gradient ring this site uses for it */}
-                <motion.div
+                <motion.figure
                   custom={2}
                   initial="hidden"
                   animate="show"
                   variants={rise}
-                  className="order-first w-40 max-w-full mx-auto sm:w-52 lg:order-none lg:mx-0 lg:w-full lg:max-w-[15rem]"
+                  className="order-first w-56 max-w-full mx-auto sm:w-64 lg:order-none lg:mx-0 lg:w-full lg:max-w-[18rem]"
                 >
                   <div className="rounded-2xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-1 shadow-xl">
                     <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[0.85rem] bg-white dark:bg-gray-900">
@@ -201,7 +206,7 @@ export default function Home() {
                         src="/image-optimized/me.webp"
                         alt="Aidil Baihaqi - Full Stack AI Engineer"
                         fill
-                        sizes="(max-width: 1024px) 208px, 240px"
+                        sizes="(max-width: 640px) 224px, (max-width: 1024px) 256px, 288px"
                         style={{ objectFit: 'cover' }}
                         priority
                         quality={80}
@@ -209,7 +214,14 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                </motion.div>
+                  <figcaption className="mt-3 text-xs leading-relaxed text-gray-500 dark:text-neutral-500">
+                    <span className="font-medium text-gray-700 dark:text-neutral-300">
+                      Aidil Baihaqi
+                    </span>{" "}
+                    — full-stack engineer and IT mentor, building AI, websites,
+                    and digitalization for growing businesses.
+                  </figcaption>
+                </motion.figure>
               </div>
             </section>
             {/* End Hero */}

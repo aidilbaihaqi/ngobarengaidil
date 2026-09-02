@@ -64,7 +64,19 @@ export const HeroParallax = ({
       ref={ref}
       className="min-h-[220vh] md:min-h-[300vh] pt-24 md:pt-40 pb-[540px] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
-      <Header title={title} description={description} />
+      {/*
+        The deck sweeps up behind the heading, so the heading cannot rely on the
+        page background for contrast — dark type landed on dark screenshots and
+        light type on pale ones. A scrim in the page colour sits between the two
+        and fades out before it reaches the cards.
+      */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 z-10 h-[70vh] bg-gradient-to-b from-white via-white/85 to-transparent dark:from-neutral-900 dark:via-neutral-900/85"
+      />
+      <div className="relative z-20">
+        <Header title={title} description={description} />
+      </div>
       <motion.div
         style={{
           rotateX,
@@ -72,7 +84,7 @@ export const HeroParallax = ({
           translateY,
           opacity,
         }}
-        className=""
+        className="relative z-0"
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-6 md:space-x-20 mb-6 md:mb-20">
           {firstRow.map((product) => (
