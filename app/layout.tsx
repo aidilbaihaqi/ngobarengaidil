@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'id_ID',
+    locale: 'en_US',
     url: baseUrl,
     title: 'Aidil Baihaqi - AI, Web Development & Business Digitalization',
     description: 'AI solutions, websites, and workflow automation that digitize how businesses run — built end to end, with the source code handed over.',
