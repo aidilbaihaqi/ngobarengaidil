@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import Main from "./components/Layout/Main";
-import LadderRail from "./components/Layout/LadderRail";
+import { LayoutTextFlip } from "./components/ui/layout-text-flip";
 
 import React, { Suspense } from "react";
 
@@ -49,10 +49,13 @@ const BentoGridThirdDemo = dynamic(
   },
 );
 
-const stops = [
-  { id: "overview", label: "Overview" },
-  { id: "work", label: "Work" },
-  { id: "services", label: "Services" },
+// The terms the headline plate cycles through. Each one has to close the
+// sentence "I build ___ for biology and medicine." on its own.
+const buildWords = [
+  "AI systems",
+  "data pipelines",
+  "research tools",
+  "web platforms",
 ];
 
 // One orchestrated load: the hero sets in top-to-bottom, then it is done.
@@ -80,8 +83,6 @@ export default function Home() {
       easing="ease-out"
     >
       <Main>
-        <LadderRail stops={stops} />
-
         <main id="content">
           {/* ---------------- Overview ---------------- */}
           <section
@@ -107,10 +108,23 @@ export default function Home() {
                   initial="hidden"
                   animate="show"
                   variants={rise}
-                  className="max-w-[19ch] text-display font-medium tracking-tightest text-ink"
+                  className="text-display font-medium tracking-tightest text-ink"
                 >
-                  I build AI systems for biology and medicine, and teach people
-                  to build them too.
+                  {/* The stable sentence, for crawlers and screen readers. */}
+                  <span className="sr-only">
+                    I build AI systems, data pipelines, research tools, and web
+                    platforms for biology and medicine.
+                  </span>
+
+                  {/* The visual line. Hidden from AT so the sentence above
+                      is not read twice. */}
+                  <span aria-hidden="true">
+                    <LayoutTextFlip
+                      text="I build"
+                      words={buildWords}
+                      trailing="for biology and medicine."
+                    />
+                  </span>
                 </motion.h1>
 
                 <motion.p

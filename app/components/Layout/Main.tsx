@@ -1,8 +1,5 @@
-import PageLoader from "../Animation/PageLoader";
 import Header from "../Partials/Header";
 import Footer from "../Partials/Footer";
-
-// import Image from "next/image";
 
 export default function Main({
   children,
@@ -13,7 +10,7 @@ export default function Main({
     <>
       <Header />
 
-      <PageLoader>{children}</PageLoader>
+      {children}
 
       <Footer />
     </>
