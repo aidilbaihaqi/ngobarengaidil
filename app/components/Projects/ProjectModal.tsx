@@ -61,7 +61,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50"
+            className="fixed inset-0 bg-neutral-950/80 backdrop-blur-sm z-50"
           />
 
           {/* Modal */}
@@ -72,13 +72,13 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
                 transition={{ duration: 0.3 }}
-                className="relative w-full max-w-4xl bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-white/10 rounded-2xl shadow-2xl overflow-hidden"
+                className="relative w-full max-w-4xl bg-white dark:bg-neutral-950 border border-gray-200 dark:border-white/10 rounded-2xl shadow-2xl overflow-hidden"
                 onClick={(e) => e.stopPropagation()}
               >
                 {/* Close Button */}
                 <button
                   onClick={onClose}
-                  className="absolute top-4 right-4 z-10 p-2 bg-white/90 dark:bg-black/50 hover:bg-white dark:hover:bg-black/70 border border-gray-200 dark:border-white/10 rounded-full text-gray-800 dark:text-white transition-all duration-300"
+                  className="absolute top-4 right-4 z-10 p-2 bg-white/90 dark:bg-neutral-950/60 hover:bg-white dark:hover:bg-neutral-950/80 border border-gray-200 dark:border-white/10 rounded-full text-gray-800 dark:text-white transition-all duration-300"
                   aria-label="Close modal"
                 >
                   <X className="w-6 h-6" />
@@ -92,7 +92,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-black/50 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/60 to-transparent" />
                 </div>
 
                 {/* Content */}

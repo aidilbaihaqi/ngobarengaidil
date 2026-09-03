@@ -40,7 +40,7 @@ export default function AwardCarousel({ images, alt }: AwardCarouselProps) {
           {/* Navigation Buttons */}
           <button
             onClick={goToPrevious}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-1 rounded-full transition-colors"
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-neutral-950/55 hover:bg-neutral-950/75 text-white p-1 rounded-full transition-colors"
             aria-label="Previous image"
           >
             <ChevronLeft className="w-5 h-5" />
@@ -48,7 +48,7 @@ export default function AwardCarousel({ images, alt }: AwardCarouselProps) {
 
           <button
             onClick={goToNext}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-1 rounded-full transition-colors"
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-neutral-950/55 hover:bg-neutral-950/75 text-white p-1 rounded-full transition-colors"
             aria-label="Next image"
           >
             <ChevronRight className="w-5 h-5" />

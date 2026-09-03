@@ -181,7 +181,7 @@ export default function FeaturedCardSwap({ items }: FeaturedCardSwapProps) {
                   quality={80}
                   loading={activeIndex === 0 ? "eager" : "lazy"}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/85 via-neutral-950/25 to-transparent" />
               </div>
             </motion.div>
           </AnimatePresence>
@@ -189,14 +189,14 @@ export default function FeaturedCardSwap({ items }: FeaturedCardSwapProps) {
           {/* Navigation Arrows */}
           <button
             onClick={goToPrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 bg-white/90 dark:bg-black/50 hover:bg-white dark:hover:bg-black/70 border border-gray-200 dark:border-white/10 rounded-full text-gray-800 dark:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-white/50"
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 bg-white/90 dark:bg-neutral-950/60 hover:bg-white dark:hover:bg-neutral-950/80 border border-gray-200 dark:border-white/10 rounded-full text-gray-800 dark:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-white/50"
             aria-label="Previous project"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={goToNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3 bg-white/90 dark:bg-black/50 hover:bg-white dark:hover:bg-black/70 border border-gray-200 dark:border-white/10 rounded-full text-gray-800 dark:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-white/50"
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3 bg-white/90 dark:bg-neutral-950/60 hover:bg-white dark:hover:bg-neutral-950/80 border border-gray-200 dark:border-white/10 rounded-full text-gray-800 dark:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-white/50"
             aria-label="Next project"
           >
             <ChevronRight className="w-6 h-6" />

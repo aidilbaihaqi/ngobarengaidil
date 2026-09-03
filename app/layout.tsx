@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Space_Grotesk, Silkscreen } from "next/font/google";
 import "./globals.css";
 import PrelineScript from "./components/PrelineScript";
 import { GridBackground } from "./components/ui/grid-background";
@@ -16,6 +16,23 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
   display: 'swap',
   preload: true,
+});
+
+// Secondary face. Carries every heading and any label that needs voice.
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],
+  display: 'swap',
+  preload: true,
+});
+
+// Bitmap display face, in the spirit of Minecraftia. Used for the wordmark
+// under the hero portrait, so it is loaded but not preloaded ahead of body copy.
+const pixelFont = Silkscreen({
+  variable: "--font-pixel",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: 'swap',
 });
 
 export const viewport = {
@@ -197,11 +214,11 @@ export default function RootLayout({
           second, unused copy.
         */}
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#3b82f6" />
+        <meta name="theme-color" content="#1A73E8" />
         <link rel="apple-touch-icon" sizes="180x180" href="/image-optimized/apple-touch-icon.png" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-neutral-900`}
+        className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} ${pixelFont.variable} antialiased`}
       >
         <script
           type="application/ld+json"

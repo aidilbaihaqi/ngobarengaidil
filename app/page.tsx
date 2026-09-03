@@ -69,7 +69,7 @@ const rise = {
 export default function Home() {
   return (
     <ClickSpark
-      sparkColor="#3b82f6"
+      sparkColor="#1A73E8"
       sparkSize={12}
       sparkRadius={20}
       sparkCount={10}
@@ -155,7 +155,7 @@ export default function Home() {
                   >
                     <Link
                       href="/projects"
-                      className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                      className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-blue-500 via-cyan-500 to-green-500 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
                     >
                       See the work
                       <svg
@@ -200,7 +200,7 @@ export default function Home() {
                   variants={rise}
                   className="order-first w-56 max-w-full mx-auto sm:w-64 lg:order-none lg:mx-0 lg:w-full lg:max-w-[18rem]"
                 >
-                  <div className="rounded-2xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-1 shadow-xl">
+                  <div className="rounded-2xl bg-gradient-to-r from-blue-500 via-cyan-500 to-green-500 p-1 shadow-xl">
                     <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[0.85rem] bg-white dark:bg-gray-900">
                       <Image
                         src="/image-optimized/me.webp"
@@ -214,12 +214,8 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <figcaption className="mt-3 text-xs leading-relaxed text-gray-500 dark:text-neutral-500">
-                    <span className="font-medium text-gray-700 dark:text-neutral-300">
-                      Aidil Baihaqi
-                    </span>{" "}
-                    — full-stack engineer and IT mentor, building AI, websites,
-                    and digitalization for growing businesses.
+                  <figcaption className="mt-4 font-pixel text-sm sm:text-base tracking-tight text-center lg:text-left text-gray-900 dark:text-white">
+                    Aidil Baihaqi
                   </figcaption>
                 </motion.figure>
               </div>

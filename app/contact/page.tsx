@@ -86,7 +86,7 @@ export default function ContactPage() {
 
   return (
     <ClickSpark
-      sparkColor="#8b5cf6"
+      sparkColor="#1A73E8"
       sparkSize={10}
       sparkRadius={18}
       sparkCount={8}

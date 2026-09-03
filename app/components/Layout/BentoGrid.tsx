@@ -170,7 +170,7 @@ const SkeletonThree = () => {
       <div className="flex-1 flex flex-col gap-1.5 overflow-hidden">
         {lines.map((line, i) => (
           <div key={i} className="flex items-center gap-2">
-            <span className="text-[8px] text-gray-400 dark:text-gray-600 w-4 text-right flex-shrink-0 font-mono">
+            <span className="text-[8px] text-gray-400 dark:text-gray-500 w-4 text-right flex-shrink-0 font-mono">
               {i + 1}
             </span>
             <motion.div
@@ -360,7 +360,7 @@ const items = [
     ),
     header: <SkeletonOne />,
     className: "",
-    icon: <IconMessages className="h-4 w-4 text-neutral-500" />,
+    icon: <IconMessages className="h-4 w-4 text-neutral-500 dark:text-neutral-400" />,
   },
   {
     title: "Full Stack Web Development",
@@ -369,7 +369,7 @@ const items = [
     ),
     header: <SkeletonTwo />,
     className: "",
-    icon: <IconCode className="h-4 w-4 text-neutral-500" />,
+    icon: <IconCode className="h-4 w-4 text-neutral-500 dark:text-neutral-400" />,
   },
   {
     title: "AI & Machine Learning",
@@ -378,7 +378,7 @@ const items = [
     ),
     header: <SkeletonThree />,
     className: "",
-    icon: <IconBrain className="h-4 w-4 text-neutral-500" />,
+    icon: <IconBrain className="h-4 w-4 text-neutral-500 dark:text-neutral-400" />,
   },
   {
     title: "Academic Tutor & Consulting",
@@ -387,7 +387,7 @@ const items = [
     ),
     header: <SkeletonFour />,
     className: "sm:col-span-2 lg:col-span-2",
-    icon: <IconBook className="h-4 w-4 text-neutral-500" />,
+    icon: <IconBook className="h-4 w-4 text-neutral-500 dark:text-neutral-400" />,
   },
   {
     title: "Source Code & Project Delivery",
@@ -396,6 +396,6 @@ const items = [
     ),
     header: <SkeletonFive />,
     className: "",
-    icon: <IconPackage className="h-4 w-4 text-neutral-500" />,
+    icon: <IconPackage className="h-4 w-4 text-neutral-500 dark:text-neutral-400" />,
   },
 ];

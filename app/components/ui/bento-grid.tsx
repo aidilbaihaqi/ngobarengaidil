@@ -35,7 +35,12 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "relative overflow-hidden rounded-xl group/bento hover:shadow-xl transition-all duration-300 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border-2 border-gray-200 dark:border-transparent hover:border-gray-300 dark:hover:border-white/[0.2] flex flex-col h-full",
+        "relative overflow-hidden rounded-xl group/bento hover:shadow-xl transition-all duration-300 shadow-input dark:shadow-none p-4 flex flex-col h-full",
+        "bg-white border-2 border-gray-200 hover:border-gray-300",
+        // On the navy ground the card needs both a lighter surface and a
+        // visible edge. `dark:border-transparent` used to erase that edge, so
+        // the card had no boundary at all in dark mode.
+        "dark:bg-neutral-900 dark:border-white/10 dark:hover:border-white/25",
         className
       )}
     >

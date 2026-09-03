@@ -4,8 +4,8 @@
   "description": "Portfolio of Aidil Baihaqi \u2014 AI solutions, websites, and workflow automation that digitize how businesses run, plus IT mentoring.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0a0a0a",
-  "theme_color": "#3b82f6",
+  "background_color": "#0D1B2A",
+  "theme_color": "#1A73E8",
   "orientation": "portrait-primary",
   "icons": [
     {

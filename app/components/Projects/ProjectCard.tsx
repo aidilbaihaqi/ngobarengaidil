@@ -37,7 +37,7 @@ function ProjectCard({ project, onClick }: ProjectCardProps) {
             quality={75}
             onLoad={() => setImageLoaded(true)}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/85 via-neutral-950/25 to-transparent" />
         </div>
 
         {/* Content */}
