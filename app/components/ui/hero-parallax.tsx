@@ -158,7 +158,11 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product h-64 w-[22rem] md:h-96 md:w-[30rem] relative shrink-0"
+      // The covers are all wide banners, around 2:1. The card used to be 1.25:1,
+      // so `object-cover` threw away a third of every image — and anchoring to
+      // `left-top` meant what survived was the corner, not the subject. Framing
+      // the card at roughly the covers' own ratio keeps them nearly whole.
+      className="group/product h-48 w-[22rem] md:h-[16.5rem] md:w-[30rem] relative shrink-0"
     >
       <a
         href={product.link}
@@ -171,7 +175,7 @@ export const ProductCard = ({
           src={product.thumbnail}
           fill
           sizes="(max-width: 768px) 22rem, 30rem"
-          className="object-cover object-left-top absolute inset-0"
+          className="object-cover object-center absolute inset-0"
           alt={product.title}
           loading="lazy"
         />

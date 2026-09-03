@@ -219,60 +219,81 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <figcaption className="mt-4 font-pixel text-sm sm:text-base tracking-tight text-center lg:text-left text-gray-900 dark:text-white">
-                    Aidil Baihaqi
+                  {/*
+                    Centred at every width, with a rule either side that grows
+                    to fill whatever the name leaves over — so the caption always
+                    spans the full width of the portrait above it. The square
+                    caps echo the bitmap face the name is set in.
+                  */}
+                  <figcaption className="mt-4 flex items-center gap-2 font-pixel text-xs tracking-tight text-gray-900 sm:gap-3 sm:text-sm dark:text-white">
+                    <span aria-hidden="true" className="flex min-w-0 flex-1 items-center gap-1.5">
+                      <span className="h-px flex-1 bg-gradient-to-r from-transparent to-gray-300 dark:to-white/30" />
+                      <span className="h-1 w-1 shrink-0 bg-gray-400 dark:bg-white/50" />
+                    </span>
+
+                    <span className="shrink-0">Aidil Baihaqi</span>
+
+                    <span aria-hidden="true" className="flex min-w-0 flex-1 items-center gap-1.5">
+                      <span className="h-1 w-1 shrink-0 bg-gray-400 dark:bg-white/50" />
+                      <span className="h-px flex-1 bg-gradient-to-l from-transparent to-gray-300 dark:to-white/30" />
+                    </span>
                   </figcaption>
                 </motion.figure>
               </div>
 
-              {/*
-                Name and expertise on a moving strip, closing the first screen.
-
-                The strip is drawn in a fixed 1200x520 viewBox with the line
-                through the middle, so the SVG carries roughly 200px of empty
-                space above and below the band. The outer div crops to the band
-                height and the inner one re-centres the SVG inside that crop —
-                without it the hero would gain a few hundred pixels of nothing
-                and push itself past 100vh.
-              */}
-              <motion.div
-                custom={6}
-                initial="hidden"
-                animate="show"
-                variants={rise}
-                className="relative mt-10 h-12 overflow-hidden sm:h-14"
-                aria-label="Aidil Baihaqi — areas of expertise"
-              >
-                <div className="absolute inset-x-0 top-1/2 -translate-y-1/2">
-                  <TextLoop
-                    /*
-                      The viewBox is a fixed width, so on a phone the lettering
-                      would scale down to about a third. Holding the SVG at a
-                      minimum width and letting the wrapper clip it keeps the
-                      type legible; it is a marquee, so a cropped edge reads as
-                      intended.
-                    */
-                    className="[&>svg]:min-w-[900px]"
-                    text="Aidil Baihaqi ✦ AI Engineer ✦ Web Development ✦ Business Digitalization ✦ Workflow Automation ✦ IT Mentor"
-                    shape="line"
-                    speed={60}
-                    direction="forward"
-                    separator="✦"
-                    fontSize={30}
-                    fontWeight={800}
-                    letterSpacing={1}
-                    uppercase
-                    color="#000000"
-                    ribbon
-                    ribbonColor="#2BC48A"
-                    ribbonWidth={56}
-                    pauseOnHover
-                  />
-                </div>
-              </motion.div>
             </section>
             {/* End Hero */}
           </div>
+
+          {/*
+            Name and expertise on a moving strip, closing the first screen.
+
+            It sits outside the centred `max-w-5xl` wrapper on purpose: `main`
+            is unconstrained, so being a child of it is what makes the band run
+            edge to edge. Doing it from inside with `w-screen` would have added
+            the scrollbar's width and left the page scrolling sideways.
+
+            The strip is drawn in a fixed 1200x520 viewBox with the line through
+            the middle, so the SVG carries roughly 200px of empty space above
+            and below the band. The outer element crops to exactly the band's
+            share of that box (56 of 1200 across) and the inner one re-centres
+            the SVG inside the crop.
+          */}
+          <motion.section
+            custom={6}
+            initial="hidden"
+            animate="show"
+            variants={rise}
+            className="relative mt-10 h-[max(42px,4.667vw)] overflow-hidden md:mt-12"
+            aria-label="Aidil Baihaqi — areas of expertise"
+          >
+            <div className="absolute inset-x-0 top-1/2 -translate-y-1/2">
+              <TextLoop
+                /*
+                  Below roughly 900px the whole viewBox — lettering included —
+                  would scale down past legibility, so the SVG holds a minimum
+                  width and the wrapper clips it. It is a marquee, so a cropped
+                  edge reads as intended. `min-h` covers the same case for the
+                  crop, which would otherwise follow the narrower wrapper.
+                */
+                className="[&>svg]:min-w-[900px]"
+                text="Aidil Baihaqi ✦ AI Engineer ✦ Web Development ✦ Business Digitalization ✦ Workflow Automation ✦ IT Mentor"
+                shape="line"
+                speed={60}
+                direction="forward"
+                separator="✦"
+                fontSize={30}
+                fontWeight={800}
+                letterSpacing={1}
+                uppercase
+                color="#000000"
+                ribbon
+                ribbonColor="#2BC48A"
+                ribbonWidth={56}
+                pauseOnHover
+              />
+            </div>
+          </motion.section>
 
           {/* Interactive Parallax Projects */}
           <div className="mt-16 md:mt-28">
