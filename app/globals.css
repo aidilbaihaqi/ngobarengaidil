@@ -10,8 +10,9 @@
  *   Soft gray    #E6E9EC   210 14% 91%
  *   Fresh green  #2BC48A   157 64% 47%
  *
- * Light mode reads as soft gray paper with navy ink; dark mode inverts onto
- * the navy. Blue carries every action, green every positive signal.
+ * Light reads as soft gray paper with navy ink. Dark drops to a pure black
+ * ground with the deep navy as the panel surface above it. Blue carries every
+ * action, green every positive signal.
  * ------------------------------------------------------------------------- */
 
 @layer base {
@@ -51,14 +52,14 @@
   }
 
   .dark {
-    --background: 211 53% 11%;
+    --background: 0 0% 0%;
     --foreground: 210 14% 91%;
-    --card: 211 45% 14%;
+    --card: 211 53% 11%;
     --card-foreground: 210 14% 91%;
-    --popover: 211 45% 14%;
+    --popover: 211 53% 11%;
     --popover-foreground: 210 14% 91%;
     --primary: 214 85% 60%;
-    --primary-foreground: 211 53% 11%;
+    --primary-foreground: 0 0% 0%;
     --secondary: 211 38% 18%;
     --secondary-foreground: 210 14% 91%;
     --muted: 211 38% 18%;
@@ -217,4 +218,43 @@ img {
 
 .dark * {
   scrollbar-color: #5096F1 transparent;
+}
+
+/* ---------------------------------------------------------------------------
+ * Custom pointer
+ *
+ * A black arrow. On a black ground a solid black shape would vanish, so both
+ * cursors carry a white keyline — the fill is the colour, the outline is what
+ * keeps it findable. Each declaration ends in a native keyword so the pointer
+ * still works if the browser rejects the image (size limits, SVG cursors off).
+ * ------------------------------------------------------------------------- */
+
+body {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 width%3D%2226%22 height%3D%2226%22 viewBox%3D%220 0 26 26%22%3E%3Cpath d%3D%22M5 2.2 5 21 10 16.2 12.9 23 16.4 21.4 13.5 14.8 20.4 14.6Z%22 fill%3D%22%23000000%22 stroke%3D%22%23ffffff%22 stroke-width%3D%221.6%22 stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E") 5 2, default;
+}
+
+/*
+  Anything clickable gets the dot instead of the arrow. `.cursor-pointer` is in
+  the list because Tailwind sets that on many controls; matching its specificity
+  and coming later in the file is what lets this win.
+*/
+a,
+button,
+summary,
+select,
+[role="button"],
+[role="tab"],
+.cursor-pointer {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 width%3D%2226%22 height%3D%2226%22 viewBox%3D%220 0 26 26%22%3E%3Ccircle cx%3D%2213%22 cy%3D%2213%22 r%3D%227%22 fill%3D%22%23000000%22 stroke%3D%22%23ffffff%22 stroke-width%3D%221.8%22%2F%3E%3C%2Fsvg%3E") 13 13, pointer;
+}
+
+/* Text entry keeps the caret it needs to be usable. */
+input:not([type="button"]):not([type="submit"]):not([type="reset"]),
+textarea {
+  cursor: text;
+}
+
+button:disabled,
+.cursor-not-allowed {
+  cursor: not-allowed;
 }
