@@ -38,6 +38,23 @@ const nextConfig: NextConfig = {
   },
   // Enable compression
   compress: true,
+  /*
+   * Canonical host is www. Vercel's dashboard redirect was answering the
+   * apex with a 307 (temporary), which is why Search Console filed every
+   * non-www URL under "Alternate page with proper canonical tag". This
+   * mirrors the redirect as a 308 (permanent) for any request that reaches
+   * the app — the dashboard setting should also be flipped to permanent.
+   */
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'aidilbaihaqi.id' }],
+        destination: 'https://www.aidilbaihaqi.id/:path*',
+        permanent: true,
+      },
+    ];
+  },
   // Enable React strict mode for better performance
   reactStrictMode: true,
   // Experimental optimizations
