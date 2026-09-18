@@ -2,15 +2,16 @@
 
 import Main from "@/app/components/Layout/Main";
 import Image from "next/image";
+import Link from "next/link";
 import dynamic from "next/dynamic";
 import { TypewriterEffectSmoothDemo } from "@/app/components/Text/TypewriterEffectSmooth";
-import { Suspense, memo, useState } from "react";
+import { memo, useState } from "react";
+import { Download, ArrowUpRight } from "lucide-react";
+import Reveal from "@/app/components/ui/Reveal";
 
-// Lazy load heavy components
-const ClickSpark = dynamic(() => import("@/app/components/ui/ClickSpark"), {
-  ssr: false,
-  loading: () => <div className="contents" />,
-});
+// Imported statically so the profile, experience, and scholarship content
+// ships in the initial HTML; the spark canvas itself only wakes client-side.
+import ClickSpark from "@/app/components/ui/ClickSpark";
 
 const AwardCarousel = dynamic(() => import("@/app/components/ui/AwardCarousel"), {
   ssr: false,
@@ -91,23 +92,52 @@ export default function Home() {
                 <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left">
                   Full Stack AI Engineer, IT Mentor & Researcher in Bioinformatics and Medical
                 </p>
+
+                {/* Résumé + hire actions */}
+                <div className="mt-5 flex flex-wrap items-center gap-3">
+                  <a
+                    href="/documents/CV-Aidil-Baihaqi.pdf"
+                    download
+                    className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gray-900 px-5 py-2.5 text-sm font-medium text-white shadow-md transition-all duration-300 hover:scale-[1.03] hover:shadow-lg dark:bg-white dark:text-gray-900"
+                  >
+                    <Download className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5" />
+                    Download CV
+                    {/* One light sweep across the face of the button on hover. */}
+                    <span
+                      aria-hidden="true"
+                      className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full dark:via-black/10"
+                    />
+                  </a>
+
+                  <Link
+                    href="/contact"
+                    className="group inline-flex items-center gap-1.5 rounded-full border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-700 transition-all duration-300 hover:border-blue-500/60 hover:text-blue-600 dark:border-white/15 dark:text-neutral-300 dark:hover:border-blue-400/60 dark:hover:text-blue-400"
+                  >
+                    Work with me
+                    <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </Link>
+                </div>
               </div>
             </div>
             {/* End Profile */}
 
             {/* About */}
-            <div className="mt-8 text-left">
+            <Reveal className="mt-8 text-left">
               <p className="text-sm text-gray-600 dark:text-neutral-400 leading-6 text-left">
-                Passionate and results-driven programmer with strong experience in software engineering,specializing in backend development, data-driven systems, and AI-based applications.Experienced in building scalable web systems, collaborating in multidisciplinary teams, and delivering high-quality projects for academic, community, and organizational needs.Proficient in modern development tools and agile workflows to solve complex problems efficiently.
+                Passionate and results-driven programmer with strong experience in software engineering, specializing in backend development, data-driven systems, and AI-based applications. Experienced in building scalable web systems, collaborating in multidisciplinary teams, and delivering high-quality projects for academic, community, and organizational needs. Proficient in modern development tools and agile workflows to solve complex problems efficiently.
               </p>
-            </div>
+            </Reveal>
             {/* End About */}
 
             {/* Skills */}
             <div className="mt-10 sm:mt-14 text-left">
-              <h2 className="mb-5 font-medium text-gray-800 dark:text-neutral-200 text-left">
-                Skills
-              </h2>
+              <div className="mb-5 flex items-baseline gap-3">
+                <span className="font-mono text-xs text-blue-600 dark:text-blue-400">01</span>
+                <h2 className="font-display text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                  Skills
+                </h2>
+                <span aria-hidden="true" className="h-px flex-1 self-center bg-gradient-to-r from-gray-200 to-transparent dark:from-white/10" />
+              </div>
 
               {/* List */}
               <div className="space-y-3 text-left">
@@ -244,9 +274,13 @@ export default function Home() {
 
             {/* Experience */}
             <div className="mt-10 sm:mt-14 text-left">
-              <h2 className="mb-5 font-medium text-gray-800 dark:text-neutral-200 text-left">
-                Experience
-              </h2>
+              <div className="mb-5 flex items-baseline gap-3">
+                <span className="font-mono text-xs text-blue-600 dark:text-blue-400">02</span>
+                <h2 className="font-display text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                  Experience
+                </h2>
+                <span aria-hidden="true" className="h-px flex-1 self-center bg-gradient-to-r from-gray-200 to-transparent dark:from-white/10" />
+              </div>
 
               {/* Timeline */}
               <div>
@@ -419,45 +453,52 @@ export default function Home() {
                 </div>
                 {/* End Item */}
 
-                {/* Item - Beasiswa Pendidikan Indonesia (hidden for now) */}
-                {false && (
-                  <div className="group relative flex gap-x-5">
-                    {/* Icon */}
-                    <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-                      <div className="relative z-10 size-6 flex justify-center items-center">
-                        <Image
-                          src={"/image-optimized/logo-bpi.webp"}
-                          alt="Beasiswa Pendidikan Indonesia"
-                          width={32}
-                          height={32}
-                          className="shrink-0 size-6 rounded-full"
-                          loading="lazy"
-                        />
-                      </div>
+                {/* Item - Beasiswa Pendidikan Indonesia */}
+                <div className="group relative flex gap-x-5">
+                  {/* Icon */}
+                  <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                    <div className="relative z-10 size-6 flex justify-center items-center">
+                      <Image
+                        src={"/image-optimized/logo-bpi.webp"}
+                        alt="Beasiswa Pendidikan Indonesia"
+                        width={32}
+                        height={32}
+                        className="shrink-0 size-6 rounded-full"
+                        loading="lazy"
+                      />
                     </div>
-                    {/* End Icon */}
-
-                    {/* Right Content */}
-                    <div className="grow pb-8 group-last:pb-0 text-left">
-                      <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
-                        Aug 2023 - Present · {calculateDuration("2023-08-01")}
-                      </h3>
-
-                      <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
-                        Awardee of Indonesia Education Scholarship
-                      </p>
-
-                      <p className="leading-6 mt-3 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                        Selected as Indonesia Education Scholarship awardee, previously qualified for Indonesia Maju Scholarship S1 Overseas program for Computer Science at Kyoto University. Actively engaged in social impact projects, IELTS and SAT preparation programs, cultural exchange initiatives, and educational outreach across Indonesia to promote digital literacy and technology advancement.
-                      </p>
-
-                      <p className="leading-6 mt-3 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                        <strong>Skills:</strong> English · Communication · Public Speaking · Project-based Learning
-                      </p>
-                    </div>
-                    {/* End Right Content */}
                   </div>
-                )}
+                  {/* End Icon */}
+
+                  {/* Right Content */}
+                  <div className="grow pb-8 group-last:pb-0 text-left">
+                    <h3 className="mb-1 text-xs text-gray-600 dark:text-neutral-400 text-left">
+                      Aug 2023 - Present · {calculateDuration("2023-08-01")}
+                    </h3>
+
+                    <p className="leading-6 font-semibold text-sm text-gray-800 dark:text-neutral-200 text-left">
+                      Awardee — Beasiswa Pendidikan Indonesia (BPI) S1 Dalam Negeri
+                    </p>
+
+                    <p className="leading-6 mt-1 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                      Fully funded degree scholarship from the Indonesian Ministry of Education, Culture, Research, and Technology in partnership with LPDP — awarded to high-achieving students across Indonesia.
+                    </p>
+
+                    <ul className="list-disc ms-6 mt-3 space-y-1.5">
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Previously an <strong>Awardee of Beasiswa Indonesia Maju (BIM) Persiapan S1 Luar Negeri</strong> — an overseas preparation program targeting Computer Science at <strong>Kyoto University, Japan</strong>, with intensive IELTS, SAT, and academic training.
+                      </li>
+                      <li className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                        Actively engaged in social impact projects, cultural exchange initiatives, and educational outreach across Indonesia to promote digital literacy and technology advancement.
+                      </li>
+                    </ul>
+
+                    <p className="leading-6 mt-3 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                      <strong>Skills:</strong> English · Communication · Public Speaking · Project-based Learning
+                    </p>
+                  </div>
+                  {/* End Right Content */}
+                </div>
                 {/* End Item */}
 
                 {/* Item - BPS */}
@@ -953,9 +994,13 @@ export default function Home() {
 
             {/* Education */}
             <div className="mt-10 sm:mt-14 text-left">
-              <h2 className="mb-3 font-medium text-gray-800 dark:text-neutral-200 text-left">
-                Education
-              </h2>
+              <div className="mb-3 flex items-baseline gap-3">
+                <span className="font-mono text-xs text-blue-600 dark:text-blue-400">03</span>
+                <h2 className="font-display text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                  Education
+                </h2>
+                <span aria-hidden="true" className="h-px flex-1 self-center bg-gradient-to-r from-gray-200 to-transparent dark:from-white/10" />
+              </div>
 
               {/* Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -1019,9 +1064,13 @@ export default function Home() {
 
             {/* Awards */}
             <div className="mt-10 sm:mt-14 text-left">
-              <h2 className="mb-3 font-medium text-gray-800 dark:text-neutral-200 text-left">
-                Awards
-              </h2>
+              <div className="mb-3 flex items-baseline gap-3">
+                <span className="font-mono text-xs text-blue-600 dark:text-blue-400">04</span>
+                <h2 className="font-display text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                  Awards
+                </h2>
+                <span aria-hidden="true" className="h-px flex-1 self-center bg-gradient-to-r from-gray-200 to-transparent dark:from-white/10" />
+              </div>
 
               {/* Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -1173,9 +1222,13 @@ export default function Home() {
 
             {/* Certifications */}
             <div className="mt-10 sm:mt-14 text-left">
-              <h2 className="mb-3 font-medium text-gray-800 dark:text-neutral-200 text-left">
-                Certifications
-              </h2>
+              <div className="mb-3 flex items-baseline gap-3">
+                <span className="font-mono text-xs text-blue-600 dark:text-blue-400">05</span>
+                <h2 className="font-display text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                  Certifications
+                </h2>
+                <span aria-hidden="true" className="h-px flex-1 self-center bg-gradient-to-r from-gray-200 to-transparent dark:from-white/10" />
+              </div>
 
               {/* Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">

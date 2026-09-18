@@ -67,6 +67,11 @@ export const metadata: Metadata = {
     "jasa pembuatan website",
     "jasa AI",
     "web developer indonesia",
+    "hire full stack developer indonesia",
+    "AI consultant indonesia",
+    "jasa dashboard bisnis",
+    "jasa otomasi workflow",
+    "software engineer tanjungpinang",
     "ngobarengaidil"
   ],
   creator: "Aidil Baihaqi",
@@ -121,9 +126,30 @@ const jsonLd = {
   '@type': 'Person',
   name: 'Aidil Baihaqi',
   url: baseUrl,
+  email: 'mailto:aidilmusirjun@gmail.com',
   image: `${baseUrl}/image-optimized/aidilbaihaqi.webp`,
   jobTitle: 'Full Stack AI Engineer & IT Mentor',
   description: 'Engineer building AI solutions, websites, and workflow automation that digitize how businesses run. Also mentors developers and hands over the source code so teams can keep building.',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Tanjungpinang',
+    addressRegion: 'Kepulauan Riau',
+    addressCountry: 'ID',
+  },
+  alumniOf: {
+    '@type': 'CollegeOrUniversity',
+    name: 'Universitas Maritim Raja Ali Haji',
+  },
+  worksFor: {
+    '@type': 'Organization',
+    name: 'UmbiTeams',
+  },
+  award: [
+    'Awardee Beasiswa Pendidikan Indonesia (BPI) S1 Dalam Negeri',
+    'Awardee Beasiswa Indonesia Maju (BIM) Persiapan S1 Luar Negeri — Kyoto University, Japan (Computer Science)',
+    'Gold Medal — National Bioinformatics & Synthetic Biology Competition, Institut Teknologi Bandung',
+  ],
+  knowsLanguage: ['English', 'Indonesian'],
   sameAs: [
     'https://github.com/aidilbaihaqi',
     'https://www.linkedin.com/in/aidilbaihaqi/',
@@ -142,6 +168,72 @@ const jsonLd = {
     'Data Analysis',
     'IT Mentoring'
   ],
+};
+
+// JSON-LD for the service catalogue — what a business can actually hire.
+// Spelled out per line of business so AI and search engines can answer
+// "who builds X in Indonesia" with a concrete offering, not a guess.
+const servicesJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'Aidil Baihaqi — AI, Web Development & Business Digitalization',
+  url: baseUrl,
+  image: `${baseUrl}/image-optimized/aidilbaihaqi.webp`,
+  email: 'mailto:aidilmusirjun@gmail.com',
+  areaServed: ['Indonesia', 'Remote / Worldwide'],
+  founder: { '@type': 'Person', name: 'Aidil Baihaqi', url: baseUrl },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Tanjungpinang',
+    addressRegion: 'Kepulauan Riau',
+    addressCountry: 'ID',
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Company Profile & Business Websites',
+          description: 'Fast, SEO-ready websites that present a business credibly and convert visitors into inquiries.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Custom Dashboards & Internal Tools',
+          description: 'Role-based dashboards, ERP modules, and internal systems that replace spreadsheets and manual reporting.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'AI Assistants & Applied Machine Learning',
+          description: 'AI features built into real workflows — assistants, diagnostics, prediction, and document intelligence.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Workflow Automation',
+          description: 'Scrapers, schedulers, integrations, and n8n pipelines that turn repetitive office work into systems.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'IT Mentoring & Team Enablement',
+          description: 'Hands-on mentoring for teams and students, plus full source-code handover on every project.',
+        },
+      },
+    ],
+  },
 };
 
 // JSON-LD for WebSite and Sitelinks Search Box
@@ -227,6 +319,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
         />
         <script
           type="application/ld+json"

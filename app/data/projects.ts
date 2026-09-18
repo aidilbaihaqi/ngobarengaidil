@@ -13,7 +13,6 @@ export const featuredProjects: FeaturedItem[] = [
     hrefRepo: "https://github.com",
     accent: "purple",
   },
-  /* HIDDEN: Ternak Klip
   {
     id: "1",
     title: "Ternak Klip",
@@ -25,7 +24,6 @@ export const featuredProjects: FeaturedItem[] = [
     hrefLive: "https://ternakklip.com/",
     accent: "pink",
   },
-  */
   {
     id: "2",
     title: "Aero Flight Fare Scrapper",
@@ -102,7 +100,6 @@ export const allProjects: Project[] = [
       contribution: ["Modeled geographical and performance data in PostgreSQL", "Developed automated Python scripts for data ingestion and cleaning", "Designed interactive dashboards and KPI reports via Metabase"]
     }
   },
-  /* HIDDEN: Ternak Klip
   {
     id: "ternak-klip",
     title: "Ternak Klip - Creator & Clipper Ecosystem Platform",
@@ -120,7 +117,6 @@ export const allProjects: Project[] = [
       contribution: ["Designed robust backend microservices with Go", "Configured scalable infrastructure on AWS", "Integrated CI/CD pipelines to ensure seamless updates"]
     }
   },
-  */
   {
     id: "aero",
     title: "Aero - Automation Flight Fare Scrapper",

@@ -1,16 +1,13 @@
 "use client";
 
-import { useState, Suspense, useMemo } from "react";
+import { useState, useMemo } from "react";
 import dynamic from "next/dynamic";
 import Main from "../components/Layout/Main";
 import { featuredProjects, allProjects } from "../data/projects";
 import type { Project } from "../types/project";
 
-// Lazy load heavy components
-const ClickSpark = dynamic(() => import("../components/ui/ClickSpark"), {
-  ssr: false,
-  loading: () => <div className="contents" />,
-});
+// Imported statically so the project list is part of the initial HTML.
+import ClickSpark from "../components/ui/ClickSpark";
 
 const FeaturedCardSwap = dynamic(
   () => import("../components/Projects/FeaturedCardSwap"),
@@ -91,12 +88,18 @@ export default function ProjectsPage() {
           <div className="w-full max-w-6xl mx-auto pt-5 md:pt-16 px-4 sm:px-6 lg:px-8 pb-20">
             {/* Header */}
             <div className="mb-16 text-center">
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-800 dark:text-white mb-4">
-                Projects
+              <p className="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-gray-500 dark:text-neutral-500">
+                Selected work · {allProjects.length} projects
+              </p>
+              <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-gray-800 dark:text-white mb-4">
+                Work that{" "}
+                <span className="bg-gradient-to-r from-blue-500 via-cyan-500 to-green-500 bg-clip-text text-transparent">
+                  ships
+                </span>
               </h1>
               <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                A collection of my work in AI/ML, web development, and open source
-                contributions
+                AI, web, data, and automation — built for businesses, institutions,
+                and communities across many fields.
               </p>
             </div>
 
@@ -117,6 +120,7 @@ export default function ProjectsPage() {
               setSearchQuery={setSearchQuery}
               activeFilter={activeFilter}
               setActiveFilter={setActiveFilter}
+              resultCount={filteredProjects.length}
             />
 
             {/* Projects Grid */}

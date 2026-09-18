@@ -152,6 +152,78 @@ img {
   }
 }
 
+/* ---------------------------------------------------------------------------
+ * Motion vocabulary for the decorative layers
+ *
+ * Everything here animates transform only (plus one registered custom
+ * property for the search border), so the effects stay on the compositor
+ * and cost next to nothing on phones. The global prefers-reduced-motion
+ * rule further down still switches all of it off.
+ * ------------------------------------------------------------------------- */
+
+/* Logo band: the track holds two copies of the list and slides one length. */
+@keyframes marquee-x {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee-x 36s linear infinite;
+  will-change: transform;
+}
+
+.marquee-paused:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+/* Aurora fields: three drift paths so the blobs never move in lockstep. */
+@keyframes aurora-a {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(4rem, 2rem, 0) scale(1.12); }
+}
+
+@keyframes aurora-b {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1.08); }
+  50% { transform: translate3d(-3rem, 3rem, 0) scale(0.95); }
+}
+
+@keyframes aurora-c {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(0.98); }
+  50% { transform: translate3d(2.5rem, -2rem, 0) scale(1.1); }
+}
+
+.animate-aurora-a { animation: aurora-a 16s ease-in-out infinite; }
+.animate-aurora-b { animation: aurora-b 21s ease-in-out infinite; }
+.animate-aurora-c { animation: aurora-c 26s ease-in-out infinite; }
+
+/*
+  The search field's focus beam sweeps by animating a registered custom
+  property that feeds a conic-gradient's start angle.
+*/
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes border-spin {
+  to { --border-angle: 360deg; }
+}
+
+.animate-border-spin {
+  animation: border-spin 4s linear infinite;
+}
+
+/* Availability badge: the soft radar ping behind the green dot. */
+@keyframes ping-soft {
+  0% { transform: scale(1); opacity: 0.7; }
+  80%, 100% { transform: scale(2.4); opacity: 0; }
+}
+
+.animate-ping-soft {
+  animation: ping-soft 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
 /* Skeleton loading animation - optimized */
 @keyframes shimmer {
   0% {

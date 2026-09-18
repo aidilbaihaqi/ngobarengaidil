@@ -9,12 +9,15 @@ import Main from "./components/Layout/Main";
 import { LayoutTextFlip } from "./components/ui/layout-text-flip";
 
 import React, { Suspense } from "react";
+import Reveal from "./components/ui/Reveal";
+import LogoMarquee from "./components/Partials/LogoMarquee";
+import ImpactStats from "./components/Partials/ImpactStats";
+import ProcessSection from "./components/Partials/ProcessSection";
 
-// Lazy load heavy components
-const ClickSpark = dynamic(() => import("./components/ui/ClickSpark"), {
-  ssr: false,
-  loading: () => <div className="contents" />,
-});
+// The spark layer SSRs fine (all canvas work lives in effects), and importing
+// it statically keeps the whole page body in the initial HTML — crawlers and
+// AI engines read the real content instead of an empty shell.
+import ClickSpark from "./components/ui/ClickSpark";
 
 const HeroParallaxProjects = dynamic(
   () => import("./components/Projects/HeroParallaxProjects"),
@@ -32,7 +35,8 @@ const TextLoop = dynamic(() => import("./components/ui/TextLoop"), {
 const BentoGridThirdDemo = dynamic(
   () => import("./components/Layout/BentoGrid").then((mod) => mod.BentoGridThirdDemo),
   {
-    ssr: false,
+    // Still code-split, but server-rendered: the services copy is exactly
+    // what search and AI engines should be able to quote.
     loading: () => (
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -90,15 +94,25 @@ export default function Home() {
               aria-label="Introduction"
               className="text-center lg:text-left"
             >
-              <motion.p
+              <motion.div
                 custom={0}
                 initial="hidden"
                 animate="show"
                 variants={rise}
-                className="text-xs font-medium uppercase tracking-[0.2em] text-gray-500 dark:text-neutral-500"
+                className="flex flex-col items-center gap-3 lg:flex-row lg:items-center lg:gap-4"
               >
-                Aidil Baihaqi · AI · Web Development · Business Digitalization
-              </motion.p>
+                {/* Availability signal — the first thing a prospective client checks. */}
+                <span className="inline-flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-3 py-1 text-xs font-medium text-green-700 dark:text-green-400">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping-soft absolute inline-flex h-full w-full rounded-full bg-green-500" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+                  </span>
+                  Available for new projects
+                </span>
+                <p className="text-xs font-medium uppercase tracking-[0.2em] text-gray-500 dark:text-neutral-500">
+                  Aidil Baihaqi · AI · Web Development · Business Digitalization
+                </p>
+              </motion.div>
 
               <div className="mt-6 grid gap-x-12 gap-y-10 lg:grid-cols-[1fr_18rem] lg:items-start">
                 <div>
@@ -300,21 +314,49 @@ export default function Home() {
             <HeroParallaxProjects />
           </div>
 
+          {/* Proof, in numbers and names — what a business reader scans first. */}
+          <section
+            aria-label="Track record"
+            className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"
+          >
+            <Reveal>
+              <p className="text-center text-xs font-medium uppercase tracking-[0.2em] text-gray-500 dark:text-neutral-500">
+                01 — Track record
+              </p>
+            </Reveal>
+            <div className="mt-10">
+              <ImpactStats />
+            </div>
+          </section>
+
+          <Reveal className="mt-14 md:mt-16">
+            <p className="mb-6 text-center text-xs font-medium uppercase tracking-[0.2em] text-gray-500 dark:text-neutral-500">
+              Built for teams &amp; institutions
+            </p>
+            {/* Full-bleed on purpose: the band runs edge to edge like the TextLoop. */}
+            <LogoMarquee />
+          </Reveal>
+
           <div className="w-full max-w-5xl mb-10 mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="border-t dark:border-gray-400 dark:border-opacity-10"></div>
+            <div className="mt-14 border-t dark:border-gray-400 dark:border-opacity-10 md:mt-20"></div>
 
             {/* Feature Section */}
-            <div className="mt-10 text-center" role="region" aria-label="Services section">
-              <div className="mb-5">
-                <h4 className="text-3xl md:text-4xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-black dark:text-white">
-                  What Can I Do For You
-                </h4>
+            <Reveal>
+              <div className="mt-10 text-center" role="region" aria-label="Services section">
+                <div className="mb-5">
+                  <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-gray-500 dark:text-neutral-500">
+                    02 — Services
+                  </p>
+                  <h4 className="text-3xl md:text-4xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-black dark:text-white">
+                    What Can I Do For You
+                  </h4>
 
-                <p className="text-sm text-gray-600 dark:text-neutral-400 leading-6 text-center">
-                  Some services or products that I can offer to you.
-                </p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400 leading-6 text-center">
+                    From company profiles to AI assistants — systems built end to end, for any line of business.
+                  </p>
+                </div>
               </div>
-            </div>
+            </Reveal>
             <Suspense fallback={
               <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -330,6 +372,24 @@ export default function Home() {
               <BentoGridThirdDemo />
             </Suspense>
             {/* End Feature Section */}
+
+            {/* Process — how an engagement runs, start to handover. */}
+            <section aria-label="How I work" className="mt-20 md:mt-28">
+              <Reveal>
+                <div className="mb-12 text-center">
+                  <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-gray-500 dark:text-neutral-500">
+                    03 — Process
+                  </p>
+                  <h4 className="text-3xl md:text-4xl tracking-tight font-medium text-black dark:text-white">
+                    From idea to running system
+                  </h4>
+                  <p className="mt-2 text-sm text-gray-600 dark:text-neutral-400 leading-6">
+                    A clear path, whatever field your business is in.
+                  </p>
+                </div>
+              </Reveal>
+              <ProcessSection />
+            </section>
           </div>
         </main>
       </Main>
