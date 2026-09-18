@@ -9,8 +9,8 @@ export const featuredProjects: FeaturedItem[] = [
     year: 2025,
     tags: ["AI/ML"],
     metric: "Bioinformatics College Projects",
-    hrefLive: "#",
-    hrefRepo: "https://github.com",
+    // No public deployment or repo yet — omit the CTAs rather than point
+    // them at placeholders a visitor can click and lose trust on.
     accent: "purple",
   },
   {
@@ -147,10 +147,6 @@ export const allProjects: Project[] = [
     metrics: {
       awards: ["Finalist - ITB Innovation Competition 2025"],
       performance: "Reduced analysis time by 85%"
-    },
-    links: {
-      live: "#",
-      repo: "https://github.com"
     },
     details: {
       problem: "Genetic data analysis requires specialized expertise and is time-consuming, limiting research accessibility.",

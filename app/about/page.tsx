@@ -334,7 +334,8 @@ export default function Home() {
 
                     <div className="mt-3">
                       {/* Card */}
-                      <a className="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-700" href="#">
+                      {/* Info card, not a link — UmbiTeams has no public site yet. */}
+                      <div className="block border border-gray-200 rounded-lg dark:border-neutral-700">
                         <div className="flex flex-col sm:flex-row items-start sm:items-center overflow-hidden">
                           <div className="hidden sm:flex flex-shrink-0 sm:w-32 md:w-48 h-24 sm:h-auto">
                             <Image
@@ -358,7 +359,7 @@ export default function Home() {
                             </div>
                           </div>
                         </div>
-                      </a>
+                      </div>
                       {/* End Card */}
                     </div>
                   </div>
@@ -420,7 +421,7 @@ export default function Home() {
 
                     <div className="mt-3">
                       {/* Card */}
-                      <a className="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-700" href="#" target="_blank" rel="noopener noreferrer">
+                      <a className="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-700" href="https://www.dbs.com/spark/index/id_id/site/codingcamp/index.html" target="_blank" rel="noopener noreferrer">
                         <div className="flex flex-col sm:flex-row items-start sm:items-center overflow-hidden">
                           <div className="hidden sm:flex flex-shrink-0 sm:w-32 md:w-48 h-24 sm:h-auto bg-gray-100 dark:bg-neutral-800">
                             <Image
@@ -649,7 +650,7 @@ export default function Home() {
 
                     <div className="mt-3">
                       {/* Card */}
-                      <a className="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-700" href="#">
+                      <a className="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-700" href="https://arusdigital.id/" target="_blank" rel="noopener noreferrer">
                         <div className="flex flex-col sm:flex-row items-start sm:items-center overflow-hidden">
                           <div className="hidden sm:flex flex-shrink-0 sm:w-32 md:w-48 h-24 sm:h-auto">
                             <Image
@@ -880,7 +881,8 @@ export default function Home() {
 
                         <div className="mt-3">
                           {/* Card */}
-                          <a className="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-700" href="#">
+                          {/* Info card, not a link — Investree's public site is no longer reliable. */}
+                          <div className="block border border-gray-200 rounded-lg dark:border-neutral-700">
                             <div className="flex flex-col sm:flex-row items-start sm:items-center overflow-hidden">
                               <div className="hidden sm:flex flex-shrink-0 sm:w-32 md:w-48 h-24 sm:h-auto">
                                 <Image
@@ -903,7 +905,7 @@ export default function Home() {
                                 </div>
                               </div>
                             </div>
-                          </a>
+                          </div>
                           {/* End Card */}
                         </div>
 

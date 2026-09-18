@@ -98,9 +98,11 @@ export const metadata: Metadata = {
     siteName: 'Personal Website Aidil Baihaqi',
     images: [
       {
-        url: '/image-optimized/aidilbaihaqi.webp',
-        width: 800,
-        height: 800,
+        // Branded 1200x630 card (scripts/generate-brand-assets.js), the size
+        // link previews actually want — the square portrait cropped badly.
+        url: '/image-optimized/og-card.png',
+        width: 1200,
+        height: 630,
         alt: 'Aidil Baihaqi - Full Stack AI Engineer & IT Mentor',
       }
     ],
@@ -109,7 +111,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Aidil Baihaqi - AI, Web Development & Business Digitalization',
     description: 'Portfolio of Aidil Baihaqi — AI solutions, websites, and business digitalization, plus IT mentoring.',
-    images: ['/image-optimized/aidilbaihaqi.webp'],
+    images: ['/image-optimized/og-card.png'],
   },
   alternates: {
     canonical: '/',

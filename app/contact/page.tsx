@@ -16,6 +16,9 @@ import {
   Check,
   Clock,
   Plus,
+  Loader2,
+  CheckCircle2,
+  AlertCircle,
 } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -119,6 +122,8 @@ const socialLinks = [
 const fieldClass =
   "w-full rounded-xl border border-gray-200 bg-gray-50 py-3 text-sm text-gray-800 placeholder-gray-400 transition-all duration-300 focus:border-blue-500/60 focus:bg-white focus:outline-none focus:ring-4 focus:ring-blue-500/10 dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder-neutral-500 dark:focus:border-blue-400/60 dark:focus:bg-white/[0.07]";
 
+type SendStatus = "idle" | "sending" | "success" | "error";
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -127,18 +132,44 @@ export default function ContactPage() {
     message: "",
   });
   const [copied, setCopied] = useState(false);
+  const [status, setStatus] = useState<SendStatus>("idle");
   const reduceMotion = useReducedMotion();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  /*
+   * Delivered through FormSubmit's AJAX endpoint instead of `mailto:` — on a
+   * machine with no configured mail client a mailto form dies silently, which
+   * is exactly the visitor a portfolio can't afford to lose. If the request
+   * fails, the error state offers the plain email address as the way through.
+   */
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (status === "sending") return;
+    setStatus("sending");
 
-    const mailtoLink = `mailto:${EMAIL}?subject=${encodeURIComponent(
-      formData.subject
-    )}&body=${encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    )}`;
+    try {
+      const res = await fetch(`https://formsubmit.co/ajax/${EMAIL}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: `[Portfolio] ${formData.subject}`,
+          _template: "table",
+          _captcha: "false",
+        }),
+      });
 
-    window.location.href = mailtoLink;
+      if (!res.ok) throw new Error(`FormSubmit responded ${res.status}`);
+
+      setStatus("success");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch {
+      setStatus("error");
+    }
   };
 
   const handleChange = (
@@ -342,11 +373,58 @@ export default function ContactPage() {
                     {/* Submit Button */}
                     <button
                       type="submit"
-                      className="group flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-500 via-cyan-500 to-green-500 px-6 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-[1.01] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-black"
+                      disabled={status === "sending"}
+                      className="group flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-500 via-cyan-500 to-green-500 px-6 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-[1.01] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:scale-100 dark:focus:ring-offset-black"
                     >
-                      <Send className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                      Send Message
+                      {status === "sending" ? (
+                        <>
+                          <Loader2 className="h-5 w-5 animate-spin" />
+                          Sending…
+                        </>
+                      ) : (
+                        <>
+                          <Send className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                          Send Message
+                        </>
+                      )}
                     </button>
+
+                    {/* Delivery feedback — spoken aloud for screen readers too. */}
+                    <div aria-live="polite">
+                      {status === "success" && (
+                        <motion.div
+                          initial={reduceMotion ? false : { opacity: 0, y: 8 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          className="flex items-start gap-3 rounded-xl border border-green-500/30 bg-green-500/10 px-4 py-3"
+                        >
+                          <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-green-600 dark:text-green-400" />
+                          <p className="text-sm text-green-700 dark:text-green-400">
+                            Message sent — thank you! I&apos;ll get back to you
+                            within 24 hours.
+                          </p>
+                        </motion.div>
+                      )}
+                      {status === "error" && (
+                        <motion.div
+                          initial={reduceMotion ? false : { opacity: 0, y: 8 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          className="flex items-start gap-3 rounded-xl border border-amber-500/30 bg-amber-500/10 px-4 py-3"
+                        >
+                          <AlertCircle className="mt-0.5 h-5 w-5 shrink-0 text-amber-600 dark:text-amber-400" />
+                          <p className="text-sm text-amber-700 dark:text-amber-400">
+                            Something went wrong sending the form. Please email
+                            me directly at{" "}
+                            <a
+                              href={`mailto:${EMAIL}`}
+                              className="font-semibold underline"
+                            >
+                              {EMAIL}
+                            </a>
+                            .
+                          </p>
+                        </motion.div>
+                      )}
+                    </div>
                   </form>
                 </SpotlightCard>
               </Reveal>
