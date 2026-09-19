@@ -131,6 +131,8 @@ export default {
   			mono: ['var(--font-geist-mono)', 'ui-monospace', 'SFMono-Regular', 'monospace'],
   			// Bitmap display face, in the spirit of Minecraftia.
   			pixel: ['var(--font-pixel)', 'ui-monospace', 'monospace'],
+  			// The /seminar deck keeps the face it was designed in.
+  			seminar: ['var(--font-montserrat)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
   		},
   		colors: {
   			// Brand names, for new code that wants to be explicit.
@@ -138,6 +140,18 @@ export default {
   			mist,
   			brand: brandBlue,
   			fresh,
+  			/*
+  			 * The /seminar deck's palette. It arrived as a standalone app whose
+  			 * `brand` was a single flat blue, which collides with the ramp above —
+  			 * so it lives under its own name and the deck's classes were renamed
+  			 * to match. Nothing outside app/seminar uses these.
+  			 */
+  			seminar: {
+  				DEFAULT: '#073FB2',
+  				dark: '#052E82',
+  				light: '#E8EFFF',
+  				ink: '#1F1D1E',
+  			},
   			// Aliases onto the stock hue names the components already use.
   			gray: mist,
   			neutral: mist,

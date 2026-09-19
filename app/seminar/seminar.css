@@ -1,0 +1,44 @@
+/* ---------------------------------------------------------------------------
+ * Styles for the /seminar deck only.
+ *
+ * The deck came from a standalone app whose globals.css locked `html, body`
+ * to `overflow: hidden` and swapped the body font. Both of those are global
+ * side effects the portfolio cannot afford, so everything here is either
+ * scoped under `.seminar-deck` or applied by `ScrollLock` while the route is
+ * mounted and removed on the way out.
+ * ------------------------------------------------------------------------- */
+
+/* While the deck is mounted: no page scroll behind the fixed full-bleed stage. */
+html.seminar-locked,
+html.seminar-locked body {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+/* The deck is a light-only design: it never defines `dark:` variants, so the
+   root `.dark` class must not bleed through the transparent gaps. */
+.seminar-deck {
+  color-scheme: light;
+  color: #1f1d1e;
+}
+
+/* The slow push-in behind every full-bleed photo. */
+.seminar-deck .kenburns {
+  animation: seminar-kenburns 18s ease-in-out infinite alternate;
+}
+
+@keyframes seminar-kenburns {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+/* The speaker-notes panel is the only thing that scrolls; its bar is noise. */
+.seminar-deck ::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.seminar-deck * {
+  scrollbar-width: none;
+}
