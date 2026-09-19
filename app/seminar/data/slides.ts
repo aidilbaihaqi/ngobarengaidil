@@ -86,7 +86,7 @@ export const slides: Slide[] = [
     ],
     photo: P.laptops,
     notes:
-      "Inti slide ini satu kalimat: kerja bukan pengganti kuliah, tapi tumbuh bareng. Jangan dibaca satu-satu — tunjuk baris pertama dan terakhir saja. 'Yang pertama saya ambil di semester 1, waktu saya belum bisa apa-apa. Yang terakhir baru jalan tahun ini.' Kalau ada yang tanya IPK: 3,80, dan itu poinnya.",
+      "Inti slide ini satu kalimat: kerja bukan pengganti kuliah, tapi tumbuh bareng. Jangan dibaca satu-satu — tunjuk baris pertama dan terakhir saja. 'Yang pertama saya mulai bahkan sebelum resmi jadi mahasiswa, waktu saya belum bisa apa-apa. Yang terakhir baru jalan tahun ini.' Kalau ada yang tanya IPK: 3,80, dan itu poinnya.",
   },
   {
     id: "karya",
@@ -138,14 +138,14 @@ export const slides: Slide[] = [
     id: "kupu-kupu",
     layout: "cards",
     phase: "ringan",
-    title: "Kupu-kupu atau kura-kura?",
+    title: "Kupu-kupu, kura-kura, atau kunang-kunang?",
     subtitle: "Topik ringan: kamu tipe yang mana?",
     cards: [
       { photo: P.soloReader, title: "Kupu-kupu", text: "Kuliah–pulang. Fokus, tapi sering sendirian." },
       { photo: P.projector, title: "Kura-kura", text: "Kuliah–rapat. Sibuk, tapi belum tentu berdampak." },
       { photo: P.bench, title: "Kunang-kunang", text: "Kuliah–nangkring. Relasi bagus, target kabur." },
     ],
-    footer: "Dua-duanya bisa berprestasi, dua-duanya bisa gagal. Yang menentukan bukan labelnya — tapi punya SATU hal yang ditekuni.",
+    footer: "Ketiganya bisa berprestasi, ketiganya bisa gagal. Yang menentukan bukan labelnya — tapi punya SATU hal yang ditekuni.",
     notes:
       "Polling tangan: 'Angkat tangan yang niatnya kupu-kupu!' 'Kura-kura?' 'Kunang-kunang?' Biarkan ramai 1–2 menit. Lalu pecahkan mitosnya: kupu-kupu yang pulang buat ngerjain PKM itu berprestasi; kura-kura yang ikut 12 rapat tanpa tanggung jawab cuma sibuk.",
   },
@@ -250,6 +250,23 @@ export const slides: Slide[] = [
     side: "left",
     notes:
       "Cek kurikulum kampus tempat seminar; ganti nama mata kuliah kalau beda. Setelah slide ini: AKTIVITAS 'Tanya tetangga' 5–7 menit — tiap orang tanya ke sebelahnya 'mata kuliah mana yang paling kamu takuti?', ambil 3 jawaban.",
+  },
+  {
+    id: "kolom-skill",
+    layout: "split",
+    phase: "berat",
+    title: "Kolom: satu skill yang ditekuni.",
+    subtitle: "Lapis yang paling sering dilewat — padahal ini yang bikin kalian dipilih masuk tim.",
+    body: [
+      "Pilih SATU keahlian teknis di luar kelas: AutoCAD, SAP2000, survei, atau menulis proposal.",
+      "Tiga jam seminggu. Setahun ≈ 150 jam — cukup untuk jadi orang yang dicari saat tim lomba dibentuk.",
+      "Nilai mata kuliah bikin kalian lulus. Skill bikin kalian dipanggil.",
+      "Jangan lima sekaligus. Satu dulu, sampai bisa ditunjukkan ke orang lain.",
+    ],
+    check: true,
+    photo: P.aerial,
+    notes:
+      "Lapis KOLOM dari slide 'Satu bangunan' — dibahas terpisah supaya metaforanya tidak menggantung: fondasi sudah dibahas tiga slide, atap tiga slide lagi, kolom jangan dilewat. Tanya: 'Siapa yang sudah bisa AutoCAD?' Biasanya sedikit yang angkat tangan. 'Bagus. Berarti kalau kalian mulai sekarang, semester 3 kalian yang dicari.' Jembatan ke slide berikutnya: skill inilah yang bikin prestasi jadi berkualitas, bukan cuma banyak.",
   },
   {
     id: "kualitas",
