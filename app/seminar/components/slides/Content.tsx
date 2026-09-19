@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2, GraduationCap, Globe, ImagePlus, Medal, School, UserRound } from "lucide-react";
+import { Award, CheckCircle2, GraduationCap, Globe, Medal, School, UserRound } from "lucide-react";
 import Photo, { LocalPhoto } from "@/app/seminar/components/Photo";
 import type { Slide } from "@/app/seminar/lib/types";
 import { Body, Frame, Item, Kicker, Stagger, Subtitle, Title, container, item, pad, rise } from "./Shared";
 
 type S<L extends Slide["layout"]> = Extract<Slide, { layout: L }>;
 
-const icons = { school: School, campus: GraduationCap, medal: Medal, globe: Globe };
+const icons = { school: School, campus: GraduationCap, medal: Medal, globe: Globe, scholarship: Award };
 
 export function IntroSlide({ s }: { s: S<"intro"> }) {
   return (
@@ -184,46 +184,6 @@ export function CompareSlide({ s }: { s: S<"compare"> }) {
         <motion.div variants={rise} initial="hidden" animate="show" className="relative hidden md:block">
           <Photo photo={s.photo} className="absolute inset-y-[8vh] left-0 right-[6vw] rounded-l-[2.5rem]" kenburns sizes="40vw" />
         </motion.div>
-      </div>
-    </Frame>
-  );
-}
-
-export function MemeSlide({ s }: { s: S<"meme"> }) {
-  return (
-    <Frame>
-      <div className="grid h-full grid-cols-1 md:grid-cols-2">
-        <motion.div variants={rise} initial="hidden" animate="show" className={`flex items-center justify-center ${pad}`}>
-          <LocalPhoto
-            src={s.memeFile}
-            alt="Meme"
-            className="aspect-square w-full max-w-[520px] rounded-3xl shadow-2xl shadow-seminar/15"
-            fallback={
-              <div className="flex h-full w-full flex-col items-center justify-center gap-3 border-4 border-dashed border-seminar/30 bg-seminar-light text-seminar">
-                <ImagePlus className="h-12 w-12" />
-                <p className="text-center text-sm font-semibold">
-                  Tempel meme di sini
-                  <br />
-                  <span className="font-mono text-xs opacity-70">public{s.memeFile}</span>
-                </p>
-              </div>
-            }
-          />
-        </motion.div>
-        <Stagger className={`flex flex-col justify-center gap-6 ${pad}`}>
-          <Item>
-            <Kicker>Meme break</Kicker>
-          </Item>
-          <Item>
-            <Title>{s.title}</Title>
-          </Item>
-          {[s.top, s.bottom].map(([label, text]) => (
-            <Item key={label}>
-              <p className="text-sm font-bold uppercase tracking-widest text-amber-600">{label}</p>
-              <p className="text-[clamp(1rem,1.7vw,1.45rem)] font-medium leading-snug text-seminar-ink">{text}</p>
-            </Item>
-          ))}
-        </Stagger>
       </div>
     </Frame>
   );

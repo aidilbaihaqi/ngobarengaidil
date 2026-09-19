@@ -9,10 +9,45 @@ export const slides: Slide[] = [
     phase: "ringan",
     kicker: "Seminar Mahasiswa Baru · Teknik Sipil",
     title: ["Kuliah Tetap Prioritas,", "Prestasi Terus Berkualitas"],
-    subtitle: "Aidil Baihaqi · Awardee BPI & Beasiswa Indonesia Maju",
+    subtitle: "Aidil Baihaqi · Awardee Beasiswa Pendidikan Indonesia S1 Dalam Negeri",
     photo: P.cranes4,
     notes:
       "Tampil saat peserta masuk. Setelah dipanggil moderator: senyum, satu kalimat, langsung lanjut. Jangan buka dengan 'selamat pagi' panjang.",
+  },
+  {
+    id: "pertanyaan",
+    layout: "cloud",
+    phase: "ringan",
+    kicker: "Pre-opening",
+    title: "Yang ada di kepala kalian sekarang.",
+    questions: [
+      { text: "Kenapa prestasi dan kuliah harus dibarengin?", size: "lg", accent: true },
+      { text: "Goals prestasi di kuliah itu seperti apa, sih?", size: "lg", accent: true },
+      { text: "IPK aman dulu atau lomba dulu?", size: "md" },
+      { text: "Kalau saya bukan anak pintar, masih bisa?", size: "md" },
+      { text: "Organisasi itu nambah nilai atau nambah beban?", size: "md" },
+      { text: "Kampus daerah bisa tembus nasional?", size: "lg" },
+      { text: "Mulainya dari mana?", size: "sm" },
+      { text: "Nanti aja semester 3, masih sempat kan?", size: "sm" },
+      { text: "Capek nggak, sih?", size: "sm" },
+      { text: "Teknik Sipil kok lombanya apa?", size: "md" },
+      { text: "Kalau gagal gimana?", size: "sm" },
+    ],
+    footer: "Tidak ada pertanyaan yang bodoh di sini. Hampir semua orang di ruangan ini menanyakan hal yang sama.",
+    notes:
+      "PRE-OPENING (0–2 menit). Jangan dibaca satu-satu — diam 5 detik, biarkan mereka membaca sendiri. Lalu: 'Ada yang kebetulan mikirin salah satunya barusan? Angkat tangan.' Tunggu tangan naik, baru lanjut.",
+  },
+  {
+    id: "satu-pertanyaan",
+    layout: "focus",
+    phase: "ringan",
+    kicker: "Dari semua itu, satu dulu",
+    question: "Kenapa kuliah dan prestasi harus dibarengin?",
+    body:
+      "Karena yang dinilai setelah kalian lulus bukan salah satunya. Bukan IPK saja, bukan sertifikat saja — tapi bukti bahwa kalian sanggup mengerjakan dua-duanya sekaligus, dalam waktu yang sama terbatasnya buat semua orang.",
+    footer: "Dua jam ke depan kita bongkar jawabannya. Pelan-pelan.",
+    notes:
+      "PRE-OPENING bagian 2. Ini kontrak isi seminar: sebutkan pertanyaannya, janjikan jawabannya, jangan dijawab sekarang. Tahan godaan untuk spoiler — jawabannya baru utuh di slide 'Satu bangunan'.",
   },
   {
     id: "kenalan",
@@ -20,14 +55,21 @@ export const slides: Slide[] = [
     phase: "ringan",
     title: "Kenalan dulu.",
     items: [
-      { icon: "school", text: "Anak SMK jurusan RPL dari Bintan Timur" },
-      { icon: "campus", text: "Kuliah di kampus daerah, Tanjungpinang" },
-      { icon: "medal", text: "Gold Medal Bioinformatika Nasional, ITB 2025" },
-      { icon: "globe", text: "Beasiswa Indonesia Maju → Kyoto University, kini awardee BPI S1" },
+      { icon: "school", text: "SMK Negeri 1 Bintan Timur, jurusan RPL — nilai akhir 91,8/100" },
+      { icon: "campus", text: "Teknik Informatika, Universitas Maritim Raja Ali Haji — IPK 3,80/4,00" },
+      { icon: "medal", text: "Gold Medal Kompetisi Bioinformatika & Biologi Sintetis Nasional, ITB 2025" },
+      {
+        icon: "globe",
+        text: "Awardee Beasiswa Indonesia Maju Persiapan S1 Luar Negeri — Kyoto University, Computer Science",
+      },
+      {
+        icon: "scholarship",
+        text: "Kini satu-satunya Awardee Beasiswa Pendidikan Indonesia S1 Dalam Negeri di Kepulauan Riau",
+      },
     ],
     body: "Jalur saya biasa saja. Yang beda cuma sistemnya — dan itu yang mau saya bagi hari ini.",
     notes:
-      "RINGAN (0–6 menit). Bawakan sebagai cerita, bukan CV. Foto diambil dari public/image-optimized/aidilbaihaqi.webp. Kalimat kunci: 'Jalur saya biasa saja - anak SMK, kampus daerah, sama seperti kalian.'",
+      "RINGAN. Bawakan sebagai cerita, bukan CV. Dua baris terakhir dibaca pelan: BIM itu jalur persiapan ke Kyoto, lalu migrasi ke BPI dalam negeri — jangan digabung jadi satu kalimat, nanti terdengar seperti satu beasiswa. Kalimat kunci: 'Jalur saya biasa saja - anak SMK, kampus daerah, sama seperti kalian.'",
   },
   {
     id: "bukti",
@@ -36,16 +78,17 @@ export const slides: Slide[] = [
     title: "Bukti, bukan pamer.",
     subtitle: "Supaya kalian percaya ini bukan teori.",
     body: [
-      "Gold Medal Bioinformatika Nasional, ITB 2025",
-      "Beasiswa Indonesia Maju — Kyoto University",
-      "Awardee BPI S1 Dalam Negeri · IPK 3,72",
-      "Juara 1 FOSS Polibatam 2025 · Juara 1 Entrepreneurship UMRAH 2025",
-      "[Prestasi seni: ____________ ]",
+      "Gold Medal — Kompetisi Bioinformatika & Biologi Sintetis Nasional, ITB 2025",
+      "Juara 1 — AL Ahmadi International Youthpreneurship Competition, Batam 2025",
+      "Juara 1 — Festival Open Source Software, Politeknik Negeri Batam 2025",
+      "Juara 2 — Festival Open Source Software, Politeknik Negeri Batam 2024",
+      "Finalis — ID Fest Developer Day, Kementerian Komdigi RI, Jakarta 2025",
+      "1 dari 1.100 programmer undangan Baparekraf Developer Day, Yogyakarta 2024",
     ],
     check: true,
     photo: P.trophies,
     notes:
-      "Maksimal 60 detik. 'Saya tunjukkan ini bukan untuk pamer, tapi supaya kalian tahu yang saya bilang 2 jam ke depan sudah saya jalani.' Isi prestasi seni dari feed @albyhaqee.",
+      "Maksimal 60 detik. Jangan dibaca semua — sebut dua, sisanya biarkan terbaca sendiri. 'Saya tunjukkan ini bukan untuk pamer, tapi supaya kalian tahu yang saya bilang 2 jam ke depan sudah saya jalani.' Perhatikan dua baris terakhir: itu yang kalah dan yang cuma diundang — sengaja ikut ditulis.",
   },
   {
     id: "kupu-kupu",
@@ -63,15 +106,20 @@ export const slides: Slide[] = [
       "Polling tangan: 'Angkat tangan yang niatnya kupu-kupu!' 'Kura-kura?' 'Kunang-kunang?' Biarkan ramai 1–2 menit. Lalu pecahkan mitosnya: kupu-kupu yang pulang buat ngerjain PKM itu berprestasi; kura-kura yang ikut 12 rapat tanpa tanggung jawab cuma sibuk.",
   },
   {
-    id: "meme-1",
-    layout: "meme",
+    id: "jajak-lulus",
+    layout: "poll",
     phase: "ringan",
+    kicker: "Angkat tangan",
     title: "Ekspektasi vs realita.",
-    top: ["Ekspektasi", "Lulus → langsung jadi site engineer."],
-    bottom: ["Realita", "Lulus → antre bareng satu juta orang."],
-    memeFile: "/seminar/memes/meme-1.jpg",
+    subtitle: "Jujur saja: seyakin apa kalian langsung kerja setelah lulus nanti?",
+    options: [
+      { label: "Yakin banget", text: "Lulus → langsung jadi site engineer." },
+      { label: "Semoga", text: "Ada rencana, tapi belum tahu caranya." },
+      { label: "Belum kepikiran", text: "Baru masuk kok sudah ditanya kerja." },
+    ],
+    reveal: "Tahan dulu jawabannya. Slide berikutnya, angkanya.",
     notes:
-      "MEME SLOT #1. Simpan meme yang viral minggu ini sebagai public/seminar/memes/meme-1.jpg. Jangan jelaskan memenya — tampilkan, diam, biar mereka ketawa, lalu: 'Angka satu juta itu bukan lelucon.'",
+      "JEDA INTERAKTIF #1. Hitung tangan dengan suara keras — ini yang bikin ruangan hidup. Jangan dikomentari benar atau salah. Begitu tangan turun, langsung ganti slide: efek angka satu juta hilang kalau kalian keburu ngobrol.",
   },
 
   // ───────────────────────────── BERAT ─────────────────────────────
@@ -220,14 +268,20 @@ export const slides: Slide[] = [
       "'Saya di semester 1 cuma anggota. Gold medal baru datang di semester 5.' Framework ini yang paling sering dicatat — beri 3 menit, minta mereka tulis di HP tahap mereka sekarang.",
   },
   {
-    id: "meme-2",
-    layout: "meme",
+    id: "jajak-organisasi",
+    layout: "poll",
     phase: "berat",
-    title: "Sebentar, meme dulu.",
-    top: ["Semester 3", "Ikut 12 organisasi."],
-    bottom: ["Prestasi", "Sertifikat peserta ×12. Bukan struktur — tumpukan bata tanpa semen."],
-    memeFile: "/seminar/memes/meme-2.jpg",
-    notes: "MEME SLOT #2 — simpan sebagai public/seminar/memes/meme-2.jpg. Jeda napas sebelum lanjut ke cerita.",
+    kicker: "Angkat tangan",
+    title: "Sebentar, hitung dulu.",
+    subtitle: "Semester ini kalian daftar berapa organisasi dan kepanitiaan?",
+    options: [
+      { label: "0–1", text: "Masih lihat-lihat dulu." },
+      { label: "2–3", text: "Cukup buat punya tanggung jawab nyata." },
+      { label: "4 atau lebih", text: "Kalender sudah penuh sebelum kuliah mulai." },
+    ],
+    reveal: "Sertifikat peserta ×12 itu bukan struktur — itu tumpukan bata tanpa semen.",
+    notes:
+      "JEDA INTERAKTIF #2. Jeda napas di tengah bagian berat. Yang angkat tangan di kolom C biasanya paling ramai — jangan diejek, justru pujilah semangatnya, baru bacakan kalimat penutupnya pelan-pelan.",
   },
   {
     id: "podium",
@@ -309,14 +363,20 @@ export const slides: Slide[] = [
 
   // ───────────────────────────── RINGAN ─────────────────────────────
   {
-    id: "meme-3",
-    layout: "meme",
+    id: "jajak-deadline",
+    layout: "poll",
     phase: "ringan",
+    kicker: "Angkat tangan",
     title: "Kembali ringan.",
-    top: ["Deadline H-7", "“Masih lama.”"],
-    bottom: ["Deadline H-1", "“Kenapa aku begini.” — bukan salah kalian, ini cara kerja otak. Makanya butuh blok, bukan niat."],
-    memeFile: "/seminar/memes/meme-3.jpg",
-    notes: "MEME SLOT #3 — public/seminar/memes/meme-3.jpg. Mulai turun ke bagian ringan: nada santai, tempo lebih pelan.",
+    subtitle: "Tugas dikumpul Senin. Kalian mulai ngerjain kapan?",
+    options: [
+      { label: "H-7", text: "“Biar tenang.” Ada? Serius?" },
+      { label: "H-3", text: "Masih masuk akal, masih sempat revisi." },
+      { label: "H-1, jam 2 pagi", text: "“Kenapa aku begini.”" },
+    ],
+    reveal: "Bukan salah kalian — ini memang cara kerja otak. Makanya yang dibutuhkan blok waktu, bukan niat.",
+    notes:
+      "JEDA INTERAKTIF #3. Kolom C pasti paling banyak; tertawakan bareng, jangan menggurui. Mulai turun ke bagian ringan: nada santai, tempo lebih pelan.",
   },
   {
     id: "kalah-dulu",

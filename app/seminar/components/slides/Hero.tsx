@@ -27,7 +27,7 @@ export function CoverSlide({ s }: { s: S<"cover"> }) {
             <Body>{s.subtitle}</Body>
           </Item>
           <Item>
-            <p className="text-xs text-neutral-400">Tekan → untuk mulai · N catatan · F layar penuh</p>
+            <p className="text-xs text-neutral-400">Tekan → untuk mulai · F layar penuh</p>
           </Item>
         </Stagger>
         <motion.div variants={rise} initial="hidden" animate="show" className="relative hidden md:block">

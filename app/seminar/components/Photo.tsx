@@ -56,7 +56,7 @@ export default function Photo({ photo, className = "", sizes = "50vw", kenburns 
   );
 }
 
-/** Foto lokal (public/...) dengan fallback — dipakai untuk foto kamu & meme. */
+/** Foto lokal (public/...) dengan fallback — dipakai untuk potret pembicara. */
 export function LocalPhoto({ src, alt, className = "", fallback }: { src: string; alt: string; className?: string; fallback: React.ReactNode }) {
   const [failed, setFailed] = useState(false);
   return (

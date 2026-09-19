@@ -6,7 +6,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { slides } from "@/app/seminar/data/slides";
 import { unsplashUrl } from "@/app/seminar/lib/photos";
 import type { Slide } from "@/app/seminar/lib/types";
-import { CardsSlide, CompareSlide, IntroSlide, MemeSlide, SplitSlide, StepsSlide } from "./slides/Content";
+import { CardsSlide, CompareSlide, IntroSlide, SplitSlide, StepsSlide } from "./slides/Content";
+import { CloudSlide, FocusSlide, PollSlide } from "./slides/Open";
 import { BuildingSlide, ChartSlide } from "./slides/Data";
 import { ClosingSlide, CoverSlide, NumberSlide, QnaSlide, QuoteSlide } from "./slides/Hero";
 
@@ -14,6 +15,9 @@ function SlideView({ s }: { s: Slide }) {
   switch (s.layout) {
     case "cover": return <CoverSlide s={s} />;
     case "intro": return <IntroSlide s={s} />;
+    case "cloud": return <CloudSlide s={s} />;
+    case "focus": return <FocusSlide s={s} />;
+    case "poll": return <PollSlide s={s} />;
     case "split": return <SplitSlide s={s} />;
     case "cards": return <CardsSlide s={s} />;
     case "number": return <NumberSlide s={s} />;
@@ -21,7 +25,6 @@ function SlideView({ s }: { s: Slide }) {
     case "building": return <BuildingSlide s={s} />;
     case "steps": return <StepsSlide s={s} />;
     case "quote": return <QuoteSlide s={s} />;
-    case "meme": return <MemeSlide s={s} />;
     case "compare": return <CompareSlide s={s} />;
     case "qna": return <QnaSlide s={s} />;
     case "closing": return <ClosingSlide s={s} />;
