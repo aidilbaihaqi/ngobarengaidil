@@ -67,9 +67,53 @@ export const slides: Slide[] = [
         text: "Kini satu-satunya Awardee Beasiswa Pendidikan Indonesia S1 Dalam Negeri di Kepulauan Riau",
       },
     ],
-    body: "Jalur saya biasa saja. Yang beda cuma sistemnya — dan itu yang mau saya bagi hari ini.",
+    body: "Jalur saya biasa saja — anak SMK, kampus daerah, dan sejak semester awal kuliah sambil kerja. Yang beda cuma sistemnya, dan itu yang mau saya bagi hari ini.",
     notes:
       "RINGAN. Bawakan sebagai cerita, bukan CV. Dua baris terakhir dibaca pelan: BIM itu jalur persiapan ke Kyoto, lalu migrasi ke BPI dalam negeri — jangan digabung jadi satu kalimat, nanti terdengar seperti satu beasiswa. Kalimat kunci: 'Jalur saya biasa saja - anak SMK, kampus daerah, sama seperti kalian.'",
+  },
+  {
+    id: "kuliah-kerja",
+    layout: "steps",
+    phase: "ringan",
+    title: "Kuliah sambil kerja.",
+    subtitle: "Semua ini jalan barengan dengan kuliah — bukan menunggu lulus dulu.",
+    steps: [
+      { label: "2023", title: "Full Stack Developer", text: "Risalah Maritim, portal berita mahasiswa — 2,5 tahun sambil kuliah" },
+      { label: "2025", title: "Full Stack Developer", text: "PT Arus Digital Sinergi — company profile, ERP, dan MVP untuk klien" },
+      { label: "2025", title: "Mentor Bioinformatika", text: "SMAN 1 Tanjungpinang — dampingi tim lomba tingkat nasional" },
+      { label: "2026", title: "Data Analyst & Automation", text: "Magang di Badan Pusat Statistik Provinsi Kepulauan Riau" },
+      { label: "Kini", title: "Founder & Software Engineer", text: "UmbiTeams — tim freelance, solusi digital dari awal sampai rilis" },
+    ],
+    photo: P.laptops,
+    notes:
+      "Inti slide ini satu kalimat: kerja bukan pengganti kuliah, tapi tumbuh bareng. Jangan dibaca satu-satu — tunjuk baris pertama dan terakhir saja. 'Yang pertama saya ambil di semester 1, waktu saya belum bisa apa-apa. Yang terakhir baru jalan tahun ini.' Kalau ada yang tanya IPK: 3,80, dan itu poinnya.",
+  },
+  {
+    id: "karya",
+    layout: "cards",
+    phase: "ringan",
+    title: "Yang dikerjakan sambil kuliah.",
+    subtitle: "Bukan tugas kuliah — produk yang benar-benar dipakai orang.",
+    cards: [
+      {
+        local: { src: "/image-optimized/projects/ternakklip.webp", alt: "Ternak Klip" },
+        title: "Ternak Klip",
+        text: "Ekosistem kreator dan clipper untuk distribusi video pendek. 100.000+ pengguna aktif.",
+      },
+      {
+        local: { src: "/image-optimized/projects/bengkel-ai.webp", alt: "BengkelAI" },
+        title: "BengkelAI",
+        text: "Platform bengkel motor berbasis AI: diagnosa pintar, badge kepercayaan, langganan servis.",
+      },
+      {
+        local: { src: "/image-optimized/projects/aero.webp", alt: "Aero" },
+        title: "Aero",
+        text: "Pelacak harga tiket pesawat otomatis plus dashboard — dipakai sebagai alat internal BPS.",
+      },
+    ],
+    footer: "Semuanya dikerjakan dari Tanjungpinang, di sela jadwal kuliah dan praktikum. Kalian juga bisa mulai dari kamar kos.",
+    notes:
+      "Sebut angkanya pelan: seratus ribu pengguna aktif. Lalu buru-buru turunkan egonya — 'ini bukan karena saya jenius, ini karena saya mulai dari proyek kecil di semester 1 dan tidak berhenti.' Kalau waktu mepet, cukup Ternak Klip saja lalu lanjut.",
   },
   {
     id: "bukti",
@@ -221,6 +265,30 @@ export const slides: Slide[] = [
       "Pengalaman mengisi formulir seleksi: 10 sertifikat webinar tidak menambah apa-apa; satu juara nasional mengubah keputusan reviewer. Tulis tiga kata: RELEVAN – BERDAMPAK – TERBUKTI.",
   },
   {
+    id: "podium",
+    layout: "gallery",
+    phase: "berat",
+    kicker: "Cerita: podium",
+    quote:
+      "“Kami bukan dari ITB. Kami dari kampus daerah. Modalnya: riset yang rapi dan tim yang mau begadang.”",
+    body:
+      "Semua foto di slide ini diambil dari kampus yang sama dengan kampus kalian. Nama kampus tidak ditulis di lembar penilaian juri — kualitas kerja kalian yang ditulis.",
+    footer: "2 tahun · 6 kompetisi · 1 kampus daerah",
+    shots: [
+      { src: "/image-optimized/awards/bio1.webp", alt: "Gold Medal Bioinformatika & Biologi Sintetis Nasional, ITB" },
+      { src: "/image-optimized/awards/al-ahmadi-youthpreneurship-1st-place-1.webp", alt: "Juara 1 AL Ahmadi International Youthpreneurship Competition, Batam" },
+      { src: "/image-optimized/awards/foss-batam-2024-2nd-place-1.webp", alt: "Juara 2 Festival Open Source Software, Politeknik Negeri Batam" },
+      { src: "/image-optimized/awards/id-fest-developer-day-jakarta-1.webp", alt: "Finalis ID Fest Developer Day, Jakarta" },
+      { src: "/image-optimized/awards/bio2.webp", alt: "Presentasi tim di kompetisi bioinformatika ITB" },
+      { src: "/image-optimized/awards/baparekraf-developer-day-yogyakarta-1.webp", alt: "Baparekraf Developer Day, Yogyakarta" },
+      { src: "/image-optimized/awards/foss-batam-2025-1st-place.webp", alt: "Juara 1 Festival Open Source Software, Politeknik Negeri Batam 2025" },
+      { src: "/image-optimized/awards/al-ahmadi-youthpreneurship-1st-place-2.webp", alt: "Penyerahan hadiah AL Ahmadi International Youthpreneurship Competition" },
+      { src: "/image-optimized/awards/foss-batam-2024-2nd-place-3.webp", alt: "Tim di Festival Open Source Software, Politeknik Negeri Batam" },
+    ],
+    notes:
+      "SLIDE PERSUASIF — taruh sebelum bahas jenjang lomba, tujuannya bikin mereka ingin ikut. Biarkan dinding foto muncul dulu, diam 5 detik. Baru cerita 90 detik versi aslimu: tim terbentuk, momen hampir nyerah, malam sebelum presentasi, momen pengumuman. Tutup dengan: 'Dua tahun lalu saya duduk di kursi kalian.' Lanjut ke jenjang lomba selagi mereka masih penasaran.",
+  },
+  {
     id: "jenjang",
     layout: "steps",
     phase: "berat",
@@ -284,17 +352,6 @@ export const slides: Slide[] = [
       "JEDA INTERAKTIF #2. Jeda napas di tengah bagian berat. Yang angkat tangan di kolom C biasanya paling ramai — jangan diejek, justru pujilah semangatnya, baru bacakan kalimat penutupnya pelan-pelan.",
   },
   {
-    id: "podium",
-    layout: "quote",
-    phase: "berat",
-    kicker: "Cerita: podium",
-    quote: "“Kami bukan dari ITB. Kami dari kampus daerah. Modalnya: riset yang rapi dan tim yang mau begadang.”",
-    body: "Nama kampus tidak ditulis di lembar penilaian juri. Kualitas kerja kalian yang ditulis.",
-    photo: P.speaker,
-    notes:
-      "CERITA #2 (90 detik): Gold Medal National Bioinformatics & Synthetic Biology Competition ITB 2025. Ceritakan versi aslimu: tim terbentuk, momen hampir nyerah, malam sebelum presentasi, momen pengumuman. Detail konkret yang bikin nempel.",
-  },
-  {
     id: "dokumentasi",
     layout: "split",
     phase: "berat",
@@ -305,6 +362,40 @@ export const slides: Slide[] = [
     photo: P.tableGroup,
     notes:
       "Praktik: folder PRESTASI, subfolder per kegiatan berisi foto, sertifikat, dan catatan 3 baris: peran saya, hasilnya, angkanya. 'Website desa dipakai 1.000+ warga' lebih kuat dari 'membuat website'.",
+  },
+  {
+    id: "portofolio",
+    layout: "channels",
+    phase: "berat",
+    kicker: "Mulai malam ini, bukan semester 7",
+    title: "Bangun portofolio dari sekarang.",
+    subtitle: "Prestasi yang tidak bisa dilihat orang lain sama saja belum ada.",
+    channels: [
+      {
+        icon: "social",
+        effort: "Paling gampang",
+        title: "Media sosial",
+        text: "Akun yang sudah kalian pegang tiap hari. Tinggal ganti isinya: proses tugas besar, sketsa, hasil praktikum lapangan, catatan kuliah yang rapi.",
+        action: "Malam ini: 1 postingan tentang tugas kuliahmu.",
+      },
+      {
+        icon: "linkedin",
+        effort: "Sekali isi, kepakai 4 tahun",
+        title: "LinkedIn",
+        text: "Tempat rekruter, panitia lomba, dan tim beasiswa benar-benar mencari nama. Isi headline, pendidikan, dan tiap sertifikat begitu didapat.",
+        action: "Minggu ini: bikin akun, pasang foto + headline.",
+      },
+      {
+        icon: "web",
+        effort: "Naik kelas",
+        title: "Website sendiri",
+        text: "Satu tautan untuk semua: proyek, sertifikat, CV. Domain sendiri bikin berkas lamaran dan beasiswa kalian terlihat serius sejak detik pertama.",
+        action: "Semester ini: 1 halaman saja sudah cukup.",
+      },
+    ],
+    footer: "Ketiganya gratis untuk dimulai. Yang mahal cuma menundanya sampai semester 7 — waktu itu buktinya sudah lupa bentuknya.",
+    notes:
+      "Lanjutan langsung dari slide 'Tanpa bukti, dianggap tak terjadi': tadi soal menyimpan, ini soal menampilkan. Jangan menggurui soal media sosial — justru itu senjata yang sudah mereka pegang, cuma isinya belum diarahkan. Kalau ada proyektor internet, buka profilmu sendiri 20 detik sebagai contoh, jangan lebih.",
   },
   {
     id: "beasiswa",

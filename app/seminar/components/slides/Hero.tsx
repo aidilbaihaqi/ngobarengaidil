@@ -92,31 +92,6 @@ export function NumberSlide({ s }: { s: S<"number"> }) {
   );
 }
 
-export function QuoteSlide({ s }: { s: S<"quote"> }) {
-  return (
-    <Frame>
-      <Photo photo={s.photo} className="absolute inset-0" kenburns credit={false} sizes="100vw" />
-      <div className="absolute inset-0 bg-seminar-dark/75" />
-      <Stagger className={`relative flex h-full max-w-5xl flex-col justify-center gap-8 ${pad}`}>
-        <Item>
-          <Kicker>
-            <span className="text-amber-300">{s.kicker}</span>
-          </Kicker>
-        </Item>
-        <Item>
-          <p className="text-[clamp(1.6rem,3.6vw,3.2rem)] font-semibold leading-tight text-white">{s.quote}</p>
-        </Item>
-        <Item>
-          <Body light className="max-w-2xl">
-            {s.body}
-          </Body>
-        </Item>
-      </Stagger>
-      <p className="absolute bottom-3 right-4 text-[10px] text-white/50">{s.photo.by} · Unsplash</p>
-    </Frame>
-  );
-}
-
 const contactIcon = (c: string) => (c.startsWith("@") ? AtSign : c.toLowerCase().includes("linkedin") ? Linkedin : Globe);
 
 export function QnaSlide({ s }: { s: S<"qna"> }) {

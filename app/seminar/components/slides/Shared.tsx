@@ -58,9 +58,16 @@ export function Body({ children, light = false, className = "" }: { children: Re
   return <p className={`text-[clamp(0.95rem,1.5vw,1.3rem)] leading-relaxed ${light ? "text-white/80" : "text-neutral-700"} ${className}`}>{children}</p>;
 }
 
-/** Bingkai slide standar: padding responsif, tinggi penuh. */
+/**
+ * Bingkai slide standar: padding responsif, tinggi penuh.
+ *
+ * Latar putih hanya dipasang kalau pemanggilnya belum membawa `bg-` sendiri —
+ * dua utilitas background dengan spesifisitas sama, urutan menangnya ditentukan
+ * stylesheet, bukan urutan di atribut class.
+ */
 export function Frame({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return <section className={`relative h-full w-full overflow-hidden bg-white ${className}`}>{children}</section>;
+  const ground = className.includes("bg-") ? "" : "bg-white";
+  return <section className={`relative h-full w-full overflow-hidden ${ground} ${className}`}>{children}</section>;
 }
 
 export const pad = "px-[6vw] py-[6vh] md:px-[7vw] md:py-[8vh]";

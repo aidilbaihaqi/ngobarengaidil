@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Award, CheckCircle2, GraduationCap, Globe, Medal, School, UserRound } from "lucide-react";
 import Photo, { LocalPhoto } from "@/app/seminar/components/Photo";
 import type { Slide } from "@/app/seminar/lib/types";
-import { Body, Frame, Item, Kicker, Stagger, Subtitle, Title, container, item, pad, rise } from "./Shared";
+import { Body, Frame, Item, Stagger, Subtitle, Title, container, item, pad, rise } from "./Shared";
 
 type S<L extends Slide["layout"]> = Extract<Slide, { layout: L }>;
 
@@ -105,7 +105,16 @@ export function CardsSlide({ s }: { s: S<"cards"> }) {
         <motion.div variants={container} className="grid grid-cols-1 gap-5 md:grid-cols-3">
           {s.cards.map((c) => (
             <motion.div key={c.title} variants={rise} className="overflow-hidden rounded-3xl bg-white shadow-xl shadow-seminar/10 ring-1 ring-seminar/10">
-              <Photo photo={c.photo} className="aspect-[16/10] w-full" sizes="30vw" />
+              {c.local ? (
+                <LocalPhoto
+                  src={c.local.src}
+                  alt={c.local.alt}
+                  className="aspect-[16/10] w-full bg-seminar-light"
+                  fallback={<div className="h-full w-full bg-gradient-to-br from-seminar-light to-white" />}
+                />
+              ) : (
+                c.photo && <Photo photo={c.photo} className="aspect-[16/10] w-full" sizes="30vw" />
+              )}
               <div className="p-5">
                 <h3 className="text-lg font-bold text-seminar md:text-xl">{c.title}</h3>
                 <p className="mt-1 text-sm leading-snug text-neutral-700 md:text-base">{c.text}</p>

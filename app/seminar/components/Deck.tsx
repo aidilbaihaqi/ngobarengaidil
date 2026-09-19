@@ -7,9 +7,10 @@ import { slides } from "@/app/seminar/data/slides";
 import { unsplashUrl } from "@/app/seminar/lib/photos";
 import type { Slide } from "@/app/seminar/lib/types";
 import { CardsSlide, CompareSlide, IntroSlide, SplitSlide, StepsSlide } from "./slides/Content";
+import { ChannelsSlide, GallerySlide } from "./slides/Gallery";
 import { CloudSlide, FocusSlide, PollSlide } from "./slides/Open";
 import { BuildingSlide, ChartSlide } from "./slides/Data";
-import { ClosingSlide, CoverSlide, NumberSlide, QnaSlide, QuoteSlide } from "./slides/Hero";
+import { ClosingSlide, CoverSlide, NumberSlide, QnaSlide } from "./slides/Hero";
 
 function SlideView({ s }: { s: Slide }) {
   switch (s.layout) {
@@ -18,25 +19,35 @@ function SlideView({ s }: { s: Slide }) {
     case "cloud": return <CloudSlide s={s} />;
     case "focus": return <FocusSlide s={s} />;
     case "poll": return <PollSlide s={s} />;
+    case "gallery": return <GallerySlide s={s} />;
+    case "channels": return <ChannelsSlide s={s} />;
     case "split": return <SplitSlide s={s} />;
     case "cards": return <CardsSlide s={s} />;
     case "number": return <NumberSlide s={s} />;
     case "chart": return <ChartSlide s={s} />;
     case "building": return <BuildingSlide s={s} />;
     case "steps": return <StepsSlide s={s} />;
-    case "quote": return <QuoteSlide s={s} />;
     case "compare": return <CompareSlide s={s} />;
     case "qna": return <QnaSlide s={s} />;
     case "closing": return <ClosingSlide s={s} />;
   }
 }
 
-/** Kumpulkan semua hash foto di satu slide untuk preload. */
+/** Kumpulkan semua hash foto Unsplash di satu slide untuk preload. */
 function photoHashes(s: Slide): string[] {
   const out: string[] = [];
   const j = s as unknown as Record<string, unknown>;
   if (j.photo && typeof j.photo === "object") out.push((j.photo as { hash: string }).hash);
-  if (Array.isArray(j.cards)) for (const c of j.cards as { photo: { hash: string } }[]) out.push(c.photo.hash);
+  if (Array.isArray(j.cards)) for (const c of j.cards as { photo?: { hash: string } }[]) if (c.photo) out.push(c.photo.hash);
+  return out;
+}
+
+/** Foto lokal di satu slide — dinding prestasi punya sembilan sekaligus. */
+function localSrcs(s: Slide): string[] {
+  const j = s as unknown as Record<string, unknown>;
+  const out: string[] = [];
+  if (Array.isArray(j.shots)) for (const sh of j.shots as { src: string }[]) out.push(sh.src);
+  if (Array.isArray(j.cards)) for (const c of j.cards as { local?: { src: string } }[]) if (c.local) out.push(c.local.src);
   return out;
 }
 
@@ -90,7 +101,10 @@ export default function Deck() {
       else if (e.key === "Home") go(0);
       else if (e.key === "End") go(total - 1);
       else if (e.key.toLowerCase() === "n") setShowNotes((v) => !v);
-      else if (e.key.toLowerCase() === "f") document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen?.();
+      else if (e.key.toLowerCase() === "f") {
+        if (document.fullscreenElement) document.exitFullscreen();
+        else document.documentElement.requestFullscreen?.();
+      }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -98,10 +112,15 @@ export default function Deck() {
 
   // preload foto slide berikut & sebelumnya supaya transisi tidak menunggu gambar
   useEffect(() => {
-    [index + 1, index + 2, index - 1]
-      .filter((i) => i >= 0 && i < total)
-      .flatMap((i) => photoHashes(slides[i]))
-      .forEach((h) => { const im = new Image(); im.src = unsplashUrl(h, 1600); });
+    const near = [index + 1, index + 2, index - 1].filter((i) => i >= 0 && i < total);
+    near.flatMap((i) => photoHashes(slides[i])).forEach((h) => {
+      const im = new Image();
+      im.src = unsplashUrl(h, 1600);
+    });
+    near.flatMap((i) => localSrcs(slides[i])).forEach((src) => {
+      const im = new Image();
+      im.src = src;
+    });
   }, [index, total]);
 
   const phase = useMemo(() => slide.phase, [slide]);

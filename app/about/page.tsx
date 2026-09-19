@@ -1104,8 +1104,8 @@ export default function Home() {
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <AwardCarousel
                     images={[
-                      "/image-optimized/awards/1st Place – AI Entrepreneurship Competition_1.webp",
-                      "/image-optimized/awards/1st Place – AI Entrepreneurship Competition_2.webp"
+                      "/image-optimized/awards/al-ahmadi-youthpreneurship-1st-place-1.webp",
+                      "/image-optimized/awards/al-ahmadi-youthpreneurship-1st-place-2.webp"
                     ]}
                     alt="AI Entrepreneurship Competition"
                   />
@@ -1127,8 +1127,8 @@ export default function Home() {
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <AwardCarousel
                     images={[
-                      "/image-optimized/awards/Finalist – ID Fest Developer Day, Jakarta_1.webp",
-                      "/image-optimized/awards/Finalist – ID Fest Developer Day, Jakarta_2.webp"
+                      "/image-optimized/awards/id-fest-developer-day-jakarta-1.webp",
+                      "/image-optimized/awards/id-fest-developer-day-jakarta-2.webp"
                     ]}
                     alt="ID Fest Developer Day"
                   />
@@ -1150,7 +1150,7 @@ export default function Home() {
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <AwardCarousel
                     images={[
-                      "/image-optimized/awards/1st Place - Festival Open Source Software, Batam, Batam Linux User Group, Politeknik Negeri Batam, 2025.webp"
+                      "/image-optimized/awards/foss-batam-2025-1st-place.webp"
                     ]}
                     alt="Festival Open Source Software 2025"
                   />
@@ -1172,11 +1172,11 @@ export default function Home() {
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <AwardCarousel
                     images={[
-                      "/image-optimized/awards/2nd Place – Festival Open Source Software, Batam_1.webp",
-                      "/image-optimized/awards/2nd Place – Festival Open Source Software, Batam_2.webp",
-                      "/image-optimized/awards/2nd Place – Festival Open Source Software, Batam_3.webp",
-                      "/image-optimized/awards/2nd Place – Festival Open Source Software, Batam_4.webp",
-                      "/image-optimized/awards/2nd Place – Festival Open Source Software, Batam_5.webp",
+                      "/image-optimized/awards/foss-batam-2024-2nd-place-1.webp",
+                      "/image-optimized/awards/foss-batam-2024-2nd-place-2.webp",
+                      "/image-optimized/awards/foss-batam-2024-2nd-place-3.webp",
+                      "/image-optimized/awards/foss-batam-2024-2nd-place-4.webp",
+                      "/image-optimized/awards/foss-batam-2024-2nd-place-5.webp",
                     ]}
                     alt="Festival Open Source Software 2024"
                   />
@@ -1198,9 +1198,9 @@ export default function Home() {
                 <div className="p-4 border border-gray-200 rounded-lg dark:border-neutral-700 text-left">
                   <AwardCarousel
                     images={[
-                      "/image-optimized/awards/1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta_1.webp",
-                      "/image-optimized/awards/1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta_2.webp",
-                      "/image-optimized/awards/1 of 1100 programmers invited to the Baparekraf Developer Day, Yogyakarta_3.webp",
+                      "/image-optimized/awards/baparekraf-developer-day-yogyakarta-1.webp",
+                      "/image-optimized/awards/baparekraf-developer-day-yogyakarta-2.webp",
+                      "/image-optimized/awards/baparekraf-developer-day-yogyakarta-3.webp",
                     ]}
                     alt="Baparekraf Developer Day"
                   />
