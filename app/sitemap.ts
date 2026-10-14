@@ -34,13 +34,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.5,
     },
-    {
-      // Standalone seminar deck. Rarely edited once delivered, and it is a
-      // side presentation rather than a pillar page, hence the low priority.
-      url: `${baseUrl}/seminar`,
-      lastModified,
-      changeFrequency: 'yearly',
-      priority: 0.4,
-    },
+
   ]
 }
