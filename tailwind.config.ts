@@ -131,6 +131,10 @@ export default {
   			mono: ['var(--font-geist-mono)', 'ui-monospace', 'SFMono-Regular', 'monospace'],
   			// Bitmap display face, in the spirit of Minecraftia.
   			pixel: ['var(--font-pixel)', 'ui-monospace', 'monospace'],
+  			// The /fossday-2026 deck: grotesk for claims, Plex for prose, JetBrains for the machine.
+  			'fd-display': ['var(--font-space-grotesk)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+  			'fd-sans': ['var(--font-plex-sans)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+  			'fd-mono': ['var(--font-jetbrains)', 'ui-monospace', 'SFMono-Regular', 'monospace'],
   		},
   		colors: {
   			// Brand names, for new code that wants to be explicit.
@@ -138,6 +142,19 @@ export default {
   			mist,
   			brand: brandBlue,
   			fresh,
+  			/*
+  			 * The /fossday-2026 deck, taken from the event poster. Its own family so
+  			 * it never collides with the site ramps above. Brick is reserved for the
+  			 * two security slides; everything else gets by on amber and teal.
+  			 */
+  			fd: {
+  				navy: '#10163A',
+  				ink: '#0B1028',
+  				cream: '#F4EFE3',
+  				amber: '#F2C46D',
+  				teal: '#7FD8D4',
+  				brick: '#D9644A',
+  			},
 
   			// Aliases onto the stock hue names the components already use.
   			gray: mist,

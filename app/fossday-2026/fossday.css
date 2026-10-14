@@ -1,0 +1,64 @@
+/* ---------------------------------------------------------------------------
+ * Styles for the /fossday-2026 deck only. Everything is scoped under
+ * `.fossday` or to the lock class ScrollLock holds while the route is open.
+ * ------------------------------------------------------------------------- */
+
+html.fossday-locked,
+html.fossday-locked body {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+.fossday {
+  color-scheme: dark;
+  font-feature-settings: "ss01", "tnum";
+}
+
+/* Drafting film: a 40px minor grid, a heavier line every fifth cell. */
+.fossday .fd-grid {
+  background-image:
+    linear-gradient(to right, rgb(244 239 227 / 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(244 239 227 / 0.07) 1px, transparent 1px),
+    linear-gradient(to right, rgb(244 239 227 / 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(244 239 227 / 0.03) 1px, transparent 1px);
+  background-size: 200px 200px, 200px 200px, 40px 40px, 40px 40px;
+  background-position: -1px -1px;
+}
+
+.fossday .fd-cursor {
+  display: inline-block;
+  width: 0.58em;
+  height: 1.08em;
+  vertical-align: -0.16em;
+  background: currentColor;
+  animation: fd-blink 1.06s steps(1, end) infinite;
+}
+
+@keyframes fd-blink {
+  50% { opacity: 0; }
+}
+
+/* A highlighter stroke under the one word that carries the claim. */
+.fossday .fd-mark {
+  background-image: linear-gradient(transparent 62%, #f2c46d 62%, #f2c46d 90%, transparent 90%);
+  padding: 0 0.04em;
+}
+
+.fossday .fd-notes::-webkit-scrollbar { width: 0; }
+.fossday .fd-notes { scrollbar-width: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fossday .fd-cursor { animation: none; }
+}
+
+/* Code on stage reads literally: `=>` stays two characters. */
+.fossday .font-fd-mono { font-variant-ligatures: none; }
+
+/* The title ticker: two identical rows, shifted by exactly one row. */
+.fossday .fd-marquee { animation: fd-marquee 48s linear infinite; }
+@keyframes fd-marquee { to { transform: translateX(-50%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .fossday .fd-marquee { animation: none; }
+}
