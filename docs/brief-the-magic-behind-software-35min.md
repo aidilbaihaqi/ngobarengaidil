@@ -139,7 +139,7 @@ Materi teknisnya padat, jadi ada 6 slide jeda untuk menurunkan ketegangan. Atura
 - **Artefak yang dibuat ulang, bukan gambar tempelan.** Chat, PR, terminal, atau diagram balok digambar ulang dalam palet deck. Tidak memakai foto atau template meme milik orang lain.
 - **Tema dev culture 2026** yang nyambung dengan tahap di sekitarnya: agen AI yang terlalu nurut, PR raksasa, *works on my machine*, deploy hari Jumat, usage limit.
 - **Dua klik:** klik pertama setup, klik kedua punchline.
-- **Penanda konsisten:** label kecil `// jeda sebentar` di kiri atas, latar krem. Satu-satunya pengecualian adalah jeda 26, yang berlatar navy pekat karena berdampingan dengan slide krem 25.
+- **Tanpa label penanda:** jeda dikenali dari latar krem dan nadanya saja. Satu-satunya pengecualian adalah jeda 26, yang berlatar navy pekat karena berdampingan dengan slide krem 25.
 - **Hindari meme politik** atau yang menyinggung pihak tertentu. Ini acara komunitas.
 
 ---
@@ -344,7 +344,14 @@ Materi teknisnya padat, jadi ada 6 slide jeda untuk menurunkan ketegangan. Atura
 - **Headline:** Apa yang terjadi setelah `git push`?
 - **Visual:** pipeline horizontal tipis di atas (push → webhook → runner → test/scan → build → registry), area bawah besar untuk **video demo 60–90 detik**.
 - **Teks lain:** label pipeline.
-- **Narasi:** jelaskan pipeline singkat, lalu putar demo: push → pipeline hijau → image → rollout. Siapkan cadangan offline; kalau video gagal, jelaskan dari diagram.
+- **Video:** `public/fossday-2026/demo.mp4`, 87 detik, berupa rekonstruksi alur dengan waktu dipercepat (jam "waktu nyata" di pojok kanan atas berjalan sampai 4:37):
+  - 0:00 · push: `git status`, commit, `git push`, webhook memicu pipeline #482
+  - 0:14 · pipeline: checkout → install → lint → test (23 passed) → scan → SBOM → build → sign → push
+  - 0:43 · registry: `avatar:v2`, 180 MB, signature dan SBOM terverifikasi, GitOps mulai sync
+  - 0:53 · rollout: 3 pod v1 diganti v2 satu per satu, trafik pindah 0 → 100%
+  - 1:15 · verifikasi: `curl` upload foto → 201, 3 ukuran, EXIF dihapus, lalu `✓ deployed to production`
+  - Daftar bab di kanan slide bisa diklik untuk lompat ke bagian itu.
+- **Narasi:** jelaskan pipeline singkat, lalu putar demo. Sebutkan bahwa ini rekonstruksi alur. Siapkan cadangan offline; kalau video gagal, jelaskan dari diagram.
 
 #### Slide 22 · Jeda 4: Works on My Machine · Jeda (krem) · +0:15
 - **Setup:** developer: "Tapi di laptop saya jalan, kok."
@@ -455,7 +462,7 @@ Slide berbasis kartu ikon: **nol**. Slide terang: 8, 13, 25, 31, plus jeda krem 
 | Animasi/rekaman prompt → output agen → `✓ deployed` | 1, 32 | Diambil dari sesi agen asli |
 | Foto diri (resolusi tinggi) | 4 | Sudah ada: `public/image/aidil.jpg`, dipotong full-bleed di sisi kiri |
 | Screenshot log sesi agen membangun `/avatar` | 10 | Satu sesi dengan aset slide 1 |
-| Rekaman demo push → pipeline → rollout (60–90 dtk) | 21 | Simpan di `public/fossday-2026/demo.mp4`, plus salinan offline |
+| Rekaman demo push → pipeline → rollout (60–90 dtk) | 21 | **Sudah ada:** `public/fossday-2026/demo.mp4` (87 dtk, 1080p). Rekonstruksi animasi, bukan rekaman sesi nyata. Source dan cara render ulang ada di `scripts/fossday-demo/`. Simpan salinan offline |
 | Screenshot issue + spesifikasi hasil AI | 7 | Dari repo demo |
 | Screenshot `AGENTS.md` di editor | 12 | Dari repo demo |
 | Angka ukuran image sebelum/sesudah multi-stage | 23 | Dari build sendiri |

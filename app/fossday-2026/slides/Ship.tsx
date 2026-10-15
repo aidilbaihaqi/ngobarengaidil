@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { C, EASE, Frame, Headline, In, Label, StageMark, Step, Window } from "../components/kit";
 
 /* ── 17 · Review & test ───────────────────────────────────────────────── */
@@ -78,8 +78,18 @@ export function S17Tests() {
 
 const PIPE = ["push", "webhook", "runner", "test/scan", "build", "registry"];
 
+/* Chapter marks in public/fossday-2026/demo.mp4; a click seeks there and plays. */
+const CHAPTERS: [string, number][] = [
+  ["push ke main", 0],
+  ["pipeline hijau", 14],
+  ["image masuk registry", 43],
+  ["rollout ke cluster", 53],
+  ["verifikasi upload", 75],
+];
+
 export function S18Pipeline() {
   const [missing, setMissing] = useState(false);
+  const video = useRef<HTMLVideoElement>(null);
 
   return (
     <Frame tone="navy">
@@ -102,6 +112,7 @@ export function S18Pipeline() {
       <In delay={0.35} className="absolute left-[120px] top-[372px] h-[620px] w-[1102px] overflow-hidden rounded-[6px] border border-fd-cream/15 bg-fd-ink">
         {!missing ? (
           <video
+            ref={video}
             src="/fossday-2026/demo.mp4"
             controls
             preload="metadata"
@@ -122,11 +133,23 @@ export function S18Pipeline() {
       <In delay={0.5} className="absolute left-[1300px] top-[372px] w-[500px]">
         <Label className="text-[16px] text-fd-cream/40">dalam demo</Label>
         <div className="mt-6 border-t border-fd-cream/15">
-          {["push ke main", "pipeline hijau", "image masuk registry", "rollout ke cluster"].map((s, i) => (
-            <div key={s} className="grid grid-cols-[56px_1fr] border-b border-fd-cream/15 py-4">
+          {CHAPTERS.map(([label, at], i) => (
+            <button
+              key={label}
+              onClick={() => {
+                const v = video.current;
+                if (!v) return;
+                v.currentTime = at;
+                void v.play();
+              }}
+              className="grid w-full grid-cols-[56px_1fr_auto] items-baseline border-b border-fd-cream/15 py-4 text-left hover:bg-fd-cream/[0.04]"
+            >
               <span className="font-fd-mono text-[18px] text-fd-amber">{String(i + 1).padStart(2, "0")}</span>
-              <span className="font-fd-sans text-[26px] text-fd-cream/85">{s}</span>
-            </div>
+              <span className="font-fd-sans text-[26px] text-fd-cream/85">{label}</span>
+              <span className="font-fd-mono text-[16px] text-fd-cream/35">
+                {Math.floor(at / 60)}:{String(at % 60).padStart(2, "0")}
+              </span>
+            </button>
           ))}
         </div>
       </In>

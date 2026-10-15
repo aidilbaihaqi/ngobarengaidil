@@ -9,18 +9,11 @@
 
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
-import { C, EASE, Frame, In, Label, Step } from "../components/kit";
+import { C, EASE, Frame, In, Step } from "../components/kit";
 
 /* Cream by default; ink where a cream content slide sits right beside it. */
 function Jeda({ children, dark }: { children: ReactNode; dark?: boolean }) {
-  return (
-    <Frame tone={dark ? "ink" : "cream"}>
-      <In className="absolute left-[120px] top-[110px]">
-        <Label className={dark ? "text-fd-cream/45" : "text-fd-navy/45"}>{"// jeda sebentar"}</Label>
-      </In>
-      {children}
-    </Frame>
-  );
+  return <Frame tone={dark ? "ink" : "cream"}>{children}</Frame>;
 }
 
 /* ── Jeda 1 · "You're absolutely right!" ───────────────────────────────── */

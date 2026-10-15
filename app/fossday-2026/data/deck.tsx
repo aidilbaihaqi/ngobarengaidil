@@ -217,7 +217,7 @@ export const DECK: SlideDef[] = [
     at: "21:30",
     Slide: S18Pipeline,
     notes:
-      "Jelaskan pipeline singkat, lalu klik video untuk memutar demo: push → pipeline hijau → image → rollout. Video dibaca dari public/fossday-2026/demo.mp4. Kalau gagal, jelaskan dari diagram.",
+      "Jelaskan pipeline singkat, lalu klik video (87 detik): push → pipeline → registry → rollout → verifikasi. Daftar di kanan bisa diklik untuk lompat ke bagian tertentu kalau waktu mepet. Sampaikan bahwa video ini rekonstruksi alur dengan waktu dipercepat; durasi nyatanya ±4,5 menit (jam di pojok kanan atas video). Kalau video gagal, jelaskan dari diagram.",
   },
   {
     title: "Jeda · Works on my machine",
