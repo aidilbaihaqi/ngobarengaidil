@@ -1,0 +1,72 @@
+/* ---------------------------------------------------------------------------
+ * Styles for the /suprise page only. Everything is scoped under `.suprise`.
+ * ------------------------------------------------------------------------- */
+
+.suprise {
+  color-scheme: light;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+}
+
+/* Scattered watermelon seeds: two offset layers so the scatter never reads as a grid. */
+.suprise .sp-seeds {
+  background-image:
+    radial-gradient(ellipse 3px 5px at 20% 30%, rgb(42 26 23 / 0.10) 98%, transparent 100%),
+    radial-gradient(ellipse 3px 5px at 70% 65%, rgb(42 26 23 / 0.08) 98%, transparent 100%),
+    radial-gradient(ellipse 3px 5px at 45% 85%, rgb(240 82 95 / 0.14) 98%, transparent 100%);
+  background-size: 64px 72px, 88px 80px, 52px 60px;
+}
+
+/* A die-cut sticker: thick white border, a soft drop, a little paper sheen. */
+.suprise .sp-sticker {
+  border: 5px solid #fff;
+  border-radius: 28px;
+  box-shadow:
+    0 1px 0 rgb(42 26 23 / 0.06),
+    0 10px 24px -8px rgb(201 48 63 / 0.35);
+  background: #fff;
+  overflow: hidden;
+}
+
+.suprise .sp-wobble {
+  animation: sp-wobble 3.2s ease-in-out infinite;
+}
+
+@keyframes sp-wobble {
+  0%, 100% { transform: rotate(var(--tilt, -4deg)); }
+  50% { transform: rotate(calc(var(--tilt, -4deg) * -1)) translateY(-4px); }
+}
+
+.suprise .sp-float {
+  animation: sp-float 4s ease-in-out infinite;
+}
+
+@keyframes sp-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* The rind band along a button's bottom edge, so every CTA reads as a slice. */
+.suprise .sp-slice {
+  box-shadow:
+    inset 0 -6px 0 #fff,
+    inset 0 -12px 0 #5fae5b,
+    0 8px 18px -6px rgb(201 48 63 / 0.55);
+}
+
+.suprise .sp-hint-pulse {
+  animation: sp-hint 1.2s ease-in-out infinite;
+}
+
+@keyframes sp-hint {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0 rgb(240 82 95 / 0)); }
+  50% { transform: scale(1.35); filter: drop-shadow(0 0 6px rgb(240 82 95 / 0.9)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .suprise .sp-wobble,
+  .suprise .sp-float,
+  .suprise .sp-hint-pulse {
+    animation: none;
+  }
+}
