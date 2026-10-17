@@ -71,7 +71,7 @@ Slide berfungsi seperti papan informasi, bukan dokumen. Detail disampaikan lisan
 - **Tidak ada bullet list lebih dari 3 baris.** Kalau lebih, ubah jadi diagram, angka besar, atau pecah slide.
 - **Angka tampil sendirian dan besar**, dengan label 4–6 kata.
 - **Sumber data tetap wajib**, sebagai footer kecil 1 baris.
-- Semua penjelasan panjang pindah ke **speaker notes**.
+- Semua penjelasan panjang pindah ke **naskah pemaparan** (`docs/naskah-fossday-2026.pdf`), bukan ke layar. Deck sendiri tidak punya panel speaker notes atau timer.
 - **Tanpa metafora:** gunakan istilah teknis (spesifikasi, implementasi, dependency, build, deploy, observability).
 
 ### 4.2 Arah Visual
@@ -479,8 +479,8 @@ Slide berbasis kartu ikon: **nol**. Slide terang: 8, 13, 25, 31, plus jeda krem 
 - [ ] Pre-opening dilatih tanpa melihat slide; 60 detik pertama menentukan perhatian audiens.
 - [x] Kredensial final slide profil: Full-stack AI Engineer · Backend & DevOps Engineer UmbiTeams · Founder Lyceum Indonesia & Tim WAT · Riset Bioinformatika, Blockchain & Deep Learning.
 - [ ] Cek ulang klaim status pengelolaan MCP (slide 12).
-- [ ] Baca ulang speaker notes, pastikan tidak ada metafora yang terselip saat latihan lisan.
-- [ ] Latihan dengan timer; titik rawan molor: slide 4 (profil), 10, 21, dan setiap jeda (jangan lebih dari 15 detik).
+- [ ] Baca ulang naskah, pastikan tidak ada metafora yang terselip saat latihan lisan.
+- [ ] Latihan dengan timer sendiri (HP atau jam tangan; deck tidak punya timer); titik rawan molor: slide 4 (profil), 10, 21, dan setiap jeda (jangan lebih dari 15 detik).
 - [ ] Rencana potong cepat jika waktu habis: slide 25 dan 28, serta jeda 15 dan 26, bisa dilewati tanpa merusak alur.
 - [ ] Uji video, animasi terminal, dan font di laptop/proyektor venue.
 

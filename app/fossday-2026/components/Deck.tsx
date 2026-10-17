@@ -10,7 +10,7 @@ const H = 1080;
 
 /*
  * Keys: → ↓ Space PageDown next · ← ↑ PageUp back · Home/End
- *       N notes · F fullscreen · B blackout · T reset the timer
+ *       F fullscreen · B blackout
  * Clicks: left fifth of the screen goes back, anywhere else goes forward.
  */
 
@@ -77,16 +77,11 @@ function useStageScale() {
   return box;
 }
 
-const fmt = (sec: number) => `${Math.floor(sec / 60)}:${String(Math.floor(sec % 60)).padStart(2, "0")}`;
-
 export default function Deck() {
   const [pos, setPos] = useState({ i: 0, step: 0 });
   const [ready, setReady] = useState(false);
-  const [notes, setNotes] = useState(false);
   const [black, setBlack] = useState(false);
   const [idle, setIdle] = useState(false);
-  const [t0, setT0] = useState(() => Date.now());
-  const [now, setNow] = useState(() => Date.now());
   const touchX = useRef<number | null>(null);
   const { s, x, y } = useStageScale();
 
@@ -142,9 +137,7 @@ export default function Deck() {
         prev();
       } else if (k === "Home") jump(0);
       else if (k === "End") jump(DECK.length - 1);
-      else if (k.toLowerCase() === "n") setNotes((v) => !v);
       else if (k.toLowerCase() === "b" || k === ".") setBlack((v) => !v);
-      else if (k.toLowerCase() === "t") setT0(Date.now());
       else if (k.toLowerCase() === "f") {
         if (document.fullscreenElement) document.exitFullscreen();
         else document.documentElement.requestFullscreen?.();
@@ -168,12 +161,6 @@ export default function Deck() {
       window.removeEventListener("mousemove", wake);
     };
   }, []);
-
-  useEffect(() => {
-    if (!notes) return;
-    const id = window.setInterval(() => setNow(Date.now()), 1000);
-    return () => window.clearInterval(id);
-  }, [notes]);
 
   const onClick = (e: React.MouseEvent) => {
     if ((e.target as HTMLElement).closest("video, button, a, aside")) return;
@@ -232,7 +219,7 @@ export default function Deck() {
       {/* Presenter controls: quiet, bottom-right, gone while idle. */}
       <div
         className={`absolute bottom-3 right-3 z-40 flex items-center gap-1 rounded-[4px] border border-fd-cream/10 bg-fd-ink/90 p-1 font-fd-mono text-[12px] text-fd-cream/60 transition-opacity duration-500 ${
-          idle && !notes ? "pointer-events-none opacity-0" : "opacity-100"
+          idle ? "pointer-events-none opacity-0" : "opacity-100"
         }`}
       >
         <button onClick={prev} className="px-2 py-1 hover:text-fd-cream" aria-label="Sebelumnya">←</button>
@@ -242,41 +229,11 @@ export default function Deck() {
         </span>
         <button onClick={next} className="px-2 py-1 hover:text-fd-cream" aria-label="Berikutnya">→</button>
         <span className="mx-1 h-4 w-px bg-fd-cream/15" />
-        <button onClick={() => setNotes((v) => !v)} className={`px-2 py-1 hover:text-fd-cream ${notes ? "text-fd-amber" : ""}`}>
-          N catatan
-        </button>
         <button onClick={() => document.documentElement.requestFullscreen?.()} className="px-2 py-1 hover:text-fd-cream">
           F layar penuh
         </button>
       </div>
 
-      {/* Speaker notes. */}
-      <AnimatePresence>
-        {notes && (
-          <motion.aside
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 16 }}
-            transition={{ duration: 0.25 }}
-            className="fd-notes absolute bottom-14 right-3 z-40 max-h-[70vh] w-[min(440px,calc(100vw-24px))] overflow-auto rounded-[4px] border border-fd-cream/15 bg-fd-ink/95 p-5 text-fd-cream backdrop-blur"
-          >
-            <div className="flex items-baseline justify-between font-fd-mono text-[11px] uppercase tracking-[0.14em] text-fd-cream/45">
-              <span>
-                {String(pos.i + 1).padStart(2, "0")} · {slide.title}
-              </span>
-              <span className="normal-case tracking-normal">
-                target {slide.at} · <span className="text-fd-amber">{fmt((now - t0) / 1000)}</span>
-              </span>
-            </div>
-            <p className="mt-3 font-fd-sans text-[15px] leading-[1.6] text-fd-cream/90">{slide.notes}</p>
-            {pos.i < DECK.length - 1 && (
-              <div className="mt-4 border-t border-fd-cream/10 pt-3 font-fd-mono text-[11px] text-fd-cream/40">
-                berikutnya → {DECK[pos.i + 1].title}
-              </div>
-            )}
-          </motion.aside>
-        )}
-      </AnimatePresence>
     </div>
   );
 }

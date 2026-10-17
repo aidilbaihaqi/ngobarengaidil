@@ -45,9 +45,6 @@ html.fossday-locked body {
   padding: 0 0.04em;
 }
 
-.fossday .fd-notes::-webkit-scrollbar { width: 0; }
-.fossday .fd-notes { scrollbar-width: none; }
-
 @media (prefers-reduced-motion: reduce) {
   .fossday .fd-cursor { animation: none; }
 }
