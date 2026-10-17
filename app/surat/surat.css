@@ -1,0 +1,64 @@
+/* ---------------------------------------------------------------------------
+ * Styles for the /surat page only, scoped under `.surat`. The look follows the
+ * cover of "Rasa untuk Jiwa": a shaded park, sunlight breaking through leaves.
+ * ------------------------------------------------------------------------- */
+
+.surat {
+  color-scheme: dark;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+}
+
+/* Shade under the trees, with warm light pooling from the top corner. */
+.surat .rj-park {
+  background:
+    radial-gradient(120% 70% at 85% -10%, rgb(242 213 138 / 0.32), transparent 60%),
+    radial-gradient(90% 60% at 0% 100%, rgb(127 166 90 / 0.22), transparent 70%),
+    linear-gradient(180deg, #1f4434 0%, #14291f 70%);
+}
+
+/* Dappled light: soft blobs that drift slowly, like leaves moving overhead. */
+.surat .rj-dapple {
+  background-image:
+    radial-gradient(closest-side, rgb(242 213 138 / 0.22), transparent),
+    radial-gradient(closest-side, rgb(242 213 138 / 0.16), transparent),
+    radial-gradient(closest-side, rgb(242 213 138 / 0.12), transparent);
+  background-size: 180px 140px, 260px 200px, 120px 110px;
+  background-position: 10% 20%, 70% 40%, 40% 80%;
+  background-repeat: no-repeat;
+  animation: rj-dapple 16s ease-in-out infinite alternate;
+  filter: blur(6px);
+}
+
+@keyframes rj-dapple {
+  0% { background-position: 10% 20%, 70% 40%, 40% 80%; }
+  50% { background-position: 18% 26%, 62% 34%, 48% 72%; }
+  100% { background-position: 6% 16%, 76% 46%, 34% 84%; }
+}
+
+/* Paper with a faint tooth and the shadow of leaves across its top edge. */
+.surat .rj-paper {
+  background:
+    radial-gradient(60% 30% at 80% 0%, rgb(63 107 69 / 0.10), transparent 70%),
+    radial-gradient(40% 20% at 15% 2%, rgb(63 107 69 / 0.08), transparent 70%),
+    repeating-linear-gradient(0deg, rgb(34 48 42 / 0.018) 0 1px, transparent 1px 3px),
+    #f7efdc;
+  box-shadow:
+    0 1px 0 rgb(255 255 255 / 0.6) inset,
+    0 30px 60px -25px rgb(0 0 0 / 0.6),
+    0 10px 20px -10px rgb(0 0 0 / 0.35);
+}
+
+.surat .rj-dropcap::first-letter {
+  font-family: var(--font-caveat), cursive;
+  font-weight: 700;
+  float: left;
+  font-size: 3.6em;
+  line-height: 0.8;
+  padding: 0.08em 0.12em 0 0;
+  color: #b2433a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .surat .rj-dapple { animation: none; }
+}

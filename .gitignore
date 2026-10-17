@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# /surat: the letter's plaintext stays local; only the sealed copy is committed
+app/surat/letter.private.json

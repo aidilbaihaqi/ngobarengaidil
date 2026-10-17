@@ -135,9 +135,9 @@ export default {
   			'fd-display': ['var(--font-space-grotesk)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
   			'fd-sans': ['var(--font-plex-sans)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
   			'fd-mono': ['var(--font-jetbrains)', 'ui-monospace', 'SFMono-Regular', 'monospace'],
-  			// The /suprise page: a round face for everything, a handwritten one for the letter.
-  			'sp-round': ['var(--font-fredoka)', 'ui-rounded', 'system-ui', 'sans-serif'],
-  			'sp-hand': ['var(--font-gaegu)', 'var(--font-fredoka)', 'cursive'],
+  			// The /surat page: a brush hand like the book's title, a book serif for the letter.
+  			'rj-brush': ['var(--font-caveat)', 'cursive'],
+  			'rj-serif': ['var(--font-lora)', 'ui-serif', 'Georgia', 'serif'],
   		},
   		colors: {
   			// Brand names, for new code that wants to be explicit.
@@ -159,17 +159,19 @@ export default {
   				brick: '#D9644A',
   			},
   			/*
-  			 * The /suprise page: watermelon flesh, rind and seed, on a cream ground
-  			 * with a cow-cheek blush. Private to that route, like fd above.
+  			 * The /surat page, taken from the cover of "Rasa untuk Jiwa": park
+  			 * greens in shade, sunlight through leaves, the reader's red shirt.
   			 */
-  			sp: {
-  				cream: '#FFF6EA',
-  				blush: '#FAC6D0',
-  				red: '#F0525F',
-  				deep: '#C9303F',
-  				rind: '#5FAE5B',
-  				leaf: '#D6F2C2',
-  				seed: '#2A1A17',
+  			rj: {
+  				night: '#14291F',
+  				forest: '#1F4434',
+  				moss: '#3F6B45',
+  				leaf: '#7FA65A',
+  				sun: '#F2D58A',
+  				paper: '#F7EFDC',
+  				stone: '#D9CFB8',
+  				shirt: '#B2433A',
+  				ink: '#22302A',
   			},
 
   			// Aliases onto the stock hue names the components already use.
