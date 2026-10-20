@@ -6,6 +6,11 @@ import Reveal from "../ui/Reveal";
 /**
  * The numbers a business reader scans for before anything else. Kept to four,
  * counted up on first view, separated by hairlines rather than card chrome.
+ *
+ * These are hardcoded on purpose, not derived from `allProjects`/`featuredProjects`.
+ * "100K+ users" is almost entirely Ternak Klip's number, but that project is
+ * hidden from every other section (project cards, parallax deck, /projects
+ * stats) — this is the one place its contribution is meant to still show.
  */
 const stats = [
   { value: 4, suffix: "+", label: "Years building software" },

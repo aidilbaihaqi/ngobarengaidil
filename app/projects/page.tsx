@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import dynamic from "next/dynamic";
 import Main from "../components/Layout/Main";
-import { featuredProjects, allProjects } from "../data/projects";
+import { featuredProjects, allProjects, hiddenProjectsMetrics } from "../data/projects";
 import type { Project } from "../types/project";
 
 // Imported statically so the project list is part of the initial HTML.
@@ -104,7 +104,7 @@ export default function ProjectsPage() {
             </div>
 
             {/* Stats Summary */}
-            <ProjectStats projects={allProjects} />
+            <ProjectStats projects={allProjects} extraUsers={hiddenProjectsMetrics.users} />
 
             {/* Featured Projects - Card Swap */}
             <section className="mb-20">

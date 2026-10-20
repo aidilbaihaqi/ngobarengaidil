@@ -1,5 +1,17 @@
 import type { FeaturedItem, Project } from "@/app/types/project";
 
+/**
+ * Ternak Klip is intentionally hidden from `featuredProjects`/`allProjects`
+ * (and therefore from every grid, carousel, and per-project listing), but
+ * its 100K+ user base is real and should still count toward the aggregate
+ * "Users Reached" stat on /projects — the same way it still backs the
+ * "100K+ Users on shipped products" tile in ImpactStats on the homepage.
+ * Keep this in sync with that tile if the real number ever changes.
+ */
+export const hiddenProjectsMetrics = {
+  users: 100000,
+};
+
 export const featuredProjects: FeaturedItem[] = [
   {
     id: "0",
@@ -12,17 +24,6 @@ export const featuredProjects: FeaturedItem[] = [
     // No public deployment or repo yet — omit the CTAs rather than point
     // them at placeholders a visitor can click and lose trust on.
     accent: "purple",
-  },
-  {
-    id: "1",
-    title: "Ternak Klip",
-    subtitle: "A digital ecosystem bridging content owners and clippers for massive short-form video distribution, powering 100,000+ active users.",
-    cover: "/image-optimized/projects/ternakklip.webp",
-    year: 2026,
-    tags: ["Mobile Apps", "Web Apps"],
-    metric: "100k+ Active Users",
-    hrefLive: "https://ternakklip.com/",
-    accent: "pink",
   },
   {
     id: "2",
@@ -98,23 +99,6 @@ export const allProjects: Project[] = [
       problem: "Managers for the 2026 Economic Census lacked a centralized, real-time method to track task distribution, staff efficiency, and overall team progress across the Riau Islands.",
       solution: "Created a comprehensive analytics platform and data hub tailored to visualize census metrics, ensuring targets remain visible and on schedule.",
       contribution: ["Modeled geographical and performance data in PostgreSQL", "Developed automated Python scripts for data ingestion and cleaning", "Designed interactive dashboards and KPI reports via Metabase"]
-    }
-  },
-  {
-    id: "ternak-klip",
-    title: "Ternak Klip - Creator & Clipper Ecosystem Platform",
-    blurb: "Ternak Klip is a digital ecosystem and community-based platform that bridges the gap between content owners (creators/influencers) and \"clippers\" (short-form video editors). The project focuses on a massive distribution strategy, where long-form video content is repurposed into viral short clips—such as TikToks, Reels, or Shorts—to maximize audience reach and build automated brand awareness through a community network.",
-    cover: "/image-optimized/projects/ternakklip.webp",
-    year: 2026,
-    role: ["Backend Developer", "Devops Engineer"],
-    stack: ["Go", "Next.js", "Flutter", "AWS"],
-    tags: ["Mobile Apps", "Web Apps"],
-    metrics: { users: 100000 },
-    links: { live: "https://ternakklip.com/" },
-    details: {
-      problem: "Content creators struggle to distribute long-form content efficiently, while video editors (clippers) lack a streamlined platform to monetize their skills and collaborate directly with creators.",
-      solution: "Developed a comprehensive digital ecosystem that automates the distribution strategy and connects creators with clippers. Implemented AWS as external storage to reliably handle large-scale video media assets for 100,000+ active users.",
-      contribution: ["Designed robust backend microservices with Go", "Configured scalable infrastructure on AWS", "Integrated CI/CD pipelines to ensure seamless updates"]
     }
   },
   {

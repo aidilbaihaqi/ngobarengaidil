@@ -7,6 +7,12 @@ import CountUp from "../ui/CountUp";
 
 interface ProjectStatsProps {
   projects: Project[];
+  /**
+   * Users contributed by projects that are hidden from the grid but still
+   * meant to count toward the aggregate (see `hiddenProjectsMetrics` in
+   * app/data/projects.ts for why).
+   */
+  extraUsers?: number;
 }
 
 /*
@@ -32,12 +38,10 @@ const statStyles = {
   },
 } as const;
 
-export default function ProjectStats({ projects }: ProjectStatsProps) {
+export default function ProjectStats({ projects, extraUsers = 0 }: ProjectStatsProps) {
   const totalProjects = projects.length;
-  const totalUsers = projects.reduce(
-    (sum, p) => sum + (p.metrics?.users || 0),
-    0
-  );
+  const totalUsers =
+    projects.reduce((sum, p) => sum + (p.metrics?.users || 0), 0) + extraUsers;
   const totalAwards = projects.reduce(
     (sum, p) => sum + (p.metrics?.awards?.length || 0),
     0
