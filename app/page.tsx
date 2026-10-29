@@ -101,14 +101,6 @@ export default function Home() {
                 variants={rise}
                 className="flex flex-col items-center gap-3 lg:flex-row lg:items-center lg:gap-4"
               >
-                {/* Availability signal — the first thing a prospective client checks. */}
-                <span className="inline-flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-3 py-1 text-xs font-medium text-green-700 dark:text-green-400">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping-soft absolute inline-flex h-full w-full rounded-full bg-green-500" />
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
-                  </span>
-                  Available for new projects
-                </span>
                 <p className="text-xs font-medium uppercase tracking-[0.2em] text-gray-500 dark:text-neutral-500">
                   Aidil Baihaqi · Full Stack AI Engineer · Business Digitalization
                 </p>

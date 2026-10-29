@@ -169,7 +169,7 @@ export default function Home() {
                   </dt>
                   <dd>
                     <ul>
-                      <SkillIcon icon="go" name="Go (Gin)" />
+                      <SkillIcon icon="go" name="Golang" />
                       <SkillIcon icon="fastapi" name="FastAPI" />
                       <SkillIcon icon="flask" name="Flask" />
                       <SkillIcon icon="nodejs" name="Node.js" />
@@ -217,7 +217,7 @@ export default function Home() {
                   </dt>
                   <dd>
                     <ul>
-                      <SkillIcon icon="aws" name="AWS (S3)" />
+                      <SkillIcon icon="aws" name="AWS" />
                       <SkillIcon icon="gcp" name="Google Cloud Platform" />
                       <SkillIcon icon="cloudflare" name="Cloudflare" />
                       <SkillIcon icon="vercel" name="Vercel" />
