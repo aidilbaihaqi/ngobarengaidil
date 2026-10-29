@@ -30,6 +30,62 @@ const escapeHtml = (s: string) =>
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
 
+/*
+ * Email clients ignore most modern CSS, so the layout is nested tables with
+ * inline styles. Colours come from the site's brand palette.
+ */
+function renderEmail(m: { name: string; email: string; subject: string; message: string }) {
+  const initial = escapeHtml((m.name.match(/[\p{L}\p{N}]/u)?.[0] ?? "?").toUpperCase());
+  const name = escapeHtml(m.name);
+  const email = escapeHtml(m.email);
+  const font = "'Segoe UI',Helvetica,Arial,sans-serif";
+
+  return `<!doctype html>
+<html>
+<body style="margin:0;padding:0;background:#E6E9EC;font-family:${font};">
+  <div style="display:none;max-height:0;overflow:hidden;opacity:0;">${escapeHtml(m.message.slice(0, 90))}</div>
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#E6E9EC;padding:32px 12px;">
+    <tr><td align="center">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border-radius:16px;overflow:hidden;">
+        <tr>
+          <td style="background:#0D1B2A;padding:28px 32px;border-bottom:4px solid #2BC48A;">
+            <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#2BC48A;font-weight:600;">New message</div>
+            <div style="font-size:22px;line-height:1.3;color:#ffffff;font-weight:700;margin-top:8px;">${escapeHtml(m.subject)}</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:28px 32px 8px;">
+            <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+              <td width="48" height="48" align="center" style="width:48px;height:48px;border-radius:24px;background:#1A73E8;color:#ffffff;font-size:20px;font-weight:700;">${initial}</td>
+              <td style="padding-left:14px;">
+                <div style="font-size:16px;font-weight:700;color:#0D1B2A;">${name}</div>
+                <a href="mailto:${email}" style="font-size:14px;color:#1A73E8;text-decoration:none;">${email}</a>
+              </td>
+            </tr></table>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:16px 32px 28px;">
+            <div style="background:#F4F6F8;border-left:4px solid #1A73E8;border-radius:8px;padding:18px 20px;font-size:15px;line-height:1.65;color:#1b2a3a;white-space:pre-wrap;">${escapeHtml(m.message)}</div>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style="padding:0 32px 32px;">
+            <a href="mailto:${email}?subject=${encodeURIComponent("Re: " + m.subject)}" style="display:inline-block;background:#1A73E8;color:#ffffff;font-size:15px;font-weight:600;text-decoration:none;padding:12px 28px;border-radius:999px;">Reply to ${name}</a>
+          </td>
+        </tr>
+        <tr>
+          <td style="background:#F4F6F8;padding:16px 32px;text-align:center;font-size:12px;color:#6b7a89;">
+            Sent from the contact form at aidilbaihaqi.id
+          </td>
+        </tr>
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>`;
+}
+
 async function verifyTurnstile(token: string, ip: string | null) {
   const body = new URLSearchParams({
     secret: process.env.TURNSTILE_SECRET_KEY ?? "",
@@ -105,13 +161,7 @@ export async function POST(req: Request) {
     replyTo: email,
     subject: `[Portfolio] ${subject}`.replace(/[\r\n]+/g, " "),
     text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\n\n${message}`,
-    html: `
-      <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-      <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-      <p><strong>Subject:</strong> ${escapeHtml(subject)}</p>
-      <hr />
-      <p style="white-space:pre-wrap">${escapeHtml(message)}</p>
-    `,
+    html: renderEmail({ name, email, subject, message }),
   });
 
   if (error) {
