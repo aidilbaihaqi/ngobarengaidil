@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import Main from "../components/Layout/Main";
 import ClickSpark from "../components/ui/ClickSpark";
 import SpotlightCard from "../components/ui/SpotlightCard";
 import AuroraBackground from "../components/ui/AuroraBackground";
 import Reveal from "../components/ui/Reveal";
+import Turnstile, { type TurnstileHandle } from "../components/ui/Turnstile";
 import {
   Mail,
   Send,
@@ -31,6 +32,7 @@ import {
 import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 const EMAIL = "aidilmusirjun@gmail.com";
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "";
 
 /* What a business developer can bring to the table — any field, any size. */
 const engagementTypes = [
@@ -130,45 +132,40 @@ export default function ContactPage() {
     email: "",
     subject: "",
     message: "",
+    website: "", // honeypot — hidden from people, see the input below
   });
+  const [token, setToken] = useState<string | null>(null);
+  const turnstileRef = useRef<TurnstileHandle>(null);
   const [copied, setCopied] = useState(false);
   const [status, setStatus] = useState<SendStatus>("idle");
   const reduceMotion = useReducedMotion();
 
   /*
-   * Delivered through FormSubmit's AJAX endpoint instead of `mailto:` — on a
-   * machine with no configured mail client a mailto form dies silently, which
-   * is exactly the visitor a portfolio can't afford to lose. If the request
-   * fails, the error state offers the plain email address as the way through.
+   * Posted to our own /api/contact route, which checks the Turnstile token
+   * with Cloudflare and then sends through Resend. If the request fails, the
+   * error state offers the plain email address as the way through.
    */
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (status === "sending") return;
+    if (status === "sending" || !token) return;
     setStatus("sending");
 
     try {
-      const res = await fetch(`https://formsubmit.co/ajax/${EMAIL}`, {
+      const res = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          _subject: `[Portfolio] ${formData.subject}`,
-          _template: "table",
-          _captcha: "false",
-        }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...formData, token }),
       });
 
-      if (!res.ok) throw new Error(`FormSubmit responded ${res.status}`);
+      if (!res.ok) throw new Error(`Contact API responded ${res.status}`);
 
       setStatus("success");
-      setFormData({ name: "", email: "", subject: "", message: "" });
+      setFormData({ name: "", email: "", subject: "", message: "", website: "" });
     } catch {
       setStatus("error");
+    } finally {
+      // Tokens are single-use: get a fresh one for the next attempt.
+      turnstileRef.current?.reset();
     }
   };
 
@@ -370,10 +367,33 @@ export default function ContactPage() {
                       />
                     </div>
 
+                    {/* Honeypot: off-screen and skipped by keyboard and screen
+                        readers, so only bots fill it in. */}
+                    <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
+                      <label htmlFor="website">Website</label>
+                      <input
+                        type="text"
+                        id="website"
+                        name="website"
+                        tabIndex={-1}
+                        autoComplete="off"
+                        value={formData.website}
+                        onChange={handleChange}
+                      />
+                    </div>
+
+                    {/* Spam check — usually passes on its own, no puzzle. */}
+                    <Turnstile
+                      ref={turnstileRef}
+                      siteKey={TURNSTILE_SITE_KEY}
+                      onToken={setToken}
+                      className="min-h-[65px]"
+                    />
+
                     {/* Submit Button */}
                     <button
                       type="submit"
-                      disabled={status === "sending"}
+                      disabled={status === "sending" || !token}
                       className="group flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-500 via-cyan-500 to-green-500 px-6 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-[1.01] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:scale-100 dark:focus:ring-offset-black"
                     >
                       {status === "sending" ? (
