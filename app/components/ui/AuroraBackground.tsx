@@ -4,6 +4,11 @@
  * pre-blurred radial gradients (no filter: blur), and the drift animates
  * transform only, so it composites even on modest phones.
  */
+/* Fades every edge, not just the bottom — on narrow screens the blobs are
+   wider than the viewport and would otherwise show a hard rectangular edge. */
+const FADE =
+  "radial-gradient(ellipse 75% 85% at 50% 40%, black 35%, transparent 100%)";
+
 export default function AuroraBackground({
   className = "",
 }: {
@@ -14,9 +19,8 @@ export default function AuroraBackground({
       aria-hidden="true"
       className={`pointer-events-none absolute inset-0 overflow-hidden ${className}`}
       style={{
-        maskImage: "linear-gradient(to bottom, black 55%, transparent 100%)",
-        WebkitMaskImage:
-          "linear-gradient(to bottom, black 55%, transparent 100%)",
+        maskImage: FADE,
+        WebkitMaskImage: FADE,
       }}
     >
       <div
