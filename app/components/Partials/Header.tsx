@@ -4,12 +4,25 @@ import Link from "next/link";
 import Navbar from "./Navbar";
 import FloatingDock from "./FloatingDock";
 import ThemeToggle from "../Button/ThemeButton";
+import { useScrollVisibility } from "../hooks/useScrollVisibility";
 
 export default function Header() {
+  // Nav links are desktop-only (see Navbar's `hidden lg:block`), so on
+  // mobile/tablet this bar is just the logo pill — free to tuck away on
+  // scroll-down and reappear on scroll-up. `lg:` overrides keep it pinned
+  // on desktop regardless of scroll direction.
+  const visible = useScrollVisibility();
+
   return (
     <>
       {/* Header */}
-      <header className="sticky top-0 inset-x-0 flex flex-wrap lg:justify-start lg:flex-nowrap z-50 w-full text-sm">
+      <header
+        className={`sticky top-0 inset-x-0 flex flex-wrap lg:justify-start lg:flex-nowrap z-50 w-full text-sm transition-[transform,opacity] duration-300 ease-out lg:translate-y-0 lg:opacity-100 ${
+          visible
+            ? "translate-y-0 opacity-100"
+            : "-translate-y-28 opacity-0 pointer-events-none"
+        }`}
+      >
         <div className="mt-4 relative max-w-5xl w-full mx-2 lg:mx-auto flex items-center justify-center lg:justify-between gap-3">
           {/* Container 1: Logo + Nav Links */}
           <nav className="flex-none lg:flex-1 bg-white/80 backdrop-blur-md border border-gray-200/60 rounded-[2rem] py-2.5 lg:flex lg:items-center lg:justify-between lg:py-0 lg:px-4 dark:bg-neutral-900/80 dark:border-neutral-700/60 shadow-lg hover:shadow-xl transition-all duration-300">
@@ -47,7 +60,7 @@ export default function Header() {
       </header>
 
       {/* Floating Dock (Tablet & Mobile) */}
-      <FloatingDock />
+      <FloatingDock visible={visible} />
     </>
   )
 }

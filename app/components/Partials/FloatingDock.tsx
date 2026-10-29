@@ -58,14 +58,26 @@ const navLinks: { name: string; href: string; icon: React.ReactNode }[] = [
   },
 ];
 
-export default function FloatingDock() {
+interface FloatingDockProps {
+  // Tucks the dock below the viewport on scroll-down and brings it back on
+  // scroll-up; see Header, which owns the shared scroll-direction state.
+  visible?: boolean;
+}
+
+export default function FloatingDock({ visible = true }: FloatingDockProps) {
   const pathname = usePathname();
 
   return (
-    <div className="lg:hidden fixed inset-x-0 bottom-4 z-50 flex justify-center px-4 pointer-events-none">
+    <div
+      className={`lg:hidden fixed inset-x-0 bottom-4 z-50 flex justify-center px-4 pointer-events-none transition-[transform,opacity] duration-300 ease-out ${
+        visible ? "translate-y-0 opacity-100" : "translate-y-24 opacity-0"
+      }`}
+    >
       <nav
         aria-label="Primary"
-        className="pointer-events-auto flex items-center gap-1 rounded-full border border-gray-200/60 bg-white/80 px-2 py-2 shadow-lg backdrop-blur-md dark:border-neutral-700/60 dark:bg-neutral-900/80"
+        className={`flex items-center gap-1 rounded-full border border-gray-200/60 bg-white/80 px-2 py-2 shadow-lg backdrop-blur-md dark:border-neutral-700/60 dark:bg-neutral-900/80 ${
+          visible ? "pointer-events-auto" : "pointer-events-none"
+        }`}
       >
         {navLinks.map((link) => {
           const isActive =
