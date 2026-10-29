@@ -87,14 +87,18 @@ export default function Home() {
                 />
               </div>
 
-              <div className="grow text-left">
-                <TypewriterEffectSmoothDemo />
-                <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left">
-                  Full Stack AI Engineer, IT Mentor & Researcher in Bioinformatics and Medical
-                </p>
+              {/* Name and headline on the left, résumé + hire actions on the
+                  right; they stack on narrow screens. */}
+              <div className="grow w-full flex flex-col gap-5 md:flex-row md:items-center md:justify-between md:gap-8 text-left">
+                <div className="min-w-0">
+                  <TypewriterEffectSmoothDemo />
+                  <p className="leading-6 text-sm text-gray-600 dark:text-neutral-400 text-left">
+                    Full Stack AI Engineer, IT Mentor &amp; Researcher in Blockchain and Deep Learning
+                  </p>
+                </div>
 
                 {/* Résumé + hire actions */}
-                <div className="mt-5 flex flex-wrap items-center gap-3">
+                <div className="flex shrink-0 flex-wrap items-center gap-3">
                   <a
                     href="/documents/CV-Aidil-Baihaqi.pdf"
                     download
@@ -169,6 +173,7 @@ export default function Home() {
                       <SkillIcon icon="fastapi" name="FastAPI" />
                       <SkillIcon icon="flask" name="Flask" />
                       <SkillIcon icon="nodejs" name="Node.js" />
+                      <SkillIcon icon="nestjs" name="NestJS" />
                       <SkillIcon icon="laravel" name="Laravel" />
                     </ul>
                   </dd>
@@ -194,9 +199,28 @@ export default function Home() {
                   <dd>
                     <ul>
                       <SkillIcon icon="docker" name="Docker" />
-                      <SkillIcon icon="linux" name="WSL" />
+                      <SkillIcon icon="kubernetes" name="Kubernetes" />
+                      <SkillIcon icon="githubactions" name="GitHub Actions" />
                       <SkillIcon icon="nginx" name="Nginx" />
                       <SkillIcon icon="linux" name="Linux Server" />
+                      <SkillIcon icon="linux" name="WSL" />
+                      <li className="me-1 inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
+                        Argo CD
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+
+                <dl className="flex flex-col sm:flex-row gap-1 justify-start">
+                  <dt className="min-w-40 text-left">
+                    <span className="block text-sm text-gray-500 dark:text-neutral-500 text-left">Cloud:</span>
+                  </dt>
+                  <dd>
+                    <ul>
+                      <SkillIcon icon="aws" name="AWS (S3)" />
+                      <SkillIcon icon="gcp" name="Google Cloud Platform" />
+                      <SkillIcon icon="cloudflare" name="Cloudflare" />
+                      <SkillIcon icon="vercel" name="Vercel" />
                     </ul>
                   </dd>
                 </dl>

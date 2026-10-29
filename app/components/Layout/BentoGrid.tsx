@@ -78,7 +78,7 @@ const SkeletonOne = () => {
   );
 };
 
-// ── Skeleton 2: Full Stack Web Dev — tech stack layers on hover ───────────────
+// ── Skeleton 2: Full Stack AI Engineering — tech stack layers on hover ───────────────
 const SkeletonTwo = () => {
   const layers = [
     { label: "Frontend", tech: "Next.js · React", Icon: IconBrandReact, color: "from-blue-400 to-cyan-400" },
@@ -363,9 +363,9 @@ const items = [
     icon: <IconMessages className="h-4 w-4 text-neutral-500 dark:text-neutral-400" />,
   },
   {
-    title: "Full Stack Web Development",
+    title: "Full Stack AI Engineering",
     description: (
-      <span>Modern, scalable websites — elegant frontend, robust backend, production-ready</span>
+      <span>End-to-end products with AI built in — elegant frontend, robust backend, production-ready</span>
     ),
     header: <SkeletonTwo />,
     className: "",

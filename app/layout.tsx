@@ -46,7 +46,7 @@ const baseUrl = 'https://www.aidilbaihaqi.id';
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "Aidil Baihaqi - AI, Web Development & Business Digitalization",
+    default: "Aidil Baihaqi - Full Stack AI Engineer & Business Digitalization",
     template: "%s | Aidil Baihaqi"
   },
   description: "Aidil Baihaqi builds AI solutions, websites, and workflow automation that digitize how businesses run — from company profile sites and custom dashboards to AI assistants and the systems that tie them together. Also an IT mentor, with source code handed over so your team can keep building.",
@@ -93,7 +93,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: baseUrl,
-    title: 'Aidil Baihaqi - AI, Web Development & Business Digitalization',
+    title: 'Aidil Baihaqi - Full Stack AI Engineer & Business Digitalization',
     description: 'AI solutions, websites, and workflow automation that digitize how businesses run — built end to end, with the source code handed over.',
     siteName: 'Personal Website Aidil Baihaqi',
     images: [
@@ -109,7 +109,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aidil Baihaqi - AI, Web Development & Business Digitalization',
+    title: 'Aidil Baihaqi - Full Stack AI Engineer & Business Digitalization',
     description: 'Portfolio of Aidil Baihaqi — AI solutions, websites, and business digitalization, plus IT mentoring.',
     images: ['/image-optimized/og-card.png'],
   },
@@ -177,7 +177,7 @@ const jsonLd = {
 const servicesJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'Aidil Baihaqi — AI, Web Development & Business Digitalization',
+  name: 'Aidil Baihaqi — Full Stack AI Engineer & Business Digitalization',
   url: baseUrl,
   image: `${baseUrl}/image-optimized/aidilbaihaqi.webp`,
   email: 'mailto:aidilmusirjun@gmail.com',

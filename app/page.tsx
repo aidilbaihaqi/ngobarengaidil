@@ -13,7 +13,6 @@ import Reveal from "./components/ui/Reveal";
 import LogoMarquee from "./components/Partials/LogoMarquee";
 import ImpactStats from "./components/Partials/ImpactStats";
 import ProcessSection from "./components/Partials/ProcessSection";
-import TestimonialsSection from "./components/Partials/TestimonialsSection";
 
 // The spark layer SSRs fine (all canvas work lives in effects), and importing
 // it statically keeps the whole page body in the initial HTML — crawlers and
@@ -111,7 +110,7 @@ export default function Home() {
                   Available for new projects
                 </span>
                 <p className="text-xs font-medium uppercase tracking-[0.2em] text-gray-500 dark:text-neutral-500">
-                  Aidil Baihaqi · AI · Web Development · Business Digitalization
+                  Aidil Baihaqi · Full Stack AI Engineer · Business Digitalization
                 </p>
               </motion.div>
 
@@ -149,7 +148,7 @@ export default function Home() {
                     variants={rise}
                     className="mt-7 max-w-[54ch] mx-auto lg:mx-0 text-base md:text-lg text-gray-600 dark:text-neutral-400 leading-relaxed"
                   >
-                    Web development, applied AI, and workflow automation — turning
+                    Full stack AI engineering and workflow automation — turning
                     manual, offline processes into systems that run on their own.
                   </motion.p>
 
@@ -292,7 +291,7 @@ export default function Home() {
                   crop, which would otherwise follow the narrower wrapper.
                 */
                 className="[&>svg]:min-w-[900px]"
-                text="Aidil Baihaqi ✦ AI Engineer ✦ Web Development ✦ Business Digitalization ✦ Workflow Automation ✦ IT Mentor"
+                text="Aidil Baihaqi ✦ Full Stack AI Engineer ✦ Business Digitalization ✦ Workflow Automation ✦ IT Mentor"
                 shape="line"
                 speed={60}
                 direction="forward"
@@ -374,30 +373,12 @@ export default function Home() {
             </Suspense>
             {/* End Feature Section */}
 
-            {/* Voices — what working together feels like from the other side. */}
-            <section aria-label="Client testimonials" className="mt-20 md:mt-28">
-              <Reveal>
-                <div className="mb-12 text-center">
-                  <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-gray-500 dark:text-neutral-500">
-                    03 — What clients say
-                  </p>
-                  <h4 className="text-3xl md:text-4xl tracking-tight font-medium text-black dark:text-white">
-                    After the handover
-                  </h4>
-                  <p className="mt-2 text-sm text-gray-600 dark:text-neutral-400 leading-6">
-                    From businesses and institutions the work now runs in.
-                  </p>
-                </div>
-              </Reveal>
-              <TestimonialsSection />
-            </section>
-
             {/* Process — how an engagement runs, start to handover. */}
             <section aria-label="How I work" className="mt-20 md:mt-28">
               <Reveal>
                 <div className="mb-12 text-center">
                   <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-gray-500 dark:text-neutral-500">
-                    04 — Process
+                    03 — Process
                   </p>
                   <h4 className="text-3xl md:text-4xl tracking-tight font-medium text-black dark:text-white">
                     From idea to running system
