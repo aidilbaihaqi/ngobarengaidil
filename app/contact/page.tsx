@@ -138,6 +138,7 @@ export default function ContactPage() {
   const turnstileRef = useRef<TurnstileHandle>(null);
   const [copied, setCopied] = useState(false);
   const [status, setStatus] = useState<SendStatus>("idle");
+  const [errorDetail, setErrorDetail] = useState<string | null>(null);
   const reduceMotion = useReducedMotion();
 
   /*
@@ -149,6 +150,7 @@ export default function ContactPage() {
     e.preventDefault();
     if (status === "sending" || !token) return;
     setStatus("sending");
+    setErrorDetail(null);
 
     try {
       const res = await fetch("/api/contact", {
@@ -157,12 +159,16 @@ export default function ContactPage() {
         body: JSON.stringify({ ...formData, token }),
       });
 
-      if (!res.ok) throw new Error(`Contact API responded ${res.status}`);
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body.detail || body.error || `Contact API responded ${res.status}`);
+      }
 
       setStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "", website: "" });
-    } catch {
+    } catch (err) {
       setStatus("error");
+      setErrorDetail(err instanceof Error ? err.message : null);
     } finally {
       // Tokens are single-use: get a fresh one for the next attempt.
       turnstileRef.current?.reset();
@@ -432,8 +438,13 @@ export default function ContactPage() {
                         >
                           <AlertCircle className="mt-0.5 h-5 w-5 shrink-0 text-amber-600 dark:text-amber-400" />
                           <p className="text-sm text-amber-700 dark:text-amber-400">
-                            Something went wrong sending the form. Please email
-                            me directly at{" "}
+                            Something went wrong sending the form.
+                            {errorDetail && (
+                              <>
+                                {" "}<span className="font-mono text-xs opacity-80">({errorDetail})</span>
+                              </>
+                            )}
+                            {" "}Please email me directly at{" "}
                             <a
                               href={`mailto:${EMAIL}`}
                               className="font-semibold underline"
